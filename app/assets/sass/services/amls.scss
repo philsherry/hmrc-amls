@@ -1,0 +1,53 @@
+/*** SIGN OUT ***/
+
+a.sign-out:link, a.sign-out:visited {
+    float: right;
+    color: #FFF;
+    font-weight: bold;
+    margin-top: 4px;
+}
+
+/**** SERVICE-HEADER ****/
+
+.service-header {
+    padding: 10px 0 10px 0;
+    border-bottom: 1px solid #bfc1c3;
+}
+
+.logo { }
+.login-name { text-align: right; font-size:16px; margin:0; float:right; }
+
+.organisation-logo, .organisation-logo-stacked {
+  font-family: Helvetica,Arial;
+  font-weight: 400;
+  position: relative;
+  font-size: 13px;
+  line-height: 16px;
+  text-decoration: none;
+  padding: 0px 0 0px 30px;
+  background-image: url(../images/crests/hmrc_crest_18px.png);
+  background-position: 5px center;
+  background-size: auto 20px;
+  background-repeat: no-repeat;
+  border-left: 2px solid #009390;
+}
+
+@media (min-width: 641px) {
+
+    .service-header .logo {
+      display:inline;
+      width: 33.33%;
+      margin-bottom: .52632em;
+    }
+
+    .organisation-logo-medium {
+      font-size: 18px;
+      line-height: 22px;
+      padding: 0px 0 0px 33px;
+      background-image: url(../images/crests/hmrc_crest_18px.png);
+      background-position: 6px center;
+      background-size: auto 20px;
+      border-left: 2px solid #009390;
+    } 
+
+}

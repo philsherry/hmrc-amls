@@ -1,0 +1,83 @@
+{{<layout}}
+
+{{$pageTitle}}
+	Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$content}}
+
+	<main id="content" role="main">
+
+    {{>includes/amls/phase-banner-alpha}}
+    {{>includes/amls/service-header}}
+
+		<div class="grid-row">        
+            
+			<div class="column-two-thirds">
+                        
+                <h1 class="heading-xlarge">Where you live</h1>
+                <div class="form-group">
+                    <label class="form-label">Are you a UK resident?</label>
+                    <fieldset class="inline">
+                        <label class="block-label" for="radio-inline-2-1">
+                          <input id="radio-inline-2-1" type="radio" name="radio-inline-group-2" value="Yes">
+                          Yes
+                        </label>
+                        <label class="block-label" for="radio-inline-2-2">
+                          <input id="radio-inline-2-2" type="radio" name="radio-inline-group-2" value="No">
+                          No
+                        </label>
+                    </fieldset>
+                </div>
+                <div id="uk-yes" class="form-group-inline panel-indent">
+                    <label class="form-label" for="first-name-2">National Insurance number
+                    <span class="form-hint">It'll be on your last payslip. For example, JH 21 90 0A.</span>
+                    </label>
+                    <input class="form-control" id="first-name-2" type="text">
+                </div>
+                <div class="form-group">
+                    <a href="summary-about-you" id="next" class="button">Save and continue</a>
+                </div>
+                
+                
+			</div>
+		</div>
+
+	</main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+  (function($) {
+    $(document).ready(function(){
+      $("#uk-yes").hide();
+      $("#radio-inline-2-1").click(function(){
+        $("#uk-yes").show();
+      });
+      $("#radio-inline-2-2").click(function(){
+        $("#uk-yes").hide();
+      });
+    });
+  })(jQuery || window.jQuery);
+</script>
+
+<script type="text/javascript">
+    //when next button is clicked create a function
+    $('#next').click(function() {
+        //if radio button yes is checked go to home '/'
+        if($('#yes-alias').is(':checked')){
+            location.href = 'other-names'
+        }
+        // else if radio button no is checked go to /summary page
+        else if ($('#no-alias').is(':checked')){
+            location.href = 'business-details'
+        }
+        // else if nothing is ticket return false and od nothing
+        else{
+            return false;
+        }
+    });
+</script>
+
+{{/content}}
+
+{{/layout}}
