@@ -12,7 +12,7 @@
     {{>includes/amls/service-header}}
    
             
-            <div class="grid-row">
+        <div class="grid-row">
 	  <div class="column-three-quarters">
 
 	  	<a href="#" class="link-back">Back</a>
@@ -70,11 +70,7 @@
 	  </div>
 	  <div class="column-quarter">
 
-	   	<ul class="actions">
-	   		<li class="action"><a href="">Print this application</a></li>
-	   		<li class="action"><a href="">Cancel this application</a></li>
-	   		<li class="action"><a href="">Save this application</a></li>
-	   	</ul>
+	   	{{>includes/amls/action-links}}
 
 	   	<div class="meta-data">
 	   	</div>
@@ -92,11 +88,11 @@
     $('#next').click(function() {
         //if radio button yes is checked go to home '/'
         if($('#yes-alias').is(':checked')){
-            location.href = 'your-details-1a'
+            location.href = 'about-you-1a'
         }
         // else if radio button no is checked go to /summary page
         else if ($('#no-alias').is(':checked')){
-            location.href = 'your-details-2'
+            location.href = 'about-you-2'
         }
         // else if nothing is ticket return false and od nothing
         else{

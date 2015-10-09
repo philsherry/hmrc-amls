@@ -1,0 +1,104 @@
+{{<layout}}
+
+{{$pageTitle}}
+	Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$content}}
+
+	<main id="content" role="main">
+
+    {{>includes/amls/phase-banner-alpha}}
+    {{>includes/amls/service-header}}
+
+<div class="grid-row">
+	  <div class="column-three-quarters">
+
+	  	<a href="#" class="link-back">Back</a>
+
+	   	<h1 class="heading-large">
+	   		<span class="heading-secondary">
+	   			<!--Question 1.1-->
+	   			About you
+	   		</span>
+	   		Other names
+	   	</h1>
+
+
+		<form class="form">
+
+		   	<div class="form-group">
+		   		<label class="form-label" for="first-name">First name</label>
+		   		<input type="text" id="first-name">
+		   	</div>
+            
+            <div class="form-group">
+		   		<label class="form-label" for="middle-name">Middle name (optional)</label>
+		   		<input type="text" id="middle-name">
+		   	</div>
+            
+            <div class="form-group">
+		   		<label class="form-label" for="last-name">Last name</label>
+		   		<input type="text" id="last-name">
+		   	</div>
+            
+            <div class="form-group">
+                <fieldset class="inline">
+                    <legend class="form-label">Are you known by any other names or aliases?</legend>
+                    <label class="block-label" for="yes-alias">
+                        <input id="yes-alias" type="radio" name="radio-inline-group" value="Yes">
+                        Yes
+                    </label>
+                    <label class="block-label" for="no-alias">
+                        <input id="no-alias" type="radio" name="radio-inline-group" value="No">
+                        No
+                    </label>
+                </fieldset>
+            </div>
+
+
+			<div class="form-group">
+	   			<a class="button" id="next">Save and continue</a>
+   			</div>
+
+
+	   	</form>
+
+
+
+	  </div>
+	  <div class="column-quarter">
+
+	   	{{>includes/amls/action-links}}
+
+	   	<div class="meta-data">
+	   	</div>
+
+		</div>
+	</div>
+
+	</main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+    //when next button is clicked create a function
+    $('#next').click(function() {
+        //if radio button yes is checked go to home '/'
+        if($('#yes-alias').is(':checked')){
+            location.href = 'about-you-1a'
+        }
+        // else if radio button no is checked go to /summary page
+        else if ($('#no-alias').is(':checked')){
+            location.href = 'about-you-2'
+        }
+        // else if nothing is ticket return false and od nothing
+        else{
+            return false;
+        }
+    });
+</script>
+
+{{/content}}
+
+{{/layout}}

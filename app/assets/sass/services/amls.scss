@@ -9,6 +9,15 @@ a.sign-out:link, a.sign-out:visited {
 
 /**** SERVICE-HEADER ****/
 
+.clearfix {
+    clear: both;
+}
+
+.inline-indent {
+    margin-bottom: 0px;
+}
+
+
 .service-header {
     padding: 10px 0 10px 0;
     border-bottom: 1px solid #bfc1c3;
@@ -50,4 +59,8 @@ a.sign-out:link, a.sign-out:visited {
       border-left: 2px solid #009390;
     } 
 
+}
+
+.block {
+    display:block;
 }
