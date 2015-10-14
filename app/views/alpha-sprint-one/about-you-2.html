@@ -1,4 +1,4 @@
-{{<layout}}
+{{<layout-amls}}
 
 {{$pageTitle}}
 	Anti Money Laundering Registration
@@ -10,10 +10,10 @@
 
     {{>includes/amls/phase-banner-alpha}}
     {{>includes/amls/service-header}}
-
-		<div class="grid-row">        
+   
             
-				  <div class="column-three-quarters">
+        <div class="grid-row">
+	  <div class="column-three-quarters">
 
 	  	<a href="#" class="link-back">Back</a>
 
@@ -22,62 +22,65 @@
 	   			<!--Question 1.1-->
 	   			About you
 	   		</span>
-	   		Your role
+	   		Your date of birth
 	   	</h1>
-                <div class="form-group">
-                    <label class="form-label">Are you employed within the business?</label>
-                    <fieldset class="inline">
-                        <label class="block-label" for="radio-inline-2-1">
-                          <input id="radio-inline-2-1" type="radio" name="radio-inline-group-2" value="Yes">
-                          Yes
-                        </label>
-                        <label class="block-label" for="radio-inline-2-2">
-                          <input id="radio-inline-2-2" type="radio" name="radio-inline-group-2" value="No">
-                          No
-                        </label>
-                    </fieldset>
-                </div>
 
-                <div class="form-group">
-                    <a id="next" class="button">Save and continue</a>
-                </div>
-                
-                
-			</div>
-            
-             <div class="column-quarter">
 
-                 {{>includes/amls/action-links}}
+		<form class="form">
+
+		   	<div class="form-group">
+    <fieldset>
+
+      <div class="form-date">
+
+        <p class="form-hint">For example, 31 3 1980</p>
+
+        <div class="form-group form-group-day">
+          <label for="dob-day">Day</label>
+          <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
+        </div>
+
+        <div class="form-group form-group-month">
+          <label for="dob-month">Month</label>
+          <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+        </div>
+
+        <div class="form-group form-group-year">
+          <label for="dob-year">Year</label>
+          <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2014">
+        </div>
+      </div>
+
+    </fieldset>
+  </div>
+
+
+			<div class="form-group">
+	   			<a class="button" href="about-you-3" id="next">Save and continue</a>
+   			</div>
+
+
+	   	</form>
+
+
+
+	  </div>
+	  <div class="column-quarter">
+
+	   	{{>includes/amls/action-links}}
 
 	   	<div class="meta-data">
 	   	</div>
 
 		</div>
-		</div>
+	</div>
+
 
 	</main>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script type="text/javascript">
-    //when next button is clicked create a function
-    $('#next').click(function() {
-        //if radio button yes is checked go to home '/'
-        if($('#radio-inline-2-1').is(':checked')){
-            location.href = 'about-you-2a'
-        }
-        // else if radio button no is checked go to /summary page
-        else if ($('#radio-inline-2-2').is(':checked')){
-            location.href = 'about-you-2b'
-        }
-        // else if nothing is ticket return false and od nothing
-        else{
-            return false;
-        }
-    });
-</script>
-
 
 
 {{/content}}
 
-{{/layout}}
+{{/layout-amls}}
