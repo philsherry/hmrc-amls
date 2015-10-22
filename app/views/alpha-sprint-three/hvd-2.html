@@ -1,0 +1,94 @@
+{{<layout-amls}}
+
+{{$pageTitle}}
+	Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$content}}
+
+	<main id="content" role="main">
+
+    {{>includes/amls/phase-banner-alpha}}
+    {{>includes/amls/service-header}}
+   
+            
+        <div class="grid-row">
+	  <div class="column-three-quarters">
+
+	  	<a href="#" class="link-back">Back</a>
+
+	   	<h1 class="heading-large">
+	   		<span class="heading-secondary">
+	   			<!--Question 1.1-->
+	   			High value dealer
+	   		</span>
+	   		Business activities
+	   	</h1>
+          
+		<form class="form" method="post">
+        
+            <div class="form-group">
+                <fieldset>
+                    <legend class="form-label">How are these goods to be sold?</legend>
+                    <span class="form-hint">(Please select all that apply.)</span>
+                    <label class="block-label" >
+                        <input id="asp" type="checkbox" name="activities" value="asp">
+                        Auction
+                    </label>
+                        
+                    <label class="block-label" >
+                        <input id="ct" type="checkbox" name="activities" value="bpsp">
+                        Retail
+                    </label>
+                        
+                    <label class="block-label">
+                        <input id="paye" type="checkbox" name="activities" value="eab">
+                        Wholesale
+                    </label>
+                        
+    
+                       
+                </fieldset>
+            </div>
+
+
+			<div class="form-group">
+<!--	   			<a class="button" href="summary" id="next">Save and continue</a>-->
+              <a class="button" href="hvd-2">Save and continue</a>
+   			</div>
+
+
+	   	</form>
+
+
+
+	  </div>
+	  <div class="column-quarter">
+
+	   	{{>includes/amls/action-links}}
+
+	   	<div class="meta-data">
+	   	</div>
+
+		</div>
+	</div>
+
+
+	</main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+  (function($) {
+    $(document).ready(function(){
+      $("#other").hide();
+      $("#other-ps").click(function(){
+        $("#other").show();
+      });
+    });
+  })(jQuery || window.jQuery);
+</script>
+
+{{/content}}
+
+{{/layout-amls}}

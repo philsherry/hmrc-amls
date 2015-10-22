@@ -1,0 +1,82 @@
+{{<layout}}
+
+{{$pageTitle}}
+	Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$content}}
+
+	<main id="content" role="main">
+
+    {{>includes/amls/phase-banner-alpha}}
+
+		<div class="grid-row">            
+            
+			<div class="column-two-thirds">
+                        
+                <h1 class="heading-xlarge">Sprint One - Second Prototype</h1>
+                    <h2 class="heading-medium">Gov.UK / Gov Gateway</h2>
+                    <ul class="list-bullet">
+                        <li><a href="start">Start page</a></li>
+                        <li><a href="gov-gateway">Gov Gateway</a></li>
+                    </ul>
+                    <h2 class="heading-medium">Business Matching</h2>
+                     <ul class="list-bullet">
+                        <li><a href="business-matching-1">Business matching (Type of business)</a></li>
+                        <li><a href="business-matching-2">Business matching (Business name)</a></li>
+                        <li><a href="business-matching-3">Business matching (Confirm business)</a></li>
+                    </ul>
+                    <h2 class="heading-medium">Business Activities</h2>
+                     <ul class="list-bullet">
+                        <li><a href="business-activities">Business activities (Type of business)</a></li>
+                    </ul>
+                    <h2 class="heading-medium">Main summary</h2>
+                     <ul class="list-bullet">
+                        <li><a href="summary">Summary</a></li>
+                        </ul>
+
+                
+                <h2 class="heading-medium">Business details section</h2>
+                     <ul class="list-bullet">
+                        <li><a href="business-details-1">Business details: HMRC registrations</a></li>
+                        <li><a href="business-details-2">Business details: AMLS History</a></li>
+                    </ul>
+              
+                <h2 class="heading-medium">About you section</h2>
+                     <ul class="list-bullet">
+                        <li><a href="about-you-1">About you: Your name</a></li>
+                        <li><a href="about-you-2">About you: Employment status</a></li>
+                        <li><a href="about-you-2.html">About you: Role in company</a></li>
+                        <li><a href="about-you-2b">About you: Role for company</a></li>
+                        <li><a href="summary-about-you">Summary: About you</a></li>
+                    </ul>
+              
+              <h2 class="heading-medium">Payment</h2>
+                     <ul class="list-bullet">
+                        <li><a href="payment">Payment</a></li>
+
+                    </ul>
+                
+			</div>
+		</div>
+
+	</main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+  (function($) {
+    $(document).ready(function(){
+      $("#uk-yes").hide();
+      $("#radio-inline-2-1").click(function(){
+        $("#uk-yes").show();
+      });
+      $("#radio-inline-2-2").click(function(){
+        $("#uk-yes").hide();
+      });
+    });
+  })(jQuery || window.jQuery);
+</script>
+
+{{/content}}
+
+{{/layout}}

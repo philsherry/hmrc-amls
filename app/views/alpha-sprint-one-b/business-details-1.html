@@ -1,0 +1,168 @@
+{{<layout-amls}}
+
+{{$pageTitle}}
+	Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$content}}
+
+	<main id="content" role="main">
+
+    {{>includes/amls/phase-banner-alpha}}
+    {{>includes/amls/service-header}}
+   
+            
+        <div class="grid-row">
+	  <div class="column-three-quarters">
+
+	  	<a href="#" class="link-back">Back</a>
+
+	   	<h1 class="heading-large">
+	   		<span class="heading-secondary">
+	   			<!--Question 1.1-->
+	   			Business details
+	   		</span>
+	   		HMRC registrations
+	   	</h1>
+          
+
+		<form class="form">
+        
+            <div class="form-group">
+                <fieldset>
+                    <legend class="form-label">Are you registered with HMRC for any of the following?</legend>
+                    <label class="block-label" for="amls">
+                        <input id="amls" type="radio" name="radio-inline-group" value="Yes">
+                        Anti-money laundering supervision
+                    </label>
+                        <div class="clearfix js-hidden"></div>
+                        <h3 class="heading-small js-hidden">If you are registered for Anti-money laundering supervision:</h3>
+                        <div id="amls-utr" class="panel-indent inline-indent">
+                            <label class="form-label" for="first-name-2">Unique Taxpayer Reference
+                            <span class="form-hint">Hint should explain where to find this.</span>
+                            </label>
+                            <input class="form-control" id="first-name-2" type="text">
+                        </div>
+                    <label class="block-label" for="ct">
+                        <input id="ct" type="radio" name="radio-inline-group" value="No">
+                        Corporation tax
+                    </label>
+                        <div class="clearfix js-hidden"></div>
+                        <h3 class="heading-small js-hidden">If you are registered for Corporation tax:</h3>
+                        <div id="ct-utr" class="panel-indent inline-indent">
+                            <label class="form-label" for="first-name-2">Unique Taxpayer Reference
+                            <span class="form-hint">Hint should explain where to find this.</span>
+                            </label>
+                            <input class="form-control" id="first-name-2" type="text">
+                        </div>
+                    <label class="block-label" for="paye">
+                        <input id="paye" type="radio" name="radio-inline-group" value="No">
+                        PAYE (Pay as your earn)
+                    </label>
+                        <div class="clearfix js-hidden"></div>
+                        <h3 class="heading-small js-hidden">If you are registered for Anti-money laundering supervision:</h3>    
+                        <div id="paye-utr" class="panel-indent inline-indent">
+                            <label class="form-label" for="first-name-2">Unique Taxpayer Reference
+                            <span class="form-hint">Hint should explain where to find this.</span>
+                            </label>
+                            <input class="form-control" id="first-name-2" type="text">
+                        </div>
+                    <label class="block-label" for="sa">
+                        <input id="sa" type="radio" name="radio-inline-group" value="No">
+                        Self Assessment
+                    </label>
+                        <div class="clearfix js-hidden"></div>
+                        <h3 class="heading-small js-hidden">If you are registered for Self Assessment:</h3>    
+                        <div id="sa-utr" class="panel-indent inline-indent">
+                            <label class="form-label" for="first-name-2">Unique Taxpayer Reference
+                            <span class="form-hint">Hint should explain where to find this.</span>
+                            </label>
+                            <input class="form-control" id="first-name-2" type="text">
+                        </div>
+                    <label class="block-label" for="tc">
+                        <input id="tc" type="radio" name="radio-inline-group" value="No">
+                        Tax credits
+                    </label>
+                        <div class="clearfix js-hidden"></div>
+                        <h3 class="heading-small js-hidden">If you are registered for tax credits:</h3>    
+                        <div id="tc-utr" class="panel-indent inline-indent">
+                            <label class="form-label" for="first-name-2">Unique Taxpayer Reference
+                            <span class="form-hint">Hint should explain where to find this.</span>
+                            </label>
+                            <input class="form-control" id="first-name-2" type="text">
+                        </div>
+                    <label class="block-label" for="vat">
+                        <input id="vat" type="radio" name="radio-inline-group" value="No">
+                        VAT (Value added tax)
+                    </label>
+                        <div class="clearfix js-hidden"></div>
+                        <h3 class="heading-small js-hidden">If you are registered for VAT:</h3>    
+                        <div id="vat-utr" class="panel-indent inline-indent">
+                            <label class="form-label" for="first-name-2">Unique Taxpayer Reference
+                            <span class="form-hint">Hint should explain where to find this.</span>
+                            </label>
+                            <input class="form-control" id="first-name-2" type="text">
+                        </div>
+                </fieldset>
+            </div>
+
+
+			<div class="form-group">
+	   			<a class="button" href="business-details-2" id="next">Save and continue</a>
+   			</div>
+
+
+	   	</form>
+
+
+
+	  </div>
+	  <div class="column-quarter">
+
+	   	{{>includes/amls/action-links}}
+
+	   	<div class="meta-data">
+	   	</div>
+
+		</div>
+	</div>
+
+
+	</main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+  (function($) {
+    $(document).ready(function(){
+      $("#amls-utr").hide();
+      $("#ct-utr").hide();
+      $("#paye-utr").hide();
+      $("#sa-utr").hide();
+      $("#tc-utr").hide();
+      $("#vat-utr").hide();
+      $("#amls").click(function(){
+        $("#amls-utr").show();
+      });
+      $("#ct").click(function(){
+        $("#ct-utr").show();
+      });
+      $("#paye").click(function(){
+        $("#paye-utr").show();
+      });
+      $("#sa").click(function(){
+        $("#sa-utr").show();
+      });
+      $("#tc").click(function(){
+        $("#tc-utr").show();
+      });
+      $("#vat").click(function(){
+        $("#vat-utr").show();
+      });
+    });
+  })(jQuery || window.jQuery);
+</script>
+
+{{/content}}
+
+{{/layout-amls}}

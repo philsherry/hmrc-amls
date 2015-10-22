@@ -1,5 +1,7 @@
 var path = require('path'),
     express = require('express'),
+    bodyParser = require('body-parser'),
+    session = require('express-session'),
     routes = require(__dirname + '/app/routes.js'),
     app = express(),
     port = (process.env.PORT || 3000),
@@ -19,6 +21,14 @@ if (env === 'production') {
   app.use(express.basicAuth(username, password));
 }
 
+app.use(express.favicon(path.join(__dirname, 'govuk_modules', 'govuk_template', 'assets', 'images','favicon.ico'))); 
+
+app.use(bodyParser.urlencoded({extended : true}));
+app.use(session({
+    secret : 'snail'
+}));
+
+
 // Application settings
 app.engine('html', require(__dirname + '/lib/template-engine.js').__express);
 app.set('view engine', 'html');
@@ -30,20 +40,16 @@ app.use('/public', express.static(__dirname + '/public'));
 app.use('/public', express.static(__dirname + '/govuk_modules/govuk_template/assets'));
 app.use('/public', express.static(__dirname + '/govuk_modules/govuk_frontend_toolkit'));
 
-app.use(express.favicon(path.join(__dirname, 'govuk_modules', 'govuk_template', 'assets', 'images','favicon.ico'))); 
-
-
 // send assetPath to all views
 app.use(function (req, res, next) {
   res.locals({'assetPath': '/public/'});
   next();
 });
 
-
-
+// if it doesn't exist, pass the request on to app/routes.js
+routes.bind(app);
 
 // auto render any view that exists
-
 app.get(/^\/([^.]+)$/, function (req, res, next) {
 
 	var path = (req.params[0]);
@@ -58,13 +64,7 @@ app.get(/^\/([^.]+)$/, function (req, res, next) {
 
 });
 
-// if it doesn't exist, pass the request on to app/routes.js
-
-routes.bind(app);
-
-
 // start the app
-
 app.listen(port);
 console.log('');
 console.log('Listening on port ' + port);

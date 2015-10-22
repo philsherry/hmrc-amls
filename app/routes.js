@@ -166,5 +166,62 @@ module.exports = {
 
   });
 
+  // AMLS Routes
+  app.post('/:sprint/business-activities', function (req, res) {
+    var activities = {
+      'asp': {
+        name : 'Accountancy service provider',
+        url : 'asp-1'
+      },
+      'bpsp': {
+        name : 'Bill payment service provider',
+        url : 'bpsp-1'
+      },
+      'eab': {
+        name : 'Estate agent business',
+        url : 'eab-1'
+      },
+      'hvd': {
+        name : 'High value dealer',
+        url : 'hvd-1'
+      },
+      'msb': {
+        name : 'Money service business',
+        url : 'msb-1'
+      },
+      'tcsp': {
+        name : 'Trust and company service provider',
+        url : 'tcsp-1'
+      },
+      'tditpsp' : {
+        name : 'Telephone, digital & IT payment service provider',
+        url : 'tditsp-1'
+      }
+    };
+    req.session.activities = [].concat(req.body.activities).map(function (e) {
+        return activities[e];
+    });
+    res.redirect(req.params.sprint + '/summary');
+  });
+    
+  app.get('/:sprint/summary', function (req, res) {
+    console.log(req.session.activities);
+    res.render(req.params.sprint + '/summary', {
+      activities : req.session.activities
+    });
+  });
+  
   }
 };
+
+
+////// AMLS Specifics /////
+
+//var varActivityASP = '0',
+//    varActivityBPSP = '0',
+//    varActivityEAB = '0',
+//    varActivityHVD = '0',
+//    varActivityMSB = '0',
+//    varActivityTCSP = '0',
+//    varActivityTDITPSP = '0';
+
