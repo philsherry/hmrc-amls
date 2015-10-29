@@ -20,15 +20,13 @@
 	   	<h1 class="heading-large">
 	   		<span class="heading-secondary">
 	   			<!--Question 1.1-->
-	   			Preliminary questions
+	   			High value dealer
 	   		</span>
-	   		Agents
+	   		Your systems
 	   	</h1>
           
-		<form class="form">
-        
-            <div class="form-group">
-                    <label class="form-label">Do you have any agents offering your services?</label>
+		<div class="form-group">
+                    <label class="form-label">Do your systems automatically identify linked cash payments that exceed the HVD threshold in total?</label>
                     <fieldset class="inline">
                         <label class="block-label" for="radio-inline-2-1">
                           <input id="radio-inline-2-1" type="radio" name="radio-inline-group-2" value="Yes">
@@ -39,31 +37,26 @@
                           No
                         </label>
                     
-
+                        <div class="clearfix js-hidden"></div>
+               
                         </fieldset>
                       </div>
+                <div class="form-group">
+                    <a href="hvd-5" id="next" class="button">Save and continue</a>
+                </div>
+                
+                
+			</div>
+            
+             <div class="column-quarter">
 
-
-			<div class="form-group">
-	   			<a class="button" href="summary" id="next">Save and continue</a>
-   			</div>
-
-
-	   	</form>
-
-
-
-	  </div>
-	  <div class="column-quarter">
-
-	   	{{>includes/amls/action-links}}
+                 {{>includes/amls/action-links}}
 
 	   	<div class="meta-data">
 	   	</div>
 
 		</div>
-	</div>
-
+		</div>
 
 	</main>
 
@@ -72,33 +65,18 @@
 <script type="text/javascript">
   (function($) {
     $(document).ready(function(){
-      $("#amls-utr").hide();
-      $("#ct-utr").hide();
-      $("#paye-utr").hide();
-      $("#sa-utr").hide();
-      $("#tc-utr").hide();
-      $("#vat-utr").hide();
-      $("#amls").click(function(){
-        $("#amls-utr").show();
+      $("#uk-yes").hide();
+      $("#radio-inline-2-1").click(function(){
+        $("#uk-yes").show();
       });
-      $("#ct").click(function(){
-        $("#ct-utr").show();
-      });
-      $("#paye").click(function(){
-        $("#paye-utr").show();
-      });
-      $("#sa").click(function(){
-        $("#sa-utr").show();
-      });
-      $("#tc").click(function(){
-        $("#tc-utr").show();
-      });
-      $("#vat").click(function(){
-        $("#vat-utr").show();
+      $("#radio-inline-2-2").click(function(){
+        $("#uk-yes").hide();
       });
     });
   })(jQuery || window.jQuery);
 </script>
+
+
 
 {{/content}}
 
