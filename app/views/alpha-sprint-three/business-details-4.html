@@ -22,19 +22,11 @@
 	   			<!--Question 1.1-->
 	   			About the business
 	   		</span>
-	   		Registered office
+	   		Website
 	   	</h1>
           
-		 <p>Where is your registered office or principal place of business?</p>
-
-		<form class="form">
-      
-
-		   	{{>includes/amls/address}}
-
-			<div class="form-group">
-			
-				<label class="form-label">Do you want to provide an alternative address for correspondence?</label>
+		<div class="form-group">
+                    <label class="form-label">Does your business have a website?</label>
                     <fieldset class="inline">
                         <label class="block-label" for="radio-inline-2-1">
                           <input id="radio-inline-2-1" type="radio" name="radio-inline-group-2" value="Yes">
@@ -44,52 +36,52 @@
                           <input id="radio-inline-2-2" type="radio" name="radio-inline-group-2" value="No">
                           No
                         </label>
-                    </fieldset>
-			
+                    
+                        <div class="clearfix js-hidden"></div>
+                <h3 class="heading-small js-hidden">If you do:</h3>
+                <div id="uk-yes" class="panel-indent inline-indent">
+                    <label class="form-label" for="first-name-2">What is the address of your website?
+                    </label>
+					<input type="text" id="first-name">
+                </div>
+                        </fieldset>
+                      </div>
+                <div class="form-group">
+                    <a href="business-details-5" id="next" class="button">Save and continue</a>
+                </div>
+                
+                
 			</div>
+            
+             <div class="column-quarter">
 
-			<div class="form-group">
-	   			<a class="button" id="next">Save and continue</a>
-   			</div>
-
-
-	   	</form>
-
-
-
-	  </div>
-	  <div class="column-quarter">
-
-	   	{{>includes/amls/action-links}}
+                 {{>includes/amls/action-links}}
 
 	   	<div class="meta-data">
 	   	</div>
 
 		</div>
-	</div>
-
+		</div>
 
 	</main>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
 <script type="text/javascript">
-    //when next button is clicked create a function
-    $('#next').click(function() {
-        //if radio button yes is checked go to home '/'
-        if($('#radio-inline-2-1').is(':checked')){
-            location.href = 'business-details-1a'
-        }
-        // else if radio button no is checked go to /summary page
-        else if ($('#radio-inline-2-2').is(':checked')){
-            location.href = 'business-details-2'
-        }
-        // else if nothing is ticket return false and od nothing
-        else{
-            return false;
-        }
+  (function($) {
+    $(document).ready(function(){
+      $("#uk-yes").hide();
+      $("#radio-inline-2-1").click(function(){
+        $("#uk-yes").show();
+      });
+      $("#radio-inline-2-2").click(function(){
+        $("#uk-yes").hide();
+      });
     });
+  })(jQuery || window.jQuery);
 </script>
+
+
 
 {{/content}}
 

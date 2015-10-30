@@ -66,3 +66,39 @@ a.sign-out:link, a.sign-out:visited {
 }
 
 .percentage-box { width:20%; }
+
+.address-fields input { display:block; margin-bottom: 10px; }
+#postcode { width:15%; }
+
+/// AUTO COMPLETE
+
+    .ui-autocomplete {
+      padding: 0;
+	  width:300px; 
+      list-style: none;
+      background-color: #fff;
+      border: 1px solid #B0BECA;
+      max-height: 250px;
+      overflow-x: hidden;
+    }
+    .ui-autocomplete .ui-menu-item {
+      display: block;
+      padding: 4px 6px;
+      color: #353D44;
+      cursor: pointer;
+    }
+    .ui-autocomplete .ui-menu-item:first-child {
+      border-top: none;
+    }
+    .ui-autocomplete .ui-menu-item.ui-state-focus {
+      background-color: #D5E5F4;
+      color: #161A1C;
+    }
+
+	#country-selector {
+		width:30%;
+		-webkit-appearance: textfield;
+		padding: 1px;
+    	background-color: white;
+    	border: 2px inset;
+	}
