@@ -1,0 +1,140 @@
+{{<layout-amls}}
+
+{{$pageTitle}}
+	Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$content}}
+
+	<main id="content" role="main">
+
+    {{>includes/amls/phase-banner-alpha}}
+    {{>includes/amls/service-header}}
+   
+            
+        <div class="grid-row">
+	  <div class="column-three-quarters">
+
+	  	<a href="#" class="link-back">Back</a>
+
+	   	<h1 class="heading-large">
+	   		<span class="heading-secondary">
+	   			<!--Question 1.1-->
+	   			High value dealer
+	   		</span>
+	   		What specific goods will you be selling?
+	   	</h1>
+          
+		<form class="form" method="post">
+        
+            <div class="form-group">
+                <fieldset>
+                    <span class="form-hint">(Please select all that apply.)</span>
+                    <label class="block-label" >
+                        <input id="asp" type="checkbox" name="activities" value="asp">
+                        Alcohol
+                    </label>
+                        
+                    <label class="block-label" >
+                        <input id="ct" type="checkbox" name="activities" value="bpsp">
+                        Antiques
+                    </label>
+                        
+                    <label class="block-label">
+                        <input id="paye" type="checkbox" name="activities" value="eab">
+                        Cars
+                    </label>
+                        
+                    <label class="block-label">
+                        <input id="sa" type="checkbox" name="activities" value="hvd">
+                        Other motor vehicles
+                    </label>
+                       
+                    <label class="block-label" >
+                        <input id="tc" type="checkbox" name="activities" value="msb">
+                        Caravans
+                    </label>
+                  
+                  <label class="block-label" >
+                        <input id="asp" type="checkbox" name="activities" value="asp">
+                        Jewellery
+                    </label>
+                        
+                    <label class="block-label" >
+                        <input id="ct" type="checkbox" name="activities" value="bpsp">
+                        Gold
+                    </label>
+                        
+                    <label class="block-label" >
+                        <input id="paye" type="checkbox" name="activities" value="eab">
+                        Scrap metals
+                    </label>
+                        
+                    <label class="block-label" >
+                        <input id="sa" type="checkbox" name="activities" value="hvd">
+                        Mobile phones
+                    </label>
+                       
+                    <label class="block-label" >
+                        <input id="tc" type="checkbox" name="activities" value="msb">
+                        Clothing
+                    </label>
+                  
+                    <label class="block-label" >
+                        <input id="other-ps" type="checkbox" name="activities" value="msb">
+                        Other
+                    </label>
+                  
+                  <div class="clearfix js-hidden"></div>
+                    <h3 class="heading-small js-hidden">If other:</h3>
+                    <div id="other" class="panel-indent inline-indent">
+                      <label class="form-label" for="first-name-2">Please specify
+                      </label>
+                      <input class="form-control" id="first-name-2" type="text">
+                </div>
+    
+                       
+                </fieldset>
+            </div>
+
+
+			<div class="form-group">
+<!--	   			<a class="button" href="summary" id="next">Save and continue</a>-->
+              <a class="button" href="hvd-2">Save and continue</a>
+   			</div>
+
+
+	   	</form>
+
+
+
+	  </div>
+	  <div class="column-quarter">
+
+	   	{{>includes/amls/action-links}}
+
+	   	<div class="meta-data">
+	   	</div>
+
+		</div>
+	</div>
+
+
+	</main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+  (function($) {
+    $(document).ready(function(){
+      $("#other").hide();
+      $("#other-ps").click(function(){
+        $("#other").show();
+      });
+    });
+  })(jQuery || window.jQuery);
+</script>
+
+{{/content}}
+
+{{/layout-amls}}

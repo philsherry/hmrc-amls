@@ -1,0 +1,74 @@
+{{<layout-amls}}
+
+{{$pageTitle}}
+	Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$content}}
+
+	<main id="content" role="main">
+
+    {{>includes/amls/phase-banner-alpha}}
+    {{>includes/amls/service-header}}
+   
+            
+        <div class="grid-row">
+	  <div class="column-three-quarters">
+
+	  	<a href="#" class="link-back">Back</a>
+
+	   	<h1 class="heading-large">
+	   		<span class="heading-secondary">
+	   			<!--Question 1.1-->
+	   			High value dealer
+	   		</span>
+	   		What percentage of turnover do you anticipate will come from High Value Cash payments?
+	   	</h1>
+          
+		<div class="form-group">
+                    <div class="inline">
+							<label class="form-label"><input id="received-income" class="form-control percentage-box" type="text"></input>&nbsp;%
+								
+							</label>            
+						</div>
+                      </div>
+                <div class="form-group">
+                    <a href="hvd-6" id="next" class="button">Save and continue</a>
+                </div>
+                
+                
+			</div>
+            
+             <div class="column-quarter">
+
+                 {{>includes/amls/action-links}}
+
+	   	<div class="meta-data">
+	   	</div>
+
+		</div>
+		</div>
+
+	</main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+  (function($) {
+    $(document).ready(function(){
+      $("#uk-yes").hide();
+      $("#radio-inline-2-1").click(function(){
+        $("#uk-yes").show();
+      });
+      $("#radio-inline-2-2").click(function(){
+        $("#uk-yes").hide();
+      });
+    });
+  })(jQuery || window.jQuery);
+</script>
+
+
+
+{{/content}}
+
+{{/layout-amls}}

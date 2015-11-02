@@ -1,0 +1,108 @@
+{{<layout-amls}}
+
+{{$pageTitle}}
+	Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$content}}
+
+	<main id="content" role="main">
+
+    {{>includes/amls/phase-banner-alpha}}
+    {{>includes/amls/service-header}}
+
+		<div class="grid-row">
+            
+            
+			<div class="column-three-quarters">
+                
+                <a href="#" class="link-back">Back</a>
+                        
+                <h1 class="heading-large">
+                    <span class="heading-secondary">
+                        Bank details
+	   		          </span>
+                   Your bank accounts</h1>
+               <p>Please provide details of all bank acounts used by the business for it's MLR activities:</p>
+                
+                </div>
+            
+           <div class="column-quarter">   
+                 {{>includes/amls/action-links}}
+			</div>
+                
+            		</div>
+
+
+		<h2 class="heading-medium">UK accounts</h2>
+                
+                <table class="table-check-answers">
+
+
+	<tbody>
+		<thead>
+		<tr>
+			<td>
+				Account name
+			</td>
+			<td>
+				Type of account
+			</td>
+			<td>
+				Account number
+			</td>
+			<td>
+				Sort code
+			</td>
+			<td class="edit-link">
+
+			</td>
+		</tr>
+		</thead>
+
+	</tbody>
+	</table>
+
+
+		<h2 class="heading-medium">International accounts</h2>
+                
+                <table class="table-check-answers">
+
+
+	<tbody>
+		<thead>
+		<tr>
+			<td>
+				Account name
+			</td>
+			<td>
+				Type of account
+			</td>
+			<td>
+				IBAN
+			</td>
+			<td class="edit-link">
+			
+			</td>
+		</tr>
+		</thead>
+
+	</tbody>
+	</table>
+                
+    <div class="form-group">
+   			<a href="business-details-1" class="button">Add bank account</a> 
+		</div>
+  
+		<div class="form-group">
+        <a href="#">There are currently no bank accounts, continue to next section</a>
+		</div>
+
+	</main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+{{/content}}
+
+{{/layout-amls}}
