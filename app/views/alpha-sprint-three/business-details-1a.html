@@ -22,14 +22,23 @@
 	   			<!--Question 1.1-->
 	   			About the business
 	   		</span>
-	   		Correspondance Address
+	   		What is your correspondence address?
 	   	</h1>
-          
-		 <p>What is your correspondence address?</p>
+
 
 		<form class="form">
       
-
+			
+			<div class="form-group">
+		   		<label class="form-label" for="first-name">Name</label>
+		   		<input type="text" id="first-name">
+		   	</div>
+            
+            <div class="form-group">
+		   		<label class="form-label" for="middle-name">Trading name (optional)</label>
+		   		<input type="text" id="middle-name">
+		   	</div>
+			
 		   	{{>includes/amls/address}}
 
 			<div class="form-group">
