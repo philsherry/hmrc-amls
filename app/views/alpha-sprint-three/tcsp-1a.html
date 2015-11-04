@@ -20,58 +20,74 @@
 	   	<h1 class="heading-large">
 	   		<span class="heading-secondary">
 	   			<!--Question 1.1-->
-	   			Question 1
+	   			Trust and company service provider information
 	   		</span>
-	   		What activities are you applying for?
+	   		Registered office/business address/virtual office services
 	   	</h1>
           
 		<form class="form" method="post">
         
             <div class="form-group">
                 <fieldset>
+					<label>Which of the following will you be offering?</label>
                     <span class="form-hint">(Please select all that apply.)</span>
-                    <label class="block-label" for="asp">
+                    <label class="block-label" >
                         <input id="asp" type="checkbox" name="activities" value="asp">
-                        Accountancy service provider
+                        Call Handling
                     </label>
                         
-                    <label class="block-label" for="ct">
+                    <label class="block-label" >
                         <input id="ct" type="checkbox" name="activities" value="bpsp">
-                        Bill payment service provider
+						Email handling
                     </label>
                         
-                    <label class="block-label" for="paye">
+                    <label class="block-label">
                         <input id="paye" type="checkbox" name="activities" value="eab">
-                        Estate agent business
+                        Email server
                     </label>
                         
-                    <label class="block-label" for="sa">
+                    <label class="block-label">
                         <input id="sa" type="checkbox" name="activities" value="hvd">
-                        High value dealer
+                        Self collect mailboxes
                     </label>
                        
-                    <label class="block-label" for="tc">
+                    <label class="block-label" >
                         <input id="tc" type="checkbox" name="activities" value="msb">
-                        Money service business
+                        Mail forwarding
                     </label>
-                        
-                    <label class="block-label" for="vat">
-                        <input id="vat" type="checkbox" name="activities" value="tcsp">
-                        Trust and company service provider
+                  
+            
+    				<label class="block-label" >
+                        <input id="tc" type="checkbox" name="activities" value="msb">
+                        Receptionist
                     </label>
-                    
-                    <label class="block-label" for="tdit">
-                        <input id="tdit" type="checkbox" name="activities" value="tditpsp">
-                        Telephone, digital &amp; IT payment service provider
+					
+					<label class="block-label" >
+                        <input id="tc" type="checkbox" name="activities" value="msb">
+                        Conference rooms
                     </label>
+					
+					<label class="block-label" >
+                        <input id="other-ps" type="checkbox" name="activities" value="msb">
+                        Other
+                    </label>
+                  
+                  <div class="clearfix js-hidden"></div>
+                    <h3 class="heading-small js-hidden">If other:</h3>
+                    <div id="other" class="panel-indent inline-indent">
+                      <label class="form-label" for="first-name-2">Please specify
+                      </label>
+                      <input class="form-control" id="first-name-2" type="text">
+                </div>
+					
                        
                 </fieldset>
             </div>
 
 
 			<div class="form-group">
-   <!--          <a class="button" href="summary" id="next">Save and continue</a> -->
- 				<input class="button" type="submit" name="submit" value="Save and continue"/> 
+<!--	   			<a class="button" href="summary" id="next">Save and continue</a>-->
+              <a class="button" href="tcsp-2">Save and continue</a>
    			</div>
 
 
@@ -94,37 +110,17 @@
 	</main>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
 <script type="text/javascript">
   (function($) {
     $(document).ready(function(){
-      $("#amls-utr").hide();
-      $("#ct-utr").hide();
-      $("#paye-utr").hide();
-      $("#sa-utr").hide();
-      $("#tc-utr").hide();
-      $("#vat-utr").hide();
-      $("#amls").click(function(){
-        $("#amls-utr").show();
-      });
-      $("#ct").click(function(){
-        $("#ct-utr").show();
-      });
-      $("#paye").click(function(){
-        $("#paye-utr").show();
-      });
-      $("#sa").click(function(){
-        $("#sa-utr").show();
-      });
-      $("#tc").click(function(){
-        $("#tc-utr").show();
-      });
-      $("#vat").click(function(){
-        $("#vat-utr").show();
+      $("#other").hide();
+      $("#other-ps").click(function(){
+        $("#other").show();
       });
     });
   })(jQuery || window.jQuery);
 </script>
+
 
 {{/content}}
 
