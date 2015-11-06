@@ -1,7 +1,9 @@
 var path = require('path'),
     express = require('express'),
     bodyParser = require('body-parser'),
+    basicAuth = require('basic-auth-connect'),
     session = require('express-session'),
+    favicon = require('serve-favicon'),
     routes = require(__dirname + '/app/routes.js'),
     app = express(),
     port = (process.env.PORT || 3000),
@@ -18,31 +20,32 @@ if (env === 'production') {
     console.log('Username or password is not set, exiting.');
     process.exit(1);
   }
-  app.use(express.basicAuth(username, password));
+  app.use(basicAuth(username, password));
 }
 
-app.use(express.favicon(path.join(__dirname, 'govuk_modules', 'govuk_template', 'assets', 'images','favicon.ico'))); 
+app.use(favicon(path.join(__dirname, 'govuk_modules', 'govuk_template', 'assets', 'images','favicon.ico'))); 
 
 app.use(bodyParser.urlencoded({extended : true}));
+
 app.use(session({
     secret : 'snail'
 }));
 
 
 // Application settings
-app.engine('html', require(__dirname + '/lib/template-engine.js').__express);
+app.engine('html', require('./lib/template-engine.js').__express);
 app.set('view engine', 'html');
-app.set('vendorViews', __dirname + '/govuk_modules/govuk_template/views/layouts');
-app.set('views', __dirname + '/app/views');
+app.set('vendorViews', path.join(__dirname, 'govuk_modules', 'govuk_template', 'views', 'layouts'));
+app.set('views', path.join(__dirname, 'app', 'views'));
 
 // Middleware to serve static assets
-app.use('/public', express.static(__dirname + '/public'));
-app.use('/public', express.static(__dirname + '/govuk_modules/govuk_template/assets'));
-app.use('/public', express.static(__dirname + '/govuk_modules/govuk_frontend_toolkit'));
+app.use('/public', express.static(path.join(__dirname, 'public')));
+app.use('/public', express.static(path.join(__dirname, 'govuk_modules', 'govuk_template', 'assets')));
+app.use('/public', express.static(path.join(__dirname, 'govuk_modules', 'govuk_frontend_toolkit')));
 
 // send assetPath to all views
 app.use(function (req, res, next) {
-  res.locals({'assetPath': '/public/'});
+  res.locals.assetPath = '/public/';
   next();
 });
 
@@ -51,9 +54,7 @@ routes.bind(app);
 
 // auto render any view that exists
 app.get(/^\/([^.]+)$/, function (req, res, next) {
-
 	var path = (req.params[0]);
-
 	res.render(path, function(err, html) {
 		if (err) {
 			next();
@@ -61,7 +62,6 @@ app.get(/^\/([^.]+)$/, function (req, res, next) {
 			res.end(html);
 		}
 	});
-
 });
 
 // start the app
