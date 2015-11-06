@@ -213,15 +213,3 @@ module.exports = {
   
   }
 };
-
-
-////// AMLS Specifics /////
-
-//var varActivityASP = '0',
-//    varActivityBPSP = '0',
-//    varActivityEAB = '0',
-//    varActivityHVD = '0',
-//    varActivityMSB = '0',
-//    varActivityTCSP = '0',
-//    varActivityTDITPSP = '0';
-
