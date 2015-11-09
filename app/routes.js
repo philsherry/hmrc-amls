@@ -210,6 +210,15 @@ module.exports = {
       activities : req.session.activities
     });
   });
+
+  app.post('/:sprint/*', function (req, res, next) {
+    var next = req.body['next-page'];
+    if (next) {
+      res.redirect('/' + req.params.sprint + '/' + next);
+    } else {
+      next();
+    }
+  });
   
   }
 };
