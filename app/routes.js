@@ -201,7 +201,7 @@ module.exports = {
     req.session.activities = [].concat(req.body.activities).map(function (e) {
         return activities[e];
     });
-    res.redirect(req.params.sprint + '/summary');
+    res.redirect("/" + req.params.sprint + '/summary');
   });
     
   app.get('/:sprint/summary', function (req, res) {

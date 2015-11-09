@@ -1,0 +1,120 @@
+{{<layout-amls}}
+
+{{$pageTitle}}
+	Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$content}}
+
+	<main id="content" role="main">
+
+    {{>includes/amls/phase-banner-alpha}}
+    {{>includes/amls/service-header}}
+   
+            
+        <div class="grid-row">
+	  <div class="column-three-quarters">
+
+	  	<a href="#" class="link-back">Back</a>
+
+	   	<h1 class="heading-large">
+	   		<span class="heading-secondary">
+	   			<!--Question 1.1-->
+	   			Trust and company service provider information
+	   		</span>
+	   		What specific services will you be offering?
+	   	</h1>
+          
+		<form class="form" method="post">
+        
+            <div class="form-group">
+                <fieldset>
+                    <span class="form-hint">(Please select all that apply.)</span>
+                    <label class="block-label" >
+                        <input id="asp" type="checkbox" name="activities" value="asp">
+                        Nominee shareholders
+                    </label>
+                        
+                    <label class="block-label" >
+                        <input id="ct" type="checkbox" name="activities" value="bpsp">
+						Trustee provider
+                    </label>
+                        
+                    <label class="block-label">
+                        <input id="paye" type="checkbox" name="activities" value="eab">
+                        
+Registered office/business address/virtual office services 
+                    </label>
+                        
+                    <label class="block-label">
+                        <input id="sa" type="checkbox" name="activities" value="hvd">
+                        Company director/secretary/partner provider
+                    </label>
+                       
+                    <label class="block-label" >
+                        <input id="tc" type="checkbox" name="activities" value="msb">
+                        Trust or company formation agent
+                    </label>
+                  
+            
+    
+                       
+                </fieldset>
+            </div>
+
+
+			<div class="form-group">
+<!--	   			<a class="button" href="summary" id="next">Save and continue</a>-->
+              <a class="button" id="next">Save and continue</a>
+   			</div>
+
+
+	   	</form>
+
+
+
+	  </div>
+	  <div class="column-quarter">
+
+	   	{{>includes/amls/action-links}}
+
+	   	<div class="meta-data">
+	   	</div>
+
+		</div>
+	</div>
+
+
+	</main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+    //when next button is clicked create a function
+    $('#next').click(function() {
+        //if radio button yes is checked go to home '/'
+        
+		// else if radio button no is checked go to /summary page
+        if ($('#tc').is(':checked') && $('#paye').is(':checked')){
+            location.href = 'tcsp-1a-2'
+        }
+		
+		else if($('#paye').is(':checked')){
+            location.href = 'tcsp-1a'
+        }
+		// else if radio button no is checked go to /summary page
+        else if ($('#tc').is(':checked')){
+            location.href = 'tcsp-1b'
+        }
+		
+        // else if radio button no is checked go to /summary page
+        else {
+            location.href = 'tcsp-2'
+        }
+
+    });
+</script>
+
+{{/content}}
+
+{{/layout-amls}}

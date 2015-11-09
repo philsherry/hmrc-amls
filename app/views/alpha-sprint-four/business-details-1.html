@@ -10,68 +10,78 @@
 
     {{>includes/amls/phase-banner-alpha}}
     {{>includes/amls/service-header}}
+   
+            
+        <div class="grid-row">
+	  <div class="column-three-quarters">
 
-		<div class="grid-row">
-            
-            
-			<div class="column-three-quarters">
-                
-                <a href="#" class="link-back">Back</a>
-                        
-                <h1 class="heading-large">
-                    <span class="heading-secondary">
-                        Bank details
-	   		          </span>
-                   Do you use any bank accounts for your MLR activities?</h1>
-               <p>This includes business, personal and accounts belonging to other businesses.</p>
-                
-				
-				<div class="form-group">
-                    <fieldset>
+	  	<a href="#" class="link-back">Back</a>
+
+	   	<h1 class="heading-large">
+	   		<span class="heading-secondary">
+	   			<!--Question 1.1-->
+	   			About the business
+	   		</span>
+	   		Where is your registered office or principal place of business?
+	   	</h1>
+
+		<form class="form">
+      
+
+		   	{{>includes/amls/address}}
+
+			<div class="form-group">
+			
+				<label class="form-label">Do you want to provide an alternative address for correspondence?</label>
+                    <fieldset class="inline">
                         <label class="block-label" for="radio-inline-2-1">
                           <input id="radio-inline-2-1" type="radio" name="radio-inline-group-2" value="Yes">
-                          Yes, one bank account is used
-                        </label>
-						 <label class="block-label" for="radio-inline-2-1">
-                          <input id="radio-inline-2-1" type="radio" name="radio-inline-group-2" value="Yes">
-                          Yes, multiple bank accounts are used
+                          Yes
                         </label>
                         <label class="block-label" for="radio-inline-2-2">
                           <input id="radio-inline-2-2" type="radio" name="radio-inline-group-2" value="No">
                           No
                         </label>
                     </fieldset>
-                </div>
-
-                <div class="form-group">
-                    <a id="next" class="button">Save and continue</a>
-                </div>
-				
-				
-                </div>
-            
-           <div class="column-quarter">   
-                 {{>includes/amls/action-links}}
+			
 			</div>
-                
-            		</div>
+
+			<div class="form-group">
+	   			<a class="button" id="next">Save and continue</a>
+   			</div>
 
 
-		
+	   	</form>
+
+
+
+	  </div>
+	  <div class="column-quarter">
+
+	   	{{>includes/amls/action-links}}
+
+	   	<div class="meta-data">
+	   	</div>
+
+		</div>
+	</div>
+
+
 	</main>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
 <script type="text/javascript">
     //when next button is clicked create a function
     $('#next').click(function() {
         //if radio button yes is checked go to home '/'
         if($('#radio-inline-2-1').is(':checked')){
-            location.href = 'bank-details-2'
+            location.href = 'business-details-1a'
         }
         // else if radio button no is checked go to /summary page
         else if ($('#radio-inline-2-2').is(':checked')){
-            location.href = 'summary-bank-details-1'
-		}
+            location.href = 'business-details-2'
+        }
         // else if nothing is ticket return false and od nothing
         else{
             return false;

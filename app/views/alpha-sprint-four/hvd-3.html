@@ -1,0 +1,112 @@
+{{<layout-amls}}
+
+{{$pageTitle}}
+	Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$content}}
+
+	<main id="content" role="main">
+
+    {{>includes/amls/phase-banner-alpha}}
+    {{>includes/amls/service-header}}
+   
+            
+        <div class="grid-row">
+	  <div class="column-three-quarters">
+
+	  	<a href="#" class="link-back">Back</a>
+
+	   	<h1 class="heading-large">
+	   		<span class="heading-secondary">
+	   			<!--Question 1.1-->
+	   			High value dealer
+	   		</span>
+	   		Has the business already accepted any cash payments over the threshold?
+	   	</h1>
+          
+		<div class="form-group">
+                
+                    <fieldset class="inline">
+                        <label class="block-label" for="radio-inline-2-1">
+                          <input id="radio-inline-2-1" type="radio" name="radio-inline-group-2" value="Yes">
+                          Yes
+                        </label>
+                        <label class="block-label" for="radio-inline-2-2">
+                          <input id="radio-inline-2-2" type="radio" name="radio-inline-group-2" value="No">
+                          No
+                        </label>
+                    
+                        <div class="clearfix js-hidden"></div>
+                <h3 class="heading-small js-hidden">If you have:</h3>
+                <div id="uk-yes" class="panel-indent inline-indent">
+                    <label class="form-label" for="first-name-2">What was the date of the first?
+                    </label>
+                        <div class="form-group">
+                          <fieldset>
+
+                            <div class="form-date">
+
+                              <p class="form-hint">For example, 31 3 1980</p>
+
+                              <div class="form-group form-group-day">
+                                <label for="dob-day">Day</label>
+                                <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
+                              </div>
+
+                              <div class="form-group form-group-month">
+                                <label for="dob-month">Month</label>
+                                <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+                              </div>
+
+                              <div class="form-group form-group-year">
+                                <label for="dob-year">Year</label>
+                                <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2014">
+                              </div>
+                            </div>
+
+                          </fieldset>
+                        </div>
+                </div>
+                        </fieldset>
+                      </div>
+                <div class="form-group">
+                    <a href="hvd-4" id="next" class="button">Save and continue</a>
+                </div>
+                
+                
+			</div>
+            
+             <div class="column-quarter">
+
+                 {{>includes/amls/action-links}}
+
+	   	<div class="meta-data">
+	   	</div>
+
+		</div>
+		</div>
+
+	</main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+  (function($) {
+    $(document).ready(function(){
+      $("#uk-yes").hide();
+      $("#radio-inline-2-1").click(function(){
+        $("#uk-yes").show();
+      });
+      $("#radio-inline-2-2").click(function(){
+        $("#uk-yes").hide();
+      });
+    });
+  })(jQuery || window.jQuery);
+</script>
+
+
+
+{{/content}}
+
+{{/layout-amls}}
