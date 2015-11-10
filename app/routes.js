@@ -205,16 +205,21 @@ module.exports = {
   });
     
   app.get('/:sprint/summary', function (req, res) {
-    console.log(req.session.activities);
     res.render(req.params.sprint + '/summary', {
       activities : req.session.activities
     });
   });
 
-  app.post('/:sprint/*', function (req, res, next) {
-    var next = req.body['next-page'];
-    if (next) {
-      res.redirect('/' + req.params.sprint + '/' + next);
+  app.get('/:sprint/:page', function (req, res) {
+    res.render(req.params.sprint + '/' + req.params.page,
+      req.session[req.params.page]);
+  });
+
+  app.post('/:sprint/:page', function (req, res, next) {
+    req.session[req.params.page] = req.body;
+    var nextPage = req.body['next-page'];
+    if (nextPage) {
+      res.redirect('/' + req.params.sprint + '/' + nextPage);
     } else {
       next();
     }
