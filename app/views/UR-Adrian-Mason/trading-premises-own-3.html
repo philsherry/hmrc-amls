@@ -1,0 +1,160 @@
+{{<layout-amls}}
+
+{{$pageTitle}}
+	Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$content}}
+
+	<main id="content" role="main">
+
+    {{>includes/amls/phase-banner-alpha}}
+    {{>includes/amls/service-header}}
+   
+            
+        <div class="grid-row">
+	  <div class="column-three-quarters">
+
+	  	<a href="#" class="link-back">Back</a>
+
+	   	<h1 class="heading-large">
+	   		<span class="heading-secondary">
+	   			<!--Question 1.1-->
+	   			Trading premises
+	   		</span>
+	   		Trading start date
+	   	</h1>
+
+		  
+		<form class="form">
+      		<div class="form-group">
+                 <div class="form-date">
+					<label>What date did you, or do you intend to, start trading from this premises?</label>
+					<p class="form-hint">For example, 31 3 1980</p>
+
+					<div class="form-group form-group-day">
+					  <label for="dob-day">Day</label>
+					  <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
+					</div>
+
+					<div class="form-group form-group-month">
+					  <label for="dob-month">Month</label>
+					  <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+					</div>
+
+					<div class="form-group form-group-year">
+					  <label for="dob-year">Year</label>
+					  <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2014">
+					</div>
+				  </div>
+			</div>
+
+			<div class="form-group">
+	   			<a class="button" href="business-details-2" id="next">Save and continue</a>
+   			</div>
+
+
+	   	</form>
+
+
+	  
+		  <table class="table-check-answers">
+			  <thead>
+		<tr>
+			<th class="section-name complete" colspan="2">				
+				<h2>Premises
+				</h2>
+			</th>
+			<th class="edit-link">
+				<a href="business-details-1" class="">
+					Edit
+				</a>
+			</th>
+		</tr>
+	</thead>
+			  <tbody>
+				<tr>
+					<td class="question">
+						Trading name
+					</td>
+					<td class="answer">
+						ACME Limited
+					</td>
+					<td class="edit-link">
+					</td>
+				</tr>
+				<tr>
+					<td class="question">
+						Registered office or principal place of business
+					</td>
+					<td class="answer">
+						Your organisation's<br>
+						Registered address<br>
+						Town<br>
+						County<br>
+						AB1 2DE
+					</td>
+					<td class="edit-link">
+					</td>
+				</tr>
+				<tr>
+					<td class="question">
+						Residential
+					</td>
+					<td class="answer">
+						Yes
+					</td>
+					<td class="edit-link">
+					</td>
+				</tr>
+			  </tbody>
+			   <thead>
+		<tr>
+			<th class="section-name complete" colspan="2">				
+				<h2>Trading activities
+				</h2>
+			</th>
+			<th class="edit-link">
+				<a href="business-details-1" class="">
+					Edit
+				</a>
+			</th>
+		</tr>
+	</thead>
+			  <tbody>
+				<tr>
+					<td class="question">
+						Which MLR activities do you conduct at this address?
+					</td>
+					<td class="answer">
+						Estate agent business
+					</td>
+					<td class="edit-link">
+					</td>
+				</tr>
+			  </tbody>
+		  </table>
+		  
+		  </table>
+		  
+
+	  </div>
+	  <div class="column-quarter">
+
+	   	{{>includes/amls/action-links}}
+
+	   	<div class="meta-data">
+	   	</div>
+
+		</div>
+	</div>
+
+
+	</main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+{{/content}}
+
+{{/layout-amls}}

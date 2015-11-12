@@ -11,30 +11,24 @@
     {{>includes/amls/phase-banner-alpha}}
     {{>includes/amls/service-header}}
 
-		<div class="grid-row">
+		<div class="grid-row">        
             
-            
-			<div class="column-three-quarters">
-                
-                <a href="#" class="link-back">Back</a>
-                        
-                <h1 class="heading-large">
-                    <span class="heading-secondary">
-                        Bank details
-	   		          </span>
-                   Do you use any bank accounts for your MLR activities?</h1>
-               <p>This includes business, personal and accounts belonging to other businesses.</p>
-                
-				
-				<div class="form-group">
-                    <fieldset>
+				  <div class="column-three-quarters">
+
+	  	<a href="#" class="link-back">Back</a>
+
+	   	<h1 class="heading-large">
+	   		<span class="heading-secondary">
+	   			<!--Question 1.1-->
+	   			About you
+	   		</span>
+	   		Are you employed within the business?
+	   	</h1>
+                <div class="form-group">
+                    <fieldset class="inline">
                         <label class="block-label" for="radio-inline-2-1">
                           <input id="radio-inline-2-1" type="radio" name="radio-inline-group-2" value="Yes">
-                          Yes, one bank account is used
-                        </label>
-						 <label class="block-label" for="radio-inline-2-3">
-                          <input id="radio-inline-2-3" type="radio" name="radio-inline-group-2" value="Yes">
-                          Yes, multiple bank accounts are used
+                          Yes
                         </label>
                         <label class="block-label" for="radio-inline-2-2">
                           <input id="radio-inline-2-2" type="radio" name="radio-inline-group-2" value="No">
@@ -46,18 +40,20 @@
                 <div class="form-group">
                     <a id="next" class="button">Save and continue</a>
                 </div>
-				
-				
-                </div>
-            
-           <div class="column-quarter">   
-                 {{>includes/amls/action-links}}
-			</div>
                 
-            		</div>
+                
+			</div>
+            
+             <div class="column-quarter">
 
+                 {{>includes/amls/action-links}}
 
-		
+	   	<div class="meta-data">
+	   	</div>
+
+		</div>
+		</div>
+
 	</main>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -66,22 +62,20 @@
     $('#next').click(function() {
         //if radio button yes is checked go to home '/'
         if($('#radio-inline-2-1').is(':checked')){
-            location.href = 'bank-details-2'
+            location.href = 'about-you-2a'
         }
         // else if radio button no is checked go to /summary page
-        else if ($('#radio-inline-2-3').is(':checked')){
-            location.href = 'summary-bank-details-2'
-		}
-		// else if radio button no is checked go to /summary page
         else if ($('#radio-inline-2-2').is(':checked')){
-            location.href = 'responsible-persons-1'
-		}
+            location.href = 'about-you-2b'
+        }
         // else if nothing is ticket return false and od nothing
         else{
             return false;
         }
     });
 </script>
+
+
 
 {{/content}}
 

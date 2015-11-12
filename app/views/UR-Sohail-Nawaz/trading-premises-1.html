@@ -20,25 +20,33 @@
                         
                 <h1 class="heading-large">
                     <span class="heading-secondary">
-                        Bank details
+                        Trading premises
 	   		          </span>
-                   Do you use any bank accounts for your MLR activities?</h1>
-               <p>This includes business, personal and accounts belonging to other businesses.</p>
+                   What trading premises do you use for your MLR business activities?</h1>
+				
+				<details class="form-group">
+    <summary><span class="summary">What are trading premises?</span></summary>
+    <div class="panel-indent">
+        <p>
+            Trading premises are any premises you use to ... description needed here from business for clarification.
+        </p>
+    </div>
+</details>  
                 
 				
 				<div class="form-group">
                     <fieldset>
                         <label class="block-label" for="radio-inline-2-1">
                           <input id="radio-inline-2-1" type="radio" name="radio-inline-group-2" value="Yes">
-                          Yes, one bank account is used
+                          Your own business trading premises
                         </label>
 						 <label class="block-label" for="radio-inline-2-3">
                           <input id="radio-inline-2-3" type="radio" name="radio-inline-group-2" value="Yes">
-                          Yes, multiple bank accounts are used
+                          Other business's premises, where you have a contractual agreement for them to act as your agent and offer your services
                         </label>
                         <label class="block-label" for="radio-inline-2-2">
                           <input id="radio-inline-2-2" type="radio" name="radio-inline-group-2" value="No">
-                          No
+                          A mixture of your own and other business's premises.
                         </label>
                     </fieldset>
                 </div>
@@ -71,10 +79,6 @@
         // else if radio button no is checked go to /summary page
         else if ($('#radio-inline-2-3').is(':checked')){
             location.href = 'summary-bank-details-2'
-		}
-		// else if radio button no is checked go to /summary page
-        else if ($('#radio-inline-2-2').is(':checked')){
-            location.href = 'responsible-persons-1'
 		}
         // else if nothing is ticket return false and od nothing
         else{

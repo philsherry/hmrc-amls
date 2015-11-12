@@ -1,0 +1,179 @@
+{{<layout-amls}}
+
+{{$pageTitle}}
+	Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$content}}
+
+	<main id="content" role="main">
+
+    {{>includes/amls/phase-banner-alpha}}
+    {{>includes/amls/service-header}}
+
+		<div class="grid-row">
+            
+            
+			<div class="column-three-quarters">
+                        
+                <h1 class="heading-large">
+                    <span class="heading-secondary">
+                        Service
+	   		          </span>
+                    Your AMLS registration</h1>
+                <p>Complete the sections below. Progress can be saved by using the save and continue button on each page. Once you start the application, you have 28 days to complete it.</p>
+                
+                
+                <table class="table-summary">
+            <thead>
+				<tr>
+					<th class="section-name complete">
+						<h2>
+							<a href="business-activities">
+							Business activities
+							</a>
+						</h2>
+					</th>
+					<th class="section-status">
+						<span class="status complete">Done</span>
+					</th>
+				</tr>
+			</thead>
+
+			<thead>
+				<tr>
+					<th class="section-name ">
+						<h2>
+							<a href="business-details-1">
+							About the business
+							</a>
+						</h2>
+					</th>
+					<th class="section-status">
+					</th>
+				</tr>
+			</thead>
+
+                  
+                  {{#activities}}
+            <thead>
+				<tr>
+					<th class="section-name ">
+						<h2>
+							<a href="{{url}}">
+							{{name}} information
+							</a>
+						</h2>
+					</th>
+					<th class="section-status">
+					</th>
+				</tr>
+			</thead>
+                  {{/activities}}
+                  
+			<thead>
+				<tr>
+					<th class="section-name ">
+						<h2>
+							<a href="trading-premises-1">
+							Trading premises
+							</a>
+						</h2>
+					</th>
+					<th class="section-status">
+					</th>
+				</tr>
+			</thead>
+                  
+			<thead>
+				<tr>
+					<th class="section-name ">
+						<h2>
+							<a href="bank-details-1">
+							Bank account details
+							</a>
+						</h2>
+					</th>
+					<th class="section-status">
+					</th>
+				</tr>
+			</thead>                  
+                  
+			<thead>
+				<tr>
+					<th class="section-name ">
+						<h2>
+							<a href="5/question-page">
+							Responsible persons
+							</a>
+						</h2>
+					</th>
+					<th class="section-status">
+					</th>
+				</tr>
+			</thead>
+                
+                  
+            <thead>
+				<tr>
+					<th class="section-name complete">
+						<h2>
+							<a href="about-you-1">
+							About you
+							</a>
+						</h2>
+					</th>
+					<th class="section-status">
+					</th>
+				</tr>
+			</thead>
+                  
+                  
+            <thead>
+				<tr>
+					<th class="section-name ">
+						<h2>
+							<a href="payment">
+							Payment
+							</a>
+						</h2>
+					</th>
+					<th class="section-status">
+					</th>
+				</tr>
+			</thead>
+                  
+                  
+                  <thead>
+				<tr>
+					<th class="section-name locked">
+						<h2>
+							<span class="locked" title="You can't complete this item right now">
+                            Declaration (locked)
+                          </span>
+						</h2>
+					</th>
+					<th class="section-status">
+					</th>
+				</tr>
+			</thead>
+
+		</table>
+  
+                
+			</div>
+            
+           <div class="column-quarter">   
+                 {{>includes/amls/action-links}}
+			</div>
+            
+		</div>
+
+	</main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+{{/content}}
+
+{{/layout-amls}}
