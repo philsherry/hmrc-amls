@@ -15,7 +15,7 @@
         <div class="grid-row">
 	  <div class="column-three-quarters">
 
-	  	<a href="#" class="link-back">Back</a>
+	  	<a href="../summary" class="link-back">Back</a>
 
 	   	<h1 class="heading-large">
 	   		<span class="heading-secondary">
@@ -27,7 +27,6 @@
 
 		<form class="form">
       
-
 		   	{{>includes/amls/address}}
 
 			<div class="form-group">
@@ -35,11 +34,11 @@
 				<label class="form-label">Do you want to provide an alternative address for correspondence?</label>
                     <fieldset class="inline">
                         <label class="block-label" for="radio-inline-2-1">
-                          <input id="radio-inline-2-1" type="radio" name="radio-inline-group-2" value="Yes">
+                          <input id="radio-inline-2-1" type="radio" name="next-page" value="1a">
                           Yes
                         </label>
                         <label class="block-label" for="radio-inline-2-2">
-                          <input id="radio-inline-2-2" type="radio" name="radio-inline-group-2" value="No">
+                          <input id="radio-inline-2-2" type="radio" name="next-page" value="2">
                           No
                         </label>
                     </fieldset>
@@ -47,7 +46,7 @@
 			</div>
 
 			<div class="form-group">
-	   			<a class="button" id="next">Save and continue</a>
+                <input type="submit" class="button" value="Check your answers">
    			</div>
 
 

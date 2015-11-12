@@ -16,7 +16,7 @@
             
 			<div class="column-three-quarters">
                 
-                <a href="#" class="link-back">Back</a>
+                <a href="../summary" class="link-back">Back</a>
                         
                 <h1 class="heading-large">
                     <span class="heading-secondary">
@@ -26,7 +26,9 @@
                <p>This includes business, personal and accounts belonging to other businesses.</p>
                 
 				
-				<div class="form-group">
+        <form method="post">
+          <input type="hidden" name="next-page" value="2">
+  				<div class="form-group">
                     <fieldset>
                         <label class="block-label" for="radio-inline-2-1">
                           <input id="radio-inline-2-1" type="radio" name="radio-inline-group-2" value="Yes">
@@ -44,8 +46,9 @@
                 </div>
 
                 <div class="form-group">
-                    <a id="next" class="button">Save and continue</a>
+                  <input type="submit" class="button" value="Check your answers">
                 </div>
+              </form>
 				
 				
                 </div>

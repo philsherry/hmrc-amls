@@ -10,21 +10,26 @@
 
     {{>includes/amls/phase-banner-alpha}}
     {{>includes/amls/service-header}}
-
-		<div class="grid-row">        
+   
             
-				  <div class="column-three-quarters">
+        <div class="grid-row">
+	  <div class="column-three-quarters">
 
-	  	<a href="#" class="link-back">Back</a>
+	  	<a href="5" class="link-back">Back</a>
 
 	   	<h1 class="heading-large">
 	   		<span class="heading-secondary">
 	   			<!--Question 1.1-->
-	   			About you
+	   			About the business
 	   		</span>
-	   		Are you employed within the business?
+	   		Is your business registered for VAT?
 	   	</h1>
-                <div class="form-group">
+
+      <form method="post">
+
+        <input type="hidden" name="next-page" value="summary">
+          
+      		<div class="form-group">
                     <fieldset class="inline">
                         <label class="block-label" for="radio-inline-2-1">
                           <input id="radio-inline-2-1" type="radio" name="radio-inline-group-2" value="Yes">
@@ -34,15 +39,23 @@
                           <input id="radio-inline-2-2" type="radio" name="radio-inline-group-2" value="No">
                           No
                         </label>
-                    </fieldset>
+                    
+                        <div class="clearfix js-hidden"></div>
+                <h3 class="heading-small js-hidden">If you are:</h3>
+                <div id="uk-yes" class="panel-indent inline-indent">
+                    <label class="form-label" for="first-name-2">What is your VAT registraton number?
+                    </label>
+					<input type="text" id="first-name">
                 </div>
-
+                        </fieldset>
+                      </div>
                 <div class="form-group">
-                    <a id="next" class="button">Save and continue</a>
+                    <input type="submit" class="button" value="Check your answers">
                 </div>
                 
                 
-			</div>
+      			</div>
+      </form>
             
              <div class="column-quarter">
 
@@ -57,22 +70,19 @@
 	</main>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
 <script type="text/javascript">
-    //when next button is clicked create a function
-    $('#next').click(function() {
-        //if radio button yes is checked go to home '/'
-        if($('#radio-inline-2-1').is(':checked')){
-            location.href = 'about-you-2a'
-        }
-        // else if radio button no is checked go to /summary page
-        else if ($('#radio-inline-2-2').is(':checked')){
-            location.href = 'about-you-2b'
-        }
-        // else if nothing is ticket return false and od nothing
-        else{
-            return false;
-        }
+  (function($) {
+    $(document).ready(function(){
+      $("#uk-yes").hide();
+      $("#radio-inline-2-1").click(function(){
+        $("#uk-yes").show();
+      });
+      $("#radio-inline-2-2").click(function(){
+        $("#uk-yes").hide();
+      });
     });
+  })(jQuery || window.jQuery);
 </script>
 
 

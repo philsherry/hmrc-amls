@@ -1,7 +1,8 @@
 module.exports = {
   bind : function (app) {
 
-  var fs = require('fs');
+  var fs = require('fs'),
+    _ = require('underscore');
 
 
   // This builds the index navigation
@@ -166,47 +167,45 @@ module.exports = {
 
   });
 
+  console.log('FOO');
+
   // AMLS Routes
   app.post('/:sprint/business-activities', function (req, res) {
-    var activities = {
-      'asp': {
-        name : 'Accountancy service provider',
-        url : 'asp-1'
-      },
-      'bpsp': {
-        name : 'Bill payment service provider',
-        url : 'bpsp-1'
-      },
-      'eab': {
-        name : 'Estate agent business',
-        url : 'eab-1'
-      },
-      'hvd': {
-        name : 'High value dealer',
-        url : 'hvd-1'
-      },
-      'msb': {
-        name : 'Money service business',
-        url : 'msb-1'
-      },
-      'tcsp': {
-        name : 'Trust and company service provider',
-        url : 'tcsp-1'
-      },
-      'tditpsp' : {
-        name : 'Telephone, digital & IT payment service provider',
-        url : 'tditsp-1'
-      }
-    };
-    req.session.activities = [].concat(req.body.activities).map(function (e) {
-        return activities[e];
-    });
+    req.session.sections = 
+      _.chain(require('./sections.js').slice())
+      .filter(function (e, i) {
+        return i > 1 && i < 9 ?
+          _.find(req.body.activities, function (section) {
+            return section == i;
+          }) : true;
+      })
+      .value();
+
     res.redirect("/" + req.params.sprint + '/summary');
+  });
+
+  function getUrl(arr, memo) {
+    var m = memo || '/';
+    return arr.reduce(function (m, n, i) {
+      return i === 1 ?
+        m + '/' + n :
+        m + n;
+    }, m);
+  }
+
+  function fromReq(req, memo) {
+    getUrl([req.sprint, req.section, req.page], memo);
+  }
+
+  app.get('/:sprint/:section/:page', function (req, res) {
+    res.render(fromReq(req), {
+
+    });
   });
     
   app.get('/:sprint/summary', function (req, res) {
     res.render(req.params.sprint + '/summary', {
-      activities : req.session.activities
+      sections : req.session.sections
     });
   });
 
