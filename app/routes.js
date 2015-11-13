@@ -2,6 +2,7 @@ module.exports = {
   bind : function (app) {
 
   var fs = require('fs'),
+    path = require('path'),
     _ = require('underscore');
 
 
@@ -167,7 +168,10 @@ module.exports = {
 
   });
 
-  console.log('FOO');
+
+
+
+
 
   // AMLS Routes
   app.post('/:sprint/business-activities', function (req, res) {
@@ -187,20 +191,46 @@ module.exports = {
   function getUrl(arr, memo) {
     var m = memo || '/';
     return arr.reduce(function (m, n, i) {
-      return i === 1 ?
-        m + '/' + n :
-        m + n;
+      return i === 0 ?
+        m + n :
+        m + '/' + n;
     }, m);
   }
 
   function fromReq(req, memo) {
-    getUrl([req.sprint, req.section, req.page], memo);
+    return getUrl([
+      req.params.sprint,
+      req.params.section,
+      req.params.page
+    ], memo);
+  }
+
+  function toFilePath(p) {
+    return path.join.apply(null, p.split('/'));
   }
 
   app.get('/:sprint/:section/:page', function (req, res) {
-    res.render(fromReq(req), {
+    res.render(toFilePath(fromReq(req)));
+  });
 
-    });
+  app.post('/:sprint/:section/summary', function (req, res) {
+    var sections = req.session.sections.entries(), section;
+    //TODO
+  });
+
+  app.post('/:sprint/:section/:page', function (req, res, next) {
+    req.session[req.params.section] = req.session[req.params.section] || {};
+    req.session[req.params.section][req.params.page] = req.body;
+    var nextPage = req.body['next-page'];
+    if (nextPage) {
+      res.redirect(
+        '/' + req.params.sprint +
+        '/' + req.params.section +
+        '/' + nextPage
+      );
+    } else {
+      next();
+    }
   });
     
   app.get('/:sprint/summary', function (req, res) {
@@ -213,16 +243,5 @@ module.exports = {
     res.render(req.params.sprint + '/' + req.params.page,
       req.session[req.params.page]);
   });
-
-  app.post('/:sprint/:page', function (req, res, next) {
-    req.session[req.params.page] = req.body;
-    var nextPage = req.body['next-page'];
-    if (nextPage) {
-      res.redirect('/' + req.params.sprint + '/' + nextPage);
-    } else {
-      next();
-    }
-  });
-  
   }
 };
