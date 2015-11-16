@@ -209,13 +209,25 @@ module.exports = {
     return path.join.apply(null, p.split('/'));
   }
 
+  function nextSection(sections, section) {
+    var sections = sections.entries(), current;
+    do {
+      current = sections.next();
+      if (current.value[1].section === section)
+        return sections.next().value[1];
+    } while (!current.done)
+  }
+
   app.get('/:sprint/:section/:page', function (req, res) {
     res.render(toFilePath(fromReq(req)));
   });
 
   app.post('/:sprint/:section/summary', function (req, res) {
-    var sections = req.session.sections.entries(), section;
-    //TODO
+    var next = nextSection(req.session.sections, req.params.section);
+    res.redirect(
+      '/' + req.params.sprint +
+      '/' + next.link
+    );
   });
 
   app.post('/:sprint/:section/:page', function (req, res, next) {
