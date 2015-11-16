@@ -23,27 +23,27 @@
                         Bank details
 	   		          </span>
                    Add a bank account</h1>
-				
-				
+				<form method="post">
+				<input type="hidden" name="next-page" value="summary-3">
+					
 				<div class="form-group">
 					<label class="form-label" for="first-name">Account name</label>
 					<input type="text" id="first-name">
 				</div>
-              
+
 				
-				
-				<div class="form-group">
-								<label class="form-label" for="first-name">Sort code
-								<span class="form-hint">For example, 20-42-66</span>
-								</label>
+				 <div class="form-group">
+								<label class="form-label" for="first-name">IBAN number</label>
 								<input type="text" id="first-name">
+							</div>
+							  <p>or</p>
+							<div class="form-group">
+								<label class="form-label" for="middle-name">Bank account number</label>
+								<input type="text" id="middle-name">
 							</div>
 
-                            <div class="form-group">
-								<label class="form-label" for="first-name">Account number</label>
-								<input type="text" id="first-name">
-							</div>
 				
+				                
 				<div class="form-group">
                 
                     <fieldset>
@@ -65,12 +65,11 @@
                         </fieldset>
                       </div>
 				
-				
                 <div class="form-group">
-                    <a href="summary-bank-details-3" id="next" class="button">Save and continue</a>
+                    <input type="submit" class="button" value="Save and continue">
                 </div>
 				
-				
+				</form>
                 </div>
             
            <div class="column-quarter">   
