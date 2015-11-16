@@ -24,8 +24,12 @@
 	   		</span>
 	   		Has the business already accepted any cash payments over the threshold?
 	   	</h1>
+
+      <form method="post">
           
-		<div class="form-group">
+        <input type="hidden" name="next-page" value="4">
+
+    		<div class="form-group">
                 
                     <fieldset class="inline">
                         <label class="block-label" for="radio-inline-2-1">
@@ -71,8 +75,10 @@
                         </fieldset>
                       </div>
                 <div class="form-group">
-                    <a href="hvd-4" id="next" class="button">Save and continue</a>
+                  <input type="submit" class="button" value="Save and continue">
                 </div>
+                
+              </form>
                 
                 
 			</div>
