@@ -1,7 +1,9 @@
 module.exports = {
   bind : function (app) {
 
-  var fs = require('fs');
+  var fs = require('fs'),
+    path = require('path'),
+    _ = require('underscore');
 
 
   // This builds the index navigation
@@ -166,47 +168,86 @@ module.exports = {
 
   });
 
+
+
+
+
+
   // AMLS Routes
   app.post('/:sprint/business-activities', function (req, res) {
-    var activities = {
-      'asp': {
-        name : 'Accountancy service provider',
-        url : 'asp-1'
-      },
-      'bpsp': {
-        name : 'Bill payment service provider',
-        url : 'bpsp-1'
-      },
-      'eab': {
-        name : 'Estate agent business',
-        url : 'eab-1'
-      },
-      'hvd': {
-        name : 'High value dealer',
-        url : 'hvd-1'
-      },
-      'msb': {
-        name : 'Money service business',
-        url : 'msb-1'
-      },
-      'tcsp': {
-        name : 'Trust and company service provider',
-        url : 'tcsp-1'
-      },
-      'tditpsp' : {
-        name : 'Telephone, digital & IT payment service provider',
-        url : 'tditsp-1'
-      }
-    };
-    req.session.activities = [].concat(req.body.activities).map(function (e) {
-        return activities[e];
-    });
+    req.session.sections = 
+      _.chain(require('./sections.js').slice())
+      .filter(function (e, i) {
+        return i > 1 && i < 9 ?
+          _.find(req.body.activities, function (section) {
+            return section == i;
+          }) : true;
+      })
+      .value();
+
     res.redirect("/" + req.params.sprint + '/summary');
+  });
+
+  function getUrl(arr, memo) {
+    var m = memo || '/';
+    return arr.reduce(function (m, n, i) {
+      return i === 0 ?
+        m + n :
+        m + '/' + n;
+    }, m);
+  }
+
+  function fromReq(req, memo) {
+    return getUrl([
+      req.params.sprint,
+      req.params.section,
+      req.params.page
+    ], memo);
+  }
+
+  function toFilePath(p) {
+    return path.join.apply(null, p.split('/'));
+  }
+
+  function nextSection(sections, section) {
+    var sections = sections.entries(), current;
+    do {
+      current = sections.next();
+      if (current.value[1].section === section)
+        return sections.next().value[1];
+    } while (!current.done)
+  }
+
+  app.get('/:sprint/:section/:page', function (req, res) {
+    res.render(toFilePath(fromReq(req)));
+  });
+
+  app.post('/:sprint/:section/summary', function (req, res) {
+    var next = nextSection(req.session.sections, req.params.section);
+    res.redirect(
+      '/' + req.params.sprint +
+      '/' + next.link
+    );
+  });
+
+  app.post('/:sprint/:section/:page', function (req, res, next) {
+    req.session[req.params.section] = req.session[req.params.section] || {};
+    req.session[req.params.section][req.params.page] = req.body;
+    var nextPage = req.body['next-page'];
+    if (nextPage) {
+      res.redirect(
+        '/' + req.params.sprint +
+        '/' + req.params.section +
+        '/' + nextPage
+      );
+    } else {
+      next();
+    }
   });
     
   app.get('/:sprint/summary', function (req, res) {
     res.render(req.params.sprint + '/summary', {
-      activities : req.session.activities
+      sections : req.session.sections
     });
   });
 
@@ -214,16 +255,5 @@ module.exports = {
     res.render(req.params.sprint + '/' + req.params.page,
       req.session[req.params.page]);
   });
-
-  app.post('/:sprint/:page', function (req, res, next) {
-    req.session[req.params.page] = req.body;
-    var nextPage = req.body['next-page'];
-    if (nextPage) {
-      res.redirect('/' + req.params.sprint + '/' + nextPage);
-    } else {
-      next();
-    }
-  });
-  
   }
 };

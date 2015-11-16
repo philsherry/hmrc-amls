@@ -22,19 +22,28 @@
 	   			<!--Question 1.1-->
 	   			About the business
 	   		</span>
-	   		Email
+	   		What is your correspondence address?
 	   	</h1>
-          
+
 
 		<form class="form">
-        
-		   	<div class="form-group">
-		   		<label class="form-label" for="first-name">What is the business's email address</label>
-		   		<input type="text" id="first-name">
-		   	</div>
+      
+			<input type="hidden" name="next-page" value="3"/>
 
 			<div class="form-group">
-	   			<a class="button" href="business-details-4" id="next">Save and continue</a>
+		   		<label class="form-label" for="first-name">Name</label>
+		   		<input type="text" id="first-name">
+		   	</div>
+            
+            <div class="form-group">
+		   		<label class="form-label" for="middle-name">Trading name (optional)</label>
+		   		<input type="text" id="middle-name">
+		   	</div>
+			
+		   	{{>includes/amls/address}}
+
+			<div class="form-group">
+	   			<input type="submit" class="button" value="Save and continue">
    			</div>
 
 
@@ -58,19 +67,6 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
-<script type="text/javascript">
-  (function($) {
-    $(document).ready(function(){
-      $("#uk-yes").hide();
-      $("#radio-inline-2-1").click(function(){
-        $("#uk-yes").show();
-      });
-      $("#radio-inline-2-2").click(function(){
-        $("#uk-yes").hide();
-      });
-    });
-  })(jQuery || window.jQuery);
-</script>
 
 {{/content}}
 
