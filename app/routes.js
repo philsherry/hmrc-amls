@@ -224,11 +224,16 @@ module.exports = {
       .value[1];
   }
 
-  function updateSectionStatus(req, status) {
+  function sectionInProgress(req) {
     var section = getSection(req.session.sections, req.params.section)[0];
     if (section.value[1].status === undefined) {
-      req.session.sections[section.value[0]].status = status;
+      req.session.sections[section.value[0]].status = 'IN PROGRESS';
     }
+  }
+
+  function sectionDone(req) {
+    var section = getSection(req.session.sections, req.params.section)[0];
+    req.session.sections[section.value[0]].status = 'DONE';
   }
 
   app.get('/:sprint/:section/:page', function (req, res) {
@@ -237,7 +242,7 @@ module.exports = {
 
   app.post('/:sprint/:section/summary', function (req, res) {
     var next = nextSection(req.session.sections, req.params.section);
-    updateSectionStatus(req, 'DONE');
+    sectionDone(req);
     res.redirect(
       '/' + req.params.sprint +
       '/' + next.link
@@ -248,7 +253,7 @@ module.exports = {
     req.session[req.params.section] = req.session[req.params.section] || {};
     req.session[req.params.section][req.params.page] = req.body;
     var nextPage = req.body['next-page'];
-    updateSectionStatus(req, 'IN PROGRESS');
+    sectionInProgress(req);
     if (nextPage) {
       res.redirect(
         '/' + req.params.sprint +
