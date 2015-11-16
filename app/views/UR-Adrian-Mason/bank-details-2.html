@@ -1,0 +1,159 @@
+{{<layout-amls}}
+
+{{$pageTitle}}
+	Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$content}}
+
+	<main id="content" role="main">
+
+    {{>includes/amls/phase-banner-alpha}}
+    {{>includes/amls/service-header}}
+
+		<div class="grid-row">
+            
+            
+			<div class="column-three-quarters">
+                
+                <a href="#" class="link-back">Back</a>
+                        
+                <h1 class="heading-large">
+                    <span class="heading-secondary">
+                        Bank details
+	   		          </span>
+                   Account details</h1>
+				
+				
+				<div class="form-group">
+					<label class="form-label" for="first-name">Account name</label>
+					<input type="text" id="first-name">
+				</div>
+                		
+				
+				<div class="form-group">
+                
+					<label>Is this a UK bank account?</label>
+                    <fieldset class="inline">
+						
+                        <label class="block-label" >
+                          <input id="radio-inline-2-1" type="radio" name="radio-inline-group-2" value="Yes">
+                          Yes
+                        </label>
+                        <label class="block-label" >
+                          <input id="radio-inline-2-2" type="radio" name="radio-inline-group-2" value="No">
+                          No
+                        </label>
+                    
+                        <div class="clearfix js-hidden"></div>
+                <h3 class="heading-small js-hidden">If it is a UK account:</h3>
+                <div id="uk-yes" class="panel-indent inline-indent">
+					
+                        <div class="form-group">
+                          <fieldset>
+							  
+							  <div class="form-group">
+								<label class="form-label" for="first-name">Sort code
+								  <span class="form-hint">For example, 20-42-66</span>
+								  </label>
+								<input type="text" id="first-name">
+							</div>
+
+                            <div class="form-group">
+								<label class="form-label" for="first-name">Account number</label>
+								<input type="text" id="first-name">
+							</div>
+							  
+                          </fieldset>
+                        </div>
+                </div>
+						
+						
+						<div class="clearfix js-hidden"></div>
+                <h3 class="heading-small js-hidden">If it is an international account:</h3>
+                <div id="uk-no" class="panel-indent inline-indent">
+               
+                        <div class="form-group">
+                          <fieldset>
+                            <div class="form-group">
+								<label class="form-label" for="first-name">IBAN number</label>
+								<input type="text" id="first-name">
+							</div>
+							  <p>or</p>
+							<div class="form-group">
+								<label class="form-label" for="middle-name">Bank account number</label>
+								<input type="text" id="middle-name">
+							</div>
+
+                          </fieldset>
+                        </div>
+                </div>
+						
+						
+						
+                        </fieldset>
+                      </div>
+				
+				
+				<div class="form-group">
+                
+                    <fieldset>
+						<legend>What type of account is this?</legend>
+                        <label class="block-label" for="radio-inline-2-8">
+                          <input id="radio-inline-2-8" type="radio" name="radio-inline-group-2" value="Yes">
+                          Personal bank account
+                        </label>
+                        <label class="block-label" for="radio-inline-2-7">
+                          <input id="radio-inline-2-7" type="radio" name="radio-inline-group-2" value="No">
+                          Business's bank account
+                        </label>
+						<label class="block-label" for="radio-inline-2-9">
+                          <input id="radio-inline-2-9" type="radio" name="radio-inline-group-2" value="No">
+                          Another business's bank account
+                        </label>
+						
+						
+                        </fieldset>
+                      </div>
+				
+                <div class="form-group">
+                    <a href="summary-bank-details-1" id="next" class="button">Check your answers</a>
+                </div>
+				
+				
+                </div>
+            
+           <div class="column-quarter">   
+                 {{>includes/amls/action-links}}
+			</div>
+                
+            		</div>
+
+
+
+	</main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+<script type="text/javascript">
+  (function($) {
+    $(document).ready(function(){
+      $("#uk-yes").hide();
+		$("#uk-no").hide();
+      $("#radio-inline-2-1").click(function(){
+        $("#uk-yes").show();
+		  $("#uk-no").hide();
+      });
+      $("#radio-inline-2-2").click(function(){
+        $("#uk-yes").hide();
+		  $("#uk-no").show();
+      });
+    });
+  })(jQuery || window.jQuery);
+</script>
+
+
+{{/content}}
+
+{{/layout-amls}}

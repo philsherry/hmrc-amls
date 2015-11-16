@@ -34,8 +34,8 @@
                           <input id="radio-inline-2-1" type="radio" name="radio-inline-group-2" value="Yes">
                           Yes, one bank account is used
                         </label>
-						 <label class="block-label" for="radio-inline-2-1">
-                          <input id="radio-inline-2-1" type="radio" name="radio-inline-group-2" value="Yes">
+						 <label class="block-label" for="radio-inline-2-3">
+                          <input id="radio-inline-2-3" type="radio" name="radio-inline-group-2" value="Yes">
                           Yes, multiple bank accounts are used
                         </label>
                         <label class="block-label" for="radio-inline-2-2">
@@ -72,8 +72,12 @@
             location.href = 'bank-details-2'
         }
         // else if radio button no is checked go to /summary page
+        else if ($('#radio-inline-2-3').is(':checked')){
+            location.href = 'summary-bank-details-2'
+		}
+		// else if radio button no is checked go to /summary page
         else if ($('#radio-inline-2-2').is(':checked')){
-            location.href = 'summary-bank-details-1'
+            location.href = 'responsible-persons-1'
 		}
         // else if nothing is ticket return false and od nothing
         else{
