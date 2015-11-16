@@ -254,6 +254,6 @@ module.exports = {
   app.get('/:sprint/:page', function (req, res) {
     res.render(req.params.sprint + '/' + req.params.page,
       req.session[req.params.page]);
-  });
+    });
   }
 };
