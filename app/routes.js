@@ -209,13 +209,26 @@ module.exports = {
     return path.join.apply(null, p.split('/'));
   }
 
-  function nextSection(sections, section) {
+  function getSection(sections, section) {
     var sections = sections.entries(), current;
     do {
       current = sections.next();
       if (current.value[1].section === section)
-        return sections.next().value[1];
+        return [current, sections];
     } while (!current.done)
+  }
+
+  function nextSection(sections, section) {
+    return getSection(sections, section)[1]
+      .next()
+      .value[1];
+  }
+
+  function updateSectionStatus(req, status) {
+    var section = getSection(req.session.sections, req.params.section)[0];
+    if (section.value[1].status === undefined) {
+      req.session.sections[section.value[0]].status = status;
+    }
   }
 
   app.get('/:sprint/:section/:page', function (req, res) {
@@ -224,6 +237,7 @@ module.exports = {
 
   app.post('/:sprint/:section/summary', function (req, res) {
     var next = nextSection(req.session.sections, req.params.section);
+    updateSectionStatus(req, 'DONE');
     res.redirect(
       '/' + req.params.sprint +
       '/' + next.link
@@ -234,6 +248,7 @@ module.exports = {
     req.session[req.params.section] = req.session[req.params.section] || {};
     req.session[req.params.section][req.params.page] = req.body;
     var nextPage = req.body['next-page'];
+    updateSectionStatus(req, 'IN PROGRESS');
     if (nextPage) {
       res.redirect(
         '/' + req.params.sprint +

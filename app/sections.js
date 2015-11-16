@@ -4,7 +4,7 @@ module.exports = [
     name: 'Business activities',
     section: 'business-activities',
     link: 'business-activities',
-    status: undefined
+    status: 'DONE'
   },
   {
     id: 1,
