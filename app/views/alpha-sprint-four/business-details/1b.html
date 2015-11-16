@@ -1,0 +1,73 @@
+{{<layout-amls}}
+
+{{$pageTitle}}
+	Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$content}}
+
+	<main id="content" role="main">
+
+    {{>includes/amls/phase-banner-alpha}}
+    {{>includes/amls/service-header}}
+   
+            
+        <div class="grid-row">
+	  <div class="column-three-quarters">
+
+	  	<a href="#" class="link-back">Back</a>
+
+	   	<h1 class="heading-large">
+	   		<span class="heading-secondary">
+	   			<!--Question 1.1-->
+	   			About the business
+	   		</span>
+	   		What is your correspondence address?
+	   	</h1>
+
+
+		<form class="form">
+      
+			<input type="hidden" name="next-page" value="3"/>
+
+			<div class="form-group">
+		   		<label class="form-label" for="first-name">Name</label>
+		   		<input type="text" id="first-name">
+		   	</div>
+            
+            <div class="form-group">
+		   		<label class="form-label" for="middle-name">Trading name (optional)</label>
+		   		<input type="text" id="middle-name">
+		   	</div>
+			
+		   	{{>includes/amls/address}}
+
+			<div class="form-group">
+	   			<input type="submit" class="button" value="Save and continue">
+   			</div>
+
+
+	   	</form>
+
+
+
+	  </div>
+	  <div class="column-quarter">
+
+	   	{{>includes/amls/action-links}}
+
+	   	<div class="meta-data">
+	   	</div>
+
+		</div>
+	</div>
+
+
+	</main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+{{/content}}
+
+{{/layout-amls}}

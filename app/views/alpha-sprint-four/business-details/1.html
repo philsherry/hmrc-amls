@@ -22,23 +22,33 @@
 	   			<!--Question 1.1-->
 	   			About the business
 	   		</span>
-	   		Where is your registered office or principal place of business?
+	   		Registered office or principal place of business
 	   	</h1>
 
 		<form class="form">
       
-		   	{{>includes/amls/address}}
+		    <p>We have the following address details for you.</p>
+			
+			<p class="panel-indent">Your organisation's<br>
+                  Registered address<br>
+                  Town<br>
+                  County<br>
+                  AB1 2DE</p>
 
 			<div class="form-group">
 			
-				<label class="form-label">Do you want to provide an alternative address for correspondence?</label>
-                    <fieldset class="inline">
+				<label class="form-label">Is this address your regstered office or principal place of business?</label>
+                    <fieldset>
                         <label class="block-label" for="radio-inline-2-1">
-                          <input id="radio-inline-2-1" type="radio" name="next-page" value="1a">
-                          Yes
+                          <input id="radio-inline-2-1" type="radio" name="next-page" value="2">
+                          Yes, and I would like correspondence to be sent here.
+                        </label>
+						<label class="block-label" for="radio-inline-2-1">
+                          <input id="radio-inline-2-1" type="radio" name="next-page" value="1b">
+                          Yes, but I would like to provide a different address for correspondence.
                         </label>
                         <label class="block-label" for="radio-inline-2-2">
-                          <input id="radio-inline-2-2" type="radio" name="next-page" value="2">
+                          <input id="radio-inline-2-2" type="radio" name="next-page" value="1a">
                           No
                         </label>
                     </fieldset>
@@ -46,7 +56,7 @@
 			</div>
 
 			<div class="form-group">
-                <input type="submit" class="button" value="Check your answers">
+                <input type="submit" class="button" value="Save and continue">
    			</div>
 
 
