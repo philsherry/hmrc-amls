@@ -1,0 +1,90 @@
+{{<layout-amls}}
+
+{{$pageTitle}}
+	Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$content}}
+
+	<main id="content" role="main">
+
+    {{>includes/amls/phase-banner-alpha}}
+    {{>includes/amls/service-header}}
+   
+            
+        <div class="grid-row">
+	  <div class="column-three-quarters">
+
+	  	<a href="#" class="link-back">Back</a>
+
+	   	<h1 class="heading-large">
+	   		<span class="heading-secondary">
+	   			<!--Question 1.1-->
+	   			High value dealer
+	   		</span>
+	   		Do your systems automatically identify linked cash payments that exceed the threshold in total?
+	   	</h1>
+          
+      <form method="post">
+
+        <input type="hidden" name="next-page" value="5">
+
+      		<div class="form-group">
+                    <fieldset class="inline">
+                        <label class="block-label" for="radio-inline-2-1">
+                          <input id="radio-inline-2-1" type="radio" name="radio-inline-group-2" value="Yes">
+                          Yes
+                        </label>
+                        <label class="block-label" for="radio-inline-2-2">
+                          <input id="radio-inline-2-2" type="radio" name="radio-inline-group-2" value="No">
+                          No
+                        </label>
+                    
+                        <div class="clearfix js-hidden"></div>
+               
+                        </fieldset>
+                      </div>
+                <div class="form-group">
+                  <input type="submit" class="button" value="Save and continue">
+                </div>
+<div class="form-group">
+   			<a href="../summary" >Save and return to your application summary</a>
+		</div>
+      </form>
+                
+                
+			</div>
+            
+             <div class="column-quarter">
+
+                 {{>includes/amls/action-links}}
+
+	   	<div class="meta-data">
+	   	</div>
+
+		</div>
+		</div>
+
+	</main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+  (function($) {
+    $(document).ready(function(){
+      $("#uk-yes").hide();
+      $("#radio-inline-2-1").click(function(){
+        $("#uk-yes").show();
+      });
+      $("#radio-inline-2-2").click(function(){
+        $("#uk-yes").hide();
+      });
+    });
+  })(jQuery || window.jQuery);
+</script>
+
+
+
+{{/content}}
+
+{{/layout-amls}}

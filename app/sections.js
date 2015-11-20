@@ -66,7 +66,7 @@ module.exports = [
     id: 9,
     name: 'Trading premises',
     section: 'trading-premises',
-    link: 'trading-premises',
+    link: 'trading-premises/summary-1',
     status: undefined
   },
   {
@@ -80,7 +80,7 @@ module.exports = [
     id: 11,
     name: 'Responsible persons',
     section: 'responsible-persons',
-    link: 'responsible-persons',
+    link: 'responsible-persons/1',
     status: undefined
   },
   {

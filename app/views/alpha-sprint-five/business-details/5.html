@@ -1,0 +1,125 @@
+{{<layout-amls}}
+
+{{$pageTitle}}
+	Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$content}}
+
+	<main id="content" role="main">
+
+    {{>includes/amls/phase-banner-alpha}}
+    {{>includes/amls/service-header}}
+   
+            
+        <div class="grid-row">
+	  <div class="column-three-quarters">
+
+	  	<a href="4" class="link-back">Back</a>
+
+	   	<h1 class="heading-large">
+	   		<span class="heading-secondary">
+	   			<!--Question 1.1-->
+	   			About the business
+	   		</span>
+	   		Have you been registered for MLR before?
+	   	</h1>
+          
+		<form class="form" method="post">
+
+            <input type="hidden" name="next-page" value="6">
+        
+            <div class="form-group">
+                <fieldset>
+                    <label class="block-label" >
+                        <input id="ex" type="radio" name="activities" value="asp">
+                        Yes, I have an existing registration
+                    </label>
+                        
+					<div class="clearfix js-hidden"></div>
+                        
+                        <h3 class="heading-small js-hidden">If you have an existing registration:</h3>
+                        
+                        <div id="mlr-ex" class="panel-indent inline-indent">
+                            <label class="form-label" for="first-name-2">MLR registration number 
+                            </label>
+                            <input class="form-control" id="first-name-2" type="text">
+                        </div>
+					
+                    <label class="block-label" >
+                        <input id="prev" type="radio" name="activities" value="bpsp">
+                        Yes, I was registered in the past but am not presently
+                    </label>
+					
+					<div class="clearfix js-hidden"></div>
+                        
+                        <h3 class="heading-small js-hidden">If you were registered previously:</h3>
+                        
+                        <div id="mlr-prev" class="panel-indent inline-indent">
+                            <label class="form-label" for="first-name-2">MLR registration number (optional)
+                            </label>
+                            <input class="form-control" id="first-name-2" type="text">
+                        </div>
+                        
+                    <label class="block-label">
+                        <input id="no" type="radio" name="activities" value="eab">
+                        No
+                    </label>
+                        
+    
+                       
+                </fieldset>
+            </div>
+
+
+			<div class="form-group">
+              <input type="submit" class="button" value="Save and continue">
+   			</div>
+<div class="form-group">
+   			<a href="../summary" >Save and return to your application summary</a>
+		</div>
+
+	   	</form>
+
+
+
+	  </div>
+	  <div class="column-quarter">
+
+	   	{{>includes/amls/action-links}}
+
+	   	<div class="meta-data">
+	   	</div>
+
+		</div>
+	</div>
+
+
+	</main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+  (function($) {
+    $(document).ready(function(){
+      $("#mlr-ex").hide();
+        $("#mlr-prev").hide();
+      $("#ex").click(function(){
+        $("#mlr-ex").show();
+        $("#mlr-prev").hide();
+      });
+      $("#prev").click(function(){
+        $("#mlr-ex").hide();
+        $("#mlr-prev").show();
+      });
+	  $("#no").click(function(){
+        $("#mlr-ex").hide();
+        $("#mlr-prev").hide();
+      });
+    });
+  })(jQuery || window.jQuery);
+</script>
+
+{{/content}}
+
+{{/layout-amls}}
