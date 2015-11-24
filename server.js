@@ -36,7 +36,7 @@ app.use(session({
 app.engine('html', require('./lib/template-engine.js').__express);
 app.set('view engine', 'html');
 app.set('vendorViews', path.join(__dirname, 'govuk_modules', 'govuk_template', 'views', 'layouts'));
-app.set('views', path.join(__dirname, 'app', 'views'));
+app.set('views', path.join(__dirname, '/app/views'));
 
 // Middleware to serve static assets
 app.use('/public', express.static(path.join(__dirname, 'public')));
