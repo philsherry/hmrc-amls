@@ -1,0 +1,101 @@
+{{<layout-amls}}
+
+{{$pageTitle}}
+	Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$content}}
+
+	<main id="content" role="main">
+
+    {{>includes/amls/phase-banner-alpha}}
+    {{>includes/amls/service-header}}
+   
+            
+        <div class="grid-row">
+	  <div class="column-three-quarters">
+
+	  	<a href="#" class="link-back">Back</a>
+
+	   	<h1 class="heading-large">
+	   		<span class="heading-secondary">
+	   			<!--Question 1.1-->
+	   			Trust and company service provider information
+	   		</span>
+	   		Trust or company formation agents
+	   	</h1>
+          
+		<form class="form" method="post">
+
+      <input type="hidden" name="next-page" value="2">
+        
+            <div class="form-group">
+                	<label>Do you sell only off-the-shelf companies?</label>
+                    <fieldset class="inline">
+                        <label class="block-label" for="radio-inline-2-1">
+                          <input id="radio-inline-2-1" type="radio" name="radio-inline-group-2" value="Yes">
+                          Yes
+                        </label>
+                        <label class="block-label" for="radio-inline-2-2">
+                          <input id="radio-inline-2-2" type="radio" name="radio-inline-group-2" value="No">
+                          No
+                        </label>
+				</fieldset>
+			</div>
+
+			
+		<div class="form-group">
+                	<label>Would you provide the services of creating complex corporate structures for customers?</label>
+                    <fieldset class="inline">
+                        <label class="block-label" for="radio-inline-32-1">
+                          <input id="radio-inline-32-1" type="radio" name="radio-inline-group-32" value="Yes">
+                          Yes
+                        </label>
+                        <label class="block-label" for="radio-inline-32-2">
+                          <input id="radio-inline-32-2" type="radio" name="radio-inline-group-32" value="No">
+                          No
+                        </label>
+				</fieldset>
+			</div>
+
+  			<div class="form-group">
+          <input type="submit" class="button" value="Save and continue">
+   			</div>
+<div class="form-group">
+   			<a href="../summary" >Save and return to your application summary</a>
+		</div>
+
+	   	</form>
+
+
+
+	  </div>
+	  <div class="column-quarter">
+
+	   	{{>includes/amls/action-links}}
+
+	   	<div class="meta-data">
+	   	</div>
+
+		</div>
+	</div>
+
+
+	</main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+  (function($) {
+    $(document).ready(function(){
+      $("#other").hide();
+      $("#other-ps").click(function(){
+        $("#other").show();
+      });
+    });
+  })(jQuery || window.jQuery);
+</script>
+
+
+{{/content}}
+
+{{/layout-amls}}
