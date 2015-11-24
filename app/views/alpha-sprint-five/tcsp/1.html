@@ -26,6 +26,8 @@
       </h1>
           
     <form class="form" method="post">
+
+      <input type="hidden" name="next-page">
         
             <div class="form-group">
                 <fieldset>
@@ -54,10 +56,6 @@
                         <input id="tc" type="checkbox" name="activities" value="msb">
                         Trust or company formation agent
                     </label>
-                  
-            
-    
-                       
                 </fieldset>
             </div>
 
@@ -94,10 +92,12 @@
   $(function () {
 
     var $tc = $('#tc'),
-      $page = $('#paye'),
+      $paye = $('#paye'),
       $next = $('input[name="next-page"]');
 
-    $('input[type="radio"]').on('change', function () {
+    $next.val('2');
+
+    $('input[type="checkbox"]').on('change', function () {
       if ($tc.is(':checked') && $paye.is(':checked')) {
         $next.val('1a-2');
       } else if ($paye.is(':checked')) {
