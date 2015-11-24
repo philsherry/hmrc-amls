@@ -22,7 +22,7 @@
 	   			<!--Question 1.1-->
 	   			Trading premises
 	   		</span>
-	   		Agent's details
+	   		Agent's tax details
 	   	</h1>
 
 
@@ -30,25 +30,34 @@
 			<input type="hidden" name="next-page" value="agent-2" />
       
             <div class="form-group">
-		   		<label class="form-label" for="middle-name">Agent's legal entity name</label>
+		   		<label class="form-label" for="middle-name">What is your agent's legal entity name?</label>
 		   		<input type="text" id="middle-name">
 		   	</div>
 			
-		   	{{>includes/amls/address}}
-			
+		   
 			<div class="form-group">
+				<legend>What is your agent's legal entity type?</legend>
 			
-				<label class="form-label">Is this a residential address?</label>
-                    <fieldset class="inline">
-                        <label class="block-label" for="radio-inline-2-1">
-                          <input id="radio-inline-2-1" type="radio" name="radio-inline-group-2" value="Yes">
-                          Yes
-                        </label>
-                        <label class="block-label" for="radio-inline-2-2">
-                          <input id="radio-inline-2-2" type="radio" name="radio-inline-group-2" value="No">
-                          No
-                        </label>
-                    </fieldset>
+				<label  class="block-label">
+								<input type="radio" name="bus_type" id="sole" value="SOP">
+								Sole proprietor
+							</label>
+							<label  class="block-label">
+								<input type="radio" name="bus_type" id="partner" value="BPT">
+								Limited liability partnership
+							</label>
+							<label class="block-label">
+								<input type="radio" name="bus_type" id="cb" value="LPT">
+								Partnership
+							</label>
+							<label class="block-label">
+								<input type="radio" name="bus_type" id="ub" value="LLP">
+								Corporate body
+							</label>
+							<label class="block-label">
+								<input type="radio" name="bus_type" id="other" value="UAS">
+								Unincorporated body
+							</label>	
 			
 			</div>
 

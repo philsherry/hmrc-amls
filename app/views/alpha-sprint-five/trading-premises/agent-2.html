@@ -29,28 +29,26 @@
 		<form class="form" method="post">
 			<input type="hidden" name="next-page" value="agent-3" />
       
-            <div class="form-group">
-		   		<label class="form-label" for="middle-name">Trading name</label>
-		   		<input type="text" id="middle-name">
-		   	</div>
-			
-		   	{{>includes/amls/address}}
-			
 			<div class="form-group">
 			
-				<label class="form-label">Is this a residential address?</label>
+				<label class="form-label">What type of tax does your agent pay?</label>
                     <fieldset class="inline">
                         <label class="block-label" for="radio-inline-2-1">
                           <input id="radio-inline-2-1" type="radio" name="radio-inline-group-2" value="Yes">
-                          Yes
+                          Self-assesment
                         </label>
                         <label class="block-label" for="radio-inline-2-2">
                           <input id="radio-inline-2-2" type="radio" name="radio-inline-group-2" value="No">
-                          No
+                          Corporation tax
                         </label>
                     </fieldset>
 			
 			</div>
+			
+			            <div class="form-group">
+		   		<label class="form-label" for="middle-name">What is your agent's UTR?</label>
+		   		<input type="text" id="middle-name">
+		   	</div>
 
 			<div class="form-group">
             <input type="submit" class="button" value="Save and continue">
@@ -62,7 +60,47 @@
 
 	   	</form>
 
-
+ <table class="table-check-answers">
+			 <thead>
+		<tr>
+			<th class="section-name complete" colspan="2">				
+				<h2>Agent details
+				</h2>
+			</th>
+			<th class="edit-link">
+				<a href="agent-1" class="">
+					Edit
+				</a>
+			</th>
+		</tr>
+	</thead>
+			  <tbody>
+				  <tr>
+					<td class="question">
+						What is your agent's legal entity name?
+					</td>
+					<td class="answer">
+						Agent of ACME
+					</td>
+					<td class="edit-link">
+					</td>
+				</tr>
+				   <tr>
+					<td class="question">
+						What is your agent's legal entity type?
+					</td>
+					<td class="answer">
+						Limited liability partnership
+					</td>
+					<td class="edit-link">
+					</td>
+				</tr>
+			  </tbody>
+				  
+				
+				  
+		  
+		  </table>
 
 	  </div>
 	  <div class="column-quarter">
