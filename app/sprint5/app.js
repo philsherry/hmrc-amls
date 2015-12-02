@@ -1,10 +1,6 @@
 var app = require('../../lib/subapp.js')(__dirname),
   _ = require('lodash');
 
-app.get('/', function (req, res) {
-  res.render('index');
-});
-
 // AMLS Routes
 app.post('/business-activities/business-activities', function (req, res) {
   req.session.sections =
@@ -17,7 +13,7 @@ app.post('/business-activities/business-activities', function (req, res) {
     })
     .value();
 
-  res.redirect('/summary');
+  res.redirect('../summary');
 });
 
 function getUrl(arr, memo) {
@@ -72,7 +68,7 @@ app.post('/:section/summary', function (req, res) {
   var next = nextSection(req.session.sections, req.params.section);
   sectionDone(req);
   res.redirect(
-    '/' + next.link
+    '../' + next.link
   );
 });
 
@@ -82,17 +78,14 @@ app.post('/:section/:page', function (req, res, next) {
   var nextPage = req.body['next-page'];
   sectionInProgress(req);
   if (nextPage) {
-    res.redirect(
-      '/' + req.params.section +
-      '/' + nextPage
-    );
+    res.redirect(nextPage);
   } else {
     next();
   }
 });
 
 app.get('/summary', function (req, res) {
-  res.render(req.params.sprint + '/summary', {
+  res.render('summary', {
     sections : req.session.sections
   });
 });
