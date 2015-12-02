@@ -1,0 +1,72 @@
+{{<layout}}
+
+{{$pageTitle}}
+  Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$main}}
+
+
+
+
+
+{{>includes/service-header}}
+
+
+        <div class="grid-row">
+    <div class="column-two-thirds">
+
+
+
+      <h1 class="heading-large">
+        <span class="heading-secondary">
+          <!--Question 1.1-->
+          High value dealer
+        </span>
+        Do you anticipate receiving cash payments over the threshold from customers you've not seen face to face?
+      </h1>
+
+      <form method="post">
+
+            <div class="form-group">
+                    <label class="form-label"></label>
+                    <fieldset class="inline">
+                         <label class="block-label" for="yes-alias">
+                        <input id="yes-alias" type="radio" name="next-page" value="6a">
+                        Yes
+                    </label>
+                    <label class="block-label" for="no-alias">
+                        <input id="no-alias" type="radio" name="next-page" value="summary">
+                        No
+                    </label>
+
+
+
+
+                        </fieldset>
+                      </div>
+                <div class="form-group">
+                  <input type="submit" class="button" value="Check your answers">
+                </div>
+<div class="form-group">
+   			<a href="../summary" >Save and return to your application summary</a>
+		</div>
+      </form>
+
+
+      </div>
+
+             <div class="column-one-third">
+
+                 {{>includes/action-links}}
+
+      <div class="meta-data">
+      </div>
+
+    </div>
+    </div>
+
+  </main>
+
+{{/main}}
+{{/layout}}

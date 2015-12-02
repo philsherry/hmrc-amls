@@ -1,0 +1,91 @@
+{{<layout}}
+
+{{$pageTitle}}
+    Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$main}}
+
+
+
+
+		   <header class="page-header">
+      <span class="form-hint">AMLS Registration</span>
+    </header>		<div class="grid-row">
+			<div class="column-two-thirds">
+			    <h1 class="heading-xlarge">About your business details</h1>
+
+			    <div class="form-group">
+			    	<p>Before registering, you need to confirm your business details.</p>
+			    </div>
+
+			    <h4 class="heading-small">What is your business type?</h4>
+
+			    <form action="/business-type/" method="POST">
+						<div class="form-group">
+							<label for="sop" class="block-label">
+								<input type="radio" name="bus_type" id="sole" value="SOP">
+								Sole proprietor
+							</label>
+							<label for="bpt" class="block-label">
+								<input type="radio" name="bus_type" id="partner" value="BPT">
+								Limited liability partnership
+							</label>
+							<label for="lpt" class="block-label">
+								<input type="radio" name="bus_type" id="cb" value="LPT">
+								Partnership
+							</label>
+							<label for="llp" class="block-label">
+								<input type="radio" name="bus_type" id="ub" value="LLP">
+								Corporate body
+							</label>
+							<label for="UAS" class="block-label">
+								<input type="radio" name="bus_type" id="other" value="UAS">
+								Unincorporated body
+							</label>
+						</div>
+
+						<div class="form-group">
+							<a href="business-matching-2" class="button" type="submit" id="save-and-continue">Continue</a>
+						</div>
+			    </form>
+			</div>
+		</div>
+
+	</main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+  (function($) {
+    $(document).ready(function(){
+      $("#uk-yes").hide();
+      $("#radio-inline-2-1").click(function(){
+        $("#uk-yes").show();
+      });
+      $("#radio-inline-2-2").click(function(){
+        $("#uk-yes").hide();
+      });
+    });
+  })(jQuery || window.jQuery);
+</script>
+
+<script type="text/javascript">
+    //when next button is clicked create a function
+    $('#next').click(function() {
+        //if radio button yes is checked go to home '/'
+        if($('#yes-alias').is(':checked')){
+            location.href = 'other-names'
+        }
+        // else if radio button no is checked go to /summary page
+        else if ($('#no-alias').is(':checked')){
+            location.href = 'business-details'
+        }
+        // else if nothing is ticket return false and od nothing
+        else{
+            return false;
+        }
+    });
+</script>
+
+{{/main}}
+{{/layout}}

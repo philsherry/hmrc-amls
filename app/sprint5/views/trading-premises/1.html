@@ -1,0 +1,96 @@
+{{<layout}}
+
+{{$pageTitle}}
+  Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$main}}
+
+
+
+
+{{>includes/service-header}}
+
+		<div class="grid-row">
+
+
+			<div class="column-two-thirds">
+
+                <a href="#" class="link-back">Back</a>
+
+                <h1 class="heading-large">
+                    <span class="heading-secondary">
+                        Trading premises
+	   		          </span>
+                   What trading premises do you use for your MLR business activities?</h1>
+
+				<details class="form-group">
+    <summary><span class="summary">What are trading premises?</span></summary>
+    <div class="panel-indent">
+        <p>
+            Trading premises are any premises you use to ... description needed here from business for clarification.
+        </p>
+    </div>
+</details>
+
+				<form method="post">
+				<div class="form-group">
+                    <fieldset>
+                        <label class="block-label" for="radio-inline-2-1">
+                          <input id="radio-inline-2-1" type="radio" name="next-page" value="summary-1">
+                          Your own business trading premises
+                        </label>
+						 <label class="block-label" for="radio-inline-2-3">
+                          <input id="radio-inline-2-3" type="radio" name="next-page" value="Yes">
+                          Other business's premises, where you have a contractual agreement for them to act as your agent and offer your services
+                        </label>
+                        <label class="block-label" for="radio-inline-2-2">
+                          <input id="radio-inline-2-2" type="radio" name="next-page" value="No">
+                          A mixture of your own and other business's premises.
+                        </label>
+                    </fieldset>
+                </div>
+
+                <div class="form-group">
+            <input type="submit" class="button" value="Save and continue">
+          </div>
+				</form>
+				<div class="form-group">
+   			<a href="../summary" >Save and return to your application summary</a>
+		</div>
+
+
+                </div>
+
+           <div class="column-one-third">
+                 {{>includes{{/main}}
+/action-links}}
+			</div>
+
+            		</div>
+
+
+
+	</main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+    //when next button is clicked create a function
+    $('#next').click(function() {
+        //if radio button yes is checked go to home '/'
+        if($('#radio-inline-2-1').is(':checked')){
+            location.href = 'bank-details-2'
+        }
+        // else if radio button no is checked go to /summary page
+        else if ($('#radio-inline-2-3').is(':checked')){
+            location.href = 'summary-bank-details-2'
+		}
+        // else if nothing is ticket return false and od nothing
+        else{
+            return false;
+        }
+    });
+</script>
+
+{{/main}}
+{{/layout}}

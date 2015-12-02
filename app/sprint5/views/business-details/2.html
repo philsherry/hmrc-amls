@@ -1,0 +1,78 @@
+{{<layout}}
+
+{{$pageTitle}}
+  Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$main}}
+
+
+    {{>includes/service-header}}
+
+
+        <div class="grid-row">
+	  <div class="column-two-thirds">
+
+
+
+	   	<h1 class="heading-large">
+	   		<span class="heading-secondary">
+	   			<!--Question 1.1-->
+	   			About the business
+	   		</span>
+	   		Telephoning your business
+	   	</h1>
+
+
+		<form method="post">
+
+			<input type="hidden" name="next-page" value="3">
+
+		   	<div class="form-group">
+		   		<label class="form-label" for="first-name">Business phone number</label>
+		   		<input type="text" id="first-name">
+		   	</div>
+
+            <div class="form-group">
+		   		<label class="form-label" for="middle-name">Mobile contact number (optional)</label>
+		   		<input type="text" id="middle-name">
+		   	</div>
+
+			<div class="form-group">
+	   			<input type="submit" class="button" value="Save and continue">
+   			</div>
+<div class="form-group">
+   			<a href="../summary" >Save and return to your application summary</a>
+		</div>
+	   	</form>
+
+
+
+	  </div>
+	  <div class="column-one-third">
+
+{{>includes/action-links}}
+
+	   	<div class="meta-data">
+	   	</div>
+
+		</div>
+	</div>
+
+
+
+<script type="text/javascript">
+  (function($) {
+    $(document).ready(function(){
+      $("#uk-yes").hide();
+      $("#radio-inline-2-1").click(function(){
+        $("#uk-yes").show();
+      });
+      $("#radio-inline-2-2").click(function(){
+        $("#uk-yes").hide();
+      });
+    });
+  })(jQuery || window.jQuery);
+</script>
+{{/main}}
+{{/layout}}
