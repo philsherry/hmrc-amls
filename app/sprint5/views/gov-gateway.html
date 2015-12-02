@@ -6,75 +6,39 @@
 
 {{$main}}
 
-
-
-
-
 		<div class="grid-row">
-
 			<div class="column-two-thirds">
 
                 <h1 class="heading-xlarge">Sign in with your Government Gateway account</h1>
-            <div id="content">
-                <div class="inner-block">
-                    <p>You can <a href="#">register for a Government Gateway account</a>
-                        if you don't have one.</p>
 
-                    <div class="form-group">
-                        <fieldset>
-                            <div class="form-field-group ">
+                <p>You can <a href="#">register for a Government Gateway account</a> if you don't have one.</p>
+                <form method="post">
+                    <fieldset>
+                        <legend class="visuallyhidden">Sign in with your Government Gateway account</legend>
+                        <div class="form-group">
+                            <label class="form-label" for="userId">User ID</label>
+                            <input class="form-control" type="text" id="userId" name="userId" required />
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="password">Password</label>
+                            <input class="form-control" type="password" id="password" name="password" required />
+                        </div>
+                        <div class="form-group">
+                            <a href="business-activities/business-matching-1" class="button" type="submit">Sign in</a>
+                        </div>
+                    </fieldset>
+                </form>
 
-
-
-                                <div class="form-group">
-                                    <label class="label--inline" for="userId">User ID</label>
-                                    <input type="text" id="userId" name="userId" required />
-                                </div>
-
-
-                                <div class="form-group">
-                                    <label class="label--inline" for="password">Password</label>
-                                    <input type="password" id="password" name="password" required />
-                                </div>
-
-                                <div class="form-group">
-                                    <a href="business-activities/business-matching-1" class="button" type="submit">Sign in</a>
-                                </div>
-                            </div>
-                        </fieldset>
-
-
-                        <h2 class="heading-medium">Problems signing in</h2>
-                        <ul class="action-list">
-            <li><a href="https://online.hmrc.gov.uk/user/credentials/userid" target="_blank" data-sso="false">Lost user ID</a></li>
-            <li><a href="https://online.hmrc.gov.uk/user/credentials/password" target="_blank" data-sso="false">Lost password</a></li>
-            <li><a href="http://www.hmrc.gov.uk/contactus/online-services.htm" target="_blank" data-sso="false">Lost user ID and password (Self Assessment only)</a></li>
-            <li><a href="https://online.hmrc.gov.uk/information/faqs?affinitygroup=&amp;faqid=eng.faq.employers.faq.faqcom046" target="_blank" data-sso="false">Lost account activation code</a></li>
-        </ul>
-                    </div>
-                </div>
-
+                <h2 class="heading-medium">Problems signing in</h2>
+                <ul class="action-list">
+                    <li><a href="https://online.hmrc.gov.uk/user/credentials/userid" target="_blank" data-sso="false">Lost user ID</a></li>
+                    <li><a href="https://online.hmrc.gov.uk/user/credentials/password" target="_blank" data-sso="false">Lost password</a></li>
+                    <li><a href="http://www.hmrc.gov.uk/contactus/online-services.htm" target="_blank" data-sso="false">Lost user ID and password (Self Assessment only)</a></li>
+                    <li><a href="https://online.hmrc.gov.uk/information/faqs?affinitygroup=&amp;faqid=eng.faq.employers.faq.faqcom046" target="_blank" data-sso="false">Lost account activation code</a></li>
+                </ul>
 
 			</div>
 		</div>
 
-	</main>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script type="text/javascript">
-  (function($) {
-    $(document).ready(function(){
-      $("#uk-yes").hide();
-      $("#radio-inline-2-1").click(function(){
-        $("#uk-yes").show();
-      });
-      $("#radio-inline-2-2").click(function(){
-        $("#uk-yes").hide();
-      });
-    });
-  })(jQuery || window.jQuery);
-</script>
-
 {{/main}}
-
 {{/layout}}

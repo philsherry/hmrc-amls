@@ -6,23 +6,29 @@
 
 {{$main}}
 
+		   {{! <header class="page-header">
+                <span class="form-hint">AMLS Registration</span>
+    </header>		 }}
 
-
-
-		   <header class="page-header">
-      <span class="form-hint">AMLS Registration</span>
-    </header>		<div class="grid-row">
+        <div class="grid-row">
 			<div class="column-two-thirds">
-			    <h1 class="heading-xlarge">About your business details</h1>
 
-			    <div class="form-group">
-			    	<p>Before registering, you need to confirm your business details.</p>
-			    </div>
+                <h1 class="heading-xlarge">About your business details</h1>
+			    <p class="lede">Before registering, you need to confirm your business details.</p>
 
-			    <h4 class="heading-small">What is your business type?</h4>
+
+                <h2 class="heading-small"></h4>
 
 			    <form action="/business-type/" method="POST">
-						<div class="form-group">
+                    <fieldset>
+                        <legend class="form-label-bold">What is your business type?</legend>
+
+                        <label class="block-label" for="waste-type-1">
+                            <input id="waste-type-1" name="waste-types" type="radio" value="waste-animal">
+                            Waste from animal carcasses
+                        </label>
+
+
 							<label for="sop" class="block-label">
 								<input type="radio" name="bus_type" id="sole" value="SOP">
 								Sole proprietor
@@ -43,11 +49,12 @@
 								<input type="radio" name="bus_type" id="other" value="UAS">
 								Unincorporated body
 							</label>
-						</div>
+
 
 						<div class="form-group">
 							<a href="business-matching-2" class="button" type="submit" id="save-and-continue">Continue</a>
 						</div>
+                        </fieldset>
 			    </form>
 			</div>
 		</div>
