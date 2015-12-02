@@ -6,6 +6,7 @@ var express = require('express'),
   glob = require('glob-all'),
   hjs = require('hjs'),
   auth = require('basic-auth-connect'),
+  session = require('express-session'),
 
   username = process.env.USERNAME,
   password = process.env.PASSWORD,
@@ -33,6 +34,10 @@ if (!app.locals.isDev) {
   }
   app.use(auth(process.env.USERNAME, process.env.PASSWORD));
 }
+
+app.use(session({
+    secret : 'snail'
+}));
 
 app.use(bodyParser.urlencoded({ extended : true }));
 
