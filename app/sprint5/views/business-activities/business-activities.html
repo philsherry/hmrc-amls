@@ -3,19 +3,23 @@
 	Anti Money Laundering Registration
 {{/pageTitle}}
 
-
 {{$main}}
 
-		{{>includes/service-header}}
 
 		<div class="grid-row">
 			<div class="column-two-thirds">
-				<h1 class="heading-large"><span class="heading-secondary"><!--Question 1.1--> Question 1</span>What activities are you applying for?</h1>
+
+
+				<h1 class="heading-xlarge">
+					{{! <span class="heading-secondary">Question 1</span> }}
+					What activities are you applying for?
+				</h1>
 
 				<form class="form" method="post">
 					<div class="form-group">
 						<fieldset>
-							<span class="form-hint">(Please select all that apply.)</span>
+							<legend class="visuallyhidden">What activities are you applying for?</legend>
+							<p>Select all that apply.</p>
 
 							<label class="block-label" for="asp">
 								<input id="asp" type="checkbox" name="activities" value="2">Accountancy service provider
