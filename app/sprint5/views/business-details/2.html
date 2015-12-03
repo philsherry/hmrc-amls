@@ -6,60 +6,100 @@
 
 {{$main}}
 
-
     {{>includes/service-header}}
 
+    <div class="grid-row">
+        <div class="column-two-thirds">
 
-        <div class="grid-row">
-	  <div class="column-two-thirds">
+            <h1 class="heading-xlarge">
+                <span class="heading-secondary">About the business</span>
+                Contact details
+            </h1>
 
+            <p class="lede">Some explanatory text to go here perhaps</p>
 
+            {{! <h3 class="heading-medium">Contacting your business (needs a better title)</h3> }}
 
-	   	<h1 class="heading-large">
-	   		<span class="heading-secondary">
-	   			<!--Question 1.1-->
-	   			About the business
-	   		</span>
-	   		Telephoning your business
-	   	</h1>
+            <form method="post">
 
+                <input type="hidden" name="next-page" value="5">
 
-		<form method="post">
+                <fieldset>
+                    <legend class="form-label-bold">Telephoning your business</legend>
+                    <input type="hidden" name="next-page" value="5">
+                    <div class="form-group">
+                        <label class="form-label" for="phone">Business phone number</label>
+                        <input class="form-control" type="text" id="phone"  />
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="mobile">Mobile contact number (optional)</label>
+                        <input class="form-control" type="text" id="mobile"  />
+                    </div>
+                </fieldset>
 
-			<input type="hidden" name="next-page" value="3">
-
-		   	<div class="form-group">
-		   		<label class="form-label" for="first-name">Business phone number</label>
-		   		<input type="text" id="first-name">
-		   	</div>
-
-            <div class="form-group">
-		   		<label class="form-label" for="middle-name">Mobile contact number (optional)</label>
-		   		<input type="text" id="middle-name">
-		   	</div>
-
-			<div class="form-group">
-	   			<input type="submit" class="button" value="Save and continue">
-   			</div>
-<div class="form-group">
-   			<a href="../summary" >Save and return to your application summary</a>
-		</div>
-	   	</form>
-
+                {{! <fieldset>
+                    <div class="form-group">
+                        <label class="form-label" for="first-name">What is the business's email address</label>
+                        <input type="text" id="first-name" class="form-control">
+                    </div>
+                </fieldset> }}
 
 
-	  </div>
-	  <div class="column-one-third">
+                <fieldset class="inline">
+                    <legend class="form-label-bold">Does your business have a website?</legend>
+                    <div class="form-group">
+                        <label class="block-label" data-target="example-ni-no" for="radio-indent-1">
+                            <input id="radio-indent-1" type="radio" name="radio-indent-group" value="Yes">Yes
+                        </label>
 
-{{>includes/action-links}}
+                        <label class="block-label" for="radio-indent-2">
+                            <input id="radio-indent-2" type="radio" name="radio-indent-group" value="No">No
+                        </label>
 
-	   	<div class="meta-data">
-	   	</div>
+                        <div class="panel-indent js-hidden" id="example-ni-no">
+                            <label class="form-label" for="national-insurance">What is the address of your website?</label>
+                            <input class="form-control" name="national-insurance" type="text" id="national-insurance">
+                        </div>
+                    </div>
+                </fieldset>
 
+                <fieldset class="inline">
+                    <legend class="form-label-bold">Does your business have an email address?</legend>
+                    <div class="form-group">
+                        <label class="block-label" data-target="emailaddress" for="radio-indent-3">
+                            <input id="radio-indent-3" type="radio" name="radio-indent-group2" value="Yes">Yes
+                        </label>
+
+                        <label class="block-label" for="radio-indent-4">
+                            <input id="radio-indent-4" type="radio" name="radio-indent-group2" value="No">No
+                        </label>
+
+                        <div class="panel-indent js-hidden" id="emailaddress">
+                            <label class="form-label" for="national-insurance">What is the business's email address?</label>
+                            <input class="form-control" name="national-insurance" type="text" id="national-insurance">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <div class="form-group">
+                    <input type="submit" class="button" value="Save and continue">
+                </div>
+
+            </form>
+
+            <p><a href="../summary" >Save and return to your application summary</a></p>
+
+            <a href="javascript:history.go(-1)" class="link-back">Back</a>
+
+        </div>
+
+        <div class="column-one-third">
+            {{>includes/action-links}}
 		</div>
 	</div>
 
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
 <script type="text/javascript">
   (function($) {
@@ -74,5 +114,6 @@
     });
   })(jQuery || window.jQuery);
 </script>
+
 {{/main}}
 {{/layout}}

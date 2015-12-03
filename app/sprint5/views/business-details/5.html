@@ -6,96 +6,78 @@
 
 {{$main}}
 
+    {{>includes/service-header}}
 
+    <div class="grid-row">
+        <div class="column-two-thirds">
 
+            <h1 class="heading-xlarge">
+                <span class="heading-secondary">About the business</span>
+                Have you been registered for MLR before?
+            </h1>
 
-{{>includes/service-header}}
+            <form class="form" method="post">
+                <input type="hidden" name="next-page" value="6">
 
-
-        <div class="grid-row">
-	  <div class="column-two-thirds">
-
-
-
-	   	<h1 class="heading-large">
-	   		<span class="heading-secondary">
-	   			<!--Question 1.1-->
-	   			About the business
-	   		</span>
-	   		Have you been registered for MLR before?
-	   	</h1>
-
-		<form class="form" method="post">
-
-            <input type="hidden" name="next-page" value="6">
-
-            <div class="form-group">
                 <fieldset>
-                    <label class="block-label" >
-                        <input id="ex" type="radio" name="activities" value="asp">
-                        Yes, I have an existing registration
-                    </label>
+                    <legend class="visuallyhidden">Have you been registered for MLR before?</legend>
 
-					<div class="clearfix js-hidden"></div>
 
-                        <h3 class="heading-small js-hidden">If you have an existing registration:</h3>
 
+
+
+
+
+
+
+
+
+                    <div class="form-group">
+                        <label class="block-label" >
+                            <input id="ex" type="radio" name="activities" value="asp">Yes, I have an existing registration
+                        </label>
+
+                        <div class="panel-indent js-hidden" id="example-ni-no">
+                            <label class="form-label" for="mlr-reg">MLR registration number</label>
+                            <input class="form-control" name="mlr-reg" type="text" id="national-insurance">
+                        </div>
+
+
+                    {{!     <h3 class="heading-small js-hidden">If you have an existing registration:</h3>
                         <div id="mlr-ex" class="panel-indent inline-indent">
-                            <label class="form-label" for="first-name-2">MLR registration number
-                            </label>
+                            <label class="form-label" for="first-name-2">MLR registration number</label>
                             <input class="form-control" id="first-name-2" type="text">
-                        </div>
+                        </div> }}
 
-                    <label class="block-label" >
-                        <input id="prev" type="radio" name="activities" value="bpsp">
-                        Yes, I was registered in the past but am not presently
-                    </label>
-
-					<div class="clearfix js-hidden"></div>
-
+                        <label class="block-label" >
+                            <input id="prev" type="radio" name="activities" value="bpsp">Yes, I was registered in the past but am not presently
+                        </label>
+                        <div class="clearfix js-hidden"></div>
                         <h3 class="heading-small js-hidden">If you were registered previously:</h3>
-
                         <div id="mlr-prev" class="panel-indent inline-indent">
-                            <label class="form-label" for="first-name-2">MLR registration number (optional)
-                            </label>
+                            <label class="form-label" for="first-name-2">MLR registration number (optional)</label>
                             <input class="form-control" id="first-name-2" type="text">
                         </div>
-
-                    <label class="block-label">
-                        <input id="no" type="radio" name="activities" value="eab">
-                        No
-                    </label>
-
-
-
+                        <label class="block-label">
+                            <input id="no" type="radio" name="activities" value="eab">No
+                        </label>
+                    </div>
                 </fieldset>
-            </div>
 
+                <div class="form-group">
+                    <input type="submit" class="button" value="Save and continue">
+                </div>
+            </form>
+        </div>
 
-			<div class="form-group">
-              <input type="submit" class="button" value="Save and continue">
-   			</div>
-<div class="form-group">
-   			<a href="../summary" >Save and return to your application summary</a>
+        <p><a href="../summary" >Save and return to your application summary</a></p>
+        <a href="javascript:history.go(-1)" class="link-back">Back</a>
+
+        <div class="column-one-third">
+            {{>includes/action-links}}
 		</div>
 
-	   	</form>
-
-
-
-	  </div>
-	  <div class="column-one-third">
-
-{{>includes/action-links}}
-
-	   	<div class="meta-data">
-	   	</div>
-
-		</div>
-	</div>
-
-
-	</main>
+    </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
