@@ -22,45 +22,31 @@
                 <fieldset>
                     <legend class="visuallyhidden">Have you been registered for MLR before?</legend>
 
-
-
-
-
-
-
-
-
-
-
                     <div class="form-group">
-                        <label class="block-label" >
-                            <input id="ex" type="radio" name="activities" value="asp">Yes, I have an existing registration
+
+                        <label class="block-label" for="yes" data-target="example-ni-no">
+                            <input id="yes" type="radio" name="activities" value="asp">Yes, I have an existing registration
                         </label>
 
                         <div class="panel-indent js-hidden" id="example-ni-no">
                             <label class="form-label" for="mlr-reg">MLR registration number</label>
-                            <input class="form-control" name="mlr-reg" type="text" id="national-insurance">
+                            <input class="form-control"  type="text" id="mlr-reg">
                         </div>
 
-
-                    {{!     <h3 class="heading-small js-hidden">If you have an existing registration:</h3>
-                        <div id="mlr-ex" class="panel-indent inline-indent">
-                            <label class="form-label" for="first-name-2">MLR registration number</label>
-                            <input class="form-control" id="first-name-2" type="text">
-                        </div> }}
-
-                        <label class="block-label" >
-                            <input id="prev" type="radio" name="activities" value="bpsp">Yes, I was registered in the past but am not presently
+                        <label class="block-label" for="yes2" data-target="example-ni-no2">
+                            <input id="yes2" type="radio"  name="activities" value="bpsp">Yes, I was registered in the past but am not presently
                         </label>
                         <div class="clearfix js-hidden"></div>
-                        <h3 class="heading-small js-hidden">If you were registered previously:</h3>
-                        <div id="mlr-prev" class="panel-indent inline-indent">
-                            <label class="form-label" for="first-name-2">MLR registration number (optional)</label>
-                            <input class="form-control" id="first-name-2" type="text">
+
+                        <div class="panel-indent js-hidden" id="example-ni-no2">
+                            <label class="form-label" for="mlr-reg2">MLR registration number (optional)</label>
+                            <input class="form-control" type="text" id="mlr-reg2">
                         </div>
+
                         <label class="block-label">
                             <input id="no" type="radio" name="activities" value="eab">No
                         </label>
+
                     </div>
                 </fieldset>
 
@@ -79,28 +65,7 @@
 
     </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
-<script type="text/javascript">
-  (function($) {
-    $(document).ready(function(){
-      $("#mlr-ex").hide();
-        $("#mlr-prev").hide();
-      $("#ex").click(function(){
-        $("#mlr-ex").show();
-        $("#mlr-prev").hide();
-      });
-      $("#prev").click(function(){
-        $("#mlr-ex").hide();
-        $("#mlr-prev").show();
-      });
-	  $("#no").click(function(){
-        $("#mlr-ex").hide();
-        $("#mlr-prev").hide();
-      });
-    });
-  })(jQuery || window.jQuery);
-</script>
 
 {{/main}}
 {{/layout}}
