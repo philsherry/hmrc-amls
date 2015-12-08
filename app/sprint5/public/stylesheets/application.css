@@ -1482,3 +1482,9 @@ details {
     .phase-tag-alpha {
       font-size: 16px;
       line-height: 1.25; } }
+
+.space {
+  margin-bottom: 1em; }
+
+.form-label-bold {
+  margin-bottom: .5em; }

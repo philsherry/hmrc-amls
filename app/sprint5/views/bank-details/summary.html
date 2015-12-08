@@ -1,0 +1,67 @@
+{{<layout}}
+
+{{$pageTitle}}
+  Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$main}}
+
+{{>includes/service-header}}
+
+		<div class="grid-row">
+			<div class="column-two-thirds">
+
+                <h1 class="heading-xlarge">
+                    <span class="heading-secondary">Bank details</span>
+                   	Accounts used for MLR activities
+				</h1>
+
+               	<p>Please check all the information you have provided below.</p>
+               	<table class="space">
+					<thead>
+						<tr>
+							<th width="35%">Name</th>
+							<th width="25%">Account</th>
+							<th>Number</th>
+							<th>Type</th>
+							{{! <th>Sort code</th> }}
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>ACME Limited</td>
+							<td>Business</td>
+							<td>******37</td>
+							{{! <td>14-21-37</td> }}
+							<td>UK</td>
+							<td class="numeric"><a href="account-details">Edit</a></td>
+						</tr>
+						<tr>
+							<td>RR Supplies ltd</td>
+							<td>Other business's</td>
+							<td>******14</td>
+							{{! <td>62-34-91</td> }}
+							<td>UK</td>
+							<td class="numeric"><a href="#">Edit</a></td>
+						</tr>
+						<tr>
+							<td>Mr W. Coyote</td>
+							<td>Personal</td>
+							<td>******64</td>
+							{{! <td>2354 4564 8368 2328</td> }}
+							<td>INT</td>
+							<td class="numeric"><a href="#">Edit</a></td>
+
+						</tr>
+					</tbody>
+				</table>
+
+    			<div class="form-group">
+   					<a href="responsible-persons-1" class="button">Next section</a>
+				</div>
+			</div>
+		</div>
+
+{{/main}}
+{{/layout}}

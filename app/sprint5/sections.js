@@ -20,13 +20,13 @@ module.exports = [
     link: 'asp/1',
     status: undefined
   },
-  {
-    id: 3,
-    name: 'Bill payment service provider information',
-    section: 'bpsp',
-    link: 'bpsp/1',
-    status: undefined
-  },
+  // {
+  //   id: 3,
+  //   name: 'Bill payment service provider information',
+  //   section: 'bpsp',
+  //   link: 'bpsp/1',
+  //   status: undefined
+  // },
   {
     id: 4,
     name: 'Estate agent business information',
@@ -55,13 +55,13 @@ module.exports = [
     link: 'tcsp/1',
     status: undefined
   },
-  {
-    id: 8,
-    name: 'Telephone, digital & IT payment service provider information',
-    section: 'tditpsp',
-    link: 'tditpsp/1',
-    status: undefined
-  },
+  // {
+  //   id: 8,
+  //   name: 'Telephone, digital & IT payment service provider information',
+  //   section: 'tditpsp',
+  //   link: 'tditpsp/1',
+  //   status: undefined
+  // },
   {
     id: 9,
     name: 'Trading premises',
@@ -73,7 +73,7 @@ module.exports = [
     id: 10,
     name: 'Bank account details',
     section: 'bank-details',
-    link: 'bank-details/1',
+    link: 'bank-details/index',
     status: undefined
   },
   {
