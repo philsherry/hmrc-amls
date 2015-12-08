@@ -14,18 +14,17 @@
 		<div class="grid-row">
 			<div class="column-two-thirds">
 
-				<h1 class="heading-xlarge">Match business details</h1>
-				<p class="lede">We will attempt to match your details against information we currently hold.</p>
+				<h1 class="heading-xlarge">Your business details</h1>
 
 				{{! <form action="/business-search/" method="POST"> }}
 				<form method="post">
 					<fieldset>
-						<legend class="visuallyhidden">We will attempt to match your details against information we currently hold.</legend>
-
+						
 						<div class="form-group">
 							<label class="form-label-bold" for="ni-number">
-								Registered name
-	    						<span class="form-hint">Your company name exactly as on your incorporation certificate</span>
+								What is your registered business name?
+	    						<span class="form-hint">
+                                    It must be identical to the name on the incorporation certificate</span>
 	  						</label>
 	  						<input class="form-control" id="reg_name" type="text" name="reg_name" value="">
   						</div>
@@ -33,7 +32,7 @@
 						<div class="form-group">
 	  						<label class="form-label-bold" for="ni-number">
 								Corporation Tax Unique Tax Reference (UTR)
-	    						<span class="form-hint">Example, UTR 23626 37849</span>
+	    						<span class="form-hint">For example: UTR 23626 37849</span>
 	    						{{! <a href="#">Where to find your UTR</a> }}
 	  						</label>
 	  						<input class="form-control" id="reg_name" type="text" name="reg_name" value="">
