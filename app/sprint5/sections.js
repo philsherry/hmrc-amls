@@ -87,7 +87,7 @@ module.exports = [
     id: 12,
     name: 'About you',
     section: 'about-you',
-    link: 'about-you/1',
+    link: 'about-you/index',
     status: undefined
   },
   {
