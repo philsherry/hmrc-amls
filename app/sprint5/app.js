@@ -2,7 +2,7 @@ var app = require('../../lib/subapp.js')(__dirname),
   _ = require('lodash');
 
 // AMLS Routes
-app.post('/business-activities/business-activities', function (req, res) {
+app.post('/business-activities/business-type', function (req, res) {
   req.session.sections =
     _.chain(require('./sections.js').slice())
     .filter(function (e, i) {
