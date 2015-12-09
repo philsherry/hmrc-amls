@@ -65,10 +65,10 @@ function sectionDone(req) {
 }
 
 app.post('/:section/summary', function (req, res) {
-  var next = nextSection(req.session.sections, req.params.section);
+  // var next = nextSection(req.session.sections, req.params.section);
   sectionDone(req);
   res.redirect(
-    '../' + next.link
+    '../summary'
   );
 });
 
