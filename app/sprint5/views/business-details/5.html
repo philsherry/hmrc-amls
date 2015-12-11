@@ -23,24 +23,23 @@
                     <legend class="visuallyhidden">Is this the first time your business has registered for anti-money laundering supervision?</legend>
 
                     <div class="form-group">
-
-                        <label class="block-label" for="yes" data-target="example-ni-no">
+                        <label class="block-label" for="yes" data-target="exisiting">
                             <input id="yes" type="radio" name="activities" value="asp">Yes, I have an existing registration
                         </label>
 
-                        <div class="panel-indent js-hidden" id="example-ni-no">
-                            <label class="form-label" for="mlr-reg">MLR registration number</label>
-                            <input class="form-control"  type="text" id="mlr-reg">
+                        <div class="panel js-hidden" id="exisiting">
+                            <label class="form-label" for="mlr">MLR registration number</label>
+                            <input class="form-control" name="mlr" type="text" id="mlr">
                         </div>
 
-                        <label class="block-label" for="yes2" data-target="example-ni-no2">
+                        <label class="block-label" for="yes2" data-target="earlier">
                             <input id="yes2" type="radio"  name="activities" value="bpsp">Yes, I was registered in the past but am not presently
                         </label>
                         <div class="clearfix js-hidden"></div>
 
-                        <div class="panel-indent js-hidden" id="example-ni-no2">
-                            <label class="form-label" for="mlr-reg2">MLR registration number (optional)</label>
-                            <input class="form-control" type="text" id="mlr-reg2">
+                        <div class="panel js-hidden" id="earlier">
+                            <label class="form-label" for="mlr-op">MLR registration number (optional)</label>
+                            <input class="form-control" name="mlr-op" type="text" id="mlr-op">
                         </div>
 
                         <label class="block-label">
@@ -54,14 +53,14 @@
                     <input type="submit" class="button" value="Save and continue">
                 </div>
             </form>
+
+            <a href="javascript:history.go(-1)" class="link-back">Back</a>
         </div>
+    </div>
 
-        <p><a href="../summary" >Save and return to your application summary</a></p>
-        <a href="javascript:history.go(-1)" class="link-back">Back</a>
 
-        <div class="column-one-third">
-            {{>includes/action-links}}
-		</div>
+
+
 
     </div>
 
