@@ -11,47 +11,53 @@
 
 {{>includes/service-header}}
 
-		<div class="grid-row">
 
-				  <div class="column-two-thirds">
+        <div class="grid-row">
+	  <div class="column-two-thirds">
 
 
 
 	   	<h1 class="heading-large">
 	   		<span class="heading-secondary">
 	   			<!--Question 1.1-->
-	   			Payment
+	   			About the business
 	   		</span>
-	   		How will you pay the fee?
+	   		Is your business registered for VAT?
 	   	</h1>
-                <div class="form-group">
 
+      <form method="post">
+
+        <input type="hidden" name="next-page" value="summary">
+
+      		<div class="form-group">
                     <fieldset class="inline">
                         <label class="block-label" for="radio-inline-2-1">
                           <input id="radio-inline-2-1" type="radio" name="radio-inline-group-2" value="Yes">
-                          Electronically
+                          Yes
                         </label>
                         <label class="block-label" for="radio-inline-2-2">
                           <input id="radio-inline-2-2" type="radio" name="radio-inline-group-2" value="No">
-                          Cheque
+                          No
                         </label>
 
                         <div class="clearfix js-hidden"></div>
-                <h3 class="heading-small js-hidden">If you are paying by cheque:</h3>
+                <h3 class="heading-small js-hidden">If you are:</h3>
                 <div id="uk-yes" class="panel-indent inline-indent">
-                    <p>If you pay by cheque there will be a 25-30 day delay in reviewing your application. This is to allow us time to process your cheque.</p>
+                    <label class="form-label" for="first-name-2">VAT registration number
+                    </label>
+					<input type="text" id="first-name">
                 </div>
                         </fieldset>
                       </div>
                 <div class="form-group">
-                    <a href="summary" id="next" class="button">Save and continue</a>
+                    <input type="submit" class="button" value="Check your answers">
                 </div>
-					  <div class="form-group">
+                <div class="form-group">
    			<a href="../summary" >Save and return to your application summary</a>
 		</div>
 
-
-			</div>
+      			</div>
+      </form>
 
              <div class="column-one-third">
 
@@ -71,10 +77,10 @@
   (function($) {
     $(document).ready(function(){
       $("#uk-yes").hide();
-      $("#radio-inline-2-2").click(function(){
+      $("#radio-inline-2-1").click(function(){
         $("#uk-yes").show();
       });
-      $("#radio-inline-2-1").click(function(){
+      $("#radio-inline-2-2").click(function(){
         $("#uk-yes").hide();
       });
     });

@@ -10,7 +10,7 @@ module.exports = [
     id: 1,
     name: 'About the business',
     section: 'business-details',
-    link: 'business-details/index',
+    link: 'business-details/1',
     status: undefined
   },
   {

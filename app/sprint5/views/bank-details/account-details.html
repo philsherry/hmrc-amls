@@ -52,7 +52,9 @@
         					</div>
 
         					<div class="panel js-hidden" id="iban">
-								<label class="form-label" for="iban-number">IBAN number</label>
+								<label class="form-label" for="iban-number">IBAN number
+                                <span class="form-hint">If your bank does not use IBAN, leave this blank</span>
+                                </label>
 								<input class="form-control" name="iban-number" type="text" id="iban-number">
         					</div>
         				</div>
@@ -65,7 +67,7 @@
 	                          <input id="radio-inline-2-1" type="radio" name="radio-inline-group-2" value="Yes">Personal bank account
 	                        </label>
 	                        <label class="block-label" for="radio-inline-2-2">
-	                          <input id="radio-inline-2-2" type="radio" name="radio-inline-group-2" value="No">Business's bank account
+	                          <input id="radio-inline-2-2" type="radio" name="radio-inline-group-2" value="No">Your business's bank account
 	                        </label>
 							<label class="block-label" for="radio-inline-2-3">
 	                          <input id="radio-inline-2-3" type="radio" name="radio-inline-group-2" value="No">Another business's bank account
@@ -77,6 +79,7 @@
 				   		<input type="submit" class="button" value="Save and continue">
 					</div>
 
+					{{! <a href="../summary" >Save and return to your application summary</a> }}
 				</form>
 			</div>
 
