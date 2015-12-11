@@ -3,8 +3,8 @@ module.exports = [
     id: 0,
     name: 'Business activities',
     section: 'business-activities',
-    link: 'business-activities',
-    status: 'DONE'
+    link: 'business-activities/index',
+    status: 'COMPLETE'
   },
   {
     id: 1,
@@ -17,7 +17,7 @@ module.exports = [
     id: 2,
     name: 'Accountancy service provider information',
     section: 'asp',
-    link: 'asp/1',
+    link: 'asp/',
     status: undefined
   },
   // {

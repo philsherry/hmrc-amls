@@ -61,7 +61,7 @@ function sectionInProgress(req) {
 
 function sectionDone(req) {
   var section = getSection(req.session.sections, req.params.section)[0];
-  req.session.sections[section.value[0]].status = 'DONE';
+  req.session.sections[section.value[0]].status = 'COMPLETE';
 }
 
 app.post('/:section/summary', function (req, res) {
