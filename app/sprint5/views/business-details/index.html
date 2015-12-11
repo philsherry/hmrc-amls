@@ -13,8 +13,9 @@
 
             <h1 class="heading-xlarge">
                 <span class="heading-secondary">About the business</span>
-                Is this the first time your business has registered for anti-money laundering supervision?
+                Has this business been registered before?
             </h1>
+            <p>This only refers to anti-money laundering registration with HMRC</p>
 
             <form class="form" method="post">
                 <input type="hidden" name="next-page" value="vat">
@@ -24,16 +25,16 @@
 
                     <div class="form-group">
                         <label class="block-label" for="yes" data-target="exisiting">
-                            <input id="yes" type="radio" name="activities" value="asp">Yes, I have an existing registration
+                            <input id="yes" type="radio" name="activities" value="asp">Yes, this business has an existing registration
                         </label>
 
                         <div class="panel js-hidden" id="exisiting">
-                            <label class="form-label" for="mlr">MLR registration number</label>
+                            <label class="form-label" for="mlr">Money Laundering Regulation registration number</label>
                             <input class="form-control" name="mlr" type="text" id="mlr">
                         </div>
 
                         {{! <label class="block-label" for="yes2" data-target="earlier">
-                            <input id="yes2" type="radio"  name="activities" value="bpsp">Yes, I was registered in the past but am not presently
+                            <input id="yes2" type="radio"  name="activities" value="bpsp">Yes, this business was registered in the past, but it's not currently registered
                         </label>
                         <div class="clearfix js-hidden"></div>
 
