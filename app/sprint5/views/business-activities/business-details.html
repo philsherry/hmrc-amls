@@ -8,15 +8,14 @@
 
 	{{>includes/service-header-not-matched}}
 
-		   {{! <header class="page-header">
-		  <span class="form-hint">AMLS Registration</span>
-		</header> }}
 		<div class="grid-row">
 			<div class="column-two-thirds">
 
-				<h1 class="heading-xlarge">Your business details</h1>
+				<h1 class="heading-xlarge">
+		  			<span class="heading-secondary">Business matching</span>
+					Your business details
+				</h1>
 
-				{{! <form action="/business-search/" method="POST"> }}
 				<form method="post">
 					<fieldset>
 
@@ -32,14 +31,23 @@
 						<div class="form-group">
 	  						<label class="form-label-bold" for="ni-number">
 								Corporation Tax Unique Tax Reference (UTR)
+
 	    						<span class="form-hint">For example: UTR 23626 37849</span>
-	    						{{! <a href="#">Where to find your UTR</a> }}
+	    						<details>
+									<summary>
+										<span class="summary">Where to find your UTR</span>
+									</summary>
+									<div class="panel panel-border-narrow">
+										<p>We need some text about the UTR putting in here</p>
+									</div>
+								</details>
+
 	  						</label>
 	  						<input class="form-control" id="reg_name" type="text" name="reg_name" value="">
 	  					</div>
 
 						<div class="form-group">
-							<a href="business-confirm"  class="button" type="submit" id="save-and-continue">Search</a>
+							<a href="business-confirm"  class="button" type="submit" id="save-and-continue">Save and continue</a>
 						</div>
 					</fieldset>
 				</form>
