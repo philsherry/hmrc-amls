@@ -12,7 +12,7 @@
 	<div class="grid-row">
 	 	<div class="column-two-thirds">
 
-			<h1 class="heading-large">
+			<h1 class="heading-xlarge">
 				<span class="heading-secondary">About the business</span>
 				Where is your registered office or main place of business?
 			</h1>
@@ -21,7 +21,7 @@
 
 				{{>includes/address}}
 
-				<div class="form-group">
+				{{! <div class="form-group">
 					<label class="form-label">Do you want letters relating to anti-money laundering supervision to be sent here?</label>
 						<fieldset class="inline">
 							<label class="block-label" for="radio-inline-2-1">
@@ -33,42 +33,17 @@
 						  No
 						</label>
 					</fieldset>
-				</div>
+				</div> }}
 
 				<div class="form-group">
 					<input type="submit" class="button" value="Save and continue">
 				</div>
-
-				<div class="form-group">
-					<a href="../summary" >Save and return to your application summary</a>
-				</div>
 			</form>
 
+			<a href="javascript:history.go(-1)" class="link-back">Back</a>
+
 	  	</div>
-
-	  	<div class="column-one-third">
-			{{>includes/action-links}}
-			<div class="meta-data"></div>
-		</div>
 	</div>
-
-<script type="text/javascript">
-	//when next button is clicked create a function
-	$('#next').click(function() {
-		//if radio button yes is checked go to home '/'
-		if($('#radio-inline-2-1').is(':checked')){
-			location.href = 'business-details-1a'
-		}
-		// else if radio button no is checked go to /summary page
-		else if ($('#radio-inline-2-2').is(':checked')){
-			location.href = 'business-details-2'
-		}
-		// else if nothing is ticket return false and od nothing
-		else{
-			return false;
-		}
-	});
-</script>
 
 {{/main}}
 {{/layout}}
