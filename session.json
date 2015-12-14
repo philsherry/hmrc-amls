@@ -62,12 +62,11 @@
   "business-details": {
     "index": {
       "next-page": "vat",
-      "activities": "eab",
+      "activities": "asp",
       "mlr": ""
     },
     "vat": {
-      "next-page": "registered-office",
-      "radio-inline-group-2": "No",
+      "next-page": "confirming-address",
       "vat": ""
     },
     "new-registered-office": {
@@ -86,6 +85,15 @@
       "next-page": "correspondence"
     },
     "correspondence": {
+      "next-page": "summary"
+    },
+    "confirming-address": {
+      "next-page": "contacting-you"
+    },
+    "contacting-you": {
+      "next-page": "address-for-letters"
+    },
+    "address-for-letters": {
       "next-page": "summary"
     }
   },
