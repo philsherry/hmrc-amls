@@ -20,12 +20,18 @@
             <form class="form" method="post">
                 <input type="hidden" name="next-page" value="vat">
 
-                <fieldset>
+
+
+
+                <fieldset class="inline">
                     <legend class="visuallyhidden">Is this the first time your business has registered for anti-money laundering supervision?</legend>
 
                     <div class="form-group">
                         <label class="block-label" for="yes" data-target="exisiting">
-                            <input id="yes" type="radio" name="activities" value="asp">Yes, this business has an existing registration
+                            <input id="yes" type="radio" name="activities" value="asp">Yes
+                        </label>
+                        <label class="block-label">
+                            <input id="no" type="radio" name="activities" value="eab">No
                         </label>
 
                         <div class="panel js-hidden" id="exisiting">
@@ -33,7 +39,7 @@
                             <input class="form-control" name="mlr" type="text" id="mlr">
                         </div>
 
-                        <label class="block-label" for="yes2" data-target="earlier">
+                        {{! <label class="block-label" for="yes2" data-target="earlier">
                             <input id="yes2" type="radio"  name="activities" value="bpsp">Yes
                         </label>
                         <div class="clearfix js-hidden"></div>
@@ -41,11 +47,9 @@
                         <div class="panel js-hidden" id="earlier">
                             <label class="form-label" for="mlr-op">MLR registration number (optional)</label>
                             <input class="form-control" name="mlr-op" type="text" id="mlr-op">
-                        </div>
+                        </div> }}
 
-                        <label class="block-label">
-                            <input id="no" type="radio" name="activities" value="eab">No
-                        </label>
+
 
                     </div>
                 </fieldset>
