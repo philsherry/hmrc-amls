@@ -7,6 +7,8 @@ var express = require('express'),
   hjs = require('hjs'),
   auth = require('basic-auth-connect'),
   session = require('express-session'),
+  FileStore = require('./lib/filestore')(session),
+  MemoryStore = session.MemoryStore,
 
   username = process.env.USERNAME,
   password = process.env.PASSWORD,
@@ -26,6 +28,13 @@ app.locals.isDev = app.get('env') === 'development';
 app.use(favicon(
   path.join(__dirname, 'global', 'public', 'images', 'favicon.ico')));
 
+// serve static global assets
+app.use('/', 
+  express.static(path.join(__dirname, 'global', 'public')));
+
+app.use('/public/images/icons', 
+  express.static(path.join(__dirname, 'global', 'public', 'images')));
+
 // Password protection for Heroku
 if (!app.locals.isDev) {
   if (!username || !password) {
@@ -36,7 +45,14 @@ if (!app.locals.isDev) {
 }
 
 app.use(session({
-    secret : 'snail'
+    secret : 'snail',
+    resave : true,
+    saveUninitialized : true,
+    store : (
+      app.locals.isDev ?
+      new FileStore :
+      new MemoryStore
+      )
 }));
 
 app.use(bodyParser.urlencoded({ extended : true }));
@@ -58,13 +74,6 @@ app.set('views', glob.sync([
   __dirname + '/global/views',
   __dirname + '/global/template',
 ]));
-
-// serve static global assets
-app.use('/', 
-  express.static(path.join(__dirname, 'global', 'public')));
-
-app.use('/public/images/icons', 
-  express.static(path.join(__dirname, 'global', 'public', 'images')));
 
 // include the app file from each sub project
 // as sub app mounted at the prefix of the name

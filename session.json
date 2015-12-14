@@ -1,0 +1,116 @@
+{
+  "cookie": {
+    "originalMaxAge": null,
+    "expires": null,
+    "httpOnly": true,
+    "path": "/"
+  },
+  "sections": [
+    {
+      "id": 0,
+      "name": "Business activities",
+      "section": "business-activities",
+      "link": "business-activities/index",
+      "status": "COMPLETE"
+    },
+    {
+      "id": 1,
+      "name": "About the business",
+      "section": "business-details",
+      "link": "business-details/index",
+      "status": "COMPLETE"
+    },
+    {
+      "id": 2,
+      "name": "Accountancy service provider information",
+      "section": "asp",
+      "link": "asp/"
+    },
+    {
+      "id": 4,
+      "name": "Estate agent business information",
+      "section": "eab",
+      "link": "eab/1",
+      "status": "COMPLETE"
+    },
+    {
+      "id": 5,
+      "name": "High value dealer information",
+      "section": "hvd",
+      "link": "hvd/1"
+    },
+    {
+      "id": 11,
+      "name": "Responsible persons",
+      "section": "responsible-persons",
+      "link": "responsible-persons/1"
+    },
+    {
+      "id": 12,
+      "name": "About you",
+      "section": "about-you",
+      "link": "about-you/index",
+      "status": "COMPLETE"
+    },
+    {
+      "id": 13,
+      "name": "Payment",
+      "section": "payment",
+      "link": "payment/1"
+    }
+  ],
+  "business-details": {
+    "index": {
+      "next-page": "vat",
+      "activities": "eab",
+      "mlr": ""
+    },
+    "vat": {
+      "next-page": "registered-office",
+      "radio-inline-group-2": "No",
+      "vat": ""
+    },
+    "new-registered-office": {
+      "next-page": "letters"
+    },
+    "registered-office": {
+      "next-page": "new-registered-office"
+    },
+    "contact-details": {
+      "next-page": [
+        "5",
+        "5"
+      ]
+    },
+    "letters": {
+      "next-page": "correspondence"
+    },
+    "correspondence": {
+      "next-page": "summary"
+    }
+  },
+  "about-you": {
+    "index": {
+      "next-page": "your-role"
+    }
+  },
+  "eab": {
+    "1": {
+      "next-page": "2a"
+    },
+    "3": {
+      "next-page": "summary",
+      "radio-inline-group-2": "No",
+      "details": ""
+    },
+    "2a": {
+      "next-page": "2b",
+      "radio-inline-group-2": "No"
+    },
+    "2b": {
+      "next-page": "3",
+      "radio-inline-group-2": "No",
+      "details": ""
+    }
+  }
+}
