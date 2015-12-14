@@ -187,7 +187,8 @@
     "index": {
       "dob-day": "",
       "dob-month": "",
-      "dob-year": ""
+      "dob-year": "",
+      "radio-inline-group-2": "Yes"
     },
     "agent": {
       "next-page": "activities"
