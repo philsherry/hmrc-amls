@@ -18,22 +18,9 @@
 			</h1>
 
 			<form method="post">
+				<input type="hidden" name="next-page" value="letters">
 
 				{{>includes/address}}
-
-				{{! <div class="form-group">
-					<label class="form-label">Do you want letters relating to anti-money laundering supervision to be sent here?</label>
-						<fieldset class="inline">
-							<label class="block-label" for="radio-inline-2-1">
-						  	<input id="radio-inline-2-1" type="radio" name="next-page" value="1b">
-						  	Yes
-						</label>
-						<label class="block-label" for="radio-inline-2-2">
-						  <input id="radio-inline-2-2" type="radio" name="next-page" value="2">
-						  No
-						</label>
-					</fieldset>
-				</div> }}
 
 				<div class="form-group">
 					<input type="submit" class="button" value="Save and continue">

@@ -1,0 +1,48 @@
+{{<layout}}
+
+{{$pageTitle}}
+  Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$main}}
+
+
+{{>includes/service-header}}
+
+	<div class="grid-row">
+	 	<div class="column-two-thirds">
+
+			<h1 class="heading-xlarge">
+				<span class="heading-secondary">About the business</span>
+				Do you want letters relating to anti-money laundering supervision to be sent here?
+			</h1>
+
+			<form method="post">
+
+
+				<div class="form-group">
+					<label class="visuallyhidden">Do you want letters relating to anti-money laundering supervision to be sent here?</label>
+						<fieldset class="inline">
+							<label class="block-label" for="radio-inline-2-1">
+						  	<input id="radio-inline-2-1" type="radio" name="next-page" value="contact-details">
+						  	Yes
+						</label>
+						<label class="block-label" for="radio-inline-2-2">
+						  <input id="radio-inline-2-2" type="radio" name="next-page" value="correspondence">
+						  No
+						</label>
+					</fieldset>
+				</div>
+
+				<div class="form-group">
+					<input type="submit" class="button" value="Save and continue">
+				</div>
+			</form>
+
+			<a href="javascript:history.go(-1)" class="link-back">Back</a>
+
+	  	</div>
+	</div>
+
+{{/main}}
+{{/layout}}
