@@ -19,92 +19,54 @@
 			 	<p>This includes your own premises and other business's premises, where you have a contractual agreement for them to act as your agent and offer your services.</p>
 
 
-				<table>
+				<table class="space">
 					<thead>
 						<tr>
-							<td>
-								Address
-							</td>
-							<td>
-								Activities
-							</td>
-							<td>
-								Start date
-							</td>
-							<td class="edit-link">
-							</td>
+							<th>Name</th>
+							<th width="30%">Address</td>
+							<th>Activities</th>
+							<th>Own Premises</th>
+							<th></th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
-							<td>
-								Your organisation's, Registered address, Town, County, AB1 2DE
+							<td>ACME</td>
+							<td>Your organisation's
+								<br />Registered address
+								<br />Town
+								<br />County
+								<br />AB1 2DE
 							</td>
-							<td>
-								Estate agent business
+							<td>Estate agent business</td>
+							<td>Yes</td>
+							<td><a href="summary-own">Edit</a></td>
+						</tr>
+						<tr>
+							<td>Agent of ACME</td>
+							<td>Your agents's
+								<br />Registered address
+								<br />Town
+								<br />County
+								<br />AB1 2DE
 							</td>
-							<td>
-								17 November 2016
-							</td>
-							<td class="edit-link">
-								<a href="summary-agent">Edit</a>
-							</td>
+							<td>Estate agent business</td>
+							<td>No</td>
+							<td><a href="summary-agent">Edit</a></td>
 						</tr>
 					</tbody>
 				</table>
-				<h2 class="heading-medium">Other business's premises</h2>
-				<p><a href="agent-1">Add another business's premises</a></p>
-				<table class="table-check-answers">
-					<thead>
-						<tr>
-							<td>
-								Agent name
-							</td>
-							<td>
-								Address
-							</td>
-							<td>
-								Activities
-							</td>
-							<td>
-								Start date
-							</td>
-							<td class="edit-link">
-							</td>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>
-								Agent of ACME
-							</td>
-							<td>
-								Your agents's, Registered address, Town, County, AB1 2DE
-							</td>
-							<td>
-								Estate agent business
-							</td>
-							<td>
-								17 November 2016
-							</td>
-							<td class="edit-link">
-								<a href="summary-own">Edit</a>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-				<br>
-				<div class="form-group">
-					<form method="post">
-						<input type="hidden" name="next-page" value="responsible-persons/1">
-						<input class="button" type="submit" value="Next section" >
-					</form>
-				</div>
-				<div class="form-group">
-					<a href="../summary" >Return to your application summary</a>
-				</div>
-				</main>
-				<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+				<form method="post">
+					<div class="form-group">
+						<input type="submit" class="button" value="Save and complete section">
+					</div>
+				</form>
+
+		 		<a href="javascript:history.go(-1)" class="link-back">Back</a>
+
+			</div>
+		</div>
 
 {{/main}}
 {{/layout}}

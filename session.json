@@ -54,7 +54,7 @@
       "name": "Trading premises",
       "section": "trading-premises",
       "link": "trading-premises/index",
-      "status": "IN PROGRESS"
+      "status": "COMPLETE"
     },
     {
       "id": 10,
@@ -187,8 +187,7 @@
     "index": {
       "dob-day": "",
       "dob-month": "",
-      "dob-year": "",
-      "next-page": "agent"
+      "dob-year": ""
     },
     "agent": {
       "next-page": "activities"

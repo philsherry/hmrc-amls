@@ -6,149 +6,67 @@
 
 {{$main}}
 
-
-
-
-{{>includes/service-header}}
+	{{>includes/service-header}}
 
 		<div class="grid-row">
-
-
 			<div class="column-two-thirds">
 
+                <h1 class="heading-xlarge">
+                    <span class="heading-secondary">Trading premises</span>
+                   	Own premises used for MLR activities
+                </h1>
+
+				<table class="space">
+					<tbody>
+						<tr>
+							<th width="90%">Premises</th>
+							<td><a href="index">Edit</a></td>
+						</tr>
+						<tr>
+							<td colspan="2">ACME Limited</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								Your organisation's
+								<br>Registered address
+								<br>Town
+								<br>County
+								<br>AB1 2DE
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2">Residential</td>
+						</tr>
+						<tr>
+							<td colspan="2">Trading start date of 17 November 2016</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<table class="space">
+					<tbody>
+						<tr>
+							<th width="90%">Trading activities</th>
+							<td><a href="activities">Edit</a></td>
+						</tr>
+						<tr>
+							<td colspan="2">Estate agent business</td>
+						</tr>
+					</tbody>
+				</table>
 
 
-                <h1 class="heading-large">
-                    <span class="heading-secondary">
-                        Trading premises
-	   		          </span>
-                   Premises used for MLR activities</h1>
-			 <p>This includes your own premises and other business's premises, where you have a contractual agreement for them to act as your agent and offer your services.</p>
 
+				<form method="post">
+					<div class="form-group">
+						<input type="hidden" name="next-page" value="summary">
+            			<input type="submit" class="button" value="Save and continue">
+          			</div>
+          		</form>
 
-                </div>
-
-           <div class="column-one-third">
-                 {{>includes/action-links}}
-			</div>
-
-            		</div>
-
-              <table class="table-check-answers">
-			  <thead>
-		<tr>
-			<th class="section-name complete" colspan="2">
-				<h2>Premises
-				</h2>
-			</th>
-			<th class="edit-link">
-				<a href="own-1" class="">
-					Edit
-				</a>
-			</th>
-		</tr>
-	</thead>
-			  <tbody>
-				<tr>
-					<td class="question">
-						Trading name
-					</td>
-					<td class="answer">
-						ACME Limited
-					</td>
-					<td class="edit-link">
-					</td>
-				</tr>
-				<tr>
-					<td class="question">
-						Registered office or principal place of business
-					</td>
-					<td class="answer">
-						Your organisation's<br>
-						Registered address<br>
-						Town<br>
-						County<br>
-						AB1 2DE
-					</td>
-					<td class="edit-link">
-					</td>
-				</tr>
-				<tr>
-					<td class="question">
-						Residential
-					</td>
-					<td class="answer">
-						Yes
-					</td>
-					<td class="edit-link">
-					</td>
-				</tr>
-			  </tbody>
-			   <thead>
-		<tr>
-			<th class="section-name complete" colspan="2">
-				<h2>Trading activities
-				</h2>
-			</th>
-			<th class="edit-link">
-				<a href="own-2" class="">
-					Edit
-				</a>
-			</th>
-		</tr>
-	</thead>
-			  <tbody>
-				<tr>
-					<td class="question">
-						Which MLR activities do you conduct at this address?
-					</td>
-					<td class="answer">
-						Estate agent business
-					</td>
-					<td class="edit-link">
-					</td>
-				</tr>
-			  </tbody>
-				  <thead>
-		<tr>
-			<th class="section-name complete" colspan="2">
-				<h2>Trading start date
-				</h2>
-			</th>
-			<th class="edit-link">
-				<a href="own-3" class="">
-					Edit
-				</a>
-			</th>
-		</tr>
-	</thead>
-			  <tbody>
-				<tr>
-					<td class="question">
-						What date did you, or do you intend to, start trading from this premises?
-					</td>
-					<td class="answer">
-						17 November 2016
-					</td>
-					<td class="edit-link">
-					</td>
-				</tr>
-			  </tbody>
-		  </table>
-
-<form method="post">
-<div class="form-group">
-				<input type="hidden" name="next-page" value="summary-2">
-            <input type="submit" class="button" value="Save and continue">
-          </div>
-
-			<div class="form-group">
-   			<a href="../summary" >Save and return to your application summary</a>
+          		<a href="javascript:history.go(-1)" class="link-back">Back</a>
+          	</div>
 		</div>
-</form>
-	</main>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
 
 {{/main}}
