@@ -1,0 +1,53 @@
+{{<layout}}
+
+{{$pageTitle}}
+  Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$main}}
+
+    {{>includes/service-header}}
+
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+
+            <h1 class="heading-large">
+                <span class="heading-secondary">Trading premises</span>
+                What MLR activities do you undertake at this address?
+            </h1>
+
+            <form class="form" method="post">
+                <input type="hidden" name="next-page" value="summary">
+                <fieldset>
+                    <legend class="visuallyhidden">What MLR activities do you undertake at this address?</legend>
+
+                    <p>(Please select all that apply.)</p>
+                    <div class="form-group">
+                        <label class="block-label" for="asp">
+                            <input id="asp" type="checkbox" name="activities" value="2">Accountancy service provider
+                        </label>
+
+                        <label class="block-label" for="vat">
+                            <input id="vat" type="checkbox" name="activities" value="7">Trust and company service provider
+                        </label>
+
+                        <label class="block-label" for="tdit">
+                            <input id="tdit" type="checkbox" name="activities" value="8">Telephone, digital &amp; IT payment service provider
+                        </label>
+                    </div>
+                </fieldset>
+
+                <div class="form-group">
+                    <input type="submit" class="button" value="Save and continue">
+                </div>
+    	   	</form>
+
+            <a href="javascript:history.go(-1)" class="link-back">Back</a>
+
+        </div>
+    </div>
+
+
+{{/main}}
+{{/layout}}

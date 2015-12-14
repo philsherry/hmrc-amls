@@ -66,7 +66,7 @@ module.exports = [
     id: 9,
     name: 'Trading premises',
     section: 'trading-premises',
-    link: 'trading-premises/summary-1',
+    link: 'trading-premises/index',
     status: undefined
   },
   {
