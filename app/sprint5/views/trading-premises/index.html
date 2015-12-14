@@ -13,26 +13,41 @@
 
         	   	<h1 class="heading-xlarge">
         	   		<span class="heading-secondary">Trading premises</span>
-        	   		Premises details
+        	   		Where does the business trade from?
         	   	</h1>
 
 
                 <form class="form" method="post">
 
                     <fieldset>
-                        <legend class="visuallyhidden">Premises details</legend>
-
+                        <legend class="visuallyhidden">Where does the business trade from?</legend>
+                        <p>Include:</p>
+                            <ul class="list list-bullet">
+                                <li>your own business premises</li>
+                                <li>other businesses' premises, if you have a contractual agreement for them to act as your agent and offer your services</li>
+                        </ul>
                         <div class="form-group">
             		   		<label class="form-label-bold" for="middle-name">Trading name</label>
             		   		<input type="text" id="middle-name" class="form-control">
             		   	</div>
 
                         {{>includes/address}}
-
+                        
+                        <div class="form-group">
+                            <label class="form-label-bold">Whose premises are these?</label>
+                            <fieldset class="inline">
+                                <label class="block-label" for="radio-inline-2-1">
+                                    <input id="radio-inline-2-1" type="radio" name="next-page" value="activities">My business' premises
+                                </label>
+                                <label class="block-label" for="radio-inline-2-2">
+                                    <input id="radio-inline-2-2" type="radio" name="next-page" value="agent">An agent's premises
+                                </label>
+                            </fieldset>
+                        </div>
                         <div class="form-group">
                             <div class="form-date">
-                                <label class="form-label-bold">What date did you, or do you intend to, start trading from this premises?</label>
-                                <p class="form-hint">For example, 31 3 1980</p>
+                                <label class="form-label-bold">Start date for trading from these premises</label>
+                                <p class="form-hint">For example, 31 3 2017</p>
 
                                 <div class="form-group form-group-day">
                                     <label for="dob-day">Day</label>
@@ -62,19 +77,7 @@
                                 </label>
                             </fieldset>
                         </div>
-
-                        <div class="form-group">
-                            <label class="form-label-bold">What type of premises</label>
-                            <fieldset class="inline">
-                                <label class="block-label" for="radio-inline-2-1">
-                                    <input id="radio-inline-2-1" type="radio" name="next-page" value="activities">Own
-                                </label>
-                                <label class="block-label" for="radio-inline-2-2">
-                                    <input id="radio-inline-2-2" type="radio" name="next-page" value="agent">Other business
-                                </label>
-                            </fieldset>
-                        </div>
-
+                    
                         <div class="form-group">
                             <input type="submit" class="button" value="Save and continue">
                         </div>
