@@ -72,7 +72,8 @@
       "id": 12,
       "name": "About you",
       "section": "about-you",
-      "link": "about-you/index"
+      "link": "about-you/index",
+      "status": "COMPLETE"
     },
     {
       "id": 13,
