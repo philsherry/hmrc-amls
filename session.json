@@ -87,7 +87,11 @@
       "details": ""
     },
     "index": {
-      "next-page": "2b"
+      "next-page": "penalties",
+      "agency": [
+        "",
+        ""
+      ]
     },
     "2a": {
       "next-page": "2b",
@@ -96,6 +100,15 @@
     "2b": {
       "next-page": "3",
       "details": ""
+    },
+    "penalties": {
+      "next-page": "summary",
+      "act-group": "No",
+      "details": [
+        "",
+        ""
+      ],
+      "penalised": "No"
     }
   }
 }
