@@ -16,5 +16,11 @@
     "index": {
       "next-page": "your-role"
     }
+  },
+  "estate-agents": {
+    "1": {},
+    "2a": {
+      "next-page": "2b"
+    }
   }
 }
