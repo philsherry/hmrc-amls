@@ -30,8 +30,8 @@ module.exports = [
   {
     id: 4,
     name: 'Estate agent business information',
-    section: 'eab',
-    link: 'eab/1',
+    section: 'estate-agents',
+    link: 'estate-agents/index',
     status: undefined
   },
   {
