@@ -5,20 +5,6 @@
     "httpOnly": true,
     "path": "/"
   },
-  "trading-premises": {
-    "index": {
-      "next-page": "activities",
-      "dob-day": "",
-      "dob-month": "",
-      "dob-year": ""
-    },
-    "activities": {
-      "next-page": "summary"
-    },
-    "summary-own": {
-      "next-page": "summary"
-    }
-  },
   "sections": [
     {
       "id": 0,
@@ -31,8 +17,7 @@
       "id": 1,
       "name": "About the business",
       "section": "business-details",
-      "link": "business-details/index",
-      "status": "COMPLETE"
+      "link": "business-details/index"
     },
     {
       "id": 2,
@@ -43,8 +28,9 @@
     {
       "id": 4,
       "name": "Estate agent business information",
-      "section": "eab",
-      "link": "eab/1"
+      "section": "estate-agents",
+      "link": "estate-agents/index",
+      "status": "IN PROGRESS"
     },
     {
       "id": 5,
@@ -68,15 +54,13 @@
       "id": 9,
       "name": "Trading premises",
       "section": "trading-premises",
-      "link": "trading-premises/index",
-      "status": "COMPLETE"
+      "link": "trading-premises/index"
     },
     {
       "id": 10,
       "name": "Bank account details",
       "section": "bank-details",
-      "link": "bank-details/index",
-      "status": "COMPLETE"
+      "link": "bank-details/index"
     },
     {
       "id": 11,
@@ -88,8 +72,7 @@
       "id": 12,
       "name": "About you",
       "section": "about-you",
-      "link": "about-you/index",
-      "status": "COMPLETE"
+      "link": "about-you/index"
     },
     {
       "id": 13,
@@ -98,38 +81,21 @@
       "link": "payment/1"
     }
   ],
-  "business-details": {
-    "index": {
-      "next-page": "vat",
-      "activities": "asp",
-      "mlr": ""
-    },
-    "vat": {
-      "next-page": "confirming-address",
-      "vat": ""
-    },
-    "confirming-address": {
-      "next-page": "contacting-you"
-    },
-    "contacting-you": {
-      "next-page": "summary"
-    }
-  },
-  "bank-details": {
-    "index": {
-      "next-page": "account-details"
-    },
-    "account-details": {
+  "estate-agents": {
+    "3": {
       "next-page": "summary",
-      "radio-indent-group": "Yes",
-      "sort-code": "",
-      "iban-number": "",
-      "radio-inline-group-2": "No"
-    }
-  },
-  "about-you": {
+      "details": ""
+    },
     "index": {
-      "next-page": "your-role"
+      "next-page": "2b"
+    },
+    "2a": {
+      "next-page": "2b",
+      "radio-inline-group-2": "Yes"
+    },
+    "2b": {
+      "next-page": "3",
+      "details": ""
     }
   }
 }

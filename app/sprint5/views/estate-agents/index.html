@@ -1,0 +1,83 @@
+{{<layout}}
+
+{{$pageTitle}}
+  Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$main}}
+
+	{{>includes/service-header}}
+
+	<div class="grid-row">
+		<div class="column-two-thirds">
+
+			<h1 class="heading-xlarge">
+		  		<span class="heading-secondary">Estate agent business</span>
+		  		What kind of estate agent business are you?
+			</h1>
+
+
+
+
+			<form class="form" method="post">
+				{{! <input type="hidden" name="next-page" value="2a"> }}
+				<fieldset>
+					<legend class="form-label-bold">Are you a residential estate agency?</legend>
+
+					<div class="form-group">
+            			<fieldset class="inline">
+							<label class="block-label" for="radio-inline-2-1">
+                				<input id="radio-inline-2-1" type="radio" name="radio-inline-group-2" value="Yes">Yes
+              				</label>
+              				<label class="block-label" for="radio-inline-2-2">
+                				<input id="radio-inline-2-2" type="radio" name="radio-inline-group-2" value="No">No
+              				</label>
+						</fieldset>
+          			</div>
+          		</fieldset>
+
+							{{! <div class="panel panel-border-narrow js-hidden" id="example-ni-no">
+								<label class="form-label" for="national-insurance">Please provide details</label>
+								<textarea name="details" id="details" class="form-control"></textarea>
+        					</div>
+ }}
+
+
+    			<fieldset class="inline">
+    				<legend class="form-label-bold">Is this business registered with a redress scheme?</legend>
+    				<span class="form-hint">A redress scheme is an independent service which resolves disputes between an estate agent business and its customers.</span>
+    				<div class="form-group">
+          				<label class="block-label" for="yes-scheme" data-target="hidden">
+            				<input id="yes-scheme" type="radio" name="group-2" value="Yes">Yes
+          				</label>
+          				<label class="block-label" for="no-scheme">
+            				<input id="no-scheme" type="radio" name="group-2" value="No">No
+            			</label>
+
+            			<div class="panel panel-border-narrow js-hidden" id="hidden">
+      						<p>Which redress scheme?</p>
+                			<label class="block-label">
+                  				<input id="asp" type="radio" class="form-control" name="scheme" value="tpol">The Property Ombudsman Limited
+                			</label>
+                			<label class="block-label">
+                  				<input id="ct" type="radio" class="form-control" name="scheme" value="os">Ombudsman Services
+                  			</label>
+                			<label class="block-label">
+                  				<input id="paye" type="radio" class="form-control" name="scheme" value="prs">Property Redress Scheme
+                			</label>
+                			{{! <label class="block-label" data-target="#other">
+                  				<input id="other-ps" type="radio" name="scheme" value="other">Other
+                			</label> }}
+            			</div>
+              		</div>
+              	</fieldset>
+		  		<div class="form-group">
+					<input type="submit" class="button" value="Save and continue">
+		  		</div>
+			</form>
+
+	  	</div>
+	</div>
+
+{{/main}}
+{{/layout}}
