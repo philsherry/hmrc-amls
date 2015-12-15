@@ -17,7 +17,8 @@
       "id": 1,
       "name": "About the business",
       "section": "business-details",
-      "link": "business-details/index"
+      "link": "business-details/index",
+      "status": "IN PROGRESS"
     },
     {
       "id": 2,
@@ -30,7 +31,7 @@
       "name": "Estate agent business information",
       "section": "estate-agents",
       "link": "estate-agents/index",
-      "status": "IN PROGRESS"
+      "status": "COMPLETE"
     },
     {
       "id": 5,
@@ -54,13 +55,15 @@
       "id": 9,
       "name": "Trading premises",
       "section": "trading-premises",
-      "link": "trading-premises/index"
+      "link": "trading-premises/index",
+      "status": "COMPLETE"
     },
     {
       "id": 10,
       "name": "Bank account details",
       "section": "bank-details",
-      "link": "bank-details/index"
+      "link": "bank-details/index",
+      "status": "COMPLETE"
     },
     {
       "id": 11,
@@ -110,6 +113,58 @@
         ""
       ],
       "penalised": "No"
+    }
+  },
+  "business-details": {
+    "index": {
+      "next-page": "vat",
+      "mlr": ""
+    },
+    "vat": {
+      "next-page": "confirming-address",
+      "vat": ""
+    },
+    "confirming-address": {
+      "next-page": "new-registered-office"
+    },
+    "new-registered-office": {
+      "next-page": "contacting-you"
+    },
+    "contacting-you": {
+      "next-page": "address-for-letters"
+    },
+    "address-for-letters": {
+      "next-page": "summary"
+    }
+  },
+  "trading-premises": {
+    "index": {
+      "next-page": "agent",
+      "dob-day": "",
+      "dob-month": "",
+      "dob-year": "",
+      "radio-inline-group-2": "Yes"
+    },
+    "agent": {
+      "next-page": "activities",
+      "bus_type": "LLP"
+    },
+    "activities": {
+      "next-page": "summary",
+      "activities": "2"
+    },
+    "summary-agent": {
+      "next-page": "summary"
+    }
+  },
+  "bank-details": {
+    "index": {
+      "next-page": "account-details"
+    },
+    "account-details": {
+      "next-page": "summary",
+      "sort-code": "",
+      "iban-number": ""
     }
   }
 }
