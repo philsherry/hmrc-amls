@@ -5,6 +5,20 @@
     "httpOnly": true,
     "path": "/"
   },
+  "trading-premises": {
+    "index": {
+      "next-page": "activities",
+      "dob-day": "",
+      "dob-month": "",
+      "dob-year": ""
+    },
+    "activities": {
+      "next-page": "summary"
+    },
+    "summary-own": {
+      "next-page": "summary"
+    }
+  },
   "sections": [
     {
       "id": 0,
@@ -17,7 +31,8 @@
       "id": 1,
       "name": "About the business",
       "section": "business-details",
-      "link": "business-details/index"
+      "link": "business-details/index",
+      "status": "COMPLETE"
     },
     {
       "id": 2,
@@ -60,7 +75,8 @@
       "id": 10,
       "name": "Bank account details",
       "section": "bank-details",
-      "link": "bank-details/index"
+      "link": "bank-details/index",
+      "status": "COMPLETE"
     },
     {
       "id": 11,
@@ -72,7 +88,8 @@
       "id": 12,
       "name": "About you",
       "section": "about-you",
-      "link": "about-you/index"
+      "link": "about-you/index",
+      "status": "COMPLETE"
     },
     {
       "id": 13,
@@ -89,111 +106,12 @@
     },
     "vat": {
       "next-page": "confirming-address",
-      "radio-inline-group-2": "Yes",
       "vat": ""
     },
-    "new-registered-office": {
+    "confirming-address": {
       "next-page": "contacting-you"
     },
-    "registered-office": {
-      "next-page": "new-registered-office"
-    },
-    "contact-details": {
-      "next-page": [
-        "5",
-        "5"
-      ]
-    },
-    "letters": {
-      "next-page": "correspondence"
-    },
-    "correspondence": {
-      "next-page": "summary"
-    },
-    "confirming-address": {
-      "next-page": "new-registered-office"
-    },
     "contacting-you": {
-      "next-page": "address-for-letters"
-    },
-    "address-for-letters": {
-      "next-page": "summary"
-    }
-  },
-  "about-you": {
-    "index": {
-      "next-page": "your-role"
-    }
-  },
-  "eab": {
-    "1": {
-      "next-page": "2a"
-    },
-    "3": {
-      "next-page": "summary",
-      "radio-inline-group-2": "No",
-      "details": ""
-    },
-    "2a": {
-      "next-page": "2b",
-      "radio-inline-group-2": "No"
-    },
-    "2b": {
-      "next-page": "3",
-      "radio-inline-group-2": "No",
-      "details": ""
-    }
-  },
-  "trading-premises": {
-    "1": {
-      "next-page": "summary-1"
-    },
-    "own-1": {
-      "next-page": "own-2"
-    },
-    "own-2": {
-      "next-page": "own-3"
-    },
-    "agent-1": {
-      "next-page": "agent-2"
-    },
-    "agent-2": {
-      "next-page": "agent-3"
-    },
-    "agent-3": {
-      "next-page": "agent-4"
-    },
-    "agent-4": {
-      "next-page": "agent-5"
-    },
-    "agent-5": {
-      "dob-day": "",
-      "dob-month": "",
-      "dob-year": "",
-      "next-page": "summary-agent"
-    },
-    "own-3": {
-      "dob-day": "",
-      "dob-month": "",
-      "dob-year": "",
-      "next-page": "summary-own"
-    },
-    "summary-own": {
-      "next-page": "summary-2"
-    },
-    "summary-2": {
-      "next-page": "responsible-persons/1"
-    },
-    "index": {
-      "dob-day": "",
-      "dob-month": "",
-      "dob-year": "",
-      "radio-inline-group-2": "Yes"
-    },
-    "agent": {
-      "next-page": "activities"
-    },
-    "activities": {
       "next-page": "summary"
     }
   },
@@ -207,6 +125,11 @@
       "sort-code": "",
       "iban-number": "",
       "radio-inline-group-2": "No"
+    }
+  },
+  "about-you": {
+    "index": {
+      "next-page": "your-role"
     }
   }
 }
