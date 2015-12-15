@@ -6,59 +6,34 @@
 
 {{$main}}
 
-
 	<div class="grid-row">
 		<div class="column-two-thirds">
 
 			<h1 class="heading-xlarge">Summary of your registration progress</h1>
             <p class="lede">Complete all the sections below to register. Once you start the application, you have 28 days to finish it.</p>
 
-	  <table class="table-summary">
+	  		<table>
 
-		{{#sections}}
-		  <thead>
-			<tr>
-			  <th class="section-name">
-				<h2>
-				  <a href="{{link}}">
-				  {{name}}
-				  </a>
-				</h2>
-			  </th>
-			  <th class="section-status">
-				{{#status}}
-				<span class="status">{{status}}</span>
-				{{/status}}
-			  </th>
-			</tr>
-		  </thead>
-		{{/sections}}
+				{{#sections}}
+		  		<thead>
+					<tr>
+			  			<th><a href="{{link}}">{{name}}</a></th>
+			  			<th>{{#status}}{{status}}</span>{{/status}}</th>
+					</tr>
+		  		</thead>
+				{{/sections}}
 
-		<thead>
-		  <tr>
-			<th class="section-name locked">
-			  <h2>
-				<span class="locked" title="You can't complete this item right now">
-				  Declaration (locked)
-				</span>
-			  </h2>
-			</th>
-			<th class="section-status">
-			  &nbsp;
-			</th>
-		  </tr>
-		</thead>
+				<thead>
+		  			<tr>
+						<th class="section-name locked"><span class="locked" title="You can't complete this item right now">Declaration (locked)</span></th>
+						<th class="section-status">&nbsp;</th>
+					</tr>
+				</thead>
 
-	  </table>
+	  		</table>
 
-
-	  </div>
-		<div class="column-one-third">
-		  {{>includes/action-links}}
-		</div>
-	  </div>
-
-  </main>
+	  	</div>
+  	</div>
 
 {{/main}}
 {{/layout}}

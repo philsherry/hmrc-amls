@@ -94,7 +94,7 @@ module.exports = [
     id: 13,
     name: 'Payment',
     section: 'payment',
-    link: 'payment/1',
+    link: 'payment/index',
     status: undefined
   }
 ];

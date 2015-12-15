@@ -40,32 +40,6 @@
       "link": "hvd/1"
     },
     {
-      "id": 6,
-      "name": "Money service business information",
-      "section": "msb",
-      "link": "msb/1"
-    },
-    {
-      "id": 7,
-      "name": "Trust and company service provider information",
-      "section": "tcsp",
-      "link": "tcsp/1"
-    },
-    {
-      "id": 9,
-      "name": "Trading premises",
-      "section": "trading-premises",
-      "link": "trading-premises/index",
-      "status": "COMPLETE"
-    },
-    {
-      "id": 10,
-      "name": "Bank account details",
-      "section": "bank-details",
-      "link": "bank-details/index",
-      "status": "COMPLETE"
-    },
-    {
       "id": 11,
       "name": "Responsible persons",
       "section": "responsible-persons",
@@ -82,7 +56,8 @@
       "id": 13,
       "name": "Payment",
       "section": "payment",
-      "link": "payment/1"
+      "link": "payment/index",
+      "status": "COMPLETE"
     }
   ],
   "estate-agents": {
@@ -92,10 +67,7 @@
     },
     "index": {
       "next-page": "penalties",
-      "agency": [
-        "",
-        ""
-      ]
+      "agency": ""
     },
     "2a": {
       "next-page": "2b",
@@ -118,6 +90,7 @@
   "business-details": {
     "index": {
       "next-page": "vat",
+      "activities": "asp",
       "mlr": ""
     },
     "vat": {
@@ -125,46 +98,19 @@
       "vat": ""
     },
     "confirming-address": {
-      "next-page": "new-registered-office"
-    },
-    "new-registered-office": {
       "next-page": "contacting-you"
     },
     "contacting-you": {
-      "next-page": "address-for-letters"
-    },
-    "address-for-letters": {
       "next-page": "summary"
     }
   },
-  "trading-premises": {
+  "payment": {
     "index": {
-      "next-page": "agent",
-      "dob-day": "",
-      "dob-month": "",
-      "dob-year": "",
-      "radio-inline-group-2": "Yes"
-    },
-    "agent": {
-      "next-page": "activities",
-      "bus_type": "LLP"
-    },
-    "activities": {
       "next-page": "summary",
-      "activities": "2"
-    },
-    "summary-agent": {
-      "next-page": "summary"
+      "radio-inline-group-2": "No"
     }
   },
-  "bank-details": {
-    "index": {
-      "next-page": "account-details"
-    },
-    "account-details": {
-      "next-page": "summary",
-      "sort-code": "",
-      "iban-number": ""
-    }
+  "about-you": {
+    "your-details": {}
   }
 }

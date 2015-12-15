@@ -6,66 +6,43 @@
 
 {{$main}}
 
-
-
-
-{{>includes/service-header}}
+    {{>includes/service-header}}
 
 		<div class="grid-row">
-
-
 			<div class="column-two-thirds">
 
+                <h1 class="heading-xlarge">
+                    <span class="heading-secondary">Payment</span>
+                    Check your answers
+                </h1>
 
 
-                <h1 class="heading-large">
-                    <span class="heading-secondary">
-                        Payment
-	   		          </span>
-                  Section summary</h1>
-               <p>Please check all the information you have provided.</p>
+                <p>Please check all the information you have provided.</p>
 
-                </div>
+                <table class="space">
+                    <tbody>
+                        <tr>
+                            <th width="90%">How will you pay</th>
+                            <td><a href="#">Edit</a></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                Electronically
+                            </td>
+                        </tr>
 
-           <div class="column-one-third">
-                 {{>includes/action-links}}
-			</div>
+                    </tbody>
+                </table>
 
-            		</div>
-
-                <table class="table-check-answers">
-
-
-	<tbody>
-		<tr>
-			<td class="question">
-				How will you pay
-			</td>
-			<td class="answer">
-				Electronically
-			</td>
-			<td class="edit-link">
-				<a href="about-you-1">
-					Edit
-				</a>
-			</td>
-		</tr>
+                <form method="post">
+                    <div class="form-group">
+                        <input type="submit" class="button" value="Save and complete section">
+                    </div>
+                </form>
 
 
-	</tbody>
-	</table>
-
-    <div class="form-group">
-   			<a href="../declaration" class="button">Declaration</a>
-		</div>
-
-         <div class="form-group">
-   			<a href="../summary" >Save and return to your application summary</a>
-		</div>
-
-	</main>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+            </div>
+        </div>
 
 
 {{/main}}
