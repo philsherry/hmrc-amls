@@ -20,78 +20,64 @@ module.exports = [
     link: 'asp/',
     status: undefined
   },
-  // {
-  //   id: 3,
-  //   name: 'Bill payment service provider information',
-  //   section: 'bpsp',
-  //   link: 'bpsp/1',
-  //   status: undefined
-  // },
   {
-    id: 4,
+    id: 3,
     name: 'Estate agent business information',
     section: 'estate-agents',
     link: 'estate-agents/index',
     status: undefined
   },
   {
-    id: 5,
+    id: 4,
     name: 'High value dealer information',
     section: 'hvd',
     link: 'hvd/1',
     status: undefined
   },
   {
-    id: 6,
+    id: 5,
     name: 'Money service business information',
     section: 'msb',
     link: 'msb/1',
     status: undefined
   },
   {
-    id: 7,
+    id: 6,
     name: 'Trust and company service provider information',
     section: 'tcsp',
     link: 'tcsp/1',
     status: undefined
   },
-  // {
-  //   id: 8,
-  //   name: 'Telephone, digital & IT payment service provider information',
-  //   section: 'tditpsp',
-  //   link: 'tditpsp/1',
-  //   status: undefined
-  // },
   {
-    id: 9,
+    id: 7,
     name: 'Trading premises',
     section: 'trading-premises',
     link: 'trading-premises/index',
     status: undefined
   },
   {
-    id: 10,
+    id: 8,
     name: 'Bank account details',
     section: 'bank-details',
     link: 'bank-details/index',
     status: undefined
   },
   {
-    id: 11,
+    id: 9,
     name: 'Responsible persons',
     section: 'responsible-persons',
     link: 'responsible-persons/1',
     status: undefined
   },
   {
-    id: 12,
+    id: 10,
     name: 'About you',
     section: 'about-you',
     link: 'about-you/index',
     status: undefined
   },
   {
-    id: 13,
+    id: 11,
     name: 'Payment',
     section: 'payment',
     link: 'payment/index',
