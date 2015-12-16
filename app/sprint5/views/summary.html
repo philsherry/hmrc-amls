@@ -10,23 +10,25 @@
 		<div class="column-two-thirds">
 
 			<h1 class="heading-xlarge">Summary of your registration progress</h1>
-            <p class="lede">Complete all the sections below to register. Once you start the application, you have 28 days to finish it.</p>
+            <div class="panel">
+            	<p>Complete all the sections below to register. Once you start the application, you have 28 days to finish it.</p>
+            </div>
 
 	  		<table>
 
 				{{#sections}}
 		  		<thead>
 					<tr>
-			  			<th><a href="{{link}}">{{name}}</a></th>
-			  			<th>{{#status}}{{status}}</span>{{/status}}</th>
+			  			<td><a href="{{link}}">{{name}}</a></td>
+			  			<td>{{#status}}{{status}}</span>{{/status}}</td>
 					</tr>
 		  		</thead>
 				{{/sections}}
 
 				<thead>
 		  			<tr>
-						<th class="section-name locked"><span class="locked" title="You can't complete this item right now">Declaration (locked)</span></th>
-						<th class="section-status">&nbsp;</th>
+						<td class="section-name locked"><span class="locked" title="You can't complete this item right now">Declaration (locked)</span></td>
+						<td class="section-status">&nbsp;</td>
 					</tr>
 				</thead>
 
