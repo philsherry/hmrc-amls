@@ -6,7 +6,7 @@ app.post('/business-activities/business-type', function (req, res) {
   req.session.sections =
     _.chain(require('./sections.js').slice())
     .filter(function (e, i) {
-      return i > 1 && i < 9 ?
+      return i > 1 && i < 7 ?
         _.find(req.body.activities, function (section) {
           return section == i;
         }) : true;

@@ -45,14 +45,14 @@ if (!app.locals.isDev) {
 }
 
 app.use(session({
-    secret : 'snail',
-    resave : true,
-    saveUninitialized : true,
-    store : (
-      app.locals.isDev ?
-      new FileStore :
-      new MemoryStore
-      )
+  secret : 'snail',
+  resave : true,
+  saveUninitialized : true,
+  store : (
+    app.locals.isDev ?
+    new FileStore :
+    new MemoryStore
+  )
 }));
 
 app.use(bodyParser.urlencoded({ extended : true }));
