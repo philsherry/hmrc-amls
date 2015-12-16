@@ -1,0 +1,150 @@
+{
+  "cookie": {
+    "originalMaxAge": null,
+    "expires": null,
+    "httpOnly": true,
+    "path": "/"
+  },
+  "sections": [
+    {
+      "id": 0,
+      "name": "Business activities",
+      "section": "business-activities",
+      "link": "business-activities/index",
+      "status": "COMPLETE"
+    },
+    {
+      "id": 1,
+      "name": "About the business",
+      "section": "business-details",
+      "link": "business-details/index"
+    },
+    {
+      "id": 2,
+      "name": "Accountancy service provider information",
+      "section": "asp",
+      "link": "asp/"
+    },
+    {
+      "id": 7,
+      "name": "Trading premises",
+      "section": "trading-premises",
+      "link": "trading-premises/index",
+      "status": "COMPLETE"
+    },
+    {
+      "id": 8,
+      "name": "Bank account details",
+      "section": "bank-details",
+      "link": "bank-details/index"
+    },
+    {
+      "id": 9,
+      "name": "Responsible persons",
+      "section": "responsible-persons",
+      "link": "responsible-persons/1"
+    },
+    {
+      "id": 10,
+      "name": "About you",
+      "section": "about-you",
+      "link": "about-you/index"
+    },
+    {
+      "id": 11,
+      "name": "Payment",
+      "section": "payment",
+      "link": "payment/index"
+    }
+  ],
+  "estate-agents": {
+    "3": {
+      "next-page": "summary",
+      "details": ""
+    },
+    "index": {
+      "next-page": "penalties"
+    },
+    "2a": {
+      "next-page": "2b",
+      "radio-inline-group-2": "Yes"
+    },
+    "2b": {
+      "next-page": "3",
+      "details": ""
+    },
+    "penalties": {
+      "next-page": "summary",
+      "details": [
+        "",
+        ""
+      ]
+    }
+  },
+  "business-details": {
+    "index": {
+      "next-page": "vat",
+      "activities": "asp",
+      "mlr": ""
+    },
+    "vat": {
+      "next-page": "confirming-address",
+      "vat": ""
+    },
+    "confirming-address": {
+      "next-page": "contacting-you"
+    },
+    "contacting-you": {
+      "next-page": "summary"
+    }
+  },
+  "payment": {
+    "index": {
+      "next-page": "summary",
+      "radio-inline-group-2": "No"
+    }
+  },
+  "about-you": {
+    "your-details": {}
+  },
+  "asp": {
+    "1": {
+      "next-page": "2"
+    },
+    "2": {
+      "next-page": "3",
+      "dob-day": [
+        "",
+        ""
+      ],
+      "dob-month": [
+        "",
+        ""
+      ],
+      "dob-year": [
+        "",
+        ""
+      ]
+    },
+    "3": {
+      "next-page": "summary",
+      "radio-inline-group-2": "Yes"
+    }
+  },
+  "trading-premises": {
+    "index": {
+      "next-page": "agent",
+      "dob-day": "",
+      "dob-month": "",
+      "dob-year": "",
+      "radio-inline-group-2": "Yes"
+    },
+    "agent": {
+      "next-page": "activities",
+      "bus_type": "SOP"
+    },
+    "activities": {
+      "next-page": "summary"
+    }
+  }
+}
