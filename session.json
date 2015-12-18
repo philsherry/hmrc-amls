@@ -17,20 +17,21 @@
       "id": 1,
       "name": "About the business",
       "section": "business-details",
-      "link": "business-details/index"
+      "link": "business-details/index",
+      "status": "COMPLETE"
     },
     {
       "id": 2,
       "name": "Accountancy service provider information",
       "section": "asp",
-      "link": "asp/"
+      "link": "asp/index",
+      "status": "IN PROGRESS"
     },
     {
       "id": 7,
       "name": "Trading premises",
       "section": "trading-premises",
-      "link": "trading-premises/index",
-      "status": "COMPLETE"
+      "link": "trading-premises/index"
     },
     {
       "id": 8,
@@ -57,34 +58,10 @@
       "link": "payment/index"
     }
   ],
-  "estate-agents": {
-    "3": {
-      "next-page": "summary",
-      "details": ""
-    },
-    "index": {
-      "next-page": "penalties"
-    },
-    "2a": {
-      "next-page": "2b",
-      "radio-inline-group-2": "Yes"
-    },
-    "2b": {
-      "next-page": "3",
-      "details": ""
-    },
-    "penalties": {
-      "next-page": "summary",
-      "details": [
-        "",
-        ""
-      ]
-    }
-  },
   "business-details": {
     "index": {
       "next-page": "vat",
-      "activities": "asp",
+      "activities": "eab",
       "mlr": ""
     },
     "vat": {
@@ -98,21 +75,13 @@
       "next-page": "summary"
     }
   },
-  "payment": {
-    "index": {
-      "next-page": "summary",
-      "radio-inline-group-2": "No"
-    }
-  },
-  "about-you": {
-    "your-details": {}
-  },
   "asp": {
-    "1": {
-      "next-page": "2"
+    "index": {
+      "next-page": "supervised",
+      "services": "accountant"
     },
-    "2": {
-      "next-page": "3",
+    "supervised": {
+      "next-page": "professional-body",
       "dob-day": [
         "",
         ""
@@ -126,25 +95,9 @@
         ""
       ]
     },
-    "3": {
+    "professional-body": {
       "next-page": "summary",
-      "radio-inline-group-2": "Yes"
-    }
-  },
-  "trading-premises": {
-    "index": {
-      "next-page": "agent",
-      "dob-day": "",
-      "dob-month": "",
-      "dob-year": "",
-      "radio-inline-group-2": "Yes"
-    },
-    "agent": {
-      "next-page": "activities",
-      "bus_type": "SOP"
-    },
-    "activities": {
-      "next-page": "summary"
+      "prof-body": "Yes"
     }
   }
 }
