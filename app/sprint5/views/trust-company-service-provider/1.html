@@ -6,108 +6,70 @@
 
 {{$main}}
 
-
-
-
 {{>includes/service-header}}
 
 
-        <div class="grid-row">
-    <div class="column-two-thirds">
+	<div class="grid-row">
+		<div class="column-two-thirds">
 
+			<h1 class="heading-xlarge">
+				<span class="heading-secondary">Trust and company service provider information</span>
+				What kind of Trust and Company Service business are you?
+	  		</h1>
 
+	  		<p>Select all that apply</p>
 
-      <h1 class="heading-large">
-        <span class="heading-secondary">
-          <!--Question 1.1-->
-          Trust and company service provider information
-        </span>
-        What kind of Trust and Company Service business are you?
-      </h1>
+			<form class="form" method="post">
+				<fieldset>
+					<legend class="visuallyhidden">What kind of Trust and Company Service business are you?</legend>
 
-    <form class="form" method="post">
+					<div class="form-group">
+						<label class="block-label" >
+							<input id="asp" type="checkbox" name="next-page" value="asp">Nominee shareholders
+						</label>
+						<label class="block-label" >
+					  		<input id="ct" type="checkbox" name="next-page" value="bpsp">Trustee provider
+						</label>
+						<label class="block-label">
+					  		<input id="paye" type="checkbox" name="next-page" value="eab">Registered office/business address/virtual office services
+						</label>
+						<label class="block-label">
+							<input id="sa" type="checkbox" name="next-page" value="hvd">Company director/secretary/partner provider
+						</label>
+						<label class="block-label" >
+							<input id="tc" type="checkbox" name="next-page" value="msb">Trust or company formation agent
+						</label>
+					</div>
+				</fieldset>
+				<div class="form-group">
+		  			<input type="submit" class="button" value="Save and continue">
+				</div>
+			</form>
 
-      <input type="hidden" name="next-page">
-
-            <div class="form-group">
-                <fieldset>
-                    <span class="form-hint">Select all that apply</span>
-                    <label class="block-label" >
-                        <input id="asp" type="checkbox" name="activities" value="asp">
-                        Nominee shareholders
-                    </label>
-
-                    <label class="block-label" >
-                      <input id="ct" type="checkbox" name="activities" value="bpsp">
-                      Trustee provider
-                    </label>
-
-                    <label class="block-label">
-                      <input id="paye" type="checkbox" name="activities" value="eab">
-                      Registered office/business address/virtual office services
-                    </label>
-
-                    <label class="block-label">
-                        <input id="sa" type="checkbox" name="activities" value="hvd">
-                        Company director/secretary/partner provider
-                    </label>
-
-                    <label class="block-label" >
-                        <input id="tc" type="checkbox" name="activities" value="msb">
-                        Trust or company formation agent
-                    </label>
-                </fieldset>
-            </div>
-
-
-        <div class="form-group">
-          <input type="submit" class="button" value="Save and continue">
-        </div>
-<div class="form-group">
-   			<a href="../summary" >Save and return to your application summary</a>
-		</div>
-
-      </form>
-
-
-
-    </div>
-    <div class="column-one-third">
-
-      {{>includes/action-links}}
-
-      <div class="meta-data">
-      </div>
-
-    </div>
-  </div>
-
-
-  </main>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  		</div>
+  	</div>
 
 <script type="text/javascript">
 
   $(function () {
 
-    var $tc = $('#tc'),
-      $paye = $('#paye'),
-      $next = $('input[name="next-page"]');
+	var $tc = $('#tc'),
+	  $paye = $('#paye'),
+	  $next = $('input[name="next-page"]');
 
-    $next.val('2');
+	$next.val('2');
 
-    $('input[type="checkbox"]').on('change', function () {
-      if ($tc.is(':checked') && $paye.is(':checked')) {
-        $next.val('1a-2');
-      } else if ($paye.is(':checked')) {
-        $next.val('1a');
-      } else if ($tc.is(':checked')) {
-        $next.val('1b');
-      } else {
-        $next.val('2');
-      }
-    });
+	$('input[type="checkbox"]').on('change', function () {
+	  if ($tc.is(':checked') && $paye.is(':checked')) {
+		$next.val('1a-2');
+	  } else if ($paye.is(':checked')) {
+		$next.val('1a');
+	  } else if ($tc.is(':checked')) {
+		$next.val('1b');
+	  } else {
+		$next.val('2');
+	  }
+	});
   });
 </script>
 
