@@ -45,7 +45,7 @@ module.exports = [
     id: 6,
     name: 'Trust and company service provider information',
     section: 'trust-company-service-provider',
-    link: 'trust-company-service-provider/1',
+    link: 'trust-company-service-provider/index',
     status: undefined
   },
   {

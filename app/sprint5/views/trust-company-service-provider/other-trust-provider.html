@@ -17,7 +17,8 @@
 				Does your business use the services of another trust and company service provider?
 			</h1>
 
-	  		<form method="post" action="summary">
+	  		<form method="post">
+                <input type="hidden" name="next-page" value="summary">
 				<fieldset class="inline">
 					<legend class="visuallyhidden">Does your business use the services of another trust and company service provider?</legend>
 
@@ -39,10 +40,12 @@
                 </fieldset>
 
 				<div class="form-group">
-			  		<input type="submit" class="button" value="Check your answers">
+			  		<input type="submit" class="button" value="Save and continue">
 				</div>
 
 		  	</form>
+
+            <a href="javascript:history.go(-1)" class="link-back">Back</a>
 
 		</div>
 	</div>
