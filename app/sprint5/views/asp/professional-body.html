@@ -36,14 +36,17 @@
                         </fieldset>
                     </div>
 
-                    <div id="hidden" class="panel-indent inline-indent js-hidden">
+                    <div id="hidden" class="inline-indent js-hidden">
+                        <p>Select all the apply.</p>
+
       					<fieldset>
-                            <div class="form-group">
+                            {{! <div class="form-group">
         					   <legend class="form-label-bold">Which professional body?</legend>
                                 <span class="form-hint">( For example, Association of Chartered Certified Accountants )</span>
                                 <input class="form-control" id="first-name-2" type="text">
-                            </div>
-                            {{! <label class="block-label" >
+                            </div> }}
+                            <div class="form-group">
+                            <label class="block-label" >
                                 <input id="asp" type="checkbox" name="activities" value="asp">Association of Accounting Technicians
                             </label>
                             <label class="block-label" >
@@ -82,13 +85,14 @@
         					<label class="block-label" >
                                 <input id="tc" type="checkbox" name="activities" value="msb">Law Society
                             </label>
-                            <label class="block-label" >
+                            <label class="block-label" data-target="other">
                                 <input id="other-ps" type="checkbox" name="activities" value="other" data-other="#other">Other
                             </label>
-                            <div id="other" class="panel-indent inline-indent js-hidden">
+                            <div id="other" class="panel inline-indent js-hidden">
                                 <label class="form-label" for="first-name-2">Please specify</label>
                                 <input class="form-control" id="first-name-2" type="text">
-                            </div> }}
+                            </div>
+                            </div>
                         </fieldset>
                     </div>
 
