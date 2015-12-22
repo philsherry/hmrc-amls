@@ -44,8 +44,8 @@ module.exports = [
   {
     id: 6,
     name: 'Trust and company service provider information',
-    section: 'tcsp',
-    link: 'tcsp/1',
+    section: 'trust-company-service-provider',
+    link: 'trust-company-service-provider/1',
     status: undefined
   },
   {
