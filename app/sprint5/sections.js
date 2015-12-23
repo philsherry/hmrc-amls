@@ -30,8 +30,8 @@ module.exports = [
   {
     id: 4,
     name: 'High value dealer information',
-    section: 'hvd',
-    link: 'hvd/1',
+    section: 'high-value-dealer',
+    link: 'high-value-dealer/index',
     status: undefined
   },
   {
