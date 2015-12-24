@@ -37,8 +37,8 @@ module.exports = [
   {
     id: 5,
     name: 'Money service business information',
-    section: 'msb',
-    link: 'msb/1',
+    section: 'money-service-business',
+    link: 'money-service-business/index',
     status: undefined
   },
   {
@@ -64,9 +64,9 @@ module.exports = [
   },
   {
     id: 9,
-    name: 'Responsible persons',
-    section: 'responsible-persons',
-    link: 'responsible-persons/1',
+    name: 'Responsible people',
+    section: 'responsible-people',
+    link: 'responsible-people/index',
     status: undefined
   },
   {
