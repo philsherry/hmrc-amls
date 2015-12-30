@@ -1,0 +1,73 @@
+{{<layout}}
+
+{{$pageTitle}}
+  Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$main}}
+
+{{>includes/service-header}}
+
+		<div class="grid-row">
+			<div class="column-two-thirds">
+
+                <h1 class="heading-xlarge">
+                    <span class="heading-secondary">Bank details</span>
+                   	Section summary
+				</h1>
+
+               	<p>Please check all the information you have provided.</p>
+               	<table class="space">
+					<thead>
+						<tr>
+							<th width="35%">Account name</th>
+							<th width="25%">Type of account</th>
+							<th width="25%">Account number</th>
+							<th width="10%">UK</th>
+							{{! <th>Sort code</th> }}
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>ACME Limited</td>
+							<td>Business</td>
+							<td>******37</td>
+							{{! <td>14-21-37</td> }}
+							<td>Yes</td>
+							<td class="numeric"><a href="account-details">Edit</a></td>
+						</tr>
+						<tr>
+							<td>RR Supplies ltd</td>
+							<td>Other business's</td>
+							<td>******14</td>
+							{{! <td>62-34-91</td> }}
+							<td>Yes</td>
+							<td class="numeric"><a href="#">Edit</a></td>
+						</tr>
+						<tr>
+							<td>Mr W. Coyote</td>
+							<td>Personal</td>
+							<td>******64</td>
+							{{! <td>2354 4564 8368 2328</td> }}
+							<td>No</td>
+							<td class="numeric"><a href="#">Edit</a></td>
+
+						</tr>
+					</tbody>
+				</table>
+
+				<p><a href="account-details">Add another bank account</a></p>
+				<form method="post">
+    				<div class="form-group">
+   						<input type="submit" class="button" value="Save and complete section">
+
+					</div>
+				</form>
+
+
+			</div>
+		</div>
+
+{{/main}}
+{{/layout}}

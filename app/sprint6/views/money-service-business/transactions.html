@@ -1,0 +1,95 @@
+{{<layout}}
+
+{{$pageTitle}}
+  Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$main}}
+
+    {{>includes/service-header}}
+
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+
+            <h1 class="heading-xlarge">
+                <span class="heading-secondary">Money service business</span>
+                Needs a title putting in here to illustrate the page
+            </h1>
+
+            <form class="form" method="post">
+
+                <input type="hidden" name="next-page" value="funds-transfer">
+
+                {{! <div class="form-group">
+                    <label class="form-label form-hint" for="amount">Give the answer in whole pounds (£)</label>
+                    <input id="amount" type="text" class="form-control" name="amount">
+                </div> }}
+
+                <div class="form-group">
+                    <fieldset class="inline">
+                        <legend class="form-label-bold">Can your systems identify linked transactions?</legend>
+                        <label class="block-label" for="radio-inline-1" >
+                            <input id="radio-inline-1" type="radio" name="radio-inline-group" value="Yes">Yes
+                        </label>
+                        <label class="block-label" for="radio-inline-2">
+                            <input id="radio-inline-2" type="radio" name="radio-inline-group" value="No">No
+                        </label>
+                    </fieldset>
+
+
+                </div>
+
+                <div class="form-group">
+                    <fieldset class="inline">
+                        <legend class="form-label-bold">Have you applied for an FCA PSR registration number? </legend>
+                        <label class="block-label" for="radio-inline-3" data-target="fca">
+                            <input id="radio-inline-3" type="radio" name="radio-inline-group-2" value="Yes">Yes
+                        </label>
+                        <label class="block-label" for="radio-inline-4">
+                            <input id="radio-inline-4" type="radio" name="radio-inline-group-2" value="No">No
+                        </label>
+                    </fieldset>
+
+                    <div class="panel panel-indent js-hidden" id="fca">
+                        <label class="form-label" for="specify">Please provide FCA PSR reference</label>
+                        <input type="text" name="" class="form-control" value="">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <fieldset class="inline">
+                        <legend class="form-label-bold">Do you use the services of an Intermediary Payment Service Provider (IPSP)?  </legend>
+                        <label class="block-label" for="radio-inline-5" data-target="IPSP">
+                            <input id="radio-inline-5" type="radio" name="radio-inline-group-3" value="Yes">Yes
+                        </label>
+                        <label class="block-label" for="radio-inline-6">
+                            <input id="radio-inline-6" type="radio" name="radio-inline-group-3" value="No">No
+                        </label>
+                    </fieldset>
+
+                    <div class="panel panel-indent js-hidden" id="IPSP">
+                        <div class="form-group">
+                            <label class="form-label" for="specify">Please provide IPSP's name</label>
+                            <input type="text" name="" class="form-control" value="">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="specify">Please provide IPSP's MLR registration number</label>
+                            <input type="text" name="" class="form-control" value="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" class="button" value="Save and continue">
+                </div>
+
+            </form>
+
+            <a href="javascript:history.go(-1)" class="link-back">Back</a>
+
+        </div>
+    </div>
+
+{{/main}}
+{{/layout}}

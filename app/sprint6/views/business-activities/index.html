@@ -1,0 +1,55 @@
+{{<layout}}
+
+{{$pageTitle}}
+    Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$main}}
+
+        <div class="grid-row">
+			<div class="column-two-thirds">
+
+                <h1 class="heading-xlarge">
+                    <span class="heading-secondary">Business activities</span>
+                    What is your business structure?
+                </h1>
+
+			    <form action="/business-type/" method="POST">
+                    <fieldset>
+
+                        <div class="form-group">
+    						<label for="sole" class="block-label">
+    							<input type="radio" name="bus_type" id="sole" value="SOP">
+    							Sole proprietor
+    						</label>
+    						<label for="llp" class="block-label">
+    							<input type="radio" name="bus_type" id="llp" value="BPT">
+    							Limited liability partnership
+    						</label>
+    						<label for="partner" class="block-label">
+    							<input type="radio" name="bus_type" id="partner" value="LPT">
+    							Partnership
+    						</label>
+    						<label for="cb" class="block-label">
+    							<input type="radio" name="bus_type" id="cb" value="LLP">
+    							Corporate body
+    						</label>
+    						<label for="other" class="block-label">
+    							<input type="radio" name="bus_type" id="other" value="UAS">
+    							Unincorporated body
+    						</label>
+                        </div>
+
+						<div class="form-group">
+							<a href="business-details" class="button" type="submit" id="save-and-continue">Save and continue</a>
+						</div>
+                    </fieldset>
+			    </form>
+
+                <a href="javascript:history.go(-1)" class="link-back">Back</a>
+			</div>
+		</div>
+
+
+{{/main}}
+{{/layout}}
