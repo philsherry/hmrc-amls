@@ -1,0 +1,55 @@
+{{<layout}}
+
+{{$pageTitle}}
+  Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$main}}
+
+    {{>includes/service-header}}
+
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+
+            <h1 class="heading-xlarge">
+                <span class="heading-secondary">Responsible people</span>
+                Contacting you
+            </h1>
+
+            <form class="form" method="post">
+
+                <input type="hidden" name="next-page" value="address">
+
+                <fieldset>
+                    <legend class="visuallyhidden">Contacting you</legend>
+                    <div class="form-group">
+                        <label class="form-label-bold" for="phone">Primary contact number</label>
+                        <input class="form-control" type="text" id="phone"  />
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label-bold" for="phone">Secondary contact number</label>
+                        <input class="form-control" type="text" id="phone"  />
+                    </div>
+
+                    <label class="form-label-bold" for="telephone-number">Email address</label>
+                        <input class="form-control" id="telephone-number" name="telephone-number" type="text">
+                        <label class="form-checkbox" for="checkbox-telephone-number">
+                        <input id="checkbox-telephone-number" name="contact-by-text-phone" type="checkbox" value="true">by completing this box you are agreeing that HMRC can contact you at this email address
+                    </label>
+                </fieldset>
+
+                <div class="form-group">
+                    <input type="submit" class="button" value="Save and continue">
+                </div>
+
+            </form>
+
+            <a href="javascript:history.go(-1)" class="link-back">Back</a>
+
+
+        </div>
+    </div>
+
+{{/main}}
+{{/layout}}
