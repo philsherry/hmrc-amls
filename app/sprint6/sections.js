@@ -16,8 +16,8 @@ module.exports = [
   {
     id: 2,
     name: 'Accountancy service provider information',
-    section: 'asp',
-    link: 'asp/index',
+    section: 'accountancy-service-provider',
+    link: 'accountancy-service-provider/index',
     status: undefined
   },
   {
