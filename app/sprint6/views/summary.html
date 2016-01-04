@@ -14,25 +14,37 @@
             	<p>Complete all the sections below to register. Once you start the application, you have 28 days to finish it.</p>
             </div>
 
-	  		<table>
+	  		<table class="space">
+	  			<thead>
+	  				<tr>
+	  					<th>Registration section</th>
+	  					<th>Status</th>
+	  				</tr>
+	  			</thead>
+	  			<tbody>
+						{{#sections}}
+						<tr>
+			  				<td><a href="{{link}}">{{name}}</a></td>
+			  				<td>{{#status}}{{status}}</span>{{/status}}</td>
+						</tr>
 
-				{{#sections}}
-		  		<thead>
-					<tr>
-			  			<td><a href="{{link}}">{{name}}</a></td>
-			  			<td>{{#status}}{{status}}</span>{{/status}}</td>
-					</tr>
-		  		</thead>
-				{{/sections}}
-
-				<thead>
+						{{#message}}
+						<tr>
+							<td>{{time}}mins - {{message}}</td>
+							<td></td>
+						</tr>
+						{{/message}}
+						{{/sections}}
+				</tbody>
+{{!
 		  			<tr>
-						<td class="section-name locked"><span class="locked" title="You can't complete this item right now">Declaration (locked)</span></td>
-						<td class="section-status">&nbsp;</td>
+						<td class=""><span class="locked" title="You can't complete this item right now">Declaration (locked)</span></td>
 					</tr>
-				</thead>
+ }}
 
 	  		</table>
+
+
 
 	  	</div>
   	</div>
