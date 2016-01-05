@@ -55,7 +55,7 @@ function nextSection(sections, section) {
 function sectionInProgress(req) {
   var section = getSection(req.session.sections, req.params.section)[0];
   if (section.value[1].status === undefined) {
-    req.session.sections[section.value[0]].status = 'IN PROGRESS';
+    req.session.sections[section.value[0]].status = '';
   }
 }
 
