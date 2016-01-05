@@ -14,13 +14,13 @@ module.exports = [
     section: 'business-details',
     link: 'business-details/index',
     message: 'some text to go here',
-    time: '30',
+    time: '5',
     status: undefined
   },
   {
     id: 2,
     name: 'Accountancy service provider information',
-    vsection: 'accountancy-service-provider',
+    section: 'accountancy-service-provider',
     link: 'accountancy-service-provider/index',
     message: 'some text to go here',
     time: '30',
