@@ -1596,3 +1596,7 @@ input[type=number] {
 
 .form-label-bold {
   margin-bottom: .5em; }
+
+.card {
+  background: #ccc;
+  margin-bottom: 30px; }

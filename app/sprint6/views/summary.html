@@ -14,58 +14,25 @@
             	<p>Complete all the sections below to register. Once you start the application, you have 28 days to finish it.</p>
             </div>
 
-	  		<!--<table class="space">
-	  			<thead>
-	  				<tr>
-	  					<th>Registration section</th>
-	  					<th>Status</th>
-	  				</tr>
-	  			</thead>
+	  		<table>
 
-	  			<tbody>
-					{{#sections}}
-						<tr>
-			  				<td><a href="{{link}}">{{name}}</a></td>
-			  				<td>{{#status}}{{status}}</span>{{/status}}</td>
-						</tr>
-						{{#message}}
-						<tr>
-							<td>{{message}}</td>
-							<td></td>
-						</tr>
-						{{/message}}
-					{{/sections}}
-
-				</tbody>
-
-		  			<tr>
-						<td class=""><span class="locked" title="You can't complete this item right now">Declaration (locked)</span></td>
+				{{#sections}}
+		  		<thead>
+					<tr>
+			  			<td><a href="{{link}}">{{name}}</a></td>
+			  			<td>{{#status}}{{status}}</span>{{/status}}</td>
 					</tr>
+		  		</thead>
+				{{/sections}}
 
+				<thead>
+		  			<tr>
+						<td class="section-name locked"><span class="locked" title="You can't complete this item right now">Declaration (locked)</span></td>
+						<td class="section-status">&nbsp;</td>
+					</tr>
+				</thead>
 
-	  		</table>-->
-
-			{{#sections}}
-	  		<table class="summarytable">
-	  			<thead>
-	  				<tr>
-	  					<th><a href="{{link}}">{{name}}</a></th>
-	  					<th width="18%" class="numeric" >{{#status}}{{status}}</span>{{/status}}</th>
-	  				</tr>
-	  			</thead>
-
-			</table>
-			{{/sections}}
-
-
-
-						<td class=""><span class="locked" title="You can't complete this item right now">Declaration (locked)</span></td>
-
-
-
-
-
-
+	  		</table>
 
 	  	</div>
   	</div>

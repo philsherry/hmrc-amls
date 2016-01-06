@@ -2,7 +2,7 @@ var app = require('../../lib/subapp.js')(__dirname),
   _ = require('lodash');
 
 // AMLS Routes
-app.post('/business-activities/business-type', function (req, res) {
+app.post('/business-activities/index', function (req, res) {
   req.session.sections =
     _.chain(require('./sections.js').slice())
     .filter(function (e, i) {
@@ -13,7 +13,7 @@ app.post('/business-activities/business-type', function (req, res) {
     })
     .value();
 
-  res.redirect('../summary');
+  res.redirect(req.body['next-page']);
 });
 
 function getUrl(arr, memo) {
@@ -55,7 +55,7 @@ function nextSection(sections, section) {
 function sectionInProgress(req) {
   var section = getSection(req.session.sections, req.params.section)[0];
   if (section.value[1].status === undefined) {
-    req.session.sections[section.value[0]].status = 'IN PROGRESS';
+    req.session.sections[section.value[0]].status = '';
   }
 }
 

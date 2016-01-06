@@ -14,32 +14,43 @@
 
             <h1 class="heading-xlarge">
                 <span class="heading-secondary">Money service business</span>
-                What specific MSB services will you be carrying out
+                What is your anticipated total throughput for the next 12 months?
             </h1>
 
-            <p>Select all that apply.</p>
             <form class="form" method="post">
 
-                <input type="hidden" name="next-page" value="anticipated-totals">
+                <input type="hidden" name="next-page" value="branches-or-agents">
+
+                {{! <div class="form-group">
+                    <label class="form-label form-hint" for="amount">Give the answer in whole pounds (£)</label>
+                    <input id="amount" type="text" class="form-control" name="amount">
+                </div> }}
+
 
                 <fieldset>
                     <div class="form-group">
-                        <legend class="visuallyhidden">What specific MSB services will you be carrying out</legend>
-
-
-                        <label class="block-label" for="money">
-                            <input id="money" type="checkbox" name="radio-group">Money transmitter
+                        <legend class="visuallyhidden">What is your anticipated total throughput for the next 12 months?</legend>
+                        <label class="block-label" for="radio-1">
+                            <input id="radio-1" type="radio" name="radio-group">&pound;0 - &pound;100k
                         </label>
-                        <label class="block-label" for="currency">
-                            <input id="currency" type="checkbox" name="radio-group">Currency exchange
+                        <label class="block-label" for="radio-2">
+                            <input id="radio-2" type="radio" name="radio-group">&pound;100k - &pound;500k
                         </label>
-                        <label class="block-label" for="cash">
-                            <input id="cash" type="checkbox" name="radio-group">Cheque casher (Nonscrap metal dealer)
+                        <label class="block-label" for="radio-1">
+                            <input id="radio-1" type="radio" name="radio-group">&pound;500k - &pound;1m
                         </label>
-                        <label class="block-label" for="scrap">
-                            <input id="scrap" type="checkbox" name="radio-group">Scrap metal dealer cheque casher
+                        <label class="block-label" for="radio-4">
+                            <input id="radio-4" type="radio" name="radio-group">&pound;1m - &pound;20m
                         </label>
-
+                        <label class="block-label" for="radio-3">
+                            <input id="radio-3" type="radio" name="radio-group">&pound;20m - &pound;100m
+                        </label>
+                        <label class="block-label" for="radio-5">
+                            <input id="radio-5" type="radio" name="radio-group">&pound;100m - &pound;1b
+                        </label>
+                        <label class="block-label" for="radio-6">
+                            <input id="radio-6" type="radio" name="radio-group">&pound;1b+
+                        </label>
                     </div>
                 </fieldset>
 

@@ -1,0 +1,74 @@
+{{<layout}}
+
+{{$pageTitle}}
+  Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$main}}
+
+	<div class="grid-row">
+		<div class="column-two-thirds">
+
+			<h1 class="heading-xlarge">Summary of your registration progress</h1>
+            <div class="panel">
+            	<p>Complete all the sections below to register. Once you start the application, you have 28 days to finish it.</p>
+            </div>
+
+	  		<!--<table class="space">
+	  			<thead>
+	  				<tr>
+	  					<th>Registration section</th>
+	  					<th>Status</th>
+	  				</tr>
+	  			</thead>
+
+	  			<tbody>
+					{{#sections}}
+						<tr>
+			  				<td><a href="{{link}}">{{name}}</a></td>
+			  				<td>{{#status}}{{status}}</span>{{/status}}</td>
+						</tr>
+						{{#message}}
+						<tr>
+							<td>{{message}}</td>
+							<td></td>
+						</tr>
+						{{/message}}
+					{{/sections}}
+
+				</tbody>
+
+		  			<tr>
+						<td class=""><span class="locked" title="You can't complete this item right now">Declaration (locked)</span></td>
+					</tr>
+
+
+	  		</table>-->
+
+			{{#sections}}
+	  		<table class="summarytable">
+	  			<thead>
+	  				<tr>
+	  					<th><a href="{{link}}">{{name}}</a></th>
+	  					<th width="18%" class="numeric" >{{#status}}{{status}}</span>{{/status}}</th>
+	  				</tr>
+	  			</thead>
+
+			</table>
+			{{/sections}}
+
+
+
+						<td class=""><span class="locked" title="You can't complete this item right now">Declaration (locked)</span></td>
+
+
+
+
+
+
+
+	  	</div>
+  	</div>
+
+{{/main}}
+{{/layout}}

@@ -4,20 +4,26 @@ module.exports = [
     name: 'Business activities',
     section: 'business-activities',
     link: 'business-activities/index',
-    status: 'COMPLETE'
+    message: 'some text to go here',
+    time: '30',
+    status: undefined
   },
   {
     id: 1,
     name: 'About the business',
     section: 'business-details',
     link: 'business-details/index',
+    message: 'some text to go here',
+    time: '5',
     status: undefined
   },
   {
     id: 2,
     name: 'Accountancy service provider information',
-    section: 'asp',
-    link: 'asp/index',
+    section: 'accountancy-service-provider',
+    link: 'accountancy-service-provider/index',
+    message: 'some text to go here',
+    time: '30',
     status: undefined
   },
   {
@@ -25,6 +31,8 @@ module.exports = [
     name: 'Estate agent business information',
     section: 'estate-agents',
     link: 'estate-agents/index',
+    message: 'some text to go here',
+    time: '30',
     status: undefined
   },
   {
@@ -32,6 +40,8 @@ module.exports = [
     name: 'High value dealer information',
     section: 'high-value-dealer',
     link: 'high-value-dealer/index',
+    message: 'some text to go here',
+    time: '30',
     status: undefined
   },
   {
@@ -39,6 +49,8 @@ module.exports = [
     name: 'Money service business information',
     section: 'money-service-business',
     link: 'money-service-business/index',
+    message: 'some text to go here',
+    time: '30',
     status: undefined
   },
   {
@@ -46,6 +58,8 @@ module.exports = [
     name: 'Trust and company service provider information',
     section: 'trust-company-service-provider',
     link: 'trust-company-service-provider/index',
+    message: 'some text to go here',
+    time: '30',
     status: undefined
   },
   {
@@ -53,6 +67,8 @@ module.exports = [
     name: 'Trading premises',
     section: 'trading-premises',
     link: 'trading-premises/index',
+    message: 'some text to go here',
+    time: '30',
     status: undefined
   },
   {
@@ -60,6 +76,8 @@ module.exports = [
     name: 'Bank account details',
     section: 'bank-details',
     link: 'bank-details/index',
+    message: 'some text to go here',
+    time: '30',
     status: undefined
   },
   {
@@ -67,6 +85,8 @@ module.exports = [
     name: 'Responsible people',
     section: 'responsible-people',
     link: 'responsible-people/index',
+    message: 'some text to go here',
+    time: '30',
     status: undefined
   },
   {
@@ -74,6 +94,8 @@ module.exports = [
     name: 'About you',
     section: 'about-you',
     link: 'about-you/index',
+    message: 'some text to go here',
+    time: '30',
     status: undefined
   },
   {
@@ -81,6 +103,8 @@ module.exports = [
     name: 'Payment',
     section: 'payment',
     link: 'payment/index',
+    message: 'some text to go here',
+    time: '30',
     status: undefined
   }
 ];
