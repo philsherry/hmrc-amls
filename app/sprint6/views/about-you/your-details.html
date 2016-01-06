@@ -17,7 +17,9 @@
 	   			Your details
 	   		</h1>
 
-			<form class="form" method="post" action="summary">
+			<form class="form" method="post">
+
+			<input type="hidden" name="next-page" value="summary">
 				<fieldset>
 					<legend class="visuallyhidden">Your name</legend>
 			   		<div class="form-group">
@@ -36,11 +38,11 @@
 				</fieldset>
 
 				<div class="form-group">
-					<input type="submit" class="button" value="Save and complete section">
-				</div>
+		            <input type="submit" class="button" value="Save and continue">
+	   			</div>
 
 	   		</form>
-
+		<a href="javascript:history.go(-1)" class="link-back">Back</a>
 	  	</div>
 	</div>
 
