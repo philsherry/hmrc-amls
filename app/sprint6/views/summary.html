@@ -46,22 +46,14 @@
 	  		</table>-->
 
 			{{#sections}}
-	  		<table class="space">
-
+	  		<table class="summarytable">
 	  			<thead>
 	  				<tr>
-	  					<td><a href="{{link}}">{{name}}</a></td>
-	  					<td width="20%">{{#status}}{{status}}</span>{{/status}}</td>
+	  					<th><a href="{{link}}">{{name}}</a></th>
+	  					<th width="18%" class="numeric" >{{#status}}{{status}}</span>{{/status}}</th>
 	  				</tr>
 	  			</thead>
-	  			{{#message}}
-	  				<tbody>
-						<tr>
-							<td>{{message}}</td>
-							<td></td>
-						</tr>
-					</tbody>
-						{{/message}}
+
 			</table>
 			{{/sections}}
 

@@ -6,7 +6,7 @@ module.exports = [
     link: 'business-activities/index',
     message: 'some text to go here',
     time: '30',
-    status: 'COMPLETE'
+    status: undefined
   },
   {
     id: 1,
