@@ -13,7 +13,7 @@
 
             <h1 class="heading-xlarge">
                 <span class="heading-secondary">Business activities</span>
-                Is this business a franchise?
+                Business details
             </h1>
 
             <form class="form" method="post">
@@ -21,7 +21,7 @@
                 <input type="hidden" name="next-page" value="employment">
 
                 <fieldset class="inline">
-                    <legend class="visuallyhidden">Are the activities the business is registering for, the only activities carried out by the business?</legend>
+                    <legend class="form-label-bold">Is this business a franchise?</legend>
                     <div class="form-group">
                         <label class="block-label" for="yes" data-target="franchise">
                             <input id="yes" type="radio" name="franchise-group" value="yes">Yes
@@ -34,6 +34,19 @@
                             <label class="form-label" for="mlr">What is your franchisor's name</label>
                             <input class="form-control" name="mlr" type="text" id="mlr">
                         </div>
+                    </div>
+
+                </fieldset>
+
+                <fieldset class="inline">
+                    <legend class="form-label-bold">People in the business</legend>
+                    <div class="form-group">
+                        <label for="yes" class="form-label">How many people are employed in this business?</label>
+                        <input id="yes" class="form-control form-control-1-4" type="number" >
+                    </div>
+                    <div class="form-group">
+                        <label for="yes" class="form-label">How many people in the business are/will be directly involved in the MLR activities?</label>
+                        <input id="yes" class="form-control form-control-1-4" type="number" >
                     </div>
 
                 </fieldset>

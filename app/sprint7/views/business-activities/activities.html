@@ -23,10 +23,18 @@
                         <label class="block-label" for="yes">
                             <input id="yes" type="radio" name="next-page" value="turnover">Yes
                         </label>
-                        <label class="block-label" >
-                            <input id="no" type="radio" name="next-page" value="other-activities">No
+                        <label class="block-label" data-target="no-activity">
+                            <input id="no" type="radio" name="next-page" value="business-turnover">No
                         </label>
-					</div>
+
+
+                        <div class="panel js-hidden" id="no-activity">
+                            <div class="form-group">
+                                <label class="form-label">What other activities are carried out by the business?</label>
+                                <textarea class="form-control" name=""></textarea>
+                            </div>
+                        </div>
+                    </div>
                 </fieldset>
 
                 <div class="form-group">

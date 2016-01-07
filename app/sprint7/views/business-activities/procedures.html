@@ -1,0 +1,87 @@
+{{<layout}}
+
+{{$pageTitle}}
+  Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$main}}
+
+    {{>includes/service-header}}
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+
+            <h1 class="heading-xlarge">
+                <span class="heading-secondary">Business activities</span>
+                Suspicious activity, policies and procedures
+            </h1>
+
+            <form class="form" method="post">
+
+                <input type="hidden" name="next-page" value="summary">
+
+
+                <fieldset>
+
+                    <div class="form-group">
+                        <fieldset class="inline">
+                            <legend class="form-label-bold">Do you have written guidance on how to identify and report suspicious activity?</legend>
+                            <label class="block-label" for="radio-inline-1">
+                                <input id="radio-inline-1" type="radio" name="radio-inline-group1" value="Yes">Yes
+                            </label>
+                            <label class="block-label" for="radio-inline-2" >
+                                <input id="radio-inline-2" type="radio" name="radio-inline-group1" value="No">No
+                            </label>
+                        </fieldset>
+                    </div>
+                    <div class="form-group">
+                        <fieldset class="inline">
+                            <legend class="form-label-bold">Have you registered with the National Crime Agency to report suspicious activity online?</legend>
+                            <label class="block-label" for="radio-inline-3">
+                                <input id="radio-inline-3" type="radio" name="radio-inline-group2" value="Yes">Yes
+                            </label>
+                            <label class="block-label" for="radio-inline-4">
+                                <input id="radio-inline-4" type="radio" name="radio-inline-group2" value="No">No
+                            </label>
+                        </fieldset>
+                    </div>
+                    <div class="form-group">
+                        <fieldset class="inline">
+                            <legend class="form-label-bold">Do you have a formal Risk Assessment and Policies/Procedures?</legend>
+                            <label class="block-label" for="radio-inline-5" data-target="records">
+                                <input id="radio-inline-5" type="radio" name="radio-inline-group3" value="Yes">Yes
+                            </label>
+                            <label class="block-label" for="radio-inline-6" >
+                                <input id="radio-inline-6" type="radio" name="radio-inline-group3" value="No">No
+                            </label>
+                        </fieldset>
+
+                        <div class="panel panel-indent js-hidden" id="records">
+                            <div class="form-group">
+                                <fieldset>
+                                    <legend class="form-label-bold">What format are these in?</legend>
+
+                                    <label class="block-label" for="manual" >
+                                        <input id="manual" type="checkbox" name="radio-group" value="Northern Ireland">Manual format
+                                    </label>
+                                    <label class="block-label" for="electronic" >
+                                        <input id="electronic" type="checkbox" name="radio-group" value="Isle of Man or the Channel Islands">Electronic format
+                                    </label>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <div class="form-group">
+                    <input type="submit" class="button" value="Save and continue">
+                </div>
+
+            </form>
+
+            <a href="javascript:history.go(-1)" class="link-back">Back</a>
+        </div>
+    </div>
+
+{{/main}}
+{{/layout}}
