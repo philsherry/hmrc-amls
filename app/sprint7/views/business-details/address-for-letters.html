@@ -28,13 +28,14 @@
 						<div class="form-group">
 						<label class="visuallyhidden">Is this a UK address</label>
 						<fieldset class="inline">
-							<label class="block-label" for="radio-inline-2-1">
-						  		<input id="radio-inline-2-1" type="radio" name="ukorover" value="uk" checked="checked" >UK
+							<label class="block-label" for="radio-inline-2-1" >
+						  		<input id="radio-inline-2-1" type="radio"  name="ukorover" value="false" checked="checked" >UK
 							</label>
-							<label class="block-label" for="radio-inline-2-2" data-target="over">
-						  		<input id="radio-inline-2-2" type="radio" name="ukorover" value="overseas">Overseas
+							<label class="block-label" for="radio-inline-2-2" >
+						  		<input id="radio-inline-2-2" type="radio" name="ukorover" value="true">Overseas
 							</label>
 						</fieldset>
+
 					</div>
 
 					<div class="form-group">
@@ -68,12 +69,14 @@
 				      <input type="text" class="form-control" id="company-address2">
 				    </div>
 
-				    <div id="zip" class="form-group">
-				      <label for="postcode-name" class="form-label-bold">Postcode</label>
-				      <input type="text" class="form-control form-control-1-8" id="postcode-name" maxlength="8">
+				    <div id="count">
+				    	<div id="zip" class="form-group">
+				      		<label for="postcode-name" class="form-label-bold">Postcode</label>
+				      		<input type="text" class="form-control form-control-1-8" id="postcode-name" maxlength="8">
+				    	</div>
 				    </div>
 
-					<div class="js-hidden" id="over">
+					<div id="over">
 				  		<div class="form-group">
 				    		<label for="company-address3" class="form-label-bold">Country</label>
 				    		<input type="text" class="form-control" id="company-address2">
@@ -95,3 +98,17 @@
 
 {{/main}}
 {{/layout}}
+<script>
+$("#over").hide();
+$("#radio-inline-2-1").on('click', function() {
+  $("#over").hide();
+  $("#count").show();
+});
+</script>
+
+<script>
+$("#radio-inline-2-2").on('click', function() {
+  $("#over").show();
+  $("#count").hide();
+});
+</script>
