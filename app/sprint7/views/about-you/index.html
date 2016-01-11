@@ -1,0 +1,72 @@
+{{<layout}}
+
+{{$pageTitle}}
+  Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$main}}
+
+    {{>includes/service-header}}
+
+
+	<div class="grid-row">
+		<div class="column-two-thirds">
+
+	   		<h1 class="heading-xlarge">
+	   			<span class="heading-secondary">About you</span>
+	   			What is your role within the business?
+	   		</h1>
+
+			<form class="form" method="post">
+
+				<input type="hidden" name="next-page" value="your-details">
+
+				<fieldset>
+					<div class="form-group">
+						<legend class="visuallyhidden">What is your role within the business?</legend>
+						<label class="block-label" for="radio-1">
+							<input id="radio-1" type="radio" name="radio-group">Beneficial shareholder
+						</label>
+						<label class="block-label" for="radio-2">
+							<input id="radio-2" type="radio" name="radio-group">Director
+						</label>
+						<label class="block-label" for="radio-1">
+							<input id="radio-1" type="radio" name="radio-group">External accountant
+						</label>
+						<label class="block-label" for="radio-4">
+							<input id="radio-4" type="radio" name="radio-group">Internal accountant
+						</label>
+						<label class="block-label" for="radio-3">
+							<input id="radio-3" type="radio" name="radio-group">Nominated officer
+						</label>
+						<label class="block-label" for="radio-5">
+							<input id="radio-5" type="radio" name="radio-group">Partner
+						</label>
+						<label class="block-label" for="radio-6">
+							<input id="radio-6" type="radio" name="radio-group">Sole proprietor
+						</label>
+						<label class="block-label" for="radio-7" data-target="other" >
+							<input id="radio-7" type="radio" name="radio-group">Other
+						</label>
+
+						<div class="panel js-hidden" id="other">
+							<label class="form-label" for="specify">Please specify</label>
+							<input class="form-control" name="specify" type="text" id="sort-code">
+						</div>
+					</div>
+				</fieldset>
+
+
+				<div class="form-group">
+		            <input type="submit" class="button" value="Save and continue">
+	   			</div>
+
+	   		</form>
+
+
+
+	  	</div>
+	</div>
+
+{{/main}}
+{{/layout}}

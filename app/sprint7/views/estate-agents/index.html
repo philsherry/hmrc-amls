@@ -1,0 +1,102 @@
+{{<layout}}
+
+{{$pageTitle}}
+  Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$main}}
+
+	{{>includes/service-header}}
+
+	<div class="grid-row">
+		<div class="column-two-thirds">
+
+			<h1 class="heading-xlarge">
+		  		<span class="heading-secondary">Estate agent business</span>
+		  		What kind of estate agent business are you?
+			</h1>
+
+			<p>Select all that apply</p>
+			<form class="form" method="post">
+				<input type="hidden" name="next-page" value="penalties">
+				<fieldset>
+					<legend class="visuallyhidden">What kind of estate agent business are you?</legend>
+
+		  			<div class="form-group">
+
+
+
+
+					  	<label class="block-label" for="agency-type-2">
+							<input type="checkbox" id="agency-type-2" name="agency" value=""> Commercial estate agency
+					  	</label>
+					  	<label class="block-label" for="agency-type-3">
+							<input type="checkbox" id="agency-type-3" name="agency" value=""> Auctioneer
+					  	</label>
+					  	<label class="block-label" for="agency-type-4">
+							<input type="checkbox" id="agency-type-4" name="agency" value=""> Relocation agent
+					  	</label>
+					  	<label class="block-label" for="agency-type-5">
+							<input type="checkbox" id="agency-type-5" name="agency" value=""> Business transfer agent
+					  	</label>
+					  	<label class="block-label" for="agency-type-6">
+							<input type="checkbox" id="agency-type-6" name="agency" value=""> Asset management company
+					  	</label>
+					  	<label class="block-label" for="agency-type-7">
+							<input type="checkbox" id="agency-type-7" name="agency" value=""> Land management agent
+					  	</label>
+					  	<label class="block-label" for="agency-type-8">
+							<input type="checkbox" id="agency-type-8" name="agency" value=""> Development company
+					  	</label>
+					  	<label class="block-label" for="agency-type-9">
+							<input type="checkbox" id="agency-type-9" name="agency" value=""> Social housing provider
+					  	</label>
+					  	<label class="block-label" for="agency-type-1" data-target="redress">
+							<input type="checkbox" id="agency-type-1" name="agency" value="" > Residential estate agency
+					  	</label>
+		  			</div>
+
+		  			<div class="panel panel-border-narrow js-hidden" id="redress">
+					  	<fieldset class="inline">
+    						<legend class="form-label-bold">Is this business registered with a redress scheme?</legend>
+    						<span class="form-hint">A redress scheme is an independent service which resolves disputes between an estate agent business and its customers.</span>
+
+    						<div class="form-group">
+          						<label class="block-label" for="yes-scheme" data-target="hidden">
+            						<input id="yes-scheme" type="radio" name="group-2" value="Yes">Yes
+          						</label>
+          						<label class="block-label" for="no-scheme">
+            						<input id="no-scheme" type="radio" name="group-2" value="No">No
+            					</label>
+            				</div>
+            			</fieldset>
+
+            			<div class="js-hidden" id="hidden">
+            			<div class="form-group">
+      						<legend class="form-label-bold">Which redress scheme?</legend>
+                			<label class="block-label">
+                  				<input id="asp" type="radio" class="form-control" name="scheme" value="tpol">The Property Ombudsman Limited
+                			</label>
+                			<label class="block-label">
+                  				<input id="ct" type="radio" class="form-control" name="scheme" value="os">Ombudsman Services
+                  			</label>
+                			<label class="block-label">
+                  				<input id="paye" type="radio" class="form-control" name="scheme" value="prs">Property Redress Scheme
+                			</label>
+                			{{! <label class="block-label" data-target="#other">
+                  				<input id="other-ps" type="radio" name="scheme" value="other">Other
+                			</label> }}
+                		</div>
+            			</div>
+            			</div>
+			  		<div class="form-group">
+						<input type="submit" class="button" value="Save and continue">
+			  		</div>
+			  	</fieldset>
+			</form>
+
+	  	</div>
+	</div>
+
+{{/main}}
+{{/layout}}

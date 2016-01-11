@@ -1,0 +1,70 @@
+{{<layout}}
+{{$pageTitle}}
+    Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$main}}
+
+
+        <div class="grid-row">
+            <div class="column-two-thirds">
+
+
+                <h1 class="heading-xlarge">
+                    <span class="heading-secondary">Business activities</span>
+                    What kind of business are you?
+                </h1>
+
+                <form class="form" method="post">
+
+                <input type="hidden" name="next-page" value="activities">
+                    <div class="form-group">
+                        <fieldset>
+                            <legend class="visuallyhidden">What kind of business are you</legend>
+                            <p>Select all that apply.</p>
+
+                            <label class="block-label" for="asp">
+                                <input id="asp" type="checkbox" name="activities" value="2">Accountancy service provider
+                            </label>
+
+                            <label class="block-label" for="ct">
+                                <input id="ct" type="checkbox" name="activities" value="">Bill payment service provider
+                            </label>
+
+                            <label class="block-label" for="paye">
+                                <input id="paye" type="checkbox" name="activities" value="3">Estate agent business
+                            </label>
+
+                            <label class="block-label" for="sa">
+                                <input id="sa" type="checkbox" name="activities" value="4">High value dealer
+                            </label>
+
+                            <label class="block-label" for="tc">
+                                <input id="tc" type="checkbox" name="activities" value="5">Money service business
+                            </label>
+
+                            <label class="block-label" for="vat">
+                                <input id="vat" type="checkbox" name="activities" value="6">Trust and company service provider
+                            </label>
+
+                            <label class="block-label" for="tdit">
+                                <input id="tdit" type="checkbox" name="activities" value="">Telephone, digital &amp; IT payment service provider
+                            </label>
+                        </fieldset>
+                    </div>
+
+
+                    <div class="form-group">
+                        <input type="submit" class="button" value="Save and continue">
+                    </div>
+
+                </form>
+
+
+            </div>
+
+        </div>
+
+
+{{/main}}
+{{/layout}}

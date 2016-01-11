@@ -1,0 +1,68 @@
+{{<layout}}
+
+{{$pageTitle}}
+  Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$main}}
+
+    {{>includes/service-header}}
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+
+            <h1 class="heading-xlarge">
+                <span class="heading-secondary">About the business</span>
+                Has this business been registered with HMRC before?
+            </h1>
+              {{! <span class="form-hint">This only refers to registration for anti-money laundering supervision with HMRC.</span> }}
+              <p>This only refers to registration for anti-money laundering supervision with HMRC</p>
+
+            <form class="form" method="post">
+                <input type="hidden" name="next-page" value="vat">
+
+
+
+
+                <fieldset class="inline">
+                    <legend class="visuallyhidden">Has this business been registered with HMRC before?</legend>
+
+                    <div class="form-group">
+                        <label class="block-label" for="yes" data-target="exisiting">
+                            <input id="yes" type="radio" name="activities" value="asp">Yes
+                        </label>
+                        <label class="block-label">
+                            <input id="no" type="radio" name="activities" value="eab">No
+                        </label>
+
+                        <div class="panel js-hidden" id="exisiting">
+                            <label class="form-label" for="mlr">Money Laundering Regulation registration number</label>
+                            <input class="form-control" name="mlr" type="text" id="mlr">
+                        </div>
+
+                        {{! <label class="block-label" for="yes2" data-target="earlier">
+                            <input id="yes2" type="radio"  name="activities" value="bpsp">Yes
+                        </label>
+                        <div class="clearfix js-hidden"></div>
+
+                        <div class="panel js-hidden" id="earlier">
+                            <label class="form-label" for="mlr-op">MLR registration number (optional)</label>
+                            <input class="form-control" name="mlr-op" type="text" id="mlr-op">
+                        </div> }}
+
+
+
+                    </div>
+                </fieldset>
+
+                <div class="form-group">
+                    <input type="submit" class="button" value="Save and continue">
+                </div>
+            </form>
+
+            <a href="javascript:history.go(-1)" class="link-back">Back</a>
+        </div>
+    </div>
+
+{{/main}}
+{{/layout}}
