@@ -84,6 +84,16 @@
                 			<label class="block-label">
                   				<input id="paye" type="radio" class="form-control" name="scheme" value="prs">Property Redress Scheme
                 			</label>
+                            <label class="block-label" data-target="other">
+                                <input id="paye" type="radio" class="form-control" name="scheme" value="other">Other
+                            </label>
+
+                            <div id="other" class="js-hidden">
+                                <div class="form-group">
+                                    <label class="form-label" for="first-name-2">Please specify</label>
+                                    <input class="form-control" id="first-name-2" type="text">
+                                </div>
+                            </div>
                 			{{! <label class="block-label" data-target="#other">
                   				<input id="other-ps" type="radio" name="scheme" value="other">Other
                 			</label> }}
