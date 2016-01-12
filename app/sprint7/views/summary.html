@@ -13,18 +13,55 @@
 			<h1 class="heading-xlarge">Summary of your registration progress</h1>
             <p class="lede">Complete all the sections below to register. Once you start the application, you have 28 days to finish it.</p>
 
+			{{! <div class="grid-row summarytop">
+				<div class="column-two-thirds">
+					<p class="heading-small">Section</p>
+				</div>
+				<div class="column-one-third">
+					<p class="heading-small"></p>
+				</div>
+			</div> }}
+
 
 			{{#sections}}
-	  		<table class="summarytable">
-	  			<thead>
-	  				<tr>
-	  					<th><a href="{{link}}">{{name}}</a></th>
-	  					<th width="18%" class="numeric" >{{#status}}{{status}}</span>{{/status}}</th>
-	  				</tr>
-	  			</thead>
+	  		<div class="grid-row summaryblock">
+				<div class="column-two-thirds statusblock">
+	  				<h2 class="heading-small">{{name}}</h2>
+	  				<p>{{message}}</p>
+	  			</div>
+	  			<div class="column-one-third ">
 
-			</table>
-			{{/sections}}
+	  				<h2 class="heading-small">{{time}} mins to complete </h2>
+
+	  				<p><a href="{{link}}">Start</a></p>
+
+	  				<!--<p>{{status}}</p>-->
+	  			</div>
+	  		</div>
+	  		{{/sections}}
+
+
+
+			<!--Option 2
+	  		{{#sections}}
+	  		<div class="grid-row summaryblock">
+	  			<div class="column-one-third ">
+	  				<h2 class="heading-small">{{name}}</h2>
+					<p><a href="{{link}}">Start</a></p>
+	  				{{! <i class="icon icon-tick"></i> }}
+
+
+	  			</div>
+	  			<div class="column-two-thirds statusblock">
+					<h2 class="heading-small">{{time}} mins</h2>
+	  				<p>{{message}}</p>
+
+	  			</div>
+	  		</div>
+	  		{{/sections}}-->
+
+
+
 
 			{{! <td class=""><span class="locked" title="You can't complete this item right now">Declaration (locked)</span></td> }}
 
