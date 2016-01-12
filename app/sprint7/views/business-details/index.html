@@ -32,13 +32,37 @@
                         <label class="block-label" for="yes" data-target="exisiting">
                             <input id="yes" type="radio" name="activities" value="asp">Yes
                         </label>
-                        <label class="block-label">
+                        <label class="block-label" data-target="no-exisiting">
                             <input id="no" type="radio" name="activities" value="eab">No
                         </label>
 
                         <div class="panel js-hidden" id="exisiting">
                             <label class="form-label" for="mlr">Money Laundering Regulation registration number</label>
                             <input class="form-control" name="mlr" type="text" id="mlr">
+                        </div>
+
+                        <div class="panel js-hidden" id="no-exisiting">
+
+                            <div class="form-date">
+                                <label class="form-label-bold">Start date??</label>
+                                <p class="form-hint">For example, 31 3 2017</p>
+
+                                <div class="form-group form-group-day">
+                                    <label for="dob-day">Day</label>
+                                    <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
+                                </div>
+
+                                <div class="form-group form-group-month">
+                                    <label for="dob-month">Month</label>
+                                    <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+                                </div>
+
+                                <div class="form-group form-group-year">
+                                    <label for="dob-year">Year</label>
+                                    <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2014">
+                                </div>
+
+                        </div>
                         </div>
 
                         {{! <label class="block-label" for="yes2" data-target="earlier">
