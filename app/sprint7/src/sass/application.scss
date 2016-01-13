@@ -13,20 +13,40 @@
     // margin-bottom: 30px;
     padding-bottom: 10px;
     padding: 0;
-    border-bottom: #fff solid 10px;
+    border-bottom: #fff solid 12px;
 }
 
 .statusblock {
     background:#f8f8f8;
-    margin-bottom: 10px;
-    padding-bottom: 20px;
-    margin: 0;
+    padding-bottom: 0px;
+    margin-bottom: 4px;
 
 }
 
+.al-center {
+    text-align: center;
+}
 
 
 .link-back {
   margin-bottom: 0px;
 }
 
+.green {
+    background-color: #28A197;
+    margin-bottom: 0;
+
+    h2 {
+padding-top: 0;
+margin: 10px 0;
+
+    }
+}
+
+.white {
+    color:#fff;
+}
+
+.statusspace {
+    margin-top: 10px
+}

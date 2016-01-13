@@ -24,20 +24,30 @@
 
 
 			{{#sections}}
-	  		<div class="grid-row summaryblock">
-				<div class="column-two-thirds statusblock">
-	  				<h2 class="heading-small">{{name}}</h2>
-	  				<p>{{message}}</p>
-	  			</div>
-	  			<div class="column-one-third ">
 
-	  				<h2 class="heading-small">{{time}} mins to complete </h2>
+	  			<div class="grid-row summaryblock">
 
-	  				<p><a href="{{link}}">Start</a></p>
+					<div class="column-two-thirds statusblock ">
+		  				<h2 class="heading-small">{{name}}</h2>
+		  				<!--{{#status}}<a href="{{link}}">Edit</a>{{/status}}-->
+		  				{{^status}}<p>{{message}}</p><!--<p class="heading-xsmall">May take up to {{time}} mins to complete</p>-->{{/status}}
+		  			</div>
 
-	  				<!--<p>{{status}}</p>-->
+	  				<div class="column-one-third al-center">
+
+					{{#status}}
+						<img src="public/images/icons/icon-tick.png" class="statusspace"/>
+						{{! <h2 class="heading-small white">Complete</h2> }}
+						{{! <p><a href="">Edit</a></p> }}
+					{{/status}}
+					{{^status}}
+	  					<h2 class="heading-small">{{! <p class="statusspace">}}
+	  					<a href="{{link}}">Start</a></h2>{{! </p> }}
+	  				{{/status}}
+
 	  			</div>
 	  		</div>
+
 	  		{{/sections}}
 
 

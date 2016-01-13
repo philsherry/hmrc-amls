@@ -6,35 +6,75 @@
 
 {{$main}}
 
-	<div class="grid-row">
-	 	<div class="column-two-thirds">
+    <div class="grid-row">
+        <div class="column-two-thirds">
 
-		  	<p><a href="javascript:history.go(-1)" class="link-back">Back</a></p>
+            <p><a href="javascript:history.go(-1)" class="link-back">Back</a></p>
 <h1 class="heading-xlarge">
-		  		Confirming your details
-		  	</h1>
+                <span class="heading-secondary">Business matching</span>
+                Check your answers
+            </h1>
 
-		  	<p>You are registering the following business for anti-money laundering supervision:</p>
+            <p>Please check all the information you have provided.</p>
 
-            <div class="panel">
-                <p>ACME Limited
-    			<br>Registered address
-    			<br>Town
-    			<br>County
-    			<br>AB1 2DE</p>
+            <table class="space">
+                <tbody>
+                    <tr>
+                        <th width="90%">Business details</th>
+                        <td><a href="#">Edit</a></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Your organisation's
+                            <br>Registered address
+                            <br>Town
+                            <br>County
+                            <br>AB1 2DE
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="space">
+                <tbody>
+                    <tr>
+                        <th width="90%">Business activities</th>
+                        <td><a href="penalised">Edit</a></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Accountancy service provider</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Money service business</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="space">
+                <tbody>
+                    <tr>
+                        <th width="90%">Are the activities the business is registering for, the only activities carried out by the business</th>
+                        <td><a href="penalised">Edit</a></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Yes</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+
+
+
+
+        <form method="post">
+            <div class="form-group">
+                <input type="submit" class="button" value="Accept and complete section">
             </div>
-
-
-			<p><a href="#">Not the right business?</a></p>
-
-			<div class="form-group">
-				<a href="../business-activities/index" class="button" type="submit" id="save-and-continue">Start registration process</a>
-			</div>
+        </form>
 
 
 
-	  	</div>
-	</div>
+
+
 
 {{/main}}
 {{/layout}}
