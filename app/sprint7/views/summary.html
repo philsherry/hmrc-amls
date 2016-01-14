@@ -15,7 +15,9 @@
 
 			{{#sections}}
 
+
 	  			<div class="grid-row summaryblock {{#status}}green{{/status}}">
+
 
 					<div class="column-two-thirds statusblock {{#status}}nospace{{/status}} ">
 		  				<h2 class="heading-small">{{name}}</h2>
@@ -28,8 +30,18 @@
 						<img src="public/images/icons/icon-tick-white.png" class="statusspace"/>
 						{{/status}}
 						{{^status}}
-	  					<h2 class="heading-small"><a href="{{link}}">Start</a></h2>
-	  					Estimated<br />{{time}} minutes
+
+							<div class="grid-row">
+								<div class="column-one-half">
+									<p class="heading-large">{{time}}<br /><span>minutes to complete section</span></p>
+								</div>
+								<div class="column-one-half">
+									<span class="chevron right">
+
+								</div>
+							</div>
+
+	  					<!--<br /><a href="{{link}}">Start</a>-->
 	  					{{/status}}
 	  				</div>
 	  			</div>
@@ -43,7 +55,7 @@
 
 				</div>
 				<div class="column-one-third al-center">
-					<h2 class="heading-small">(Locked</h2>
+					<h2 class="heading-small">Locked</h2>
 				</div>
 			</div>
 

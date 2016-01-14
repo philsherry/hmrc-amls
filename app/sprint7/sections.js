@@ -5,7 +5,7 @@ module.exports = [
     section: 'business-matching',
     link: 'business-matching/index',
     editlink: 'business-matching/summary',
-    message: 'covered by the Money Laundering Regulations.',
+    message: 'business activities covered by the Money Laundering Regulations, details of staff and agents that will decide here.',
     time: '30',
     status: undefined
   },
@@ -15,8 +15,8 @@ module.exports = [
     section: 'business-details',
     link: 'business-details/index',
     editlink: 'business-details/summary',
-    message: 'business activities covered by the Money Laundering Regulations, details of staff and agents.',
-    time: '5',
+    message: 'business activities covered by the Money Laundering Regulations, details of staff and agents that will decide here.',
+    time: '15',
     status: undefined
   },
   {
@@ -25,8 +25,8 @@ module.exports = [
     section: 'business-activities',
     link: 'business-activities/index',
     editlink: 'business-activities/summary',
-    message: 'your details, details of each address where you carry on business activities',
-    time: '30',
+    message: 'business activities covered by the Money Laundering Regulations, details of staff and agents that will decide here.',
+    time: '23',
     status: undefined
   },
   {
@@ -35,8 +35,8 @@ module.exports = [
     section: 'bank-details',
     link: 'bank-details/index',
     editlink: 'bank-details/summary',
-    message: 'passport number, bank account details',
-    time: '30',
+    message: 'business activities covered by the Money Laundering Regulations, details of staff and agents that will decide here.',
+    time: '10',
     status: undefined
   },
   {
@@ -45,8 +45,8 @@ module.exports = [
     section: 'responsible-people',
     link: 'responsible-people/index',
     editlink: 'responsible-people/summary',
-    message: 'passport number, national insurance number.',
-    time: '30',
+    message: 'business activities covered by the Money Laundering Regulations, details of staff and agents that will decide here.',
+    time: '25',
     status: undefined
   },
   {
@@ -55,8 +55,8 @@ module.exports = [
     section: 'trading-premises',
     link: 'trading-premises/index',
     editlink: 'trading-premises/summary',
-    message: 'details of each address where you carry on.',
-    time: '30',
+    message: 'business activities covered by the Money Laundering Regulations, details of staff and agents that will decide here.',
+    time: '18',
     status: undefined
   },
   {
@@ -65,8 +65,8 @@ module.exports = [
     section: 'accountancy-service-provider',
     link: 'accountancy-service-provider/index',
     editlink: 'accountancy-service-provider/summary',
-    message: 'your details, details of each address',
-    time: '30',
+    message: 'business activities covered by the Money Laundering Regulations, details of staff and agents that will decide here.',
+    time: '20',
     status: undefined
   },
   {
@@ -75,8 +75,8 @@ module.exports = [
     section: 'estate-agents',
     link: 'estate-agents/index',
     editlink: 'estate-agents/summary',
-    message: 'by the Money Laundering Regulations, details of staff and agents.',
-    time: '30',
+    message: 'business activities covered by the Money Laundering Regulations, details of staff and agents that will decide here.',
+    time: '12',
     status: undefined
   },
   {
@@ -85,8 +85,8 @@ module.exports = [
     section: 'high-value-dealer',
     link: 'high-value-dealer/index',
     editlink: 'high-value-dealer/summary',
-    message: 'address where you carry on business activities covered by the Money Laundering Regulations, details of staff and agents.',
-    time: '30',
+    message: 'business activities covered by the Money Laundering Regulations, details of staff and agents that will decide here.',
+    time: '14',
     status: undefined
   },
   {
@@ -95,8 +95,8 @@ module.exports = [
     section: 'money-service-business',
     link: 'money-service-business/index',
     editlink: 'money-service-business/summary',
-    message: 'details of staff and agents.',
-    time: '30',
+    message: 'business activities covered by the Money Laundering Regulations, details of staff and agents that will decide here.',
+    time: '15',
     status: undefined
   },
   {
@@ -105,8 +105,8 @@ module.exports = [
     section: 'trust-company-service-provider',
     link: 'trust-company-service-provider/index',
     editlink: 'trust-company-service-provider/summary',
-    message: 'activities covered by the Money Laundering Regulations, details of staff and agents.',
-    time: '30',
+    message: 'business activities covered by the Money Laundering Regulations, details of staff and agents that will decide here.',
+    time: '18',
     status: undefined
   },
     {
@@ -115,8 +115,8 @@ module.exports = [
     section: 'about-you',
     link: 'about-you/index',
     editlink: 'about-you/summary',
-    message: 'your details, details of each address where you carry on business activities covered by the Money Laundering Regulations, details of staff and agents.',
-    time: '30',
+    message: 'business activities covered by the Money Laundering Regulations, details of staff and agents that will decide here.',
+    time: '10',
     status: undefined
   },
   {
@@ -125,8 +125,8 @@ module.exports = [
     section: 'payment',
     link: 'payment/index',
     editlink: 'payment/summary',
-    message: 'covered by the Money Laundering Regulations.',
-    time: '30',
+    message: 'business activities covered by the Money Laundering Regulations, details of staff and agents that will decide here.',
+    time: '5',
     status: undefined
   }
 
