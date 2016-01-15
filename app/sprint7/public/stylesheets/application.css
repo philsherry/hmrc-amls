@@ -1624,7 +1624,7 @@ input[type=number] {
     line-height: .6; }
     .al-center .heading-large span {
       font-size: 16px; }
-  .al-center a:link .grid-row {
+  .al-center a:link .grid-row, .al-center a:visited .grid-row {
     color: #6F777B; }
   .al-center a:hover .grid-row {
     color: #fff;
