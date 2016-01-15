@@ -73,7 +73,7 @@ gulp.task('sass', function () {
         outputStyle : 'extended',
         includePaths : glob.sync([
           __dirname + '/node_modules/govuk_*/stylesheets',
-          __dirname + '/node_modules/govuk-elements/**/sass',
+          __dirname + '/node_modules/govuk-elements-sass/**/sass',
           __dirname + '/lib/sass'
         ])
       }))
