@@ -6,42 +6,36 @@
 
 {{$main}}
 
-{{>includes/service-header}}
+    {{>includes/service-header}}
 
-		<div class="grid-row">
-			<div class="column-two-thirds">
-
-
-				<h1 class="heading-xlarge">
-					<span class="heading-secondary">Bank details</span>
-				  	Does your business use any bank accounts?
-				</h1>
-			   	<p>Include:</p>
-				<ul class="list-bullet space">
-					<li>bank accounts belonging to your business</li>
-					<li>bank accounts belonging to other businesses</li>
-					<li>personal bank accounts</li>
-				</ul>
-
-				<form method="post">
-					<fieldset class="inline space">
-						<legend class="visuallyhidden">Does your business use any bank accounts?</legend>
-	      				<label class="block-label" for="radio-inline-1">
-	        				<input id="radio-inline-1" type="radio" name="next-page" value="account-details">Yes
-	        			</label>
-	      				<label class="block-label" for="radio-inline-2">
-	      					<input id="radio-inline-2" type="radio" name="next-page" value="#">No
-	      				</label>
-	      			</fieldset>
-
-	      			<div class="form-group">
-				  		<input type="submit" class="button" value="Save and continue">
-					</div>
-      			</form>
+    <div class="grid-row">
+        <div class="column-two-thirds">
 
 
-			</div>
-		</div>
+            <h1 class="heading-xlarge">
+                <span class="heading-secondary">Bank details</span>
+                What you need
+            </h1>
+
+            <div class="panel panel-border-narrow">
+               You need the following information to complete this section
+            </div>
+
+            <ul class="list-bullet space">
+                <li>anticipated turnover for the next 12 months</li>
+                <li>franchisor's name, if relevant</li>
+                <li>number of employees</li>
+                <li>list of countries where your most high-value customers live</li>
+                <li>how you record transactions, if relevant</li>
+            </ul>
+
+            <div class="form-group">
+                <a href="accounts" class="button ">Continue</a>
+            </div>
+
+
+        </div>
+    </div>
 
 {{/main}}
 {{/layout}}

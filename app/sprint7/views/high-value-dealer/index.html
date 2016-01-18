@@ -6,103 +6,36 @@
 
 {{$main}}
 
+    {{>includes/service-header}}
 
-	{{>includes/service-header}}
-
-
-		<div class="grid-row">
-	  		<div class="column-two-thirds">
+    <div class="grid-row">
+        <div class="column-two-thirds">
 
 
-				<h1 class="heading-xlarge">
-					<span class="heading-secondary">High value dealer</span>
-					What will your business sell?
-				</h1>
+            <h1 class="heading-xlarge">
+                <span class="heading-secondary">High value dealer</span>
+                What you need
+            </h1>
 
-				<p>Select all that apply</p>
-				<form class="form" method="post">
+            <div class="panel panel-border-narrow">
+               You need the following information to complete this section
+            </div>
 
-					<input type="hidden" name="next-page" value="how-will-you-sell">
+            <ul class="list-bullet space">
+                <li>anticipated turnover for the next 12 months</li>
+                <li>franchisor's name, if relevant</li>
+                <li>number of employees</li>
+                <li>list of countries where your most high-value customers live</li>
+                <li>how you record transactions, if relevant</li>
+            </ul>
 
-					<fieldset>
-						<legend class="visuallyhidden">What will your business be selling?</legend>
-
-						<div class="form-group">
-
-							<label class="block-label" data-target="redress2" >
-								<input id="asp" type="checkbox" name="activities" value="asp">
-								Alcohol
-							</label>
-
-							<div class="panel panel-border-narrow js-hidden" id="redress2">
-					  			<fieldset class="inline">
-					  				<legend class="form-label">Do you buy or sell duty-suspended excise goods?</legend>
-					  				<label class="block-label" for="radio-inline-1">
-        								<input id="radio-inline-1" type="radio" name="radio-inline-group" value="Yes">Yes
-      								</label>
-      								<label class="block-label" for="radio-inline-2">
-      									<input id="radio-inline-2" type="radio" name="radio-inline-group" value="No">No
-      								</label>
-      							</fieldset>
-							</div>
-
-							<label class="block-label" data-target="redress2" >
-								<input id="paye" type="checkbox" name="activities" value="eab">
-								Tobacco
-							</label>
-
-							<label class="block-label" >
-								<input id="ct" type="checkbox" name="activities" value="bpsp">
-								Antiques
-							</label>
-
-							<label class="block-label" >
-								<input id="asp" type="checkbox" name="activities" value="asp">
-								Motor vehicles
-							</label>
-
-							<label class="block-label">
-								<input id="sa" type="checkbox" name="activities" value="hvd">
-							   Gold and Jewellery
-							</label>
-
-							<label class="block-label" >
-								<input id="ct" type="checkbox" name="activities" value="bpsp">
-								Scrap metals
-							</label>
-
-							<label class="block-label" >
-								<input id="tc" type="checkbox" name="activities" value="msb">
-								Mobile phones
-							</label>
-
-							<label class="block-label">
-								<input id="paye" type="checkbox" name="activities" value="eab">
-								Clothing
-							</label>
+            <div class="form-group">
+                <a href="selling" class="button ">Continue</a>
+            </div>
 
 
-							<label class="block-label" data-target="redress" >
-								<input id="other-ps" type="checkbox" name="activities" value="msb">
-								Other
-							</label>
-
-				  			<div class="panel panel-border-narrow js-hidden" id="redress">
-					  			<label class="form-label" for="first-name-2">Please specify</label>
-					  			<input class="form-control" id="first-name-2" type="text">
-							</div>
-						</div>
-
-					</fieldset>
-
-					<div class="form-group">
-						<input type="submit" class="button" value="Save and continue">
-					</div>
-
-				</form>
-
-			</div>
-		</div>
+        </div>
+    </div>
 
 {{/main}}
 {{/layout}}

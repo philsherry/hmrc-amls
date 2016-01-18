@@ -1,4 +1,3 @@
-
 {{<layout}}
 
 {{$pageTitle}}
@@ -7,7 +6,6 @@
 
 {{$main}}
 
-
     {{>includes/service-header}}
 
     <div class="grid-row">
@@ -15,44 +13,26 @@
 
 
             <h1 class="heading-xlarge">
-  	   		    <span class="heading-secondary">Accountancy service provider</span>
-  	   		    Which services does your business provide?
+                <span class="heading-secondary">Accountancy service provider</span>
+                What you need
             </h1>
 
-            <p>Select all that apply</p>
-    		<form class="form" method="post">
-                <input type="hidden" name="next-page" value="agent-scheme">
+            <div class="panel panel-border-narrow">
+               You need the following information to complete this section
+            </div>
 
-                <div class="form-group">
-                    <fieldset>
-                        <legend class="visuallyhidden">Which services does your business provide?</legend>
+            <ul class="list-bullet space">
+                <li>anticipated turnover for the next 12 months</li>
+                <li>franchisor's name, if relevant</li>
+                <li>number of employees</li>
+                <li>list of countries where your most high-value customers live</li>
+                <li>how you record transactions, if relevant</li>
+            </ul>
 
-                        <label class="block-label" >
-                            <input type="checkbox" name="" value="accountant">Accountancy
-                        </label>
+            <div class="form-group">
+                <a href="services" class="button ">Continue</a>
+            </div>
 
-                        <label class="block-label" >
-                            <input type="checkbox" name="" value="psp">Payroll services
-                        </label>
-
-                        <label class="block-label">
-                            <input type="checkbox" name="" value="bookkeeper">Bookkeeping
-                        </label>
-
-                        <label class="block-label">
-                            <input type="checkbox" name="" value="auditor">Auditing
-                        </label>
-
-                        <label class="block-label" >
-                            <input type="checkbox" name="" value="ftadvisor">Financial advice and/or tax advice
-                        </label>
-                    </fieldset>
-                </div>
-
-                <div class="form-group">
-                    <input type="submit" class="button" value="Save and continue">
-     			</div>
-            </form>
 
         </div>
     </div>
