@@ -1,0 +1,57 @@
+{{<layout}}
+
+{{$pageTitle}}
+	Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$main}}
+
+	{{>includes/service-header-not-matched}}
+
+		<div class="grid-row">
+			<div class="column-two-thirds">
+
+				<p><a href="javascript:history.go(-1)" class="link-back">Back</a></p>
+				<h1 class="heading-xlarge">
+					<span class="heading-secondary">Business matching</span>
+					What is your business name?
+				</h1>
+
+				<form method="post">
+					<fieldset>
+
+						<div class="form-group">
+	  						<input class="form-control" id="reg_name" type="text" name="reg_name" value="">
+  						</div>
+
+						<!--<div class="form-group">
+	  						<label class="form-label-bold" for="ni-number">
+								Corporation Tax Unique Tax Reference (UTR)
+
+	    						<span class="form-hint">For example: UTR 23626 37849</span>
+	    						{{! <details>
+									<summary>
+										<span class="summary">Where to find your UTR</span>
+									</summary>
+									<div class="panel panel-border-narrow">
+										<p>Can we show an image of a typical letter that has UTR? (similar to <a href="https://www.viewdrivingrecord.service.gov.uk/driving-record/licence-number">passport service</a>)</p>
+									</div>
+								</details> }}
+
+	  						</label>
+	  						<input class="form-control" id="reg_name" type="text" name="reg_name" value="">
+	  					</div>-->
+
+						<div class="form-group">
+							<a href="confirm"  class="button" type="submit" id="save-and-continue">Save and continue</a>
+						</div>
+					</fieldset>
+				</form>
+
+
+
+			</div>
+		</div>
+
+{{/main}}
+{{/layout}}
