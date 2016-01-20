@@ -64,14 +64,14 @@ function sectionDone(req) {
   req.session.sections[section.value[0]].status = 'COMPLETE';
 }
 
-app.post('/business-matching/:page', function (req, res) {
-  var nextPage = req.body['next-page'];
-  if (nextPage) {
-    res.redirect(nextPage);
-  } else {
-    next();
-  }
-});
+// app.post('/business-matching/:page', function (req, res) {
+//   var nextPage = req.body['next-page'];
+//   if (nextPage) {
+//     res.redirect(nextPage);
+//   } else {
+//     next();
+//   }
+// });
 
 app.post('/:section/summary', function (req, res) {
   // var next = nextSection(req.session.sections, req.params.section);
