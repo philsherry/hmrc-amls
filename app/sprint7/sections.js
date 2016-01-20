@@ -29,13 +29,13 @@ module.exports = [
     time: '23',
     status: undefined
   },
-  {
+  { 
     id: 3,
     name: 'Bank account details',
     section: 'bank-details',
     link: 'bank-details/index',
     editlink: 'bank-details/summary',
-    message: 'business activities covered by the Money Laundering Regulations, details of staff and agents that will decide here.',
+    message: 'We need to identify any bank accounts your business uses. These include personal accounts or accounts belonging to other businesses.',
     time: '10',
     status: undefined
   },
@@ -45,7 +45,7 @@ module.exports = [
     section: 'responsible-people',
     link: 'responsible-people/index',
     editlink: 'responsible-people/summary',
-    message: 'business activities covered by the Money Laundering Regulations, details of staff and agents that will decide here.',
+    message: 'We need to be sure that suitable people are running your business. A Responsible Person is anyone who directs the business, is a beneficial owner, or is the nominated officer.',
     time: '25',
     status: undefined
   },
@@ -55,7 +55,7 @@ module.exports = [
     section: 'trading-premises',
     link: 'trading-premises/index',
     editlink: 'trading-premises/summary',
-    message: 'business activities covered by the Money Laundering Regulations, details of staff and agents that will decide here.',
+    message: 'Tell us which premises your business trades from, and also details of any other businesses that trade on your behalf.',
     time: '18',
     status: undefined
   },
@@ -65,7 +65,7 @@ module.exports = [
     section: 'accountancy-service-provider',
     link: 'accountancy-service-provider/index',
     editlink: 'accountancy-service-provider/summary',
-    message: 'business activities covered by the Money Laundering Regulations, details of staff and agents that will decide here.',
+    message: 'We need to know which accountancy services you provide, and information about any previous anti-money laundering supervision.',
     time: '20',
     status: undefined
   },
