@@ -18,7 +18,7 @@ module.exports = [
     message: 'business activities covered by the Money Laundering Regulations, details of staff and agents that will decide here.',
     time: '15',
     status: undefined
-  },
+  },written, not in properly
   {
     id: 2,
     name: 'Business activities',
