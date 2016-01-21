@@ -1,0 +1,112 @@
+{{<layout}}
+
+{{$pageTitle}}
+  Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$main}}
+
+
+{{>includes/service-header}}
+
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+
+            <p><a href="javascript:history.go(-1)" class="link-back">Back</a></p>
+<h1 class="heading-xlarge">
+              <span class="heading-secondary">Trust and company service provider information</span>
+              Is this business a member of a professional body?
+            </h1>
+
+            <form method="post">
+
+                <input type="hidden" name="next-page" value="penalised"/>
+
+                <fieldset>
+                    <legend class="visuallyhidden">Is this business a member of a professional body?</legend>
+
+                  <div class="form-group">
+                        <fieldset class="inline">
+                            <label class="block-label" for="radio-inline-2-1" data-target="hidden">
+                                <input id="radio-inline-2-1" type="radio" name="prof-body" value="Yes">Yes
+                            </label>
+                            <label class="block-label" for="radio-inline-2-2">
+                                <input id="radio-inline-2-2" type="radio" name="prof-body" value="No">No
+                            </label>
+                        </fieldset>
+                    </div>
+
+                    <div id="hidden" class="inline-indent js-hidden">
+                        <p>Select all the apply</p>
+
+                <fieldset>
+                            {{! <div class="form-group">
+                     <legend class="form-label-bold">Which professional body?</legend>
+                                <span class="form-hint">( For example, Association of Chartered Certified Accountants )</span>
+                                <input class="form-control" id="first-name-2" type="text">
+                            </div> }}
+                            <div class="form-group">
+                            <label class="block-label" >
+                                <input id="asp" type="checkbox" name="activities" value="asp">Association of Accounting Technicians
+                            </label>
+                            <label class="block-label" >
+                                <input id="ct" type="checkbox" name="activities" value="bpsp">Association of Chartered Certified Accountants
+                            </label>
+                            <label class="block-label">
+                                <input id="paye" type="checkbox" name="activities" value="eab">Association of International Accountants
+                            </label>
+                            <label class="block-label">
+                                <input id="sa" type="checkbox" name="activities" value="hvd">Association of Taxation Technicians
+                            </label>
+                            <label class="block-label" >
+                                <input id="tc" type="checkbox" name="activities" value="msb">Chartered Institute of Management Accountants
+                            </label>
+                            <label class="block-label" >
+                                <input id="asp" type="checkbox" name="activities" value="asp">Chartered Institute of Taxation
+                            </label>
+                            <label class="block-label" >
+                                <input id="ct" type="checkbox" name="activities" value="bpsp">Institute of Certified Bookkeepers
+                            </label>
+                            <label class="block-label" >
+                                <input id="paye" type="checkbox" name="activities" value="eab">Institute of Chartered Accountants in Ireland
+                            </label>
+                            <label class="block-label" >
+                                <input id="sa" type="checkbox" name="activities" value="hvd">Institute of Chartered Accountants in Scotland
+                            </label>
+                            <label class="block-label" >
+                                <input id="tc" type="checkbox" name="activities" value="msb">Institute of Chartered Accountants of England and Wales
+                            </label>
+                  <label class="block-label" >
+                                <input id="tc" type="checkbox" name="activities" value="msb">Institute of Financial Accountants
+                            </label>
+                  <label class="block-label" >
+                                <input id="tc" type="checkbox" name="activities" value="msb">International Association of Book-keepers
+                            </label>
+                  <label class="block-label" >
+                                <input id="tc" type="checkbox" name="activities" value="msb">Law Society
+                            </label>
+                            <label class="block-label" data-target="other">
+                                <input id="other-ps" type="checkbox" name="activities" value="other" data-other="#other">Other
+                            </label>
+                            <div id="other" class="panel inline-indent js-hidden">
+                                <label class="form-label" for="first-name-2">Please specify</label>
+                                <input class="form-control" id="first-name-2" type="text">
+                            </div>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" class="button" value="Save and continue">
+                    </div>
+
+                </fieldset>
+
+            </form>
+
+        </div>
+    </div>
+
+{{/main}}
+{{/layout}}

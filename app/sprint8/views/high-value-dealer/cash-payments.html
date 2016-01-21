@@ -1,0 +1,106 @@
+{{<layout}}
+
+{{$pageTitle}}
+  Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$main}}
+
+	{{>includes/service-header}}
+
+		<div class="grid-row">
+	  		<div class="column-two-thirds">
+
+				<p><a href="javascript:history.go(-1)" class="link-back">Back</a></p>
+<h1 class="heading-xlarge">
+					<span class="heading-secondary">High value dealer</span>
+					Cash payments
+				</h1>
+
+                <span class="form-hint">If you do not use Euros, please convert to the currency you use.</span>
+
+
+
+
+
+
+	  			<form method="post">
+
+					<input type="hidden" name="next-page" value="receiving">
+
+					<fieldset>
+
+
+						<legend class="form-label-bold">Has your business already accepted any cash payments which total €15,000 or more?</legend>
+
+
+						<div class="form-group">
+
+
+						<div class="form-group">
+
+							<fieldset class="inline">
+								<label class="block-label" for="radio-inline-2-1" data-target="redress">
+						  			<input id="radio-inline-2-1" type="radio" name="radio-inline-group-2" value="Yes">Yes
+								</label>
+								<label class="block-label" for="radio-inline-2-2">
+						  			<input id="radio-inline-2-2" type="radio" name="radio-inline-group-2" value="No">No
+								</label>
+
+
+
+								<div class="panel panel-border-narrow js-hidden" id="redress">
+									<label class="form-label" for="first-name-2">What was the date of the first payment?</label>
+
+									<div class="form-group">
+						  				<fieldset>
+						  					<div class="form-date">
+							  					<p class="form-hint">For example, 31 3 2015</p>
+							  					<div class="form-group form-group-day">
+													<label for="dob-day">Day</label>
+													<input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
+							  					</div>
+							  					<div class="form-group form-group-month">
+													<label for="dob-month">Month</label>
+													<input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+							  					</div>
+							  					<div class="form-group form-group-year">
+													<label for="dob-year">Year</label>
+													<input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2014">
+							  					</div>
+											</div>
+						  				</fieldset>
+									</div>
+								</div>
+							</fieldset>
+					  	</div>
+
+					  	<fieldset>
+					  		<legend class="form-label-bold">Are you able to automatically identify linked cash payments which come to €15,000 or more?</legend>
+					  		<div class="form-group">
+	                    		<fieldset class="inline">
+	                        		<label class="block-label" for="radio-inline-2-3">
+	                          			<input id="radio-inline-2-3" type="radio" name="radio-inline-group-3" value="Yes">Yes
+	                        		</label>
+	                        		<label class="block-label" for="radio-inline-2-4">
+	                          			<input id="radio-inline-2-4" type="radio" name="radio-inline-group-3" value="No">No
+	                        		</label>
+	                        	</fieldset>
+	                      	</div>
+	                     </fieldset>
+
+
+						<div class="form-group">
+				  			<input type="submit" class="button" value="Save and continue">
+						</div>
+					</fieldset>
+				</form>
+
+
+
+			</div>
+		</div>
+
+
+{{/main}}
+{{/layout}}

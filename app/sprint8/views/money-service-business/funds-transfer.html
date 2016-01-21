@@ -1,0 +1,96 @@
+{{<layout}}
+
+{{$pageTitle}}
+  Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$main}}
+
+    {{>includes/service-header}}
+
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+
+            <p><a href="javascript:history.go(-1)" class="link-back">Back</a></p>
+<h1 class="heading-xlarge">
+                <span class="heading-secondary">Money service business</span>
+                Funds transfer
+            </h1>
+
+            <form class="form" method="post">
+
+                <input type="hidden" name="next-page" value="currency">
+
+                {{! <div class="form-group">
+                    <label class="form-label form-hint" for="amount">Give the answer in whole pounds (£)</label>
+                    <input id="amount" type="text" class="form-control" name="amount">
+                </div> }}
+
+                <div class="form-group">
+                    <fieldset class="inline">
+                        <legend class="form-label-bold">Do you operate an informal funds transfer system, such as acting as a hawaladar, where the money transfer transactions occur without the need for actual money movement?</legend>
+                        <label class="block-label" for="radio-inline-1" >
+                            <input id="radio-inline-1" type="radio" name="radio-inline-group" value="Yes">Yes
+                        </label>
+                        <label class="block-label" for="radio-inline-2">
+                            <input id="radio-inline-2" type="radio" name="radio-inline-group" value="No">No
+                        </label>
+                    </fieldset>
+
+
+                </div>
+
+
+                <fieldset>
+                    <legend class="form-label-bold">Money and transactions</legend>
+                    <div class="form-group">
+                        <label for="country1" class="form-label">What is the anticipated number of Money Transfer transactions for the next 12 months?</label>
+                        <input type="number" class="form-control" id="country1">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="country1" class="form-label">Top 3 countries you anticipate sending the largest amount of money to?</label>
+                         <span class="form-hint">1 is mandatory, others are optional</span>
+                        <input type="text" class="form-control" id="country1">
+                    </div>
+                    <div class="form-group">
+                        <label for="country1" class="form-label"></label>
+                        <input type="text" class="form-control" id="country1">
+                    </div>
+                    <div class="form-group">
+                        <label for="country1" class="form-label"></label>
+                        <input type="text" class="form-control" id="country1">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="country1" class="form-label">Top 3 countries you anticipate sending the largest number of transactions to?</label>
+                         <span class="form-hint">1 is mandatory, others are optional</span>
+                        <input type="text" class="form-control" id="country1">
+                    </div>
+                    <div class="form-group">
+                        <label for="country1" class="form-label"></label>
+                        <input type="text" class="form-control" id="country1">
+                    </div>
+                    <div class="form-group">
+                        <label for="country1" class="form-label"></label>
+                        <input type="text" class="form-control" id="country1">
+                    </div>
+                </fieldset>
+
+
+
+
+                <div class="form-group">
+                    <input type="submit" class="button" value="Save and continue">
+                </div>
+
+            </form>
+
+
+
+        </div>
+    </div>
+
+{{/main}}
+{{/layout}}
