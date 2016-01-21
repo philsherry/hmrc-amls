@@ -35,7 +35,7 @@ module.exports = [
     section: 'bank-details',
     link: 'bank-details/index',
     editlink: 'bank-details/summary',
-    message: 'We need to identify any bank accounts your business uses. These include personal accounts or accounts belonging to other businesses.',
+    message: 'We need to know which bank accounts your business uses. These include personal accounts or accounts belonging to other businesses.',
     time: '10',
     status: undefined
   },
