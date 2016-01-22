@@ -1,96 +1,47 @@
 var app = require('../../lib/subapp.js')(__dirname),
   _ = require('lodash');
 
-// AMLS Routes
 app.post('/business-matching/activities', function (req, res) {
-  req.session.sections =
-    _.chain(require('./sections.js').slice())
-    .filter(function (e, i) {
-      return i > 1 && i < 7 ?
-        _.find(req.body.activities, function (section) {
-          return section == i;
-        }) : true;
-    })
-    .value();
-
+  var sections = require('./sections.js');
+  req.session.sections = [].concat(
+      sections[0],
+      [].concat(req.body.activities).reduce(function (m, n) {
+        var e = sections[1][n];
+        if (e) {
+          return m.concat(e);
+        } else {
+          return m;
+        }
+      }, []),
+      sections[2]
+    );
   res.redirect(req.body['next-page']);
 });
 
-function getUrl(arr, memo) {
-  var m = memo || '/';
-  return arr.reduce(function (m, n, i) {
-    return i === 0 ?
-      m + n :
-      m + '/' + n;
-  }, m);
-}
-
-function fromReq(req, memo) {
-  return getUrl([
-    req.params.sprint,
-    req.params.section,
-    req.params.page
-  ], memo);
-}
-
-function toFilePath(p) {
-  return path.join.apply(null, p.split('/'));
-}
-
-function getSection(sections, section) {
-  var sections = sections.entries(), current;
-  do {
-    current = sections.next();
-    if (current.value[1].section === section)
-      return [current, sections];
-  } while (!current.done)
-}
-
-function nextSection(sections, section) {
-  return getSection(sections, section)[1]
-    .next()
-    .value[1];
-}
-
-function sectionInProgress(req) {
-  var section = getSection(req.session.sections, req.params.section)[0];
-  if (section.value[1].status === undefined) {
-    req.session.sections[section.value[0]].status = '';
-  }
-}
-
-function sectionDone(req) {
-  var section = getSection(req.session.sections, req.params.section)[0];
-  req.session.sections[section.value[0]].status = 'COMPLETE';
-}
-
-app.post('/business-matching/:page', function (req, res) {
-  var nextPage = req.body['next-page'];
-  if (nextPage) {
-    res.redirect(nextPage);
-  } else {
-    next();
-  }
-});
-
 app.post('/:section/summary', function (req, res) {
-  // var next = nextSection(req.session.sections, req.params.section);
-  sectionDone(req);
+  var sections = req.session.sections.map(
+    function (e) {
+      if (e.section === req.params.section) {
+        e.status = 'DONE';
+      }
+      return e;
+  });
+  req.session.sections = sections;
   res.redirect(
     '../summary'
   );
 });
 
-app.post('/:section/:page', function (req, res, next) {
-  req.session[req.params.section] = req.session[req.params.section] || {};
-  req.session[req.params.section][req.params.page] = req.body;
-  var nextPage = req.body['next-page'];
-  sectionInProgress(req);
-  if (nextPage) {
-    res.redirect(nextPage);
-  } else {
-    next();
-  }
+app.post('/:section/:page', function (req, res) {
+  var sections = req.session.sections.map(
+    function (e) {
+      if (e.section === req.params.section) {
+        e.status = 'IN PROGRESS';
+      }
+      return e;
+    });
+  req.session.sections = sections;
+  res.redirect(req.body['next-page']);
 });
 
 app.get('/summary', function (req, res) {
