@@ -58,6 +58,16 @@ module.exports = [
 
   [
 
+{
+      id: '3',
+      name: 'High value dealer',
+      section: 'high-value-dealer',
+      link: 'high-value-dealer/index',
+      editlink: 'high-value-dealer/summary',
+      message: 'business activities covered by the Money Laundering Regulations, details of staff and agents that will decide here.',
+      time: '14',
+      status: undefined
+    },
     {
       id: '2',
       name: 'Estate agent business',
@@ -68,16 +78,7 @@ module.exports = [
       time: '12',
       status: undefined
     },
-    {
-      id: '3',
-      name: 'High value dealer',
-      section: 'high-value-dealer',
-      link: 'high-value-dealer/index',
-      editlink: 'high-value-dealer/summary',
-      message: 'business activities covered by the Money Laundering Regulations, details of staff and agents that will decide here.',
-      time: '14',
-      status: undefined
-    },
+
     {
       id: '4',
       name: 'Money service business',
