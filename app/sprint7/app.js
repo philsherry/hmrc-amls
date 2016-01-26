@@ -33,14 +33,16 @@ app.post('/:section/summary', function (req, res) {
 });
 
 app.post('/:section/:page', function (req, res) {
-  var sections = req.session.sections.map(
-    function (e) {
-      if (e.section === req.params.section) {
-        e.status = 'IN PROGRESS';
-      }
-      return e;
-    });
-  req.session.sections = sections;
+  if (req.session.sections) {
+    var sections = req.session.sections.map(
+      function (e) {
+        if (e.section === req.params.section) {
+          e.status = 'IN PROGRESS';
+        }
+        return e;
+      });
+    req.session.sections = sections;
+  }
   res.redirect(req.body['next-page']);
 });
 
