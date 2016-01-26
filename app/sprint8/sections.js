@@ -57,16 +57,7 @@ module.exports = [
   ],
 
   [
-    {
-      id: '1',
-      name: 'Accountancy service provider',
-      section: 'accountancy-service-provider',
-      link: 'accountancy-service-provider/index',
-      editlink: 'accountancy-service-provider/summary',
-      message: 'We need to know which accountancy services you provide, and information about any previous anti-money laundering supervision.',
-      time: '20',
-      status: undefined
-    },
+
     {
       id: '2',
       name: 'Estate agent business',
@@ -95,6 +86,16 @@ module.exports = [
       editlink: 'money-service-business/summary',
       message: 'business activities covered by the Money Laundering Regulations, details of staff and agents that will decide here.',
       time: '15',
+      status: undefined
+    },
+        {
+      id: '1',
+      name: 'Accountancy service provider',
+      section: 'accountancy-service-provider',
+      link: 'accountancy-service-provider/index',
+      editlink: 'accountancy-service-provider/summary',
+      message: 'We need to know which accountancy services you provide, and information about any previous anti-money laundering supervision.',
+      time: '20',
       status: undefined
     },
     {
