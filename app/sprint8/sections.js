@@ -55,8 +55,10 @@ module.exports = [
       status: undefined
     }
   ],
+
   [
     {
+      id: '1',
       name: 'Accountancy service provider',
       section: 'accountancy-service-provider',
       link: 'accountancy-service-provider/index',
@@ -66,6 +68,7 @@ module.exports = [
       status: undefined
     },
     {
+      id: '2',
       name: 'Estate agent business',
       section: 'estate-agents',
       link: 'estate-agents/index',
@@ -75,6 +78,7 @@ module.exports = [
       status: undefined
     },
     {
+      id: '3',
       name: 'High value dealer',
       section: 'high-value-dealer',
       link: 'high-value-dealer/index',
@@ -84,6 +88,7 @@ module.exports = [
       status: undefined
     },
     {
+      id: '4',
       name: 'Money service business',
       section: 'money-service-business',
       link: 'money-service-business/index',
@@ -93,6 +98,7 @@ module.exports = [
       status: undefined
     },
     {
+      id: '5',
       name: 'Trust and company service provider',
       section: 'trust-company-service-provider',
       link: 'trust-company-service-provider/index',
@@ -102,6 +108,7 @@ module.exports = [
       status: undefined
     },
   ],
+
   [
     {
       name: 'About you',
