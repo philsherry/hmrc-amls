@@ -1,0 +1,94 @@
+{{<layout}}
+
+{{$pageTitle}}
+  Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$main}}
+
+    {{>includes/service-header}}
+
+        <div class="grid-row">
+            <div class="column-two-thirds">
+
+
+                <h1 class="heading-xlarge">
+        	   		<span class="heading-secondary">Trading premises</span>
+        	   		Where are your trading premises?
+        	   	</h1>
+
+
+                <form class="form" method="post">
+
+                    <fieldset>
+                        <legend class="visuallyhidden">Where does the business trade from?</legend>
+                        <p>Include:</p>
+                            <ul class="list list-bullet">
+                                <li>your own business premises</li>
+                                <li>other businesses' premises, if you have a contractual agreement for them to act as your agents and offer your services</li>
+                        </ul>
+                        <div class="form-group">
+            		   		<label class="form-label-bold" for="middle-name">Trading name</label>
+            		   		<input type="text" id="middle-name" class="form-control">
+            		   	</div>
+
+                        {{>includes/address}}
+
+                        <div class="form-group">
+                            <label class="form-label-bold">Whose premises are these?</label>
+                            <fieldset class="inline">
+                                <label class="block-label" for="radio-inline-2-1">
+                                    <input id="radio-inline-2-1" type="radio" name="next-page" value="activities">My business' premises
+                                </label>
+                                <label class="block-label" for="radio-inline-2-2">
+                                    <input id="radio-inline-2-2" type="radio" name="next-page" value="agent">Another business' premises
+                                </label>
+                            </fieldset>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-date">
+                                <label class="form-label-bold">Date you will start trading from these premises</label>
+                                <p>If you are already trading, give the date you started</p>
+                                <p class="form-hint">For example, 31 3 2017</p>
+
+                                <div class="form-group form-group-day">
+                                    <label for="dob-day">Day</label>
+                                    <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
+                                </div>
+
+                                <div class="form-group form-group-month">
+                                    <label for="dob-month">Month</label>
+                                    <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+                                </div>
+
+                                <div class="form-group form-group-year">
+                                    <label for="dob-year">Year</label>
+                                    <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2014">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+				            <label class="form-label-bold">Is this a residential address?</label>
+                            <fieldset class="inline">
+                                <label class="block-label" for="yes">
+                                    <input id="yes" type="radio" name="radio-inline-group-2" value="Yes">Yes
+                                </label>
+                                <label class="block-label" for="no">
+                                    <input id="no" type="radio" name="radio-inline-group-2" value="No">No
+                                </label>
+                            </fieldset>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="submit" class="button" value="Save and continue">
+                        </div>
+
+                    </fieldset>
+                </form>
+
+            </div>
+        </div>
+
+{{/main}}
+{{/layout}}

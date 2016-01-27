@@ -1,0 +1,54 @@
+{{<layout}}
+
+{{$pageTitle}}
+  Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$main}}
+
+    {{>includes/service-header}}
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+
+
+            <h1 class="heading-xlarge">
+                <span class="heading-secondary">About the business</span>
+                Is the business an existing HMRC MLR registered business?
+            </h1>
+              {{! <span class="form-hint">This only refers to registration for anti-money laundering supervision with HMRC.</span> }}
+              <p>This only refers to registration for anti-money laundering supervision with HMRC</p>
+
+            <form class="form" method="post">
+
+                <fieldset class="inline">
+                    <legend class="visuallyhidden">Has this business been registered with HMRC before?</legend>
+
+                    <div class="form-group">
+                        <label class="block-label" for="yes" data-target="exisiting">
+                            <input id="yes" type="radio" name="next-page" value="vat">Yes
+                        </label>
+                        <label class="block-label">
+                            <input id="no" type="radio" name="next-page" value="activities">No
+                        </label>
+
+                        <div class="panel js-hidden" id="exisiting">
+                            <label class="form-label" for="mlr">Money Laundering Regulation registration number</label>
+                            <input class="form-control" name="mlr" type="text" id="mlr">
+                        </div>
+
+
+                    </div>
+                </fieldset>
+
+                <div class="form-group">
+                    <input type="submit" class="button" value="Save and continue">
+                </div>
+            </form>
+
+
+        </div>
+    </div>
+
+{{/main}}
+{{/layout}}
