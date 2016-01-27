@@ -27,7 +27,7 @@ module.exports = [
       time: '23',
       status: undefined
     },
-    { 
+    {
       name: 'Bank account details',
       section: 'bank-details',
       link: 'bank-details/index',
