@@ -27,7 +27,7 @@ module.exports = [
       time: '23',
       status: undefined
     },
-    { 
+    {
       name: 'Bank account details',
       section: 'bank-details',
       link: 'bank-details/index',
@@ -55,26 +55,11 @@ module.exports = [
       status: undefined
     }
   ],
+
   [
-    {
-      name: 'Accountancy service provider',
-      section: 'accountancy-service-provider',
-      link: 'accountancy-service-provider/index',
-      editlink: 'accountancy-service-provider/summary',
-      message: 'We need to know which accountancy services you provide, and information about any previous anti-money laundering supervision.',
-      time: '20',
-      status: undefined
-    },
-    {
-      name: 'Estate agent business',
-      section: 'estate-agents',
-      link: 'estate-agents/index',
-      editlink: 'estate-agents/summary',
-      message: 'business activities covered by the Money Laundering Regulations, details of staff and agents that will decide here.',
-      time: '12',
-      status: undefined
-    },
-    {
+
+{
+      id: '3',
       name: 'High value dealer',
       section: 'high-value-dealer',
       link: 'high-value-dealer/index',
@@ -84,6 +69,18 @@ module.exports = [
       status: undefined
     },
     {
+      id: '2',
+      name: 'Estate agent business',
+      section: 'estate-agents',
+      link: 'estate-agents/index',
+      editlink: 'estate-agents/summary',
+      message: 'business activities covered by the Money Laundering Regulations, details of staff and agents that will decide here.',
+      time: '12',
+      status: undefined
+    },
+
+    {
+      id: '4',
       name: 'Money service business',
       section: 'money-service-business',
       link: 'money-service-business/index',
@@ -92,7 +89,18 @@ module.exports = [
       time: '15',
       status: undefined
     },
+        {
+      id: '1',
+      name: 'Accountancy service provider',
+      section: 'accountancy-service-provider',
+      link: 'accountancy-service-provider/index',
+      editlink: 'accountancy-service-provider/summary',
+      message: 'We need to know which accountancy services you provide, and information about any previous anti-money laundering supervision.',
+      time: '20',
+      status: undefined
+    },
     {
+      id: '5',
       name: 'Trust and company service provider',
       section: 'trust-company-service-provider',
       link: 'trust-company-service-provider/index',
@@ -102,6 +110,7 @@ module.exports = [
       status: undefined
     },
   ],
+
   [
     {
       name: 'About you',
