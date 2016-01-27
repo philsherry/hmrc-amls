@@ -15,6 +15,7 @@ app.post('/business-matching/activities', function (req, res) {
       }, []),
       sections[2]
     );
+  console.log(req.session.sections);
   res.redirect(req.body['next-page']);
 });
 
