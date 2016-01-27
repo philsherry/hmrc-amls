@@ -6,7 +6,7 @@ module.exports = [
       link: 'business-matching/index',
       editlink: 'business-matching/summary',
       message: 'business activities covered by the Money Laundering Regulations, details of staff and agents that will decide here.',
-      time: '30',
+      time: '5',
       status: undefined
     },
     {
@@ -15,7 +15,7 @@ module.exports = [
       link: 'business-details/index',
       editlink: 'business-details/summary',
       message: 'business activities covered by the Money Laundering Regulations, details of staff and agents that will decide here.',
-      time: '15',
+      time: '5',
       status: undefined
     },
     {
@@ -24,7 +24,7 @@ module.exports = [
       link: 'business-activities/index',
       editlink: 'business-activities/summary',
       message: 'business activities covered by the Money Laundering Regulations, details of staff and agents that will decide here.',
-      time: '23',
+      time: '8',
       status: undefined
     },
     {
@@ -33,7 +33,7 @@ module.exports = [
       link: 'bank-details/index',
       editlink: 'bank-details/summary',
       message: 'We need to identify any bank accounts your business uses. These include personal accounts or accounts belonging to other businesses.',
-      time: '10',
+      time: '5',
       status: undefined
     },
     {
@@ -42,7 +42,7 @@ module.exports = [
       link: 'responsible-people/index',
       editlink: 'responsible-people/summary',
       message: 'We need to be sure that suitable people are running your business. A Responsible Person is anyone who directs the business, is a beneficial owner, or is the nominated officer.',
-      time: '25',
+      time: '10',
       status: undefined
     },
     {
@@ -51,7 +51,7 @@ module.exports = [
       link: 'trading-premises/index',
       editlink: 'trading-premises/summary',
       message: 'Tell us which premises your business trades from, and also details of any other businesses that trade on your behalf.',
-      time: '18',
+      time: '8',
       status: undefined
     }
   ],
@@ -62,7 +62,7 @@ module.exports = [
       link: 'accountancy-service-provider/index',
       editlink: 'accountancy-service-provider/summary',
       message: 'We need to know which accountancy services you provide, and information about any previous anti-money laundering supervision.',
-      time: '20',
+      time: 5,
       status: undefined
     },
     {
@@ -71,7 +71,7 @@ module.exports = [
       link: 'estate-agents/index',
       editlink: 'estate-agents/summary',
       message: 'business activities covered by the Money Laundering Regulations, details of staff and agents that will decide here.',
-      time: '12',
+      time: '5',
       status: undefined
     },
     {
@@ -80,7 +80,7 @@ module.exports = [
       link: 'high-value-dealer/index',
       editlink: 'high-value-dealer/summary',
       message: 'business activities covered by the Money Laundering Regulations, details of staff and agents that will decide here.',
-      time: '14',
+      time: 8,
       status: undefined
     },
     {
@@ -89,7 +89,7 @@ module.exports = [
       link: 'money-service-business/index',
       editlink: 'money-service-business/summary',
       message: 'business activities covered by the Money Laundering Regulations, details of staff and agents that will decide here.',
-      time: '15',
+      time: '6',
       status: undefined
     },
     {
@@ -98,18 +98,18 @@ module.exports = [
       link: 'trust-company-service-provider/index',
       editlink: 'trust-company-service-provider/summary',
       message: 'business activities covered by the Money Laundering Regulations, details of staff and agents that will decide here.',
-      time: '18',
+      time: '8',
       status: undefined
     },
   ],
   [
     {
-      name: 'About you',
-      section: 'about-you',
-      link: 'about-you/index',
-      editlink: 'about-you/summary',
+      name: 'Declaration',
+      section: 'declaration',
+      link: 'declaration/index',
+      editlink: 'declaration/summary',
       message: 'business activities covered by the Money Laundering Regulations, details of staff and agents that will decide here.',
-      time: '10',
+      time: '2',
       status: undefined
     },
     {
