@@ -18,25 +18,69 @@
         	   	</h1>
 
 
-                <form class="form" method="post">
+                <p>Include:</p>
+                <ul class="list list-bullet">
+                    <li>your own business premises</li>
+                    <li>other businesses' premises, if you have a contractual agreement for them to act as your agents and offer your services</li>
+                </ul>
 
+                <form class="form" method="post">
                     <fieldset>
                         <legend class="visuallyhidden">Where does the business trade from?</legend>
-                        <p>Include:</p>
-                            <ul class="list list-bullet">
-                                <li>your own business premises</li>
-                                <li>other businesses' premises, if you have a contractual agreement for them to act as your agents and offer your services</li>
-                        </ul>
+
                         <div class="form-group">
-            		   		<label class="form-label-bold" for="middle-name">Trading name</label>
-            		   		<input type="text" id="middle-name" class="form-control">
-            		   	</div>
+                            <label class="visuallyhidden">Is this a UK address</label>
+                            <fieldset class="inline">
+                                <label class="block-label" for="radio-inline-2-1" >
+                                    <input id="radio-inline-2-1" type="radio"  name="ukorover" value="false" checked="checked" >UK
+                                </label>
+                                <label class="block-label" for="radio-inline-2-2" >
+                                    <input id="radio-inline-2-2" type="radio" name="ukorover" value="true">Overseas
+                                </label>
+                            </fieldset>
+                        </div>
 
-                        {{>includes/address}}
+                        <div class="form-group">
+                            <label class="form-label-bold" for="middle-name">Trading name</label>
+                            <input type="text" id="middle-name" class="form-control">
+                        </div>
 
+                        <div class="form-group">
+                          <label for="company-address1" class="form-label-bold">Address</label>
+                          <input type="text" class="form-control" id="company-address1">
+                        </div>
+                        <div class="form-group">
+                          <label for="company-address2" class="form-label"></label>
+                          <input type="text" class="form-control" id="company-address2">
+                        </div>
+                        <div class="form-group">
+                          <label for="company-address3" class="form-label"></label>
+                          <input type="text" class="form-control" id="company-address2">
+                        </div>
+                        <div class="form-group">
+                          <label for="company-address3" class="form-label"></label>
+                          <input type="text" class="form-control" id="company-address2">
+                        </div>
+
+                        <div id="count">
+                            <div id="zip" class="form-group">
+                                <label for="postcode-name" class="form-label-bold">Postcode</label>
+                                <input type="text" class="form-control form-control-1-8" id="postcode-name" maxlength="8">
+                            </div>
+                        </div>
+
+                        <div id="over">
+                            <div class="form-group">
+                                <label for="company-address3" class="form-label-bold">Country</label>
+                                <input type="text" class="form-control" id="company-address2">
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
                         <div class="form-group">
                             <label class="form-label-bold">Whose premises are these?</label>
-                            <span class="form-hint">This only refers to who uses the premises. We don't need to know who legally owns the premises.</span> 
+                            <span class="form-hint">This only refers to who uses the premises. We don't need to know who legally owns the premises.</span>
                             <fieldset class="inline">
                                 <label class="block-label" for="radio-inline-2-1">
                                     <input id="radio-inline-2-1" type="radio" name="next-page" value="activities">My business' premises
@@ -46,6 +90,9 @@
                                 </label>
                             </fieldset>
                         </div>
+                    </fieldset>
+
+                    <fieldset>
                         <div class="form-group">
                             <div class="form-date">
                                 <label class="form-label-bold">Date you will start trading from these premises</label>
@@ -68,7 +115,9 @@
                                 </div>
                             </div>
                         </div>
+                    </fieldset>
 
+                    <fieldset>
                         <div class="form-group">
 				            <label class="form-label-bold">Is this a residential address?</label>
                             <fieldset class="inline">
@@ -93,3 +142,17 @@
 
 {{/main}}
 {{/layout}}
+<script>
+$("#over").hide();
+$("#radio-inline-2-1").on('click', function() {
+  $("#over").hide();
+  $("#count").show();
+});
+</script>
+
+<script>
+$("#radio-inline-2-2").on('click', function() {
+  $("#over").show();
+  $("#count").hide();
+});
+</script>
