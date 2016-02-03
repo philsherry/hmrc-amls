@@ -1,0 +1,59 @@
+{{<layout}}
+
+{{$pageTitle}}
+  Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$main}}
+
+    {{>includes/service-header}}
+
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+
+            <h1 class="heading-xlarge">
+                <span class="heading-secondary">Money service business</span>
+                Which services does your business provide?
+            </h1>
+
+            <p>Select all that apply</p>
+            <form class="form" method="post">
+
+                <input type="hidden" name="next-page" value="anticipated-totals">
+
+                <fieldset>
+                    <div class="form-group">
+                        <legend class="visuallyhidden">What specific MSB services will you be carrying out</legend>
+
+
+                        <label class="block-label" for="money">
+                            <input id="money" type="checkbox" name="radio-group">Transmitting money
+                        </label>
+                        <label class="block-label" for="currency">
+                            <input id="currency" type="checkbox" name="radio-group">Currency exchange
+                        </label>
+                        <label class="block-label" for="cash">
+                            <input id="cash" type="checkbox" name="radio-group">Cheque cashing (all businesses except scrap metal dealers)
+                        </label>
+                        <label class="block-label" for="scrap">
+                            <input id="scrap" type="checkbox" name="radio-group">Cheque cashing (scrap metal dealers)
+                        </label>
+
+                    </div>
+                </fieldset>
+
+
+                <div class="form-group">
+                    <input type="submit" class="button" value="Save and continue">
+                </div>
+
+            </form>
+
+
+
+        </div>
+    </div>
+
+{{/main}}
+{{/layout}}
