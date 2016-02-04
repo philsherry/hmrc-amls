@@ -1,0 +1,57 @@
+{{<layout}}
+
+{{$pageTitle}}
+  Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$main}}
+
+    {{>includes/service-header}}
+
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+
+            <p><a href="javascript:history.go(-1)" class="link-back">Back</a></p>
+<h1 class="heading-xlarge">
+                <span class="heading-secondary">Responsible people</span>
+               How can we contact you?
+            </h1>
+
+            <form class="form" method="post">
+
+                <input type="hidden" name="next-page" value="address">
+
+                <fieldset>
+                    <legend class="visuallyhidden"> How can we contact you?</legend>
+                    <div class="form-group">
+                        <label class="form-label-bold" for="phone">Phone number</label>
+                        <input class="form-control" type="text" id="phone"  />
+                    </div>
+                     <!-- questioning the business about this  
+                    <div class="form-group">
+                        <label class="form-label-bold" for="phone">Secondary phone number (optional)</label>
+                        <input class="form-control" type="text" id="phone"  />
+                    </div>
+                    -->
+                    <label class="form-label-bold" for="telephone-number">Email address</label>
+                        <input class="form-control" id="telephone-number" name="telephone-number" type="text">
+                        <label class="form-checkbox" for="checkbox-telephone-number">
+                        <input id="checkbox-telephone-number" name="contact-by-text-phone" type="checkbox" value="true">tick this box to allow HMRC to email you
+                    </label>
+                </fieldset>
+
+                <div class="form-group">
+                    <input type="submit" class="button" value="Save and continue">
+                </div>
+
+            </form>
+
+
+
+
+        </div>
+    </div>
+
+{{/main}}
+{{/layout}}
