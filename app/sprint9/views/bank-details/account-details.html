@@ -22,6 +22,21 @@
 					<input type="hidden" name="next-page" value="summary">
 
                     <fieldset>
+                        <div class="form-group">
+                            <legend class="visuallyhidden">What type of account is this?</legend>
+                            <label class="block-label" for="radio-inline-2-1">
+                              <input id="radio-inline-2-1" type="radio" name="radio-inline-group-2" value="Yes">Personal bank account
+                            </label>
+                            <label class="block-label" for="radio-inline-2-2">
+                              <input id="radio-inline-2-2" type="radio" name="radio-inline-group-2" value="No">Your business' bank account
+                            </label>
+                            <label class="block-label" for="radio-inline-2-3">
+                              <input id="radio-inline-2-3" type="radio" name="radio-inline-group-2" value="No">Another business' bank account
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
                     	<legend class="visuallyhidden">Account details</legend>
 						<div class="form-group">
 							<label class="form-label-bold" for="first-name">Account name</label>
@@ -71,20 +86,7 @@
         				</div>
         			</fieldset>
 
-        			<fieldset>
-						<div class="form-group">
-							<legend class="form-label-bold">What type of account is this?</legend>
-	                        <label class="block-label" for="radio-inline-2-1">
-	                          <input id="radio-inline-2-1" type="radio" name="radio-inline-group-2" value="Yes">Personal bank account
-	                        </label>
-	                        <label class="block-label" for="radio-inline-2-2">
-	                          <input id="radio-inline-2-2" type="radio" name="radio-inline-group-2" value="No">Your business' bank account
-	                        </label>
-							<label class="block-label" for="radio-inline-2-3">
-	                          <input id="radio-inline-2-3" type="radio" name="radio-inline-group-2" value="No">Another business' bank account
-	                        </label>
-                        </div>
-                    </fieldset>
+
 
 					<div class="form-group">
 				   		<input type="submit" class="button" value="Save and continue">

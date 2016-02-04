@@ -11,35 +11,39 @@
 		<div class="grid-row">
 			<div class="column-two-thirds">
 
-                <p><a href="javascript:history.go(-1)" class="link-back">Back</a></p>
-<h1 class="heading-xlarge">
-                    <span class="heading-secondary">Bank details</span>
-                   	Check your answers
-				</h1>
+            <p><a href="javascript:history.go(-1)" class="link-back">Back</a></p>
+            <h1 class="heading-xlarge">
+                <span class="heading-secondary">Bank details</span>
+                Check your answers
+			</h1>
 
-               	<p>Please check all the information you have provided.</p>
+            {{! <p>Please check all the information you have provided.</p> }}
 
-				<table class="space">
-                    <tbody>
-                        <tr>
-                            <th width="90%">You currently have no bank accounts registered</th>
-                            <td><a href="index">Edit</a></td>
-                        </tr>
+            <div class="panel panel-border-wide spacelarge">
+                    <p>You currently have no bank accounts registered</p>
 
-                    </tbody>
-                </table>
+            </div>
 
-				<p><a href="account-details">Add another bank account</a></p>
-				<form method="post">
-    				<div class="form-group">
-   						<input type="submit" class="button" value="Accept and complete section">
+			{{! <table class="space">
+                <tbody>
+                    <tr>
+                        <th width="90%">You currently have no bank accounts registered</th>
+                        <td><a href="index">Edit</a></td>
+                    </tr>
 
-					</div>
-				</form>
+                </tbody>
+            </table> }}
 
+			<p><a href="account-details">Add a bank account</a></p>
 
-			</div>
+			<form method="post">
+				<div class="form-group">
+					<input type="submit" class="button" value="Accept and complete section">
+				</div>
+			</form>
+
 		</div>
+	</div>
 
 {{/main}}
 {{/layout}}
