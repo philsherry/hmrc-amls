@@ -31,7 +31,7 @@ module.exports = [
       name: 'Bank account details',
       section: 'bank-details',
       link: 'bank-details/index',
-      editlink: 'bank-details/summary',
+      editlink: 'bank-details/summary-dp',
       message: 'We need to identify any bank accounts your business uses. These include personal accounts or accounts belonging to other businesses.',
       time: '5',
       status: undefined
