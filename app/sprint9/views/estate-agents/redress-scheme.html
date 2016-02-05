@@ -1,0 +1,76 @@
+{{<layout}}
+
+{{$pageTitle}}
+  Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$main}}
+
+	{{>includes/service-header}}
+
+	<div class="grid-row">
+		<div class="column-two-thirds">
+
+            <p><a href="javascript:history.go(-1)" class="link-back">Back</a></p>
+            <h1 class="heading-xlarge">
+		  		<span class="heading-secondary">Estate agent business</span>
+		  		Is this business registered with a redress scheme?
+			</h1>
+
+			<form class="form" method="post">
+				<input type="hidden" name="next-page" value="penalties">
+
+                <fieldset class="inline">
+                    <legend class="visuallyhidden">Is this business registered with a redress scheme?</legend>
+					<span class="form-hint">A redress scheme is an independent service which resolves disputes between an estate agent business and its customers.</span>
+
+					<div class="form-group">
+  						<label class="block-label" for="yes-scheme" data-target="hidden">
+    						<input id="yes-scheme" type="radio" name="group-2" value="Yes">Yes
+  						</label>
+  						<label class="block-label" for="no-scheme">
+    						<input id="no-scheme" type="radio" name="group-2" value="No">No
+    					</label>
+    				</div>
+    			</fieldset>
+
+
+        		<div class="panel js-hidden" id="hidden">
+        			<div class="form-group">
+  						<legend class="form-label-bold">Which redress scheme?</legend>
+            			<label class="block-label">
+              				<input id="asp" type="radio" class="form-control" name="scheme" value="tpol">The Property Ombudsman Limited
+            			</label>
+            			<label class="block-label">
+              				<input id="ct" type="radio" class="form-control" name="scheme" value="os">Ombudsman Services
+              			</label>
+            			<label class="block-label">
+              				<input id="paye" type="radio" class="form-control" name="scheme" value="prs">Property Redress Scheme
+            			</label>
+                        <label class="block-label" data-target="other">
+                            <input id="paye" type="radio" class="form-control" name="scheme" value="other">Other
+                        </label>
+
+                        <div id="other" class="js-hidden">
+                            <div class="form-group">
+                                <label class="form-label" for="first-name-2">Please specify</label>
+                                <input class="form-control" id="first-name-2" type="text">
+                            </div>
+                        </div>
+            			{{! <label class="block-label" data-target="#other">
+              				<input id="other-ps" type="radio" name="scheme" value="other">Other
+            			</label> }}
+            		</div>
+        		</div>
+
+			  		<div class="form-group">
+						<input type="submit" class="button" value="Save and continue">
+			  		</div>
+			  	</fieldset>
+			</form>
+
+	  	</div>
+	</div>
+
+{{/main}}
+{{/layout}}
