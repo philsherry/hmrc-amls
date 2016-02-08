@@ -26,7 +26,7 @@
                 <form class="form" method="post">
                     <fieldset>
                         <legend class="visuallyhidden">Where does the business trade from?</legend>
-                        <div class="form-group">
+                        {{! <div class="form-group">
                             <label class="visuallyhidden">Is this a UK address</label>
                             <fieldset class="inline">
                                 <label class="block-label" for="radio-inline-2-1" >
@@ -36,7 +36,7 @@
                                     <input id="radio-inline-2-2" type="radio" name="ukorover" value="true">Overseas
                                 </label>
                             </fieldset>
-                        </div>
+                        </div> }}
 
                         <div class="form-group">
                             <label class="form-label-bold" for="middle-name">Trading name</label>
@@ -142,7 +142,7 @@
 
 {{/main}}
 {{/layout}}
-<script>
+<!--<script>
 $("#over").hide();
 $("#radio-inline-2-1").on('click', function() {
   $("#over").hide();
@@ -155,4 +155,4 @@ $("#radio-inline-2-2").on('click', function() {
   $("#over").show();
   $("#count").hide();
 });
-</script>
+</script>-->
