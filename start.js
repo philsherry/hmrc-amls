@@ -30,10 +30,10 @@ app.use(favicon(
   path.join(__dirname, 'global', 'public', 'images', 'favicon.ico')));
 
 // serve static global assets
-app.use('/', 
+app.use('/',
   express.static(path.join(__dirname, 'global', 'public')));
 
-app.use('/public/images/icons', 
+app.use('/public/images/icons',
   express.static(path.join(__dirname, 'global', 'public', 'images')));
 
 // Password protection for Heroku
