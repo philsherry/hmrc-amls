@@ -17,7 +17,8 @@ module.exports = function (app) {
     var meta = {
       name : req.body.name,
       description : req.body.description,
-      phase : req.body.phase
+      phase : req.body.phase,
+      hidden : req.body.hidden
     };
     fs.copySync(
       path.join(cwd, 'app', req.body.app),

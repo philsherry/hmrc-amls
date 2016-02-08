@@ -7,6 +7,7 @@ var express = require('express'),
   hjs = require('hjs'),
   auth = require('basic-auth-connect'),
   session = require('express-session'),
+  fs = require('fs-extra'),
   FileStore = require('./lib/filestore')(session),
   MemoryStore = session.MemoryStore,
 
@@ -79,6 +80,10 @@ app.set('views', glob.sync([
 // as sub app mounted at the prefix of the name
 // of the folder
 glob.sync(__dirname + '/app/**/app.js')
+  .filter(function (e) {
+    var meta = fs.readJsonSync(path.join(path.dirname(e), 'meta.json'));
+    return app.locals.isDev || !meta.hidden;
+  })
   .map(function (e) {
     var p = './' + path.relative(
       __dirname, e
