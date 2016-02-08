@@ -42,7 +42,8 @@ module.exports = function (app) {
       var meta = {
         name : req.body.name,
         description : req.body.description,
-        phase : req.body.phase
+        phase : req.body.phase,
+        hidden : req.body.hidden
       };
       var newPath = path.join(cwd, 'app', req.body.path);
       fs.writeJsonSync(
