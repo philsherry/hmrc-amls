@@ -1,5 +1,6 @@
 {
   "name": "Sprint 8 - Jan 20",
   "description": "new summary page, check through of data items, new pages for business activities and title page updates",
-  "phase": "alpha"
+  "phase": "alpha",
+  "hidden": false
 }

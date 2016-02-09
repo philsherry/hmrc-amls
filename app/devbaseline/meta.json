@@ -1,5 +1,6 @@
 {
-  "name": "Dev Baseline",
-  "description": "The current baseline for development work",
-  "phase": "alpha"
+  "name": "Development Baseline",
+  "description": "The current baseline for development work during Sprint 9",
+  "phase": "alpha",
+  "hidden": false
 }

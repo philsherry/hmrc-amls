@@ -1,5 +1,6 @@
 {
   "name": "Sprint 7 - Jan 4",
   "description": "Includes all sections re-aligned and any remaining sections have now been added",
-  "phase": "alpha"
+  "phase": "alpha",
+  "hidden": false
 }
