@@ -28,7 +28,7 @@ module.exports = [
       status: undefined
     },
     {
-      name: 'Bank account details',
+      name: 'Bank details',
       section: 'bank-details',
       link: 'bank-details/index',
       editlink: 'bank-details/summary-dp',
