@@ -57,7 +57,7 @@ module.exports = [
   ],
   [
     {
-      name: 'Accountancy service provider',
+      name: 'Accountancy Service Provider',
       section: 'accountancy-service-provider',
       link: 'accountancy-service-provider/index',
       editlink: 'accountancy-service-provider/summary',
@@ -75,7 +75,7 @@ module.exports = [
       status: undefined
     },
     {
-      name: 'High value dealer',
+      name: 'High Value Dealer',
       section: 'high-value-dealer',
       link: 'high-value-dealer/index',
       editlink: 'high-value-dealer/summary',
@@ -84,7 +84,7 @@ module.exports = [
       status: undefined
     },
     {
-      name: 'Money service business',
+      name: 'Money Service Business',
       section: 'money-service-business',
       link: 'money-service-business/index',
       editlink: 'money-service-business/summary',
@@ -93,7 +93,7 @@ module.exports = [
       status: undefined
     },
     {
-      name: 'Trust and company service provider',
+      name: 'Trust or Company Service Provider',
       section: 'trust-company-service-provider',
       link: 'trust-company-service-provider/index',
       editlink: 'trust-company-service-provider/summary',
