@@ -1608,6 +1608,9 @@ input[type=number] {
 .form-label-bold {
   margin-bottom: .5em; }
 
+.form-label {
+  margin-bottom: .3em; }
+
 .summaryblock {
   background: #DEE0E2;
   padding: 0;
