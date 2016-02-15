@@ -103,23 +103,23 @@ module.exports = [
     },
   ],
   [
-    {
-      name: 'Declaration',
-      section: 'declaration',
-      link: 'declaration/index',
-      editlink: 'declaration/summary',
-      message: 'business activities covered by the Money Laundering Regulations, details of staff and agents that will decide here.',
-      time: '2',
-      status: undefined
-    },
-    {
-      name: 'Payment',
-      section: 'payment',
-      link: 'payment/index',
-      editlink: 'payment/summary',
-      message: 'business activities covered by the Money Laundering Regulations, details of staff and agents that will decide here.',
-      time: '5',
-      status: undefined
-    }
+    // {
+    //   name: 'Declaration',
+    //   section: 'declaration',
+    //   link: 'declaration/index',
+    //   editlink: 'declaration/summary',
+    //   message: 'business activities covered by the Money Laundering Regulations, details of staff and agents that will decide here.',
+    //   time: '2',
+    //   status: undefined
+    // },
+    // {
+    //   name: 'Payment',
+    //   section: 'payment',
+    //   link: 'payment/index',
+    //   editlink: 'payment/summary',
+    //   message: 'business activities covered by the Money Laundering Regulations, details of staff and agents that will decide here.',
+    //   time: '5',
+    //   status: undefined
+    // }
   ]
 ];
