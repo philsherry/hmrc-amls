@@ -45,15 +45,27 @@
 	  	</div>
 
 	  	<div class="column-one-third">
-	  		{{#complete}}
+
 				<div class="grid-row statusblock declaration">
-		  			<h2 class="heading-small">Declaration</h2>
-		  			<p>Some message to go in here about declaration</p>
+		  			<h2 class="heading-small">Submit registration</h2>
+		  			{{#complete}}
+		  				<p>Some message to go in here about declaration</p>
+		  			{{/complete}}
+		  			{{^complete}}
+		  				<p>This will be available once all sections are complete</p>
+		  			{{/complete}}
+
 		  			<div class="form-group">
-                            <a href="declaration/index" class="button" type="submit">Continue with declaration</a>
-                        </div>
+                        {{#complete}}
+                        	<a href="declaration/index" class="button" type="submit">Continue with declaration</a>
+                        {{/complete}}
+                        {{^complete}}
+                        	<a href="declaration/index" class="button" disabled="disabled" type="submit">Continue with declaration</a>
+
+						{{/complete}}
+					</div>
 	  			</div>
-			{{/complete}}
+
 
 	  	</div>
   	</div>
