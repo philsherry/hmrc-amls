@@ -40,7 +40,7 @@ module.exports = [
       name: 'Responsible people',
       section: 'responsible-people',
       link: 'responsible-people/index',
-      editlink: 'responsible-people/summary',
+      editlink: 'responsible-people/summary-dp',
       message: 'We need to be sure that suitable people are running your business. A Responsible Person is anyone who directs the business, is a beneficial owner, or is the nominated officer.',
       time: '10',
       status: undefined
