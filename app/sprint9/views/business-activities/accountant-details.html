@@ -14,7 +14,7 @@
             <p><a href="javascript:history.go(-1)" class="link-back">Back</a></p>
             <h1 class="heading-xlarge">
                 <span class="heading-secondary">Business activities</span>
-                Accountants details
+                Who is your accountant?
             </h1>
 
             <form method="post">
@@ -22,7 +22,7 @@
                     {{! <input type="hidden" name="next-page" value="summary"/> }}
 
                     {{! <fieldset>
-                        <legend class="visuallyhidden">Where should we send letters relating to anti-money laundering supervision?</legend>
+                        <legend class="visuallyhidden">Who is your accountant?</legend>
                         <div class="form-group">
                             <label class="visuallyhidden">Is this a UK address</label>
                             <fieldset class="inline">
@@ -40,11 +40,11 @@
                     <fieldset>
                         <legend></legend>
                         <div class="form-group">
-                            <label class="form-label" for="first-name">Name</label>
+                            <label class="form-label" for="first-name">Registered name</label>
                             <input type="text" class="form-control" id="first-name">
                         </div>
                         <div class="form-group">
-                            <label class="form-label" for="middle-name">Trading Name</label>
+                            <label class="form-label" for="middle-name">Trading name</label>
                             <input type="text"  class="form-control" id="middle-name">
                         </div>
 
@@ -82,7 +82,7 @@
 
 
                     <fieldset class="inline">
-                    <legend class="form-label-bold">Do they also deal with any of your tax related matters with HMRC?</legend>
+                    <legend class="form-label-bold">Does this accountant also deal with HMRC on behalf of your business, for tax-related matters?</legend>
                     <div class="form-group">
                         <label class="block-label" for="yes" data-target="no-activity">
                             <input id="yes" type="radio" name="next-page" value="summary">Yes
@@ -92,7 +92,7 @@
                         </label>
                         <div class="panel js-hidden" id="no-activity">
                             <div class="form-group">
-                                <label class="form-label">HMRC Agent Reference Number</label>
+                                <label class="form-label">Your accountant's HMRC Agent Reference Number</label>
                                 <input type="text" class="form-control" id="company-address2">
                             </div>
                         </div>
