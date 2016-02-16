@@ -49,6 +49,7 @@ app.post('/:section/:page', function (req, res) {
 app.get('/summary', function (req, res) {
   res.render('summary', {
     complete : req.session.sections.every(function (section) {
+      // console.log(section);
       return section.status === 'DONE';
     }),
     sections : req.session.sections
