@@ -1,0 +1,109 @@
+{{<layout}}
+
+{{$pageTitle}}
+  Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$main}}
+
+
+	{{>includes/service-header}}
+
+
+		<div class="grid-row">
+	  		<div class="column-two-thirds">
+
+
+				<h1 class="heading-xlarge">
+					<span class="heading-secondary">High Value Dealer</span>
+					What will your business sell?
+				</h1>
+
+				<p>Select all that apply</p>
+				<form class="form" method="post">
+
+					<input type="hidden" name="next-page" value="excise-goods">
+
+					<fieldset>
+						<legend class="visuallyhidden">What will your business be selling?</legend>
+
+						<div class="form-group">
+
+							<label class="block-label">
+								<input id="asp" type="checkbox" name="activities" value="asp">
+								Alcohol
+							</label>
+
+							<label class="block-label">
+								<input id="paye" type="checkbox" name="activities" value="tob">
+								Tobacco
+							</label>
+
+							<label class="block-label" >
+								<input id="ct" type="checkbox" name="activities" value="ant">
+								Antiques
+							</label>
+							<label class="block-label" >
+								<input id="asp" type="checkbox" name="activities" value="cars">
+								Cars
+							</label>
+
+							<label class="block-label" >
+								<input id="asp" type="checkbox" name="activities" value="mot">
+								Other motor vehicles
+							</label>
+
+							<label class="block-label" >
+								<input id="asp" type="checkbox" name="activities" value="caravan">
+								Caravans
+							</label>
+
+							<label class="block-label">
+								<input id="sa" type="checkbox" name="activities" value="jewel">
+							   Jewellery
+							</label>
+							<label class="block-label">
+								<input id="sa" type="checkbox" name="activities" value="gold">
+							   Gold
+							</label>
+
+							<label class="block-label" >
+								<input id="ct" type="checkbox" name="activities" value="scrap">
+								Scrap metals
+							</label>
+
+							<label class="block-label" >
+								<input id="tc" type="checkbox" name="activities" value="mob">
+								Mobile phones
+							</label>
+
+							<label class="block-label">
+								<input id="paye" type="checkbox" name="activities" value="clothing">
+								Clothing
+							</label>
+
+
+							<label class="block-label" data-target="redress" >
+								<input id="other-ps" type="checkbox" name="activities" value="other">
+								Other
+							</label>
+
+				  			<div class="panel panel-border-narrow js-hidden" id="redress">
+					  			<label class="form-label" for="first-name-2">Please give details</label>
+					  			<input class="form-control" id="first-name-2" type="text">
+							</div>
+						</div>
+
+					</fieldset>
+
+					<div class="form-group">
+						<input type="submit" class="button" value="Save and continue">
+					</div>
+
+				</form>
+
+			</div>
+		</div>
+
+{{/main}}
+{{/layout}}
