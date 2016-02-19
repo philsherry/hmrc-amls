@@ -1605,6 +1605,9 @@ input[type=number] {
 .spacelarge {
   margin-bottom: 40px; }
 
+.spacesummary {
+  margin-bottom: 50px; }
+
 .form-label-bold {
   margin-bottom: .5em; }
 
