@@ -21,7 +21,7 @@
 
                     {{! <input type="hidden" name="next-page" value="summary"/> }}
 
-                    {{! <fieldset>
+                    <fieldset>
                         <legend class="visuallyhidden">Who is your accountant?</legend>
                         <div class="form-group">
                             <label class="visuallyhidden">Is this a UK address</label>
@@ -34,7 +34,7 @@
                                 </label>
                             </fieldset>
                         </div>
-                    <fieldset> }}
+                    <fieldset>
 
 
                     <fieldset>
@@ -68,14 +68,18 @@
                             <input type="text" class="form-control" id="company-address2">
                         </div>
 
-                        <div class="form-group">
-                            <label for="postcode-name" class="form-label">Postcode</label>
-                            <input type="text" class="form-control form-control-1-4" id="postcode-name" maxlength="8">
+                        <div id="count">
+                            <div id="zip" class="form-group">
+                                <label for="postcode-name" class="form-label">Postcode</label>
+                                <input type="text" class="form-control form-control-1-4" id="postcode-name" maxlength="8">
+                            </div>
                         </div>
 
-                        <div class="form-group">
-                            <label for="company-address3" class="form-label">Country</label>
-                            <input type="text" class="form-control" id="company-address2">
+                        <div id="over">
+                            <div class="form-group">
+                                <label for="company-address3" class="form-label">Country</label>
+                                <input type="text" class="form-control" id="company-address2">
+                            </div>
                         </div>
 
                     </fieldset>
@@ -117,3 +121,17 @@
 
 {{/main}}
 {{/layout}}
+<script>
+$("#over").hide();
+$("#radio-inline-2-1").on('click', function() {
+  $("#over").hide();
+  $("#count").show();
+});
+</script>
+
+<script>
+$("#radio-inline-2-2").on('click', function() {
+  $("#over").show();
+  $("#count").hide();
+});
+</script>
