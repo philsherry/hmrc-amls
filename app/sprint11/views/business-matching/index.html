@@ -19,24 +19,34 @@
                     <fieldset>
                         <legend class="visuallyhidden">What's your business structure</legend>
                         <div class="form-group">
-    						<label for="sole" class="block-label">
-    							<input type="radio" name="next-page" id="sole" value="sole-trader">
+    						<label for="lc" class="block-label">
+                                <input type="radio" name="next-page" id="lc" value="business-details">
+                                Limited company
+                            </label>
+                            <label for="sole" class="block-label">
+    							<input type="radio" name="next-page" id="sole" value="business-details">
     							Sole proprietor
     						</label>
-    						<label for="llp" class="block-label">
+    						<label for="partner" class="block-label">
+                                <input type="radio" name="next-page" id="partner" value="business-details">
+                                Partnership
+                            </label>
+                            <label for="lp" class="block-label">
+                                <input type="radio" name="next-page" id="lp" value="business-details">
+                                Limited partnership
+                            </label>
+                            <label for="llp" class="block-label">
     							<input type="radio" name="next-page" id="llp" value="business-details">
     							Limited liability partnership
     						</label>
-    						<label for="partner" class="block-label">
-    							<input type="radio" name="next-page" id="partner" value="business-details">
-    							Partnership
-    						</label>
-    						<label for="cb" class="block-label">
+
+    						{{! <label for="cb" class="block-label">
     							<input type="radio" name="next-page" id="cb" value="business-details">
     							Incorporated body
-    						</label>
+    						</label> }}
+
     						<label for="other" class="block-label">
-    							<input type="radio" name="next-page" id="other" value="business-name">
+    							<input type="radio" name="next-page" id="other" value="business-details">
     							Unincorporated body
     						</label>
                         </div>

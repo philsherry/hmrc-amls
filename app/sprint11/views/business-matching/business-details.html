@@ -14,28 +14,20 @@
 				<p><a href="javascript:history.go(-1)" class="link-back">Back</a></p>
 				<h1 class="heading-xlarge">
 					<span class="heading-secondary">Business matching</span>
-					 What's your business name?
+					 Enter your business details
 				</h1>
-
+				<p class="lede">We will attempt to match your details against information we currently hold</p>
 				<form method="post">
 					<fieldset>
 						<legend class="visuallyhidden">Business details</legend>
 						<div class="form-group">
-							
+							<label class="form-label">Registered company name</label>
 							<span class="form-hint">It must be identical to the registered name on the incorporation certificate.</span>
 	  						<input class="form-control" id="reg_name" type="text" name="reg_name" value="">
   						</div>
 
   						<div class="form-group">
-							<label class="form-label">Company registration number</label>
-							<span class="form-hint">For example: A1234567.</span>
-	  						<input class="form-control" id="reg_name" type="text" name="reg_name" value="">
-  						</div>
-
-						
-
-						<!--<div class="form-group">
-	  						<label class="form-label-bold" for="ni-number">
+	  						<label class="form-label" for="ni-number">
 								Corporation Tax Unique Tax Reference (UTR)
 
 	    						<span class="form-hint">For example: UTR 23626 37849</span>
@@ -50,10 +42,20 @@
 
 	  						</label>
 	  						<input class="form-control" id="reg_name" type="text" name="reg_name" value="">
-	  					</div>-->
+	  					</div>
+
+  						{{! <div class="form-group">
+							<label class="form-label">Company registration number</label>
+							<span class="form-hint">For example: A1234567.</span>
+	  						<input class="form-control" id="reg_name" type="text" name="reg_name" value="">
+  						</div> }}
+
+
+
+
 
 						<div class="form-group">
-							<a href="confirm"  class="button" type="submit" id="save-and-continue">Save and continue</a>
+							<a href="confirm"  class="button" type="submit" id="save-and-continue">Match</a>
 						</div>
 					</fieldset>
 				</form>
