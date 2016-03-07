@@ -1673,11 +1673,6 @@ input[type=number] {
   left: 0;
   transform: rotate(45deg); }
 
-.panel .notice p {
-  display: block;
-  padding-left: 55px;
-  margin-top: 0; }
-
 .declaration {
   margin-left: 20px;
   padding: 20px; }
