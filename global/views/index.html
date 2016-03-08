@@ -9,14 +9,21 @@
 <div class="grid-row">
 	<div class="column-two-thirds">
 
-		<h1 class="heading-xlarge">Anti Money Laundering Supervision</h1>
- 
+    {{#intro}}
+  		  <h1 class="heading-xlarge">{{h1}}</h1>
+        <p class="lede">{{description}}</p>
+    {{/intro}}
 
-        {{#isDev}}
-        <div class="panel panel-border-wide">
-            <a href="/admin/new-iteration" class="button">Create a new iteration</a>
-        </div>
-        {{/isDev}}
+    {{#isDev}}
+        <p><a href="/admin/edit-intro">Edit title and introduction text</a></p>
+    {{/isDev}}
+
+
+    {{#isDev}}
+      <div class="panel panel-border-wide">
+        <a href="/admin/new-iteration" class="button">Create a new iteration</a>
+      </div>
+    {{/isDev}}
 
 	{{>includes/subapp-list}}
 

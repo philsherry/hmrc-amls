@@ -11,6 +11,7 @@
 	<div class="grid-row">
 		<div class="column-two-thirds">
 
+			<a href="javascript:history.go(-1)" class="link-back">Back</a>
 			<h1 class="heading-xlarge">Create a new iteration</h1>
 
 			<form method="post">
@@ -67,11 +68,21 @@
 					</div>
 				</fieldset>
 
+				<fieldset>
+					<div class="form-group">
+						<label class="form-checkbox">
+    						<input type="checkbox" name="hidden" value="true" {{#hidden}}checked{{/hidden}} >
+    						Hide this iteration from your Heroku service
+  						</label>
+
+					</div>
+				</fieldset>
+
 				<button class="button">Create iteration</button>
 
 			</form>
 
-			<a href="javascript:history.go(-1)" class="link-back">Back</a>
+
 
 		</div>
 		<div class="column-third">

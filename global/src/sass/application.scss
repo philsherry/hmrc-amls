@@ -1,1 +1,16 @@
 @import "app.scss";
+
+.panel-edit{
+  border: 1px dashed white;
+  margin: 1em 0;
+
+  a{
+    float: right;
+    margin-right: -170px;
+  }
+}
+
+.panel-edit:hover{
+  border: 1px dashed grey;
+  margin: 1em 0;
+}

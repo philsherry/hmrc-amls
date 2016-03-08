@@ -1,0 +1,49 @@
+{{<layout}}
+
+{{$pageTitle}}
+	GOV.UK prototyping kit
+{{/pageTitle}}
+
+{{$content}}
+
+<main id="content" role="main">
+
+	<div class="grid-row">
+		<div class="column-two-thirds">
+
+			<a href="javascript:history.go(-1)" class="link-back">Back</a>
+
+			<h1 class="heading-xlarge">Edit title and description text for your prototype</h1>
+
+			<form method="post">
+				<fieldset>
+					<div class="form-group">
+						<label class="form-label-bold">Title
+							<span class="form-hint">Change the title of your prototype</span>
+						</label>
+						<input name="h1" class="form-control" value="{{intro.h1}}"></input>
+					</div>
+
+					<div class="form-group">
+						<label class="form-label-bold">
+							Description
+							<span class="form-hint">Change the description text</span>
+						</label>
+						<textarea name="description" class="form-control" cols="40" rows="5" >{{intro.description}}</textarea>
+					</div>
+
+				</fieldset>
+
+				<button class="button">Make changes</button>
+			</form>
+
+		</div>
+		<div class="column-third">
+			{{>includes/admin-tools}}
+		</div>
+	</div>
+
+</main>
+
+{{/content}}
+{{/layout}}
