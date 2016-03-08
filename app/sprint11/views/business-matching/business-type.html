@@ -6,37 +6,31 @@
 
 {{$main}}
 
-	{{>includes/service-header-not-matched}}
+	<div class="grid-row">
+		<div class="column-two-thirds">
 
-		<div class="grid-row">
-			<div class="column-two-thirds">
+			<p><a href="javascript:history.go(-1)" class="link-back">Back</a></p>
+			<h1 class="heading-xlarge">
+				<span class="heading-secondary">Business matching</span>
+				What's your type of business?
+			</h1>
 
-				<p><a href="javascript:history.go(-1)" class="link-back">Back</a></p>
-				<h1 class="heading-xlarge">
-					<span class="heading-secondary">Business matching</span>
-					What's your type of business?
-				</h1>
+			<form method="post">
+				<fieldset>
+					<legend class="visuallyhidden">Business details</legend>
+					<div class="form-group">
+						<label class="visuallyhidden">Type of business</label>
+						<span class="form-hint">For example: association, charity, trust</span>
+							<input class="form-control" id="reg_name" type="text" name="reg_name" value="">
+					</div>
+					<div class="form-group">
+						<a href="activities"  class="button" type="submit" id="save-and-continue">Save and continue</a>
+					</div>
+				</fieldset>
+			</form>
 
-				<form method="post">
-					<fieldset>
-						<legend class="visuallyhidden">Business details</legend>
-
-  						<div class="form-group">
-							<label class="visuallyhidden">Type of business</label>
-							<span class="form-hint">For example: association, charity, trust</span>
-	  						<input class="form-control" id="reg_name" type="text" name="reg_name" value="">
-  						</div>
-
-						<div class="form-group">
-							<a href="activities"  class="button" type="submit" id="save-and-continue">Save and continue</a>
-						</div>
-					</fieldset>
-				</form>
-
-
-
-			</div>
 		</div>
+	</div>
 
 {{/main}}
 {{/layout}}

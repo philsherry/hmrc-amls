@@ -15,13 +15,13 @@
                 Check your answers
             </h1>
 
+            {{! <div class="panel panel-border-wide spacelarge">
+                <p>Please check all the information you have provided.</p>
+            </div> }}
 
-            <p>Please check all the information you have provided.</p>
-
-            <div class="panel panel-border-wide spacelarge">
-
-                    <p>You will be registering the following business for anti-money laundering supervision:</p>
-
+            <div class="notice spacelarge">
+                <i class="icon icon-important"><span class="visuallyhidden">Warning</span></i>
+                <p>You will be registering the following business for anti-money laundering supervision:</p>
             </div>
 
             <table class="space">
@@ -89,18 +89,15 @@
                 </tbody>
             </table>
 
+            <form method="post">
+                <input type="hidden" name="next-page" value="../summary"/>
+                <div class="form-group">
+                    <input type="submit" class="button" value="Confirm and start registration">
+                </div>
+            </form>
 
-        <form method="post">
-            <input type="hidden" name="next-page" value="../summary"/>
-            <div class="form-group">
-                <input type="submit" class="button" value="Confirm and start registration">
-            </div>
-        </form>
-
-
-
-
-
+        </div>
+    </div>
 
 {{/main}}
 {{/layout}}
