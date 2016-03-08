@@ -18,7 +18,7 @@ app.post('/business-matching/activities', function (req, res) {
   res.redirect(req.body['next-page']);
 });
 
-app.post('/:section/summary', function (req, res) {
+app.post('/:section/check-your-answers', function (req, res) {
   var sections = req.session.sections.map(
     function (e) {
       if (e.section === req.params.section) {
