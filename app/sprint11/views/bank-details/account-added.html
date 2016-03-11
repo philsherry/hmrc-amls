@@ -12,7 +12,7 @@
 			<div class="column-two-thirds">
 
 				<p><a href="javascript:history.go(-1)" class="link-back">Back</a></p>
-<h1 class="heading-xlarge">
+                <h1 class="heading-xlarge">
 					<span class="heading-secondary">Bank details</span>
 					Account added
 				</h1>
@@ -22,9 +22,9 @@
                 </div>
 
 				<form method="post">
-					{{! <input type="hidden" name="next-page" value="check-your-answers"> }}
-					<fieldset class="inline">
-						<legend class="form-label">Would you like to add another bank account</legend>
+
+                    <fieldset class="inline">
+						<legend class="form-label">Does your business use any other bank accounts?</legend>
       					<div class="form-group">
         					<label class="block-label" data-target="sortcode" for="radio-indent-1">
           						<input id="radio-indent-1" type="radio" name="next-page" value="accounts">Yes
@@ -35,8 +35,6 @@
 
         				</div>
         			</fieldset>
-
-
 
 					<div class="form-group">
 				   		<input type="submit" class="button" value="Save and continue">
