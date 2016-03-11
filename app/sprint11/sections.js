@@ -5,7 +5,7 @@ module.exports = [
       section: 'business-matching',
       link: 'business-matching/index',
       editlink: 'business-matching/check-your-answers',
-      message: 'business activities covered by the Money Laundering Regulations, details of staff and agents that will decide here.',
+      message: 'Most people complete this section in about 5 minutes.',
       time: '5',
       status: undefined
     },
@@ -14,7 +14,7 @@ module.exports = [
       section: 'business-details',
       link: 'business-details/index',
       editlink: 'business-details/check-your-answers',
-      message: 'business activities covered by the Money Laundering Regulations, details of staff and agents that will decide here.',
+      message: 'Most people complete this section in 5 minutes.',
       time: '5',
       status: undefined
     },
@@ -23,7 +23,7 @@ module.exports = [
       section: 'business-activities',
       link: 'business-activities/index',
       editlink: 'business-activities/check-your-answers',
-      message: 'business activities covered by the Money Laundering Regulations, details of staff and agents that will decide here.',
+      message: '',
       time: '8',
       status: undefined
     },
