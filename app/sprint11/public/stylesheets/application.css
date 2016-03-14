@@ -1617,37 +1617,32 @@ input[type=number] {
 .summaryblock {
   background: #DEE0E2;
   padding: 0;
-  border-bottom: #fff solid 12px; }
+  margin-bottom: 12px; }
 
-.statusblock {
-  background: #f8f8f8;
-  padding-bottom: 0px;
-  margin-bottom: 4px; }
-
-.al-center {
-  text-align: left;
+.chev {
   color: #6F777B; }
-  .al-center .heading-large {
-    margin-top: 30px;
-    margin-bottom: 32px;
-    line-height: .6; }
-    .al-center .heading-large span {
-      font-size: 16px; }
-  .al-center a:link .grid-row, .al-center a:visited .grid-row {
-    color: #6F777B; }
-  .al-center a:hover .grid-row {
-    color: #fff;
-    background: #00823B; }
+  .chev p {
+    margin: 0;
+    padding: 24px 0 0 0; }
+
+.summaryblock:hover {
+  background: #00823B; }
+  .summaryblock:hover .chev {
+    color: #fff; }
+
+.greyblock {
+  background: #f8f8f8;
+  padding-bottom: 10px;
+  border-bottom: #DEE0E2 solid 3px; }
+  .greyblock p {
+    margin: 0;
+    padding-bottom: 10px; }
+
+.green {
+  background-color: #00823B; }
 
 .link-back {
   margin-bottom: 0px; }
-
-.green {
-  background-color: #00823B;
-  margin-bottom: 0; }
-  .green h2 {
-    padding-top: 0;
-    margin: 10px 0; }
 
 .white {
   color: #fff; }
@@ -1666,8 +1661,10 @@ input[type=number] {
   height: 2.5em;
   position: relative;
   transform: rotate(-45deg);
-  top: 40px;
-  width: 2.5em; }
+  left: 0;
+  top: 36px;
+  width: 2.5em;
+  margin-left: -30px; }
 
 .chevron.right:before {
   left: 0;
@@ -1680,6 +1677,8 @@ input[type=number] {
 
 .declaration {
   margin-left: 20px;
-  padding: 20px; }
+  padding: 20px;
+  background: #f8f8f8;
+  border-bottom: #DEE0E2 solid 3px; }
   .declaration h2 {
     margin-top: 0; }

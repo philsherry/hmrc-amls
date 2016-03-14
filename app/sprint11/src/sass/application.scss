@@ -14,65 +14,100 @@
   margin-bottom: .5em; }
 
 .form-label {
-  margin-bottom: .3em; }
+  margin-bottom: .3em;
+}
 
-
+// Registration Page Coding
 .summaryblock {
     background:#DEE0E2;
-    // background:#85994B;
-    // margin-bottom: 30px;
     padding: 0;
-    border-bottom: #fff solid 12px;
-}
-
-.statusblock {
-    background:#f8f8f8;
-    padding-bottom: 0px;
-    margin-bottom: 4px;
-
+    margin-bottom: 12px;
 
 }
 
-.al-center {
-    text-align: left;
+.chev {
     color: #6F777B;
 
-    .heading-large {
-        margin-top: 30px;
-        margin-bottom: 32px;
-        line-height: .6;
-
-        span {
-            font-size: 16px;
-        }
-    }
-
-    a:link .grid-row, a:visited .grid-row {
-        color: #6F777B;
-    }
-
-    a:hover .grid-row {
-            color: #fff;
-            background: #00823B;
-
+    p {
+        margin: 0;
+        padding: 24px 0 0 0;
     }
 }
+
+.summaryblock:hover {
+    background: #00823B;
+
+    .chev {
+        color: #fff;
+    }
+}
+
+.greyblock {
+    background:#f8f8f8;
+    padding-bottom: 10px;
+     border-bottom: #DEE0E2 solid 3px;
+
+    p {
+     margin: 0;
+     padding-bottom: 10px;
+    }
+}
+
+
+
+.green {
+    background-color: #00823B;
+    }
+
+// .statusblock {
+//     background:#f8f8f8;
+//     padding-bottom: 0px;
+//     margin-bottom: 4px;
+// }
+
+// .al-center {
+//     text-align: left;
+//     color: #6F777B;
+
+//     .heading-large {
+//         margin-top: 30px;
+//         margin-bottom: 32px;
+//         line-height: .6;
+
+//         span {
+//             font-size: 16px;
+//         }
+//     }
+
+//     a:link .grid-row, a:visited .grid-row {
+//         color: #6F777B;
+//     }
+
+//     a:hover .grid-row {
+//             color: #fff;
+//             background: #00823B;
+
+//     }
+// }
+
+
+
+
 
 
 .link-back {
   margin-bottom: 0px;
 }
 
-.green {
-    background-color: #00823B;
-    margin-bottom: 0;
+// .green {
+//     background-color: #00823B;
 
-    h2 {
-padding-top: 0;
-margin: 10px 0;
+//     h2 {
+// padding-top: 0;
+// margin: 10px 0;
 
-    }
-}
+//     }
+// }
 
 .white {
     color:#fff;
@@ -93,12 +128,12 @@ margin: 10px 0;
     content: '';
     display: inline-block;
     height: 2.5em;
-    // left: 0.15em;
     position: relative;
-    // top: 0.15em;
     transform: rotate(-45deg);
-    top: 40px;
+    left: 0;
+    top: 36px;
     width: 2.5em;
+    margin-left: -30px
 }
 
 .chevron.right:before {
@@ -120,6 +155,8 @@ margin: 10px 0;
 .declaration {
     margin-left: 20px;
     padding: 20px;
+    background:#f8f8f8;
+    border-bottom: #DEE0E2 solid 3px;
 
     h2 {
         margin-top: 0;
