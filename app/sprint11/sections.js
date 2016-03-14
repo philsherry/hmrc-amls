@@ -5,7 +5,7 @@ module.exports = [
       section: 'business-matching',
       link: 'business-matching/index',
       editlink: 'business-matching/check-your-answers',
-      message: 'Most people complete this section in about 5 minutes.',
+      message: '.',
       time: '5',
       status: undefined
     },
@@ -14,7 +14,7 @@ module.exports = [
       section: 'business-details',
       link: 'business-details/index',
       editlink: 'business-details/check-your-answers',
-      message: 'Most people complete this section in 5 minutes.',
+      message: 'Administrative information about your business.',
       time: '5',
       status: undefined
     },
@@ -23,7 +23,7 @@ module.exports = [
       section: 'business-activities',
       link: 'business-activities/index',
       editlink: 'business-activities/check-your-answers',
-      message: '',
+      message: 'Information about how your business operates, and your anti-money laundering procedures.',
       time: '8',
       status: undefined
     },
@@ -32,7 +32,8 @@ module.exports = [
       section: 'bank-details',
       link: 'bank-details/index',
       editlink: 'bank-details/check-your-answers-dp',
-      message: 'We need to identify any bank accounts your business uses. These include personal accounts or accounts belonging to other businesses.',
+      message: 'The bank accounts your business uses. These include personal accounts or accounts belonging to other businesses.
+',
       time: '5',
       status: undefined
     },
@@ -41,7 +42,7 @@ module.exports = [
       section: 'responsible-people',
       link: 'responsible-people/index',
       editlink: 'responsible-people/check-your-answers-dp',
-      message: 'We need to be sure that suitable people are running your business. A Responsible Person is anyone who directs the business, is a beneficial owner, or is the nominated officer.',
+      message: 'Information about the people in charge of your business.',
       time: '10',
       status: undefined
     },
@@ -50,7 +51,7 @@ module.exports = [
       section: 'trading-premises',
       link: 'trading-premises/index',
       editlink: 'trading-premises/check-your-answers',
-      message: 'Tell us which premises your business trades from, and also details of any other businesses that trade on your behalf.',
+      message: 'Which premises your business trades from, and details of any other businesses that trade on your behalf.',
       time: '8',
       status: undefined
     }
@@ -61,7 +62,7 @@ module.exports = [
       section: 'accountancy-service-provider',
       link: 'accountancy-service-provider/index',
       editlink: 'accountancy-service-provider/check-your-answers',
-      message: 'We need to know which accountancy services you provide, and information about any previous anti-money laundering supervision.',
+      message: 'Registration information specifically for Accountancy Service Providers.',
       time: 5,
       status: undefined
     },
@@ -70,7 +71,7 @@ module.exports = [
       section: 'estate-agents',
       link: 'estate-agents/index',
       editlink: 'estate-agents/check-your-answers',
-      message: 'business activities covered by the Money Laundering Regulations, details of staff and agents that will decide here.',
+      message: 'Registration information specifically for Estate Agent Businesses',
       time: '5',
       status: undefined
     },
@@ -79,7 +80,7 @@ module.exports = [
       section: 'high-value-dealer',
       link: 'high-value-dealer/index',
       editlink: 'high-value-dealer/check-your-answers',
-      message: 'business activities covered by the Money Laundering Regulations, details of staff and agents that will decide here.',
+      message: 'Registration information specifically for High Value Dealers',
       time: 8,
       status: undefined
     },
@@ -88,7 +89,7 @@ module.exports = [
       section: 'money-service-business',
       link: 'money-service-business/index',
       editlink: 'money-service-business/check-your-answers',
-      message: 'business activities covered by the Money Laundering Regulations, details of staff and agents that will decide here.',
+      message: 'Registration information specifically for Money Service Businesses.',
       time: '6',
       status: undefined
     },
@@ -97,7 +98,7 @@ module.exports = [
       section: 'trust-company-service-provider',
       link: 'trust-company-service-provider/index',
       editlink: 'trust-company-service-provider/check-your-answers',
-      message: 'business activities covered by the Money Laundering Regulations, details of staff and agents that will decide here.',
+      message: 'Registration information specifically for Trust or Company Service Providers.',
       time: '8',
       status: undefined
     },
