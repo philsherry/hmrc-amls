@@ -28,7 +28,7 @@ app.post('/:section/check-your-answers', function (req, res) {
   });
   req.session.sections = sections;
   res.redirect(
-    '../summary'
+    '../registration-progress'
   );
 });
 
@@ -46,8 +46,8 @@ app.post('/:section/:page', function (req, res) {
   res.redirect(req.body['next-page']);
 });
 
-app.get('/summary', function (req, res) {
-  res.render('summary', {
+app.get('/registration-progress', function (req, res) {
+  res.render('registration-progress', {
     complete : req.session.sections.every(function (section) {
       // console.log(section);
       return section.status === 'DONE';
