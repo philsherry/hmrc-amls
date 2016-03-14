@@ -32,8 +32,7 @@ module.exports = [
       section: 'bank-details',
       link: 'bank-details/index',
       editlink: 'bank-details/check-your-answers-dp',
-      message: 'The bank accounts your business uses. These include personal accounts or accounts belonging to other businesses.
-',
+      message: 'The bank accounts your business uses. These include personal accounts or accounts belonging to other businesses.',
       time: '5',
       status: undefined
     },
