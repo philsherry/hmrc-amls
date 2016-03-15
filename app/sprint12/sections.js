@@ -4,7 +4,7 @@ module.exports = [
       name: 'Business matching',
       section: 'business-matching',
       link: 'business-matching/index',
-      editlink: 'business-matching/check-your-answers',
+      editlink: 'business-matching/your-answers',
       message: '.',
       time: '5',
       status: undefined
@@ -13,7 +13,7 @@ module.exports = [
       name: 'About the business',
       section: 'business-details',
       link: 'business-details/index',
-      editlink: 'business-details/check-your-answers',
+      editlink: 'business-details/your-answers',
       message: 'Administrative information about your business.',
       time: '5',
       status: undefined
@@ -22,7 +22,7 @@ module.exports = [
       name: 'Business activities',
       section: 'business-activities',
       link: 'business-activities/index',
-      editlink: 'business-activities/check-your-answers',
+      editlink: 'business-activities/your-answers',
       message: 'Information about how your business operates, and your anti-money laundering procedures.',
       time: '8',
       status: undefined
@@ -31,7 +31,7 @@ module.exports = [
       name: 'Bank details',
       section: 'bank-details',
       link: 'bank-details/index',
-      editlink: 'bank-details/check-your-answers',
+      editlink: 'bank-details/your-answers',
       message: 'The bank accounts your business uses. These include personal accounts or accounts belonging to other businesses.',
       time: '5',
       status: undefined
@@ -40,7 +40,7 @@ module.exports = [
       name: 'Responsible people',
       section: 'responsible-people',
       link: 'responsible-people/index',
-      editlink: 'responsible-people/check-your-answers-dp',
+      editlink: 'responsible-people/your-answers-dp',
       message: 'Information about the people in charge of your business.',
       time: '10',
       status: undefined
@@ -49,7 +49,7 @@ module.exports = [
       name: 'Trading premises',
       section: 'trading-premises',
       link: 'trading-premises/index',
-      editlink: 'trading-premises/check-your-answers',
+      editlink: 'trading-premises/your-answers',
       message: 'Which premises your business trades from, and details of any other businesses that trade on your behalf.',
       time: '8',
       status: undefined
@@ -60,7 +60,7 @@ module.exports = [
       name: 'Accountancy Service Provider',
       section: 'accountancy-service-provider',
       link: 'accountancy-service-provider/index',
-      editlink: 'accountancy-service-provider/check-your-answers',
+      editlink: 'accountancy-service-provider/your-answers',
       message: 'Registration information specifically for Accountancy Service Providers.',
       time: 5,
       status: undefined
@@ -69,7 +69,7 @@ module.exports = [
       name: 'Estate agent business',
       section: 'estate-agents',
       link: 'estate-agents/index',
-      editlink: 'estate-agents/check-your-answers',
+      editlink: 'estate-agents/your-answers',
       message: 'Registration information specifically for Estate Agent Businesses',
       time: '5',
       status: undefined
@@ -78,7 +78,7 @@ module.exports = [
       name: 'High Value Dealer',
       section: 'high-value-dealer',
       link: 'high-value-dealer/index',
-      editlink: 'high-value-dealer/check-your-answers',
+      editlink: 'high-value-dealer/your-answers',
       message: 'Registration information specifically for High Value Dealers',
       time: 8,
       status: undefined
@@ -87,7 +87,7 @@ module.exports = [
       name: 'Money Service Business',
       section: 'money-service-business',
       link: 'money-service-business/index',
-      editlink: 'money-service-business/check-your-answers',
+      editlink: 'money-service-business/your-answers',
       message: 'Registration information specifically for Money Service Businesses.',
       time: '6',
       status: undefined
@@ -96,7 +96,7 @@ module.exports = [
       name: 'Trust or Company Service Provider',
       section: 'trust-company-service-provider',
       link: 'trust-company-service-provider/index',
-      editlink: 'trust-company-service-provider/check-your-answers',
+      editlink: 'trust-company-service-provider/your-answers',
       message: 'Registration information specifically for Trust or Company Service Providers.',
       time: '8',
       status: undefined
@@ -107,7 +107,7 @@ module.exports = [
     //   name: 'Declaration',
     //   section: 'declaration',
     //   link: 'declaration/index',
-    //   editlink: 'declaration/check-your-answers',
+    //   editlink: 'declaration/your-answers',
     //   message: 'business activities covered by the Money Laundering Regulations, details of staff and agents that will decide here.',
     //   time: '2',
     //   status: undefined
@@ -116,7 +116,7 @@ module.exports = [
     //   name: 'Payment',
     //   section: 'payment',
     //   link: 'payment/index',
-    //   editlink: 'payment/check-your-answers',
+    //   editlink: 'payment/your-answers',
     //   message: 'business activities covered by the Money Laundering Regulations, details of staff and agents that will decide here.',
     //   time: '5',
     //   status: undefined
