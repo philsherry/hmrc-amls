@@ -2,5 +2,5 @@
   "name": "Sprint 11 - 2nd March",
   "description": "Additions to summary pages to help with recurring information such as bank details, trading premises",
   "phase": "alpha",
-  "hidden": false
+  "hidden": true
 }
