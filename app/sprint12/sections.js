@@ -40,7 +40,7 @@ module.exports = [
       name: 'Responsible people',
       section: 'responsible-people',
       link: 'responsible-people/index',
-      editlink: 'responsible-people/your-answers-dp',
+      editlink: 'responsible-people/your-answers',
       message: 'Information about the people in charge of your business.',
       time: '10',
       status: undefined
