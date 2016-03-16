@@ -28,29 +28,29 @@
 
             <form class="form" method="post">
 
-                <input type="hidden" name="next-page" value="vat">
+                {{! <input type="hidden" name="next-page" value="vat"> }}
 
                 <fieldset>
                     <div class="form-group">
                         <legend class="visuallyhidden">What's your position within the business?</legend>
                         <p>Select all that apply</p>
                         <label class="block-label" for="radio-1">
-                            <input id="radio-1" type="checkbox" name="radio-group">Beneficial owner (holding 25% or more of shares)
+                            <input id="radio-1" type="checkbox" name="next-page" value="experience-training" >Beneficial owner (holding 25% or more of shares)
                         </label>
                         <label class="block-label" for="radio-2">
-                            <input id="radio-2" type="checkbox" name="radio-group">Director
+                            <input id="radio-2" type="checkbox" name="next-page" value="experience-training" >Director
                         </label>
                         <label class="block-label" for="radio-4">
-                            <input id="radio-4" type="checkbox" name="radio-group">Internal accountant
+                            <input id="radio-4" type="checkbox" name="next-page" value="experience-training" >Internal accountant
                         </label>
                         <label class="block-label" for="radio-5">
-                            <input id="radio-5" type="checkbox" name="radio-group">Nominated officer
+                            <input id="radio-5" type="checkbox" name="next-page" value="experience-training" >Nominated officer
                         </label>
                         <label class="block-label" for="radio-6">
-                            <input id="radio-6" type="checkbox" name="radio-group">Partner
+                            <input id="radio-6" type="checkbox" name="next-page" value="vat" >Partner
                         </label>
                         <label class="block-label" for="radio-7">
-                            <input id="radio-7" type="checkbox" name="radio-group">Sole proprietor
+                            <input id="radio-7" type="checkbox" name="next-page" value="vat" >Sole proprietor
                         </label>
                     </div>
                 </fieldset>
