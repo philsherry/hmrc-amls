@@ -1,0 +1,80 @@
+{{<layout}}
+
+{{$pageTitle}}
+  Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$main}}
+
+    {{>includes/service-header}}
+
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+
+            <p><a href="javascript:history.go(-1)" class="link-back">Back</a></p>
+
+            <h1 class="heading-xlarge">
+                <span class="heading-secondary">Responsible people</span>
+               What's the name of this responsible person?
+            </h1>
+
+            <form class="form" method="post">
+
+                <input type="hidden" name="next-page" value="residency">
+
+                <fieldset>
+                    <div class="form-group">
+                        <label class="form-label" for="first-name">First name</label>
+                        <input type="text" id="first-name" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="middle-name">Middle name (optional)</label>
+                        <input type="text" id="middle-name" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="last-name">Last name</label>
+                        <input type="text" id="last-name" class="form-control">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <div class="form-group">
+                        <fieldset class="inline">
+                            <legend class="form-label">Has this person ever been known by other names?</legend>
+                            <label class="block-label" for="radio-inline-3" data-target="namechange">
+                                <input id="radio-inline-3" type="radio" name="radio-inline-group2" value="Yes">Yes
+                            </label>
+                            <label class="block-label" for="radio-inline-4">
+                                <input id="radio-inline-4" type="radio" name="radio-inline-group2" value="No">No
+                            </label>
+                        </fieldset>
+
+                        <div class="panel panel-indent js-hidden" id="namechange">
+                            <div class="form-group">
+                                <label class="form-label" for="first-name">Other first names</label>
+                                <input type="text" id="first-name" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="middle-name">Other middle names (optional)</label>
+                                <input type="text" id="middle-name" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="last-name">Other last names</label>
+                                <input type="text" id="last-name" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <div class="form-group">
+                    <input type="submit" class="button" value="Save and continue">
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+{{/main}}
+{{/layout}}
