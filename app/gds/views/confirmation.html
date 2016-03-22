@@ -6,18 +6,18 @@
 
 {{$main}}
 
-	<div class="grid-row">
+{{! 	<div class="grid-row">
 		<div class="column-two-thirds">
 			<h1 class="heading-xlarge"><span class="heading-secondary">Submit registration</span>
 			Confirmation</h1>
 		</div>
-	</div>
+	</div> }}
 
 	<div class="grid-row">
 		<div class="column-two-thirds">
 
 			<div class="govuk-box-highlight spacelarge">
-				<p class="heading-large"><img src="public/images/icons/tick.png"> Your registration for anti-money laundering supervision has been submitted.</p>
+				<p class="heading-large"><img src="public/images/icons/tick.png"> Your registration for anti-money laundering supervision has been submitted pending payment</p>
 				<p class="heading-small">Reference code: XAAM00000123456</p>
 			</div>
 
@@ -25,6 +25,9 @@
 			<div class="panel panel-border-wide spacelarge">
 				<p>Your registration payment amount is:
 				<br /><span class="heading-xlarge">&pound;1160.00</span></p>
+				<div class="form-group">
+                    <a href="payment/index" class="button" type="submit">Make payment</a>
+				</div>
 			</div>
 
 
@@ -71,6 +74,8 @@
 
 	  	<div class="column-one-third">
 			<div class="grid-row statusblock declaration">
+
+
 	  			<h2 class="heading-medium">How to pay</h2>
 	  			<p>When you complete the registration you'll be given the full amount you need to pay. You have 28 days to complete the registration. You can save your progress and return to it later. </p>
 
@@ -79,10 +84,10 @@
 
 
 
-{{! 	  			<div class="form-group">
+	  			<div class="form-group">
                     <a href="payment/index" class="button" type="submit">Make payment</a>
 				</div>
- }}  			</div>
+  			</div>
 	  	</div>
   	</div>
 
