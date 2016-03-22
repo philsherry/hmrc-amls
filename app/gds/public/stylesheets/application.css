@@ -1682,3 +1682,8 @@ input[type=number] {
   border-bottom: #DEE0E2 solid 3px; }
   .declaration h2 {
     margin-top: 0; }
+
+.govuk-box-highlight {
+  margin-top: 0; }
+  .govuk-box-highlight .heading-large {
+    margin: 0; }
