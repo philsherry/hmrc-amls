@@ -24,19 +24,12 @@
 					<div class="column-two-thirds greyblock">
 						<h2 class="heading-small">{{name}}</h2>
 
-		  				{{^status}}<p>{{message}}</p><p class="font-xsmall"><a href="{{link}}">Start this section</a></p>{{/status}}
+		  				{{^status}}<p>{{message}}</p><!--<p class="font-xsmall"><a href="{{link}}">Start this section</a></p>-->{{/status}}
 		  				{{#status}}<p class="font-xsmall"><a href="{{editlink}}">Edit</a></p>{{/status}}
 					</div>
 					<div class="column-one-third">
 						{{#status}}
-							<div class="grid-row chev">
-								<div class="column-one-third">
-									<img src="public/images/icons/icon-tick-white.png" class="statusspace"/>
-								</div>
-								<div class="column-two-thirds">
-
-								</div>
-							</div>
+							<img src="public/images/icons/icon-tick-white.png" class="statusspace"/>
 						{{/status}}
 						{{^status}}
 							<div class="grid-row chev">
@@ -46,7 +39,7 @@
 								</div>
 								<div class="column-one-third">
 
-									<span class="chevron right"></span>
+									<a href="{{link}}"><span class="chevron right"></span></a>
 								</div>
 							</div>
 	  					{{/status}}

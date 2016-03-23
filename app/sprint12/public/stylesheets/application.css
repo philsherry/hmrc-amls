@@ -1628,7 +1628,8 @@ input[type=number] {
 .summaryblock:hover {
   background: #00823B; }
   .summaryblock:hover .chev {
-    color: #fff; }
+    color: #fff !important;
+    a-color: #ff6600; }
 
 .greyblock {
   background: #f8f8f8;
@@ -1662,13 +1663,19 @@ input[type=number] {
   position: relative;
   transform: rotate(-45deg);
   left: 0;
-  top: 36px;
+  top: 2em;
   width: 2.5em;
   margin-left: -30px; }
 
 .chevron.right:before {
   left: 0;
   transform: rotate(45deg); }
+
+a .chevron {
+  color: #6F777B; }
+
+a:hover .chevron {
+  color: #fff; }
 
 .notice p {
   display: block;
