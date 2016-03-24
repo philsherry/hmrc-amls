@@ -57,7 +57,7 @@ module.exports = [
   ],
   [
     {
-      name: 'Accountancy Service Provider',
+      name: 'Accountancy service provider',
       section: 'accountancy-service-provider',
       link: 'accountancy-service-provider/index',
       editlink: 'accountancy-service-provider/your-answers',
@@ -70,21 +70,21 @@ module.exports = [
       section: 'estate-agents',
       link: 'estate-agents/index',
       editlink: 'estate-agents/your-answers',
-      message: 'Registration information specifically for Estate Agent Businesses',
+      message: 'Registration information specifically for Estate Agent Businesses.',
       time: '5',
       status: undefined
     },
     {
-      name: 'High Value Dealer',
+      name: 'High value dealer',
       section: 'high-value-dealer',
       link: 'high-value-dealer/index',
       editlink: 'high-value-dealer/your-answers',
-      message: 'Registration information specifically for High Value Dealers',
+      message: 'Registration information specifically for High Value Dealers.',
       time: 8,
       status: undefined
     },
     {
-      name: 'Money Service Business',
+      name: 'Money service business',
       section: 'money-service-business',
       link: 'money-service-business/index',
       editlink: 'money-service-business/your-answers',
@@ -93,7 +93,7 @@ module.exports = [
       status: undefined
     },
     {
-      name: 'Trust or Company Service Provider',
+      name: 'Trust or company service provider',
       section: 'trust-company-service-provider',
       link: 'trust-company-service-provider/index',
       editlink: 'trust-company-service-provider/your-answers',

@@ -1634,6 +1634,10 @@ input[type=number] {
     .summaryblock:hover .chev a {
       color: #fff; }
 
+a:focus .chevron {
+  background-color: #00823B;
+  border-color: #00823B; }
+
 .greyblock {
   background: #f8f8f8;
   padding-bottom: 10px;
