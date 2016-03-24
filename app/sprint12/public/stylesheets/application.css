@@ -1621,6 +1621,8 @@ input[type=number] {
 
 .chev {
   color: #6F777B; }
+  .chev a {
+    color: #6F777B; }
   .chev p {
     margin: 0;
     padding: 24px 0 0 0; }
@@ -1628,7 +1630,9 @@ input[type=number] {
 .summaryblock:hover {
   background: #00823B; }
   .summaryblock:hover .chev {
-    color: #ff6600; }
+    color: #fff; }
+    .summaryblock:hover .chev a {
+      color: #fff; }
 
 .greyblock {
   background: #f8f8f8;

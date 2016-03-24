@@ -28,6 +28,10 @@
 .chev {
     color: #6F777B;
 
+    a {
+        color: #6F777B;
+    }
+
     p {
         margin: 0;
         padding: 24px 0 0 0;
@@ -38,7 +42,11 @@
     background: #00823B;
 
     .chev {
-        color: #ff6600;
+        color: #fff;
+
+        a {
+            color: #fff;
+        }
     }
 }
 
