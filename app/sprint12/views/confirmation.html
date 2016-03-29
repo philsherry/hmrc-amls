@@ -25,9 +25,9 @@
 			<div class="panel panel-border-wide spacelarge">
 				<p>Your registration fee:
 				<br /><span class="heading-xlarge">&pound;1,160</span></p>
-				<div class="form-group">
+				{{! <div class="form-group">
                     <a href="payment/index" class="button" type="submit">Pay fee</a>
-				</div>
+				</div> }}
 			</div>
 
 
@@ -35,26 +35,26 @@
 			 <table class="spacelarge">
                 <thead>
                 	<th></th>
-                	<th width="15%">Quantity</th>
+                	<th width="15%" class="numeric">Quantity</th>
                 	<th width="20%" class="numeric">Fee per item</th>
                 	<th width="20%" class="numeric">Total fee</th>
                 </thead>
                 <tbody>
                     <tr>
                         <td>Application submission</td>
-                        <td>1</td>
+                        <td class="numeric">1</td>
                         <td class="numeric">&pound;100</td>
                         <td class="numeric">&pound;100</td>
                     </tr>
                     <tr>
                         <td>Responsible people</td>
-                        <td>4</td>
+                        <td class="numeric">4</td>
                         <td class="numeric">&pound;100</td>
                         <td class="numeric">&pound;400</td>
                     </tr>
                     <tr>
                         <td>Trading premises</td>
-                        <td>6</td>
+                        <td class="numeric">6</td>
                         <td class="numeric">&pound;110</td>
                         <td class="numeric">&pound;660</td>
                     </tr>
@@ -62,19 +62,24 @@
             </table>
 
 
-           
 
-			
+        <h2 class="heading-medium">How to pay</h2>
+        <p>You have registered for anti-money laundering supervision, pending payment.</p>
+
+
+
+
 	  	</div>
 
 	  	<div class="column-one-third">
 			<div class="grid-row statusblock declaration margin20">
 
 
-                <h3 class="heading-small">Confirmation code</h3>
+                <h3 class="heading-small">Confirmation and payment codes</h3>
                 <p>You have registered for anti-money laundering supervision, pending payment.</p>
-	  	        <P>Your confirmation code is: XAAM00000123456</P>
-                
+	  	        <p>Your confirmation code is: <span class="heading-small">XAAM00000123456</span></p>
+                <p>Your payment code is: <span class="heading-small">XAAM00000654321</span></p>
+
                 <p>You have 30 days to pay the registration fee.</p>
 
 
