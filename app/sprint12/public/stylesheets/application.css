@@ -1692,7 +1692,8 @@ a:focus .chevron {
     margin-top: 0; }
 
 .govuk-box-highlight {
-  margin-top: 40px; }
+  margin-top: 40px;
+  padding: 20px; }
   .govuk-box-highlight .heading-large {
     margin: 0; }
 
