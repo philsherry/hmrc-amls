@@ -2,5 +2,5 @@
   "name": "GDS Assessment",
   "description": "Version of prototype for use in GDS Assessment",
   "phase": "alpha",
-  "hidden": false
+  "hidden": true
 }
