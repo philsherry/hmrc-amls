@@ -11,9 +11,9 @@ module.exports = [
     },
     {
       name: 'About the business',
-      section: 'business-details',
-      link: 'business-details/index',
-      editlink: 'business-details/your-answers',
+      section: 'about-the-business',
+      link: 'about-the-business/index',
+      editlink: 'about-the-business/your-answers',
       message: 'Administrative information about your business and your current registration status.',
       time: '5',
       status: undefined
