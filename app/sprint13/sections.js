@@ -12,7 +12,7 @@ module.exports = [
     {
       name: 'About the business',
       section: 'about-the-business',
-      link: 'about-the-business/index',
+      link: 'about-the-business/what-you-need',
       editlink: 'about-the-business/your-answers',
       message: 'Administrative information about your business and your current registration status.',
       time: '5',
