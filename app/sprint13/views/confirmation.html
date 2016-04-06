@@ -18,21 +18,18 @@
 
 			<div class="govuk-box-highlight spacelarge">
 				<p class="heading-large"><img src="public/images/icons/tick.png"> You have submitted the registration. Now pay the registration fee.</p>
-				
 			</div>
-
 
 			<div class="panel panel-border-wide spacelarge">
 				<p>Your registration fee:
-				<br /><span class="heading-xlarge">&pound;660</span></p>
+				<br /><span class="heading-xlarge">&pound;1,200</span></p>
 				{{! <div class="form-group">
                     <a href="payment/index" class="button" type="submit">Pay fee</a>
 				</div> }}
 			</div>
 
-
             <p>How your registration fee has been calculated:</p>
-			 <table class="spacelarge">
+			<table class="spacelarge">
                 <thead>
                 	<th></th>
                 	<th width="15%" class="numeric">Quantity</th>
@@ -40,7 +37,7 @@
                 	<th width="20%" class="numeric">Total fee</th>
                 </thead>
                 <tbody>
-                    {{! <tr>
+                    <tr>
                         <td>Application submission</td>
                         <td class="numeric">1</td>
                         <td class="numeric">&pound;100</td>
@@ -51,7 +48,7 @@
                         <td class="numeric">4</td>
                         <td class="numeric">&pound;110</td>
                         <td class="numeric">&pound;440</td>
-                    </tr> }}
+                    </tr>
                     <tr>
                         <td>Trading premises</td>
                         <td class="numeric">6</td>
@@ -61,43 +58,58 @@
                 </tbody>
             </table>
 
-
-
-        <h2 class="heading-medium">How to pay</h2>
-                    
+            <h2 class="heading-large">How to pay</h2>
             <p>You can pay the fee by Bacs or cheque.</p>
 
-            <p><span class="heading-small">Bacs</span>
-
+            <p><span class="heading-medium">Bacs</span>
             <p>Use the following bank account details to pay the fee via bank transfer. Use your 8-digit Money Laundering Regulations number as the reference.</p>
 
-            <p>Account name: HMRC Money Services Receipts (HMRC MS RCTS)<br />
-                Sort code: 20 50 46 <br />
-                Account number: 10365998</p>	
+{{!             <table class="spacelarge">
+                <tbody>
+                    <tr>
+                        <th>Account name</th>
+                        <td>HMRC Money Services Receipts (HMRC MS RCTS)</td>
+                    </tr>
+                    <tr>
+                        <th>Sort code</th>
+                        <td>20 50 46</td>
+                    </tr>
+                    <tr>
+                        <th>Account number</th>
+                        <td>10365998</td>
+                    </tr>
+                </tbody>
+            </table> }}
+
+
+            <div class="panel panel-border-wide spacelarge">
+                <p><span class="heading-small">Account name</span><br />HMRC Money Services Receipts (HMRC MS RCTS)</p>
+                <p><span class="heading-small">Sort code</span><br />20-50-46</p>
+                <p><span class="heading-small">Account number</span><br />10365998</p>
+            </div>
 
 
 
+            <p><span class="heading-medium">Cheque</span>
+            <p>Make the cheque payable to ‘HM Revenue and Customs’ and write your 8-digit Money Laundering Regulations reference number on the back.</p>
+            <p>Post the cheque to:</p>
 
-<p><span class="heading-small">Cheque</span>
-
-<p>Make the cheque payable to ‘HM Revenue and Customs’ and write your 8-digit Money Laundering Regulations reference number on the back.</p> 
-
-<p>Post the cheque to:</p>
-
-<p>HM Revenue and Customs, Anti Money Laundering Supervision, 
-7th Floor, Alexander House, 21 Victoria Avenue, Southend on Sea, Essex, SS99 1AG</p>
-
-
-
-
-
+            <div class="panel panel-border-wide spacelarge">
+                <p>HM Revenue and Customs
+                <br />Anti Money Laundering Supervision
+                <br />7th Floor, Alexander House
+                <br />21 Victoria Avenue
+                <br />Southend on Sea
+                <br />Essex
+                <br />SS99 1AG</p>
+            </div>
 	  	</div>
 
 	  	<div class="column-one-third">
 			<div class="grid-row statusblock declaration margin20">
 
 
-                       
+
                 <p><span class="heading-small">Confirmation code: XAAM00000123456</span></p>
                 <p>Quote this code if you need to contact HM Revenue and Customs about your registration.</p>
 
