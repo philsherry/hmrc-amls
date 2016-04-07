@@ -11,7 +11,7 @@
     <div class="grid-row">
         <div class="column-two-thirds">
 
-            <p><a href="javascript:history.go(-1)" class="link-back">Back</a></p>
+            {{>includes/back}}
             <h1 class="heading-xlarge">
                 <span class="heading-secondary">Business activities</span>
               Is your business involved in any other activities?
@@ -19,8 +19,7 @@
 
             <p>You've told us your business does this:</p>
             <div class="panel panel-border-wide spacelarge">
-
-                Estate agent business</p>
+                <p>{{>includes/business-type}}</p>
             </div>
 
             <form class="form" method="post">

@@ -12,7 +12,7 @@
     <div class="grid-row">
         <div class="column-two-thirds">
 
-            <p><a href="javascript:history.go(-1)" class="link-back">Back</a></p>
+            {{>includes/back}}
 
             <h1 class="heading-xlarge">
                 <span class="heading-secondary">Responsible people</span>
@@ -27,7 +27,7 @@
 
                     <div class="form-group">
                         <fieldset class="inline">
-                          
+
                             <label class="block-label" for="radio-inline-5" data-target="resident">
                                 <input id="radio-inline-5" type="radio" name="radio-inline-group3" value="Yes">Yes
                             </label>
@@ -79,7 +79,6 @@
                                         <label class="form-label" for="national-insurance">Passport number</label>
                                         <input class="form-control" name="national-insurance" type="text" id="national-insurance">
                                     </div>
-                                    <p class="form-block">or</p>
                                     <label class="block-label" for="radio-3">
                                         <input id="radio-3" type="radio" name="radio-group" value="I am a British citizen living abroad">This person doesn't have a passport
                                     </label>

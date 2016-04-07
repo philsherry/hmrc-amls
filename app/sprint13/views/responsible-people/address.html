@@ -12,7 +12,7 @@
     <div class="grid-row">
         <div class="column-two-thirds">
 
-            <p><a href="javascript:history.go(-1)" class="link-back">Back</a></p>
+            {{>includes/back}}
             <h1 class="heading-xlarge">
                 <span class="heading-secondary">Responsible people</span>
                 Where does this person live?
@@ -20,52 +20,7 @@
 
             <form class="form" method="post">
 
-                <fieldset>
-
-                    <div class="form-group">
-                        <label class="visuallyhidden">Is this a UK address</label>
-                        <fieldset class="inline">
-                            <label class="block-label" for="radio-inline-2-1" >
-                                <input id="radio-inline-2-1" type="radio"  name="ukorover" value="false" checked="checked" >UK
-                            </label>
-                            <label class="block-label" for="radio-inline-2-2" >
-                                <input id="radio-inline-2-2" type="radio" name="ukorover" value="true">Overseas
-                            </label>
-                        </fieldset>
-                    </div>
-
-                    <div class="form-group">
-                      <label for="company-address1" class="form-label-bold">Address</label>
-                      <input type="text" class="form-control" id="company-address1">
-                    </div>
-                    <div class="form-group">
-                      <label for="company-address2" class="form-label"></label>
-                      <input type="text" class="form-control" id="company-address2">
-                    </div>
-                    <div class="form-group">
-                      <label for="company-address3" class="form-label"></label>
-                      <input type="text" class="form-control" id="company-address2">
-                    </div>
-                    <div class="form-group">
-                      <label for="company-address3" class="form-label"></label>
-                      <input type="text" class="form-control" id="company-address2">
-                    </div>
-
-                    <div id="count">
-                        <div id="zip" class="form-group">
-                            <label for="postcode-name" class="form-label-bold">Postcode</label>
-                            <input type="text" class="form-control form-control-1-8" id="postcode-name" maxlength="8">
-                        </div>
-                    </div>
-
-                    <div id="over">
-                        <div class="form-group">
-                            <label for="company-address3" class="form-label-bold">Country</label>
-                            <input type="text" class="form-control" id="company-address2">
-                        </div>
-                    </div>
-
-                </fieldset>
+                {{>includes/address-b}}
 
                 <fieldset>
                     <div class="form-group">

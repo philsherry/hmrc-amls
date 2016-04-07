@@ -9,15 +9,11 @@
 	<div class="grid-row">
 		<div class="column-two-thirds">
 
-			<p><a href="javascript:history.go(-1)" class="link-back">Back</a></p>
-<h1 class="heading-xlarge">
+			{{>includes/back}}
+			<h1 class="heading-xlarge">
 				<span class="heading-secondary">About the business</span>
 				Check your answers
 			</h1>
-
-			{{! <div class="panel panel-border-wide spacelarge">
-				<p>Please check all the information you have provided.</p>
-			</div> }}
 
 			<table class="space">
 				<tbody>
@@ -31,7 +27,7 @@
 				</tbody>
 			</table>
 
-			{{! <table class="space">
+			<table class="space">
 				<tbody>
 					<tr>
 						<th width="90%">Start date for activites realted to anti-money laundering</th>
@@ -41,7 +37,7 @@
 						<td colspan="2">20 January 2010</td>
 					</tr>
 				</tbody>
-			</table> }}
+			</table>
 			<table class="space">
 				<tbody>
 					<tr>
@@ -78,24 +74,12 @@
 						<td><a href="confirming-address">Edit</a></td>
 					</tr>
 					<tr>
-						<td colspan="2">Registered address
-							<br>Town
-							<br>County
-							<br>AB1 2DE
-						</td>
+						<td colspan="2">{{>includes/business-address}}</td>
 					</tr>
 				</tbody>
 			</table>
 			<table class="spacelarge">
 				<tbody>
-					{{! <tr>
-						<th>Should we use a different correspondance address?</th>
-						<td><a href="#">Edit</a></td>
-					</tr>
-					<tr>
-						<td colspan="2">Yes</td>
-					</tr> }}
-
 					<tr>
 						<th width="90%">How can we contact you</th>
 						<td><a href="contacting-you">Edit</a></td>
@@ -107,32 +91,18 @@
 						<td colspan="2">info@acme.com</td>
 					</tr>
 					<tr>
-						<td colspan="2">
-							Your organisation's<br>
-							Correspondance address<br>
-							Town<br>
-							County<br>
-							AB1 2DE
-						</td>
+						<td colspan="2">{{>includes/business-address}}</td>
 					</tr>
 				</tbody>
 			</table>
 
-
-
-
-
-
-		<form method="post">
-			<div class="form-group">
-				<input type="submit" class="button" value="Accept and complete section">
-			</div>
-		</form>
-
-
-
-
-
+			<form method="post">
+				<div class="form-group">
+					<input type="submit" class="button" value="Accept and complete section">
+				</div>
+			</form>
+		</div>
+	</div>
 
 {{/main}}
 {{/layout}}

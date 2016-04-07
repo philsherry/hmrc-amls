@@ -9,7 +9,8 @@
 	<div class="grid-row">
 	 	<div class="column-two-thirds">
 
-		  	<p><a href="javascript:history.go(-1)" class="link-back">Back</a></p>
+		  	{{>includes/back}}
+
             <h1 class="heading-xlarge">
                 <span class="heading-secondary">Business matching</span>
 		  		Is this your business?
@@ -18,11 +19,7 @@
 		  	<p>You are registering the following business for anti-money laundering supervision:</p>
 
             <div class="panel panel-border-wide space">
-                <p>Ubunchews Estate Agents
-                <br>Benton Park Road
-                <br>Newcastle
-                <br>Tyne and Wear
-                <br>AB1 2DE</p>
+                <p>{{>includes/business-address}}</p>
             </div>
 
 			<p><a href="index" >Not the right business?</a></p>

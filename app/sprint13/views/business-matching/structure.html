@@ -9,7 +9,7 @@
     <div class="grid-row">
 		<div class="column-two-thirds">
 
-            <p><a href="javascript:history.go(-1)" class="link-back">Back</a></p>
+            {{>includes/back}}
             <h1 class="heading-xlarge">
                 <span class="heading-secondary">Business matching</span>
                 What's your business structure?
@@ -31,7 +31,7 @@
                             <input type="radio" name="next-page" id="partner" value="business-details">
                             Partnership
                         </label>
-                   
+
                         <label for="llp" class="block-label">
 							<input type="radio" name="next-page" id="llp" value="business-details">
 							Limited Partnership or Limited Liability Partnership

@@ -9,7 +9,7 @@
     <div class="grid-row">
         <div class="column-two-thirds">
 
-            <p><a href="javascript:history.go(-1)" class="link-back">Back</a></p>
+            {{>includes/back}}
             <h1 class="heading-xlarge">
                 <span class="heading-secondary">Business matching</span>
                 Check your answers
@@ -31,11 +31,7 @@
                         <td><a href="index">Edit</a></td>
                     </tr>
                     <tr>
-                        <td colspan="2">Ubunchews Estate Agents
-                <br>Benton Park Road
-                <br>Newcastle
-                <br>Tyne and Wear
-                <br>AB1 2DE
+                        <td colspan="2">{{>includes/business-address}}
                         </td>
                     </tr>
                 </tbody>
@@ -84,7 +80,7 @@
                         <td><a href="activities">Edit</a></td>
                     </tr>
                     <tr>
-                        <td colspan="2">Estate agent business</td>
+                        <td colspan="2">{{>includes/business-type}}</td>
                     </tr>
                 </tbody>
             </table>
