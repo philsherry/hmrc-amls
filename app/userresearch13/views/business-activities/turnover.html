@@ -11,7 +11,7 @@
     <div class="grid-row">
         <div class="column-two-thirds">
 
-            <p><a href="javascript:history.go(-1)" class="link-back">Back</a></p>
+            {{>includes/back}}
             <h1 class="heading-xlarge">
                 <span class="heading-secondary">Business activities</span>
                 How much turnover do you expect in the next 12 months, from these activities?
@@ -20,7 +20,7 @@
 
             <p>You've told us your business is involved in:</p>
             <div class="panel panel-border-wide spacelarge">
-                <p>Estate agent business</p>
+                <p>{{>includes/business-type}}</p>
             </div>
 
             <form class="form" method="post">

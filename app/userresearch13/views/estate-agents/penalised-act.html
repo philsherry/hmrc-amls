@@ -11,7 +11,7 @@
 	<div class="grid-row">
 		<div class="column-two-thirds">
 
-			<p><a href="javascript:history.go(-1)" class="link-back">Back</a></p>
+			{{>includes/back}}
 <h1 class="heading-xlarge">
 		  		<span class="heading-secondary">Estate Agent Business</span>
 				 Has the business, or anyone in the business, ever been penalised under the Estate Agents Act 1979?
@@ -48,7 +48,7 @@
 			  				<div class="panel panel-border-narrow js-hidden" id="estate-act">
 								<label class="form-label" for="details">Give a brief overview of what the penalty was, and when it occurred.</label>
                                 <span class="form-hint">Enter 255 characters or less.</span>
-								<textarea name="details" class="form-control" id="details"></textarea>
+								<textarea name="details" class="form-control" id="details" cols="100" rows="5"></textarea>
 			  				</div>
 						</fieldset>
 		  			</div>
