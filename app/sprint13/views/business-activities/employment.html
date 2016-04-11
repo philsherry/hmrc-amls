@@ -31,49 +31,21 @@
                         </label>
 
                         <div class="panel panel-indent js-hidden" id="franchise">
-                        <label class="form-label-bold" for="specify">Where do your most high-value customers outside of the UK live?</label>
-                            <span class="form-hint">'High value customers' are those who bring in the most revenue to your business.</span>
-                            <p>List up to 10 countries.</p>
+                            <label class="form-label" >Where do your most high-value customers outside of the UK live?</label>
+                            <p class="form-hint">'High value customers' are those who bring in the most revenue to your business. List up to 10 countries.</p>
+
                             <div class="form-group">
-                                <label for="country1" class="form-label"></label>
-                                <input type="text" class="form-control" id="country1">
+
+                                <div id="countries">
+                                    <div class="form-group">
+                                        <label for="country1" class="form-label"></label>
+                                        <input type="text" class="form-control" id="country1">
+                                    </div>
+                                </div>
+
                             </div>
-                            <div class="form-group">
-                                <label for="country1" class="form-label"></label>
-                                <input type="text" class="form-control" id="country1">
-                            </div>
-                            <div class="form-group">
-                                <label for="country1" class="form-label"></label>
-                                <input type="text" class="form-control" id="country1">
-                            </div>
-                            <div class="form-group">
-                                <label for="country1" class="form-label"></label>
-                                <input type="text" class="form-control" id="country1">
-                            </div>
-                            <div class="form-group">
-                                <label for="country1" class="form-label"></label>
-                                <input type="text" class="form-control" id="country1">
-                            </div>
-                            <div class="form-group">
-                                <label for="country1" class="form-label"></label>
-                                <input type="text" class="form-control" id="country1">
-                            </div>
-                            <div class="form-group">
-                                <label for="country1" class="form-label"></label>
-                                <input type="text" class="form-control" id="country1">
-                            </div>
-                            <div class="form-group">
-                                <label for="country1" class="form-label"></label>
-                                <input type="text" class="form-control" id="country1">
-                            </div>
-                            <div class="form-group">
-                                <label for="country1" class="form-label"></label>
-                                <input type="text" class="form-control" id="country1">
-                            </div>
-                            <div class="form-group">
-                                <label for="country1" class="form-label"></label>
-                                <input type="text" class="form-control" id="country1">
-                            </div>
+
+                            <p><a href="#" onclick="add()" >Add another country</a></p>
 
                         </div>
                     </div>
@@ -82,6 +54,7 @@
                 <div class="form-group">
                     <input type="submit" class="button" value="Save and continue">
                 </div>
+
             </form>
 
         </div>
@@ -89,3 +62,13 @@
 
 {{/main}}
 {{/layout}}
+
+<script>
+var numAdd = 1;
+var add = function() {
+    if (numAdd >= 10) return;
+    $('#countries').append('<div class="form-group"> <label for="" class="form-label"></label><input type="text" class="form-control" id=""></div');
+    numAdd++;
+};
+
+</script>
