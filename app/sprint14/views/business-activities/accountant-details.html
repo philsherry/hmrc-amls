@@ -1,0 +1,62 @@
+{{<layout}}
+
+{{$pageTitle}}
+  Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$main}}
+
+    {{>includes/service-header}}
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+
+            {{>includes/back}}
+            <h1 class="heading-xlarge">
+                <span class="heading-secondary">Business activities</span>
+                Who is your accountant?
+            </h1>
+
+            <form method="post">
+
+                <input type="hidden" name="next-page" value="tax-matters"/>
+
+                <fieldset>
+                    <legend class="visuallyhidden">Name and trading name</legend>
+                    <div class="form-group">
+                        <label class="form-label" for="first-name">Name</label>
+                        <input type="text" class="form-control" id="first-name">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="middle-name">Trading name (if different)</label>
+                        <input type="text"  class="form-control" id="middle-name">
+                    </div>
+                </fieldset>
+
+                {{>includes/address}}
+
+                <div class="form-group">
+                    <input type="submit" class="button" value="Save and continue">
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+{{/main}}
+{{/layout}}
+<script>
+$("#over").hide();
+$("#radio-inline-2-1").on('click', function() {
+  $("#over").hide();
+  $("#count").show();
+});
+</script>
+
+<script>
+$("#radio-inline-2-2").on('click', function() {
+  $("#over").show();
+  $("#count").hide();
+});
+</script>

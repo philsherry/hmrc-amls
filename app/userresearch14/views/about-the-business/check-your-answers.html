@@ -1,0 +1,108 @@
+{{<layout}}
+
+{{$pageTitle}}
+  Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$main}}
+
+	<div class="grid-row">
+		<div class="column-two-thirds">
+
+			{{>includes/back}}
+			<h1 class="heading-xlarge">
+				<span class="heading-secondary">About the business</span>
+				Check your answers
+			</h1>
+
+			<table class="space">
+				<tbody>
+					<tr>
+						<th width="90%">Is your business currently registered for anti-money laundering supervision?</th>
+						<td><a href="registered">Edit</a></td>
+					</tr>
+					<tr>
+						<td colspan="2">8765 4321</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<table class="space">
+				<tbody>
+					<tr>
+						<th width="90%">Start date for activites realted to anti-money laundering</th>
+						<td><a href="#">Edit</a></td>
+					</tr>
+					<tr>
+						<td colspan="2">20 January 2010</td>
+					</tr>
+				</tbody>
+			</table>
+			<table class="space">
+				<tbody>
+					<tr>
+						<th width="90%">Is your business registered for VAT in the UK?</th>
+						<td><a href="vat">Edit</a></td>
+					</tr>
+					<tr>
+						<td colspan="2">Yes</td>
+					</tr>
+					<tr>
+						<td colspan="2">2468 1357 90</td>
+					</tr>
+				</tbody>
+			</table>
+			<table class="space">
+				<tbody>
+					<tr>
+						<th width="90%">Registered for Corportation Tax</th>
+						<td><a href="corporation-tax">Edit</a></td>
+					</tr>
+					<tr>
+						<td colspan="2">Yes</td>
+					</tr>
+					<tr>
+						<td colspan="2">UTR: 2468 1357 90</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<table class="space">
+				<tbody>
+					<tr>
+						<th width="90%">Registered office or main place of business</th>
+						<td><a href="confirming-address">Edit</a></td>
+					</tr>
+					<tr>
+						<td colspan="2">{{>includes/business-address}}</td>
+					</tr>
+				</tbody>
+			</table>
+			<table class="spacelarge">
+				<tbody>
+					<tr>
+						<th width="90%">How can we contact you</th>
+						<td><a href="contacting-you">Edit</a></td>
+					</tr>
+					<tr>
+						<td colspan="2">0191 234 5678</td>
+					</tr>
+					<tr>
+						<td colspan="2">info@acme.com</td>
+					</tr>
+					<tr>
+						<td colspan="2">{{>includes/business-address}}</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<form method="post">
+				<div class="form-group">
+					<input type="submit" class="button" value="Accept and complete section">
+				</div>
+			</form>
+		</div>
+	</div>
+
+{{/main}}
+{{/layout}}
