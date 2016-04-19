@@ -31,7 +31,7 @@
                 {{! <input type="hidden" name="next-page" value="vat"> }}
 
                 <fieldset>
-                    <div class="form-group">
+                    <div class="form-group spacelarge">
                         <legend class="visuallyhidden">What's your position within the business?</legend>
                         <p>Select all that apply</p>
                         <label class="block-label" for="radio-1">
@@ -52,6 +52,27 @@
                         <label class="block-label" for="radio-7">
                             <input id="radio-7" type="checkbox" name="next-page" value="vat" >Sole proprietor
                         </label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend class="form-label">Date position commenced</legend>
+                    <div class="form-group">
+                        <div class="form-date">
+                            <p class="form-hint" id="dob-hint">For example, 31 3 1980</p>
+                            <div class="form-group form-group-day">
+                                <label for="dob-day">Day</label>
+                                <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31" aria-describedby="dob-hint">
+                            </div>
+                            <div class="form-group form-group-month">
+                                <label for="dob-month">Month</label>
+                                <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+                            </div>
+                            <div class="form-group form-group-year">
+                                <label for="dob-year">Year</label>
+                                <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
+                            </div>
+                        </div>
                     </div>
                 </fieldset>
 
