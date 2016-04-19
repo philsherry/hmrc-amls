@@ -2,9 +2,9 @@ module.exports = [
   [
     {
       name: 'Pre-registration',
-      section: 'business-matching',
-      link: 'business-matching/what-you-need',
-      editlink: 'business-matching/your-answers',
+      section: 'pre-registration',
+      link: 'pre-registration/what-you-need',
+      editlink: 'pre-registration/your-answers',
       message: '.',
       time: '5',
       status: undefined

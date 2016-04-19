@@ -1,7 +1,7 @@
 var app = require('../../lib/subapp.js')(__dirname),
   _ = require('lodash');
 
-app.post('/business-matching/activities', function (req, res) {
+app.post('/pre-registration/activities', function (req, res) {
   var sections = require('./sections.js');
   req.session.sections = [].concat(
       sections[0],
