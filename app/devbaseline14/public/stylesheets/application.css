@@ -1699,3 +1699,7 @@ a:focus .chevron {
 
 .margin20 {
   margin-top: 40px; }
+
+.summaryblock a:focus {
+  background-color: transparent;
+  outline: transparent; }
