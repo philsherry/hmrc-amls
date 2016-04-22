@@ -29,7 +29,7 @@
                         <input type="text" id="first-name" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label class="form-label" for="middle-name">Middle name (optional)</label>
+                        <label class="form-label" for="middle-name">Middle name, if applicable</label>
                         <input type="text" id="middle-name" class="form-control">
                     </div>
                     <div class="form-group">
@@ -41,7 +41,7 @@
                 <fieldset>
                     <div class="form-group">
                         <fieldset class="inline">
-                            <legend class="form-label">Has this person ever been known by other names?</legend>
+                            <legend class="form-label">Has this person ever legally been known by other names?</legend>
                             <label class="block-label" for="radio-inline-3" data-target="namechange">
                                 <input id="radio-inline-3" type="radio" name="radio-inline-group2" value="Yes">Yes
                             </label>
@@ -56,13 +56,65 @@
                                 <input type="text" id="first-name" class="form-control">
                             </div>
                             <div class="form-group">
-                                <label class="form-label" for="middle-name">Other middle names (optional)</label>
+                                <label class="form-label" for="middle-name">Other middle names, if applicable</label>
                                 <input type="text" id="middle-name" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label class="form-label" for="last-name">Other last names</label>
                                 <input type="text" id="last-name" class="form-control">
                             </div>
+
+                            <fieldset>
+                                <legend class="form-label">Date name changed</legend>
+                                <div class="form-group">
+                                    <div class="form-date">
+                                        <p class="form-hint" id="dob-hint">For example, 31 3 1980</p>
+                                        <div class="form-group form-group-day">
+                                            <label for="dob-day">Day</label>
+                                            <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31" aria-describedby="dob-hint">
+                                        </div>
+                                        <div class="form-group form-group-month">
+                                            <label for="dob-month">Month</label>
+                                            <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+                                        </div>
+                                        <div class="form-group form-group-year">
+                                            <label for="dob-year">Year</label>
+                                            <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <div class="form-group">
+                        <fieldset class="inline">
+                            <legend class="form-label">Has this person ever alias</legend>
+                            <label class="block-label" for="radio-inline-5" data-target="aliaschange">
+                                <input id="radio-inline-5" type="radio" name="radio-inline-group3" value="Yes">Yes
+                            </label>
+                            <label class="block-label" for="radio-inline-6">
+                                <input id="radio-inline-6" type="radio" name="radio-inline-group3" value="No">No
+                            </label>
+                        </fieldset>
+
+                        <div class="panel panel-indent js-hidden" id="aliaschange">
+                            <div class="form-group">
+                                <label class="form-label" for="first-name">Alias name</label>
+                                <input type="text" id="first-name" class="form-control">
+                            </div>
+                            {{! <div class="form-group">
+                                <label class="form-label" for="middle-name">Other middle names, if applicable</label>
+                                <input type="text" id="middle-name" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="last-name">Other last names</label>
+                                <input type="text" id="last-name" class="form-control">
+                            </div> }}
+
+
                         </div>
                     </div>
                 </fieldset>
