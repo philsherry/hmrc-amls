@@ -1,0 +1,217 @@
+{{<layout}}
+
+{{$pageTitle}}
+  Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$main}}
+
+	<div class="grid-row">
+		<div class="column-two-thirds">
+
+            <h1 class="heading-xlarge">
+                <span class="heading-secondary">Registration</span>
+                Your registration
+            </h1>
+
+            <h2 class="heading-medium">Status</h2>
+            <ul class="list list-bullet">
+                <li>Pending (Application pending)</li>
+                <li>Pending (Application under consideration)
+                <li>Withdrawn</li>
+                <li>Rejected</li>
+
+            </ul>
+
+            {{! <p>We cannot currently receive payments. HM Revenue and Customs will contact you within 4 weeks to arrange payment for the registration fee. This does not affect your registration for anti-money laundering supervision.</p> }}
+			<div class="panel panel-border-wide spacelarge">
+				<p>Your registration fee:
+				<br /><span class="heading-xlarge">&pound;1,200</span></p>
+				<div class="form-group">
+                    <a href="payment/index" class="button" type="submit">Pay fee</a>
+				</div>
+			</div>
+
+
+            <h2 class="heading-medium">Make changes to your application</h2>
+            <ul class="list list-bullet">
+                <li><a href="#">trading premises</a></li>
+                <li><a href="#">bank accounts</a></li>
+                <li><a href="#">responsible people</a></li>
+            </ul>
+
+{{! <section class="section--branded">
+<div class="grid-row">
+   <div class="column-third">
+
+      <ul class="nav-list four-buckets">
+         <li class="selected">
+            <div>
+               <div class="bucket-text">
+                  <span class="bold-small">PAYE Income Tax</span>
+                  <span class="bold-medium">£2,284</span>
+               </div>
+               <div class="bucket-chevron">
+                  <span class="chevron right"></span>
+               </div>
+            </div>
+         </li>
+
+         <li>
+            <a href="taxable-income">
+               <div>
+                  <div class="bucket-text">
+                     <span class="bold-small">Taxable income</span>
+                     <span class="bold-medium">£22,020</span>
+                  </div>
+                  <div class="bucket-chevron">
+                     <span class="chevron right"></span>
+                  </div>
+               </div>
+            </a>
+         </li>
+
+         <li>
+            <a href="tax-free-allowance">
+               <div>
+                  <div class="bucket-text">
+                     <span class="bold-small">Tax-free allowance</span>
+                     <span class="bold-medium">£11,000</span>
+                  </div>
+                  <div class="bucket-chevron">
+                     <span class="chevron right"></span>
+                  </div>
+               </div>
+            </a>
+         </li>
+
+         <li>
+            <a href="tax-code">
+               <div>
+                  <div class="bucket-text">
+                     <span class="bold-small">Tax code</span>
+                     <span class="bold-medium">1040L</span>
+                  </div>
+                  <div class="bucket-chevron">
+                     <span class="chevron right"></span>
+                  </div>
+               </div>
+            </a>
+         </li>
+      </ul>
+   </div><!-- end column-third -->
+
+<div class="column-two-thirds">
+   <h3 class="heading-medium flush--ends">How this is collected</h3>
+   <p>Your employer or pension provider&nbsp;takes off Income Tax&nbsp;before<br> they pay you. This is called&nbsp;'Pay As You Earn' (PAYE).
+   <a href="tax-code">Your tax code</a><br>tells them&nbsp;how much tax-free income you can have before they deduct Income Tax.</p>
+   <p>Basic rate Income Tax is usually taken from interest on savings and investments automatically.</p>
+   <a href="taxable-income">Your income</a> this year is approximately £22,020. <a href="tax-free-allowance">Your tax-free allowance</a> is £11,000.<p></p>
+
+   <details>
+      <summary role="button" aria-controls="details-content-0" tabindex="0" aria-expanded="false"><span class="summary">Why is this an estimate?</span></summary>
+      <div class="panel-indent" id="details-content-0" aria-hidden="true" style="display: none;">
+         <p>
+           The amount of tax you pay depends on your total income for the whole tax year. We can't give an exact figure because we won't know about all your income until after the tax year ends on 5 April.
+         </p>
+      </div>
+   </details>
+
+
+   <h3 class="heading-medium">Tax on your income</h3>
+   <div class="text">
+      <div role="img" aria-label="Chart representing data referenced in list below">
+         <div class="number-bar">
+            <span style="left:0">£0</span>
+            <span class="centred" style="left:25.00%">£11,000</span>
+            <span class="centred" style="left:49.38%">£22,020</span>
+            <span style="right:0">£42,385</span>
+         </div>
+         <div class="bar tax-bar">
+            <div style="left:0" class="tax-point"></div>
+            <div style="left:25.00%" class="tax-point"></div>
+            <div style="left:49.38%" class="tax-point"></div>
+            <div style="right:0" class="tax-point"></div>
+         </div>
+            <div class="chart">
+            <div style="width:25.00%;" class="TaxFree chart-bar"></div>
+            <div style="width:24.38%;" class="Band1 chart-bar"></div>
+         </div>
+      </div>
+   </div>
+   <br>
+   <section class="table-section">
+      <table>
+         <thead>
+            <tr>
+               <th>Key</th>
+               <th>%<abbr title="Tax">tax rate</abbr></th>
+               <th>Income (£)</th>
+               <th class="numeric">Tax (£)</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td><span class="key-icon TaxFree"></span> tax-free allowance</td>
+               <td>0%</td>
+               <td>11,000</td>
+               <td class="numeric">0</td>
+            </tr>
+            <tr>
+               <td><div class="key-icon Band1">.</div>Basic tax rate</td>
+               <td>20%</td>
+               <td>11,020</td>
+               <td class="numeric">2,284</td>
+            </tr>
+            <tr>
+               <td class="row-sum">Total</td>
+               <td class="row-sum"></td>
+               <td class="row-sum"><span class="heading-small"> 22,020</span></td>
+               <td class="numeric row-sum"><span class="heading-small">2,284</span></td>
+            </tr>
+         </tbody>
+      </table>
+   </section>
+   <p><span class="key-icon Band-unused"></span><span> Income above £42,785 will be taxed at a higher rate.</span></p>
+   <a class="link-back" href="income-tax-landing">Back to Income Tax</a>
+   </div>
+</div>
+</section> }}
+
+            {{! <h2 class="heading-large">How to pay</h2>
+            <p>You can pay the fee by Bacs or cheque.</p>
+
+            <h3 class="heading-medium">Bacs</h3>
+            <p>Use the following bank account details to pay the fee via bank transfer. Use your 8-digit Money Laundering Regulations number as the reference.</p>
+            <div class="panel panel-border-wide spacelarge">
+                <p><span class="heading-small">Account name</span><br />HMRC Money Services Receipts (HMRC MS RCTS)</p>
+                <p><span class="heading-small">Sort code</span><br />20-50-46</p>
+                <p><span class="heading-small">Account number</span><br />10365998</p>
+            </div>
+
+            <h3 class="heading-medium">Cheque</h3>
+            <p>Make the cheque payable to ‘HM Revenue and Customs’ and write your 8-digit Money Laundering Regulations reference number on the back.</p>
+            <p>Post the cheque to:</p>
+
+            <div class="panel panel-border-wide spacelarge">
+                <p>HM Revenue and Customs
+                <br />Anti Money Laundering Supervision
+                <br />7th Floor, Alexander House
+                <br />21 Victoria Avenue
+                <br />Southend on Sea
+                <br />Essex
+                <br />SS99 1AG</p>
+            </div> }}
+	  	</div>
+
+	  	<div class="column-one-third">
+			<div class="grid-row statusblock declaration margin20">
+                <p><span class="heading-small">Confirmation code: XAAM00000123456</span></p>
+                <p>Quote this code if you need to contact HM Revenue and Customs about your registration.</p>
+  			</div>
+	  	</div>
+
+  	</div>
+
+{{/main}}
+{{/layout}}
