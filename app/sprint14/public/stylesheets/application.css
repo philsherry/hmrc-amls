@@ -1757,16 +1757,17 @@ a.reg-step {
       width: 66.66667%; } }
 
 .statuslist {
-  background: #f8f8f8;
+  background: #bfc1c3;
   padding: 10px;
-  color: #bfc1c3; }
+  color: #fff; }
 
 .statusdone {
   padding: 10px;
   color: #fff;
-  background: #00823b; }
+  background: #28a197; }
 
 .statuspending {
-  padding: 10px;
-  color: #0b0c0c;
-  background: #dee0e2; }
+  padding: 10px; }
+
+.grey45 {
+  padding: 0 20px; }
