@@ -6,11 +6,11 @@
 
 {{$main}}
 
-	<div class="grid-row spacelarge">
-		<div class="column-two-thirds">
+    <div class="grid-row spacelarge">
+        <div class="column-two-thirds">
             <h1 class="heading-xlarge">
-                <span class="heading-secondary">Registration</span>
-                Application Status
+                <span class="heading-secondary">Anti-money laundering supervision registration</span>
+                Your application status
             </h1>
         </div>
     </div>
@@ -18,14 +18,18 @@
     <div class="grid-row spacelarge">
         <div class="column-two-thirds">
             <p>{{>includes/business-address}}</p>
-            <p>Reference: XAAM00000123456</p>
+            {{! <p>Reference: XAAM00000123456</p>}}
             {{! <br /><span class="font-xsmall">Quote this code if you need to contact HM Revenue and Customs about your registration.</span></p> }}
         </div>
         <div class="column-one-third declaration">
-            <h2 class="heading-small">Amend your application</h2>
+            <h2 class="heading-small">Has something changed?</h2>
+                <p>It’s important that you tell HM Revenue and Customs about any changes to your business that relate to anti-money laundering supervision.</p>
                 <ul class="list">
-                <li><a href="#">Adjust trading premises</a></li>
-                <li><a href="#">Change responsible people</a></li>
+                <li><a href="#">Change your trading premises</a></li>
+                <li><a href="#">Change your responsible people</a></li>
+                </ul>
+                <p>XXsomething about the fee? Something about the risks / penalties of not keeping this up to date?XX</p>
+
             </ul>
         </div>
     </div>
@@ -33,16 +37,17 @@
     <div class="grid-row">
         <div class="column-one-third">
             <ul class="list">
-                <li class="statusdone"><img src="public/images/icons/icon-tick-white-small.png"  alt="" /> Completed application</li>
-                <li class="statusdone"><img src="public/images/icons/icon-tick-white-small.png"  alt="" /> Submitted application</li>
-                <li class="statuspending">Pay registration fee</li>
-                <li class="statuslist">Application status</li>
-                <li class="statuslist">Renewal due</li>
+                <li class="statusdone"><img src="public/images/icons/icon-tick-white-small.png"  alt="" /> All sections completed</li>
+                <li class="statusdone"><img src="public/images/icons/icon-tick-white-small.png"  alt="" />Application form submitted</li>
+                <li class="statuspending">Fee paid</li>
+                <li class="statuslist">Under review</li>
+                <li class="statuslist">Approved</li>
             </ul>
         </div>
 
         <div class="column-two-thirds">
-            <p>Make the cheque payable to ‘HM Revenue and Customs’ and write your 8-digit Money Laundering Regulations reference number on the back.</p>
+            <h3 class="heading-medium">Pay the registration fee</h3>
+            <p>You’ve submitted the application but you haven’t paid the registration fee. Your application form won’t be reviewed until the fee is paid.</p>
             <p>Your registration fee:
             <br /><span class="heading-xlarge">&pound;1,200</span></p>
             <div class="form-group">
@@ -51,20 +56,10 @@
 
             <hr />
 
-            <h3 class="heading-medium">Cheque</h3>
-            <p>Make the cheque payable to ‘HM Revenue and Customs’ and write your 8-digit Money Laundering Regulations reference number on the back.</p>
-            <p>Post the cheque to:</p>
-
-            <p>HM Revenue and Customs
-            <br />Anti Money Laundering Supervision
-            <br />7th Floor, Alexander House
-            <br />21 Victoria Avenue
-            <br />Southend on Sea
-            <br />Essex
-            <br />SS99 1AG</p>
+           
         </div>
 
-  	</div>
+    </div>
 
 {{/main}}
 {{/layout}}
