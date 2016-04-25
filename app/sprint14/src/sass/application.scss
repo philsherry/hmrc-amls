@@ -218,3 +218,25 @@ a.reg-step {
   }
 
 }
+
+
+
+
+
+
+
+.statuslist {
+    background: $grey-4;
+    padding: 10px;
+    color: $border-colour;
+}
+.statusdone {
+    padding: 10px;
+    color: $page-colour;
+    background: $button-colour;
+}
+.statuspending {
+    padding: 10px;
+    color: $text-colour;
+    background: $grey-3;
+}
