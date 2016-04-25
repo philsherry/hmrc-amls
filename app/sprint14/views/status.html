@@ -10,7 +10,7 @@
 		<div class="column-two-thirds">
             <h1 class="heading-xlarge">
                 <span class="heading-secondary">Registration</span>
-                Application status
+                Application Status
             </h1>
         </div>
     </div>
@@ -18,10 +18,10 @@
     <div class="grid-row spacelarge">
         <div class="column-two-thirds">
             <p>{{>includes/business-address}}</p>
-            <p><span class="heading-small">Confirmation code: XAAM00000123456</span>
-            <br /><span class="font-xsmall">Quote this code if you need to contact HM Revenue and Customs about your registration.</span></p>
+            <p>Reference: XAAM00000123456</p>
+            {{! <br /><span class="font-xsmall">Quote this code if you need to contact HM Revenue and Customs about your registration.</span></p> }}
         </div>
-        <div class="column-one-third  statusblock declaration margin20">
+        <div class="column-one-third declaration">
             <h2 class="heading-small">Amend your application</h2>
                 <ul class="list">
                 <li><a href="#">Adjust trading premises</a></li>
@@ -33,15 +33,16 @@
     <div class="grid-row">
         <div class="column-one-third">
             <ul class="list">
-                <li class="statusdone">{{! <img src="public/images/icons/icon-tick-white.png"  alt="" /> }} Complete application</li>
-                <li class="statusdone">{{! <img src="public/images/icons/icon-tick-white.png"  alt="" /> }} Submit application</li>
+                <li class="statusdone"><img src="public/images/icons/icon-tick-white-small.png"  alt="" /> Completed application</li>
+                <li class="statusdone"><img src="public/images/icons/icon-tick-white-small.png"  alt="" /> Submitted application</li>
                 <li class="statuspending">Pay registration fee</li>
                 <li class="statuslist">Application status</li>
                 <li class="statuslist">Renewal due</li>
             </ul>
         </div>
 
-        <div class="column-two-thirds grey45">
+        <div class="column-two-thirds">
+            <p>Make the cheque payable to ‘HM Revenue and Customs’ and write your 8-digit Money Laundering Regulations reference number on the back.</p>
             <p>Your registration fee:
             <br /><span class="heading-xlarge">&pound;1,200</span></p>
             <div class="form-group">
