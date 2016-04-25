@@ -1668,12 +1668,14 @@ a.reg-step {
   padding: 0;
   position: relative;
   transition: all .25s ease-in; }
-  a.reg-step:focus, a.reg-step:hover, a.reg-step.complete {
-    background-color: #00823b; }
-    a.reg-step:focus .reg-link--to-go, a.reg-step:hover .reg-link--to-go, a.reg-step.complete .reg-link--to-go {
-      color: #fff; }
-    a.reg-step:focus .chevron::before, a.reg-step:hover .chevron::before, a.reg-step.complete .chevron::before {
-      border-color: #fff #fff transparent transparent; }
+  a.reg-step:focus .reg-link--to-go, a.reg-step:hover .reg-link--to-go, a.reg-step.complete .reg-link--to-go {
+    color: #fff; }
+  a.reg-step:focus .chevron::before, a.reg-step:hover .chevron::before, a.reg-step.complete .chevron::before {
+    border-color: #fff #fff transparent transparent; }
+  a.reg-step:focus, a.reg-step:hover {
+    background-color: #006435; }
+  a.reg-step.complete {
+    background-color: #28a197; }
   a.reg-step > .column-one-third,
   a.reg-step > .column-two-thirds {
     min-height: 8em;
