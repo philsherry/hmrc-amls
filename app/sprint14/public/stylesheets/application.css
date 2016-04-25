@@ -1602,11 +1602,21 @@ input[type=number] {
 .space {
   margin-bottom: 20px; }
 
+.margin20 {
+  margin-top: 40px; }
+
+.reg-step--status-tick {
+  margin-top: 20px; }
+
 .spacelarge {
   margin-bottom: 40px; }
 
 .spacesummary {
   margin-bottom: 50px; }
+
+.link-back,
+.nospace {
+  margin-bottom: 0; }
 
 .form-label-bold {
   margin-bottom: .5em; }
@@ -1614,80 +1624,69 @@ input[type=number] {
 .form-label {
   margin-bottom: .3em; }
 
-.summaryblock {
-  background: #DEE0E2;
+.heading-large {
+  display: block;
+  margin-bottom: 0;
+  margin-top: 0; }
+
+a.reg-step {
+  background: #dee0e2;
+  color: #0b0c0c;
+  display: block;
+  margin-bottom: 12px;
   padding: 0;
-  margin-bottom: 12px; }
-
-.chev {
-  color: #6F777B; }
-  .chev a {
-    color: #6F777B; }
-  .chev p {
-    margin: 0;
-    padding: 24px 0 0 0; }
-
-.summaryblock:hover {
-  background: #00823B; }
-  .summaryblock:hover .chev {
-    color: #fff; }
-    .summaryblock:hover .chev a {
+  position: relative;
+  transition: all .25s ease-in; }
+  a.reg-step:focus, a.reg-step:hover, a.reg-step.complete {
+    background-color: #00823b; }
+    a.reg-step:focus .reg-link--to-go, a.reg-step:hover .reg-link--to-go, a.reg-step.complete .reg-link--to-go {
       color: #fff; }
+  a.reg-step > .column-one-third,
+  a.reg-step > .column-two-thirds {
+    min-height: 8em;
+    padding-bottom: 10px; }
+    @media screen and (min-width: 769px) {
+      a.reg-step > .column-one-third,
+      a.reg-step > .column-two-thirds {
+        min-height: initial; } }
+  a.reg-step > .column-one-third {
+    float: left;
+    width: 33.33333%; }
+  a.reg-step > .column-two-thirds {
+    float: left;
+    width: 66.66667%; }
 
-a:focus .chevron {
-  background-color: #00823B;
-  border-color: #00823B; }
-
-.greyblock {
+.reg-step--details {
   background: #f8f8f8;
-  padding-bottom: 10px;
-  border-bottom: #DEE0E2 solid 3px; }
-  .greyblock p {
+  border-bottom: #dee0e2 solid 3px;
+  padding-bottom: 10px; }
+  .reg-step--details p {
     margin: 0;
     padding-bottom: 10px; }
 
-.green {
-  background-color: #00823B; }
+.reg-step--status {
+  color: #6f777b; }
 
-.link-back {
-  margin-bottom: 0px; }
+.reg-step--submit {
+  padding-right: 0;
+  padding-left: 30px; }
 
 .white {
   color: #fff; }
 
-.statusspace {
-  margin-top: 20px; }
-
-.nospace {
-  margin-bottom: 0; }
-
-.chevron::before {
-  border-style: solid;
-  border-width: 0.4em 0.4em 0 0;
-  content: '';
-  display: inline-block;
-  height: 2.5em;
-  position: relative;
-  transform: rotate(-45deg);
-  left: 0;
-  top: 2em;
-  width: 2.5em;
-  margin-left: -30px; }
-
-.chevron.right:before {
-  left: 0;
-  transform: rotate(45deg); }
-
 .notice p {
   display: block;
-  padding-left: 65px;
-  margin-left: -15px; }
+  margin-left: -15px;
+  padding-left: 65px; }
 
 .declaration {
-  margin-left: 20px;
-  padding: 20px;
   background: #f8f8f8;
-  border-bottom: #DEE0E2 solid 3px; }
+  border-bottom: #dee0e2 solid 3px;
+  margin: 0 -15px;
+  padding: 20px; }
+  @media screen and (min-width: 641px) {
+    .declaration {
+      margin: 0; } }
   .declaration h2 {
     margin-top: 0; }
 
@@ -1697,9 +1696,60 @@ a:focus .chevron {
   .govuk-box-highlight .heading-large {
     margin: 0; }
 
-.margin20 {
-  margin-top: 40px; }
+.reg-link--to-go {
+  display: block;
+  text-decoration: none; }
+  .reg-link--to-go p {
+    margin: 0;
+    padding: 24px 0 0; }
+  .reg-link--to-go .column-one-third {
+    bottom: 10px;
+    position: absolute;
+    right: 0;
+    text-align: right; }
+  .reg-link--to-go .column-one-third,
+  .reg-link--to-go .column-two-thirds {
+    float: none;
+    width: inherit; }
+  @media screen and (min-width: 480px) {
+    .reg-link--to-go .column-one-third {
+      bottom: inherit;
+      float: right;
+      position: relative;
+      right: 20px;
+      text-align: right;
+      width: 33.33333%; }
+    .reg-link--to-go .column-two-thirds {
+      float: left;
+      width: 66.66667%; } }
 
-.summaryblock a:focus {
-  background-color: transparent;
-  outline: transparent; }
+.chevron::before {
+  border-color: #6f777b #6f777b transparent transparent;
+  border-style: solid;
+  border-width: .4em .4em 0 0;
+  content: '';
+  display: inline-block;
+  height: .5em;
+  transform: rotate(-45deg);
+  width: .5em; }
+  @media screen and (min-width: 480px) and (max-width: 768px) {
+    .chevron::before {
+      height: 1.25em;
+      margin-left: 0;
+      margin-top: 24px;
+      width: 1.25em; } }
+  @media screen and (min-width: 769px) {
+    .chevron::before {
+      height: 1.75em;
+      margin-left: -10px;
+      margin-top: 30px;
+      width: 1.75em; } }
+  @media screen and (min-width: 960px) {
+    .chevron::before {
+      height: 2.5em;
+      margin-left: -20px;
+      margin-top: 36px;
+      width: 2.5em; } }
+
+.chevron.right::before {
+  transform: rotate(45deg); }
