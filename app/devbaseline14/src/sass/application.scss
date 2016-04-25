@@ -1,154 +1,220 @@
-@import "app.scss";
+@import 'app';
+
+// for anyone panicking about the nested media queries...
+// https://www.npmjs.com/package/css-mqpacker
+// https://www.npmjs.com/package/gulp-postcss
+
+// dimensions
+$gutter: 20px; // this probably needs a better name
 
 .space {
-  margin-bottom: 20px; }
+  margin-bottom: $gutter;
+}
+
+.margin20 {
+  margin-top: ($gutter * 2);
+}
+
+.reg-step--status-tick {
+  margin-top: $gutter;
+}
+
 .spacelarge {
-    margin-bottom: 40px;
+  margin-bottom: ($gutter * 2);
 }
 
 .spacesummary {
-    margin-bottom: 50px;
+  margin-bottom: ($gutter * 2.5);
+}
+
+.link-back,
+.nospace {
+  margin-bottom: 0;
 }
 
 .form-label-bold {
-  margin-bottom: .5em; }
+  margin-bottom: .5em;
+}
 
 .form-label {
   margin-bottom: .3em;
 }
 
+.heading-large {
+  display: block;
+  margin-bottom: 0;
+  margin-top: 0;
+}
 
 // Registration Page Coding
-.summaryblock {
-    background:#DEE0E2;
-    padding: 0;
-    margin-bottom: 12px;
+// block-level link
+a.reg-step {
+  background: $grey-3;
+  color: $secondary-text-colour;
+  display: block;
+  margin-bottom: 12px;
+  padding: 0;
+  position: relative;
+  transition: all .25s ease-in;
 
-}
+  &:focus,
+  &:hover,
+  &.complete {
+    background-color: $button-colour;
 
-.chev {
-    color: #6F777B;
-
-    a {
-        color: #6F777B;
+    .reg-link--to-go {
+      color: $page-colour;
     }
+  }
 
-    p {
-        margin: 0;
-        padding: 24px 0 0 0;
-    }
-}
-
-.summaryblock:hover {
-    background: #00823B;
-
-    .chev {
-        color: #fff;
-
-        a {
-            color: #fff;
-        }
-    }
-}
-
-
-a:focus .chevron {
-    background-color: #00823B;
-    border-color: #00823B;
-}
-
-.greyblock {
-    background:#f8f8f8;
+  > .column-one-third,
+  > .column-two-thirds {
+    min-height: 8em;
     padding-bottom: 10px;
-     border-bottom: #DEE0E2 solid 3px;
 
-    p {
-     margin: 0;
-     padding-bottom: 10px;
+    @media screen and (min-width: 769px) {
+      min-height: initial;
     }
+  }
+
+  > .column-one-third {
+    float: left;
+    width: 33.33333%;
+  }
+
+  > .column-two-thirds {
+    float: left;
+    width: 66.66667%;
+  }
 }
 
+.reg-step--details {
+  background: $grey-4;
+  border-bottom: $grey-3 solid 3px;
+  padding-bottom: 10px;
 
-
-.green {
-    background-color: #00823B;
-    }
-
-.link-back {
-  margin-bottom: 0px;
+  p {
+    margin: 0;
+    padding-bottom: 10px;
+  }
 }
 
 .white {
-    color:#fff;
+  color: $page-colour;
 }
-
-.statusspace {
-    margin-top: 20px
-}
-
-.nospace {
-    margin-bottom: 0;
-}
-
-
-
-.chevron::before {
-    border-style: solid;
-    border-width: 0.4em 0.4em 0 0;
-    content: '';
-    display: inline-block;
-    height: 2.5em;
-    position: relative;
-    transform: rotate(-45deg);
-    left: 0;
-    top: 2em;
-    width: 2.5em;
-    margin-left: -30px
-}
-
-.chevron.right:before {
-    left: 0;
-    transform: rotate(45deg);
-}
-
-
 
 .notice p {
-    display: block;
-    padding-left: 65px;
-    margin-left: -15px; }
-
+  display: block;
+  margin-left: -15px;
+  padding-left: 65px;
+}
 
 // information icon override
-
-
-
-
 .declaration {
-    margin-left: 20px;
-    padding: 20px;
-    background:#f8f8f8;
-    border-bottom: #DEE0E2 solid 3px;
+  background: $grey-4;
+  border-bottom: $grey-3 solid 3px;
+  margin: 0 -15px;
+  padding: $gutter;
 
-    h2 {
-        margin-top: 0;
-    }
+  @media screen and (min-width: 641px) {
+    margin: 0;
+  }
+
+  h2 {
+    margin-top: 0;
+  }
 }
 
 .govuk-box-highlight {
+  margin-top: ($gutter * 2);
+  padding: $gutter;
 
-    margin-top: 40px;
-    padding: 20px;
-    .heading-large {
-        margin:0;
+  .heading-large {
+    margin: 0;
+  }
+}
+
+.reg-link--to-go {
+  display: block;
+  text-decoration: none;
+
+  p {
+    margin: 0;
+    padding: 24px 0 0;
+  }
+
+  .column-one-third {
+    bottom: 10px;
+    position: absolute;
+    right: 0;
+    text-align: right;
+  }
+
+  .column-one-third,
+  .column-two-thirds {
+    float: none;
+    width: inherit;
+  }
+
+  @media screen and (min-width: 480px) {
+
+    .column-one-third {
+      bottom: inherit;
+      float: right;
+      position: relative;
+      right: $gutter;
+      text-align: right;
+      width: 33.33333%;
     }
+
+    .column-two-thirds {
+      float: left;
+      width: 66.66667%;
+    }
+  }
 }
 
-.margin20 {
-    margin-top: 40px;
-}
+.chevron {
 
-.summaryblock a:focus {
-   background-color: transparent;
-   outline: transparent;
+  // initial reg-link--to-go is tiny and positioned bottom-right
+  &::before {
+    border-style: solid;
+    border-width: .4em .4em 0 0;
+    content: '';
+    display: inline-block;
+    height: .5em;
+    transform: rotate(-45deg);
+    width: .5em;
+
+    // then it's changing size and position as the screen size grow
+    @media screen and (min-width: 480px) and (max-width: 768px) {
+      height: 1.25em;
+      margin-left: 0;
+      margin-top: 24px;
+      width: 1.25em;
+    }
+
+    @media screen and (min-width: 769px) {
+      height: 1.75em;
+      margin-left: -10px;
+      margin-top: 30px;
+      width: 1.75em;
+    }
+
+    @media screen and (min-width: 960px) {
+      height: 2.5em;
+      margin-left: -20px;
+      margin-top: 36px;
+      width: 2.5em;
+    }
+
+  }
+
+  &.right {
+
+    &::before {
+      transform: rotate(45deg);
+    }
+  }
+
 }
