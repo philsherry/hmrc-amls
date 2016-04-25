@@ -218,3 +218,43 @@ a.reg-step {
   }
 
 }
+
+    @media screen and (min-width: 769px) {
+      height: 1.75em;
+      margin-left: -10px;
+      margin-top: 30px;
+      width: 1.75em;
+    }
+
+    @media screen and (min-width: 960px) {
+      height: 2.5em;
+      margin-left: -20px;
+      margin-top: 36px;
+      width: 2.5em;
+    }
+
+  }
+
+  &.right {
+
+    &::before {
+      transform: rotate(45deg);
+    }
+  }
+
+
+.statuslist {
+    background: $grey-4;
+    padding: 10px;
+    color: $border-colour;
+}
+.statusdone {
+    padding: 10px;
+    color: $page-colour;
+    background: $button-colour;
+}
+.statuspending {
+    padding: 10px;
+    color: $text-colour;
+    background: $grey-3;
+}

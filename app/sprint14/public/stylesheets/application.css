@@ -1745,3 +1745,18 @@ a.reg-step {
 
 .chevron.right::before {
   transform: rotate(45deg); }
+
+.statuslist {
+  background: #f8f8f8;
+  padding: 10px;
+  color: #bfc1c3; }
+
+.statusdone {
+  padding: 10px;
+  color: #fff;
+  background: #00823b; }
+
+.statuspending {
+  padding: 10px;
+  color: #0b0c0c;
+  background: #dee0e2; }
