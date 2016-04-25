@@ -1755,3 +1755,18 @@ a.reg-step {
     .reg-link--to-go .column-two-thirds {
       float: left;
       width: 66.66667%; } }
+
+.statuslist {
+  background: #f8f8f8;
+  padding: 10px;
+  color: #bfc1c3; }
+
+.statusdone {
+  padding: 10px;
+  color: #fff;
+  background: #00823b; }
+
+.statuspending {
+  padding: 10px;
+  color: #0b0c0c;
+  background: #dee0e2; }
