@@ -1669,7 +1669,7 @@ a.reg-step {
   position: relative;
   transition: all .25s ease-in; }
   a.reg-step:focus, a.reg-step:hover, a.reg-step.complete {
-    background-color: #00823b; }
+    background-color: #28a197; }
     a.reg-step:focus .reg-link--to-go, a.reg-step:hover .reg-link--to-go, a.reg-step.complete .reg-link--to-go {
       color: #fff; }
     a.reg-step:focus .chevron::before, a.reg-step:hover .chevron::before, a.reg-step.complete .chevron::before {
