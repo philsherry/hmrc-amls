@@ -9,3 +9,4 @@ session.json
 npm-debug.log
 .idea/
 session.json
+app/**/public/stylesheets/application.css
