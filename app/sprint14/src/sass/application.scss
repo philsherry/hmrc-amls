@@ -109,7 +109,6 @@ a.reg-step {
   &:focus,
   &:hover,
   &.complete {
-    background-color: $turquoise;
 
     .reg-link--to-go {
       color: $page-colour;
@@ -118,6 +117,15 @@ a.reg-step {
     .chevron::before {
       border-color: $page-colour $page-colour transparent transparent;
     }
+  }
+
+  &:focus,
+  &:hover {
+    background-color: $green;
+  }
+
+  &.complete {
+    background-color: $turquoise;
   }
 
   > .column-one-third,
@@ -257,4 +265,11 @@ a.reg-step {
     // color: $grey-1;
     // background-color: $grey-4;
 
+}
+
+
+.grey45 {
+    // background-color: $grey-4;
+    // border-bottom: 3px solid $grey-3;
+    padding: 0 20px;
 }
