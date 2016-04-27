@@ -6,69 +6,66 @@
 
 {{$main}}
 
-    <div class="grid-row spacelarge">
-        <div class="column-two-thirds">
-            <h1 class="heading-xlarge">
+<div class="grid-row spacelarge">
+    <div class="column-two-thirds">
+        <h1 class="heading-xlarge">
                 <span class="heading-secondary">Anti-money laundering supervision registration</span>
                 Your application status
             </h1>
-        </div>
     </div>
+</div>
 
-    <div class="grid-row spacelarge">
-        <div class="column-two-thirds">
-            <div class="panel panel-border-wide">
+<div class="grid-row spacelarge">
+    <div class="column-two-thirds">
+        <div class="panel panel-border-wide">
             <p>Ubunchews Accountany Services
-            <br>Benton Park Road
-            <br>Newcastle
-            <br>Tyne and Wear
-            <br>AB1 2DE</p>
-        </div>
-        </div>
-
-    </div>
-
-
-
-    <div class="grid-row">
-        <div class="column-one-third">
-            <ul class="list">
-    <li class="statusdone">1. Complete all sections <img src="public/images/icons/icon-tick-white-small.png"  alt="" /></li>
-    <li class="statuspending">2. Submit application</li>
-    <li class="statuslist">3. Pay fee</li>
-    <li class="statuslist">4. Under review</li>
-    <li class="statuslist">5. Decision</li>
-    {{! <li class="statuslist">Rejected</li>
-    <li class="statuslist">Withdrawn</li>
-    <li class="statuslist">Timed out</li> }}
-</ul>
-        </div>
-        <div class="column-two-thirds status-text">
-            <h2 class="heading-medium">Submit the application form</h2>
-            <p>You’ve completed all sections of the form, but you haven’t submitted it.  You have XX days to submit the application. After XX days the information you entered will be lost, and you’ll need to start again.</p>
- <div class="form-group">
-                <a href="declaration/who-is-registering" class="button" type="submit">Submit application</a>
-            </div>
+                <br>Benton Park Road
+                <br>Newcastle
+                <br>Tyne and Wear
+                <br>AB1 2DE</p>
         </div>
     </div>
+</div>
 
-    <hr />
-
-    <div class="grid-row">
-        <div class="column-two-thirds">
-           {{>includes/status-change}}
-           <ul class="list">
-    <li><a href="#">Change your trading premises</a></li>
-    <li><a href="#">Change your responsible people</a></li>
-    <li><a href="#">Withdraw application</a></li>
-</ul>
-        </div>
-        <div class="column-one-third">
-            {{! <h3 class="heading-small">Actions</h3> }}
-
-        </div>
-
+<div class="grid-row">
+    <div class="column-one-third">
+        <ol class="list list-number status-list">
+            <li class="status-list--complete">Complete all sections</li>
+            <li class="status-list--pending">Submit application</li>
+            <li class="status-list--upcoming">Pay fee</li>
+            <li class="status-list--upcoming">Under review</li>
+            <li class="status-list--upcoming">Decision</li>
+            {{!
+            <li class="status-list--upcoming">Rejected</li>
+            <li class="status-list--upcoming">Withdrawn</li>
+            <li class="status-list--upcoming">Timed out</li> }}
+        </ol>
     </div>
+    <div class="column-two-thirds status-text">
+        <h2 class="heading-medium">Submit the application form</h2>
+        <p>You’ve completed all sections of the form, but you haven’t submitted it. You have XX days to submit the application. After XX days the information you entered will be lost, and you’ll need to start again.</p>
+        <div class="form-group">
+            <a href="declaration/who-is-registering" class="button" type="submit">Submit application</a>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<div class="grid-row">
+    <div class="column-two-thirds">
+        {{>includes/status-change}}
+        <ul class="list">
+            <li><a href="#">Change your trading premises</a></li>
+            <li><a href="#">Change your responsible people</a></li>
+            <li><a href="#">Withdraw application</a></li>
+        </ul>
+    </div>
+    <div class="column-one-third">
+        {{!
+        <h3 class="heading-small">Actions</h3> }}
+    </div>
+</div>
 
 {{/main}}
 {{/layout}}
