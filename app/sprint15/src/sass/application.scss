@@ -126,6 +126,14 @@ a.reg-step {
 
   &.complete {
     background-color: $turquoise;
+
+    .reg-link {
+      color: $link-colour;
+    }
+
+    &:hover .reg-link {
+      color: $link-hover-colour;
+    }
   }
 
   > .column-one-third,
@@ -184,7 +192,7 @@ a.reg-step {
   background: $grey-4;
   border-bottom: $grey-3 solid 3px;
   margin: 0 -15px;
-  padding: 0 $gutter;
+  padding: $gutter;
 
   @media screen and (min-width: 641px) {
     margin: 0;
