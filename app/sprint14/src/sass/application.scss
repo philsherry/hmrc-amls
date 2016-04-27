@@ -126,6 +126,14 @@ a.reg-step {
 
   &.complete {
     background-color: $turquoise;
+
+    .reg-link {
+      color: $link-colour;
+    }
+
+    &:hover .reg-link {
+      color: $link-hover-colour;
+    }
   }
 
   > .column-one-third,
