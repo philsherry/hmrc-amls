@@ -1,0 +1,72 @@
+{{<layout}}
+
+{{$pageTitle}}
+  Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$main}}
+
+    <div class="grid-row spacelarge">
+        <div class="column-two-thirds">
+            <h1 class="heading-xlarge">
+                <span class="heading-secondary">Anti-money laundering supervision registration</span>
+                Your application status
+            </h1>
+        </div>
+    </div>
+
+    <div class="grid-row spacelarge">
+        <div class="column-two-thirds">
+            <div class="panel panel-border-wide">
+            <p>Ubunchews Accountany Services
+            <br>Benton Park Road
+            <br>Newcastle
+            <br>Tyne and Wear
+            <br>AB1 2DE</p>
+        </div>
+        </div>
+        <div class="column-one-third declaration">
+            <p class="heading-small">Confirmation code</p>
+            <p class="font-small">CXAAM00000123456</p>
+        </div>
+    </div>
+
+
+
+    <div class="grid-row">
+        <div class="column-one-third">
+            <ul class="list">
+    <li class="statusdone">1. Complete all sections <img src="public/images/icons/icon-tick-white-small.png"  alt="" /></li>
+    <li class="statusdone">2. Submit application <img src="public/images/icons/icon-tick-white-small.png"  alt="" /></li>
+    <li class="statusdone">3. Pay fee <img src="public/images/icons/icon-tick-white-small.png"  alt="" /></li>
+    <li class="statuspending">4. Under review</li>
+    <li class="statuslist">5. Decision</li>
+    {{! <li class="statuslist">Rejected</li>
+    <li class="statuslist">Withdrawn</li>
+    <li class="statuslist">Timed out</li> }}
+</ul>
+        </div>
+        <div class="column-two-thirds status-text">
+            <h2 class="heading-medium">Under review</h2>
+            <p>Your application is being reviewed by HM Revenue and Customs. This usually takes XX weeks, and you’ll receive the decision by XXemail?XX. If you haven’t received a response within XXtimescaleXX, XXwhat action if any do we want them to take?XX</p>
+
+        </div>
+    </div>
+
+    <hr />
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            {{>includes/status-change}}
+            <ul class="list">
+                <li><a href="#">Change your trading premises</a></li>
+                <li><a href="#">Change your responsible people</a></li>
+                <li><a href="#">Withdraw application</a></li>
+            </ul>
+        </div>
+
+
+    </div>
+
+{{/main}}
+{{/layout}}

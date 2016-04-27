@@ -192,7 +192,7 @@ a.reg-step {
   background: $grey-4;
   border-bottom: $grey-3 solid 3px;
   margin: 0 -15px;
-  padding: $gutter;
+  padding: 0 $gutter;
 
   @media screen and (min-width: 641px) {
     margin: 0;
@@ -281,3 +281,13 @@ a.reg-step {
     // border-bottom: 3px solid $grey-3;
     padding: 0 20px;
 }
+
+
+.status-text {
+  h2 {
+    margin-top: 10px;
+  }
+
+}
+
+hr { margin-bottom: 0;}
