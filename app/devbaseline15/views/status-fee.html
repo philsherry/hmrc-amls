@@ -1,0 +1,76 @@
+{{<layout}}
+
+{{$pageTitle}}
+  Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$main}}
+
+    <div class="grid-row spacelarge">
+        <div class="column-two-thirds">
+            <h1 class="heading-xlarge">
+                <span class="heading-secondary">Anti-money laundering supervision registration</span>
+                Your application status
+            </h1>
+        </div>
+    </div>
+
+    <div class="grid-row space">
+        <div class="column-two-thirds">
+            <div class="panel panel-border-wide">
+            <p>Ubunchews Accountany Services
+            <br>Benton Park Road
+            <br>Newcastle
+            <br>Tyne and Wear
+            <br>AB1 2DE</p>
+        </div>
+        </div>
+        <div class="column-one-third declaration">
+            <p class="heading-small">Confirmation code</p>
+            <p class="font-small">CXAAM00000123456</p>
+        </div>
+    </div>
+
+
+
+    <div class="grid-row">
+        <div class="column-one-third">
+            <ul class="list">
+    <li class="statusdone">1. Complete all sections <img src="public/images/icons/icon-tick-white-small.png"  alt="" /> </li>
+    <li class="statusdone">2. Submit application <img src="public/images/icons/icon-tick-white-small.png"  alt="" /> </li>
+    <li class="statuspending">3. Pay fee</li>
+    <li class="statuslist">4. Under review</li>
+    <li class="statuslist">5. Decision</li>
+
+    {{! <li class="statuslist">Withdrawn</li>
+    <li class="statuslist">Timed out</li> }}
+</ul>
+        </div>
+        <div class="column-two-thirds status-text">
+            <h2 class="heading-medium">Pay the registration fee</h2>
+            <p>You’ve submitted the application but you haven’t paid the registration fee. Your application form won’t be reviewed until the fee is paid.</p>
+            <p>Your registration fee:
+            <br /><span class="heading-xlarge">&pound;1,200</span></p>
+            <div class="form-group">
+                <a href="payment/index" class="button" type="submit">Pay fee</a>
+            </div>
+
+        </div>
+    </div>
+
+    <hr />
+
+<div class="grid-row">
+        <div class="column-two-thirds">
+            {{>includes/status-change}}
+            <ul class="list">
+                <li><a href="#">Change your trading premises</a></li>
+                <li><a href="#">Change your responsible people</a></li>
+                <li><a href="#">Withdraw application</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+{{/main}}
+{{/layout}}

@@ -1,0 +1,52 @@
+{{<layout}}
+
+{{$pageTitle}}
+  Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$main}}
+
+    <div class="grid-row spacelarge">
+        <div class="column-two-thirds">
+            <h1 class="heading-xlarge">
+                <span class="heading-secondary">Anti-money laundering supervision registration</span>
+                Your application status
+            </h1>
+        </div>
+    </div>
+
+    <div class="grid-row spacelarge">
+        <div class="column-two-thirds">
+            <p>Ubunchews Accountany Services
+            <br>Benton Park Road
+            <br>Newcastle
+            <br>Tyne and Wear
+            <br>AB1 2DE</p>
+        </div>
+        <div class="column-one-third declaration">
+            {{>includes/status-change}}
+
+        </div>
+    </div>
+
+
+
+    <div class="grid-row">
+        <div class="column-one-third spacelarge">
+            {{>status/status-list}}
+        </div>
+        <div class="column-two-thirds status-text">
+            {{>status/fee-paid}}
+        </div>
+    </div>
+
+    <hr />
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+           {{>includes/status-change}}
+        </div>
+    </div>
+
+{{/main}}
+{{/layout}}

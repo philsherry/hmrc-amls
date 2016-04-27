@@ -1,0 +1,50 @@
+{{<layout}}
+
+{{$pageTitle}}
+  Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$main}}
+
+  	{{>includes/service-header}}
+
+
+	<div class="grid-row">
+		<div class="column-two-thirds">
+
+			{{>includes/back}}
+			<h1 class="heading-xlarge">
+				<span class="heading-secondary">About the business</span>
+				Is your business registered for Corporation Tax?
+			</h1>
+
+  			<form method="post">
+				<input type="hidden" name="next-page" value="confirming-address">
+
+				<div class="form-group">
+					<fieldset class="inline">
+						<legend class="visuallyhidden">Is your business registered for Corporation Tax?</legend>
+						<label class="block-label" for="radio-inline-2-1" data-target="vat">
+					  		<input id="radio-inline-2-1" type="radio" name="radio-inline-group-2" value="Yes">Yes
+						</label>
+						<label class="block-label" for="radio-inline-2-2">
+					  		<input id="radio-inline-2-2" type="radio" name="radio-inline-group-2" value="No">No
+						</label>
+						<div class="panel js-hidden" id="vat">
+							<label class="form-label" for="vat">Corporation Tax Reference number</label>
+                            <span class="form-hint">For example: 1234567890</span>
+							<input class="form-control" name="vat" type="text" id="sort-code">
+    					</div>
+					</fieldset>
+				</div>
+
+				<div class="form-group">
+						<input type="submit" class="button" value="Save and continue">
+				</div>
+			</form>
+
+		</div>
+	</div>
+
+{{/main}}
+{{/layout}}
