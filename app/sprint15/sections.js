@@ -1,7 +1,7 @@
 module.exports = [
   [
     {
-      name: 'Pre-registration',
+      name: 'Pre-application',
       section: 'pre-registration',
       link: 'pre-registration/what-you-need',
       editlink: 'pre-registration/your-answers',
