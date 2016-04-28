@@ -29,35 +29,21 @@
 </div>
 
 <div class="grid-row">
-    <div class="column-one-third">
+    {{! <div class="column-one-third">
         <ol class="list list-number status-list">
             <li class="status-list--complete">Complete all sections <span class="status-list--icon"></span></li>
             <li class="status-list--complete">Submit application <span class="status-list--icon"></span></li>
-            <li class="status-list--pending">Pay fee <span class="status-list--icon"></span></li>
-            <li class="status-list--upcoming">Under review <span class="status-list--icon"></span></li>
-            <li class="status-list--upcoming">Decision <span class="status-list--icon"></span></li>
-            {{!
-            <li class="status-list--upcoming">Withdrawn <span class="status-list--icon"></span></li>
-            <li class="status-list--upcoming">Timed out <span class="status-list--icon"></span></li> }}
+            <li class="status-list--complete">Pay fee <span class="status-list--icon"></span></li>
+            <li class="status-list--complete">Under review <span class="status-list--icon"></span></li>
+            <li class="status-list--pending status-list--end">Decision <span class="status-list--icon"></span></li>
         </ol>
-    </div>
+    </div> }}
     <div class="column-two-thirds status-text">
-        <h2 class="heading-medium">Pay the registration fee</h2>
-        <p>You’ve submitted the application but you haven’t paid the registration fee. Your application form won’t be reviewed until the fee is paid.</p>
-        <p>Your registration fee:
-            <br /><span class="heading-xlarge">&pound;1,200</span></p>
+        <h2 class="heading-medium">Withdraw application</h2>
+        <p>Your application has been rejected, and your business is not registered with HM Revenue and Customs for anti-money laundering supervision. XXwhat happens now? What do we want them to do?XX</p>
         <div class="form-group">
-            <a href="#" class="button" type="submit">Pay fee</a>
+            <a href="declaration/who-is-registering" class="button" type="submit">Confirm and submit</a>
         </div>
-    </div>
-</div>
-
-<hr />
-
-<div class="grid-row">
-    <div class="column-two-thirds">
-        {{>includes/status-change}}
-        <a href="status-04-review" class="link-back">temp status link</a>
     </div>
 </div>
 
