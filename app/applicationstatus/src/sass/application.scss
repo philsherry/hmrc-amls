@@ -169,18 +169,21 @@ a.reg-step {
 }
 
 .reg-step--submit {
-  padding-right: 0;
   padding-left: 30px;
+  padding-right: 0;
 }
 
 .white {
   color: $page-colour;
 }
 
-.notice p {
-  display: block;
-  margin-left: -15px;
-  padding-left: 65px;
+.notice {
+
+  p {
+    display: block;
+    margin-left: -15px;
+    padding-left: 65px;
+  }
 }
 
 // information icon override
@@ -255,8 +258,8 @@ a.reg-step {
   padding-left: 0;
 
   li {
-    list-style-position: inside;
     line-height: 1.25;
+    list-style-position: inside;
     padding: 18px 55px 10px 10px;
     position: relative;
   }
@@ -290,7 +293,7 @@ a.reg-step {
 }
 
 .status-list--complete {
-  background-color: $turquoise ;
+  background-color: $turquoise;
   color: $page-colour;
 
   .status-list--icon {
@@ -321,4 +324,7 @@ a.reg-step {
 
 }
 
-hr { margin-bottom: 0;}
+hr {
+  margin-bottom: 0;
+}
+

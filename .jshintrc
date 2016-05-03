@@ -1,0 +1,16 @@
+{
+  "asi": true,
+  "curly": true,
+  "eqeqeq": true,
+  "eqnull": true,
+  "force": false,
+  "indent": '2',
+  "quotmark": 'single',
+  "plusplus": false,
+  globals: {
+    "console": true,
+    "jQuery": true,
+    "module": true,
+    "quiet": true
+  }
+}
