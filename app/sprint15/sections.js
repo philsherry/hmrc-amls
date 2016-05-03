@@ -84,6 +84,15 @@ module.exports = [
       status: undefined
     },
     {
+      name: 'Supervision',
+      section: 'supervision',
+      link: 'supervision/what-you-need',
+      editlink: 'supervision/your-answers',
+      message: 'Registration information specifically for Trust or Company Service Providers.',
+      time: '4',
+      status: undefined
+    },
+    {
       name: 'Money service business',
       section: 'money-service-business',
       link: 'money-service-business/what-you-need',
@@ -100,17 +109,7 @@ module.exports = [
       message: 'Registration information specifically for Trust or Company Service Providers.',
       time: '8',
       status: undefined
-    },
-
-    {
-      name: 'Supervision',
-      section: 'supervision',
-      link: 'supervision/what-you-need',
-      editlink: 'supervision/your-answers',
-      message: 'Registration information specifically for Trust or Company Service Providers.',
-      time: '4',
-      status: undefined
-    },
+    }
   ],
   [
     // {
