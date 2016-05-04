@@ -102,17 +102,7 @@ module.exports = [
       status: undefined
     }
   ],
-  [
-    {
-      name: 'Supervision',
-      section: 'supervision',
-      link: 'supervision/what-you-need',
-      editlink: 'supervision/your-answers',
-      message: 'Registration information specifically for Trust or Company Service Providers.',
-      time: '4',
-      status: undefined
-    }
-  ],
+
   [
     // {
     //   name: 'Supervision',
