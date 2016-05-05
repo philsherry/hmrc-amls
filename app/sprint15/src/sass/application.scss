@@ -15,6 +15,20 @@ $sprite-path: '../images/icons/app-status.png';
 // dimensions
 $gutter: 20px; // this probably needs a better name
 
+// just to make things look less broken in IE8…
+// these are mostly due to lack of respect for media queries
+.lte-ie8 {
+
+  #content {
+    margin: 0 auto;
+  }
+
+  .reg-step--submit {
+    margin: 0 15px;
+    padding-left: 0;
+  }
+}
+
 .space {
   margin-bottom: $gutter;
 }
