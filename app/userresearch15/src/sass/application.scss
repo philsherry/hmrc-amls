@@ -183,11 +183,11 @@ a.reg-step {
 .declaration {
   background: $grey-4;
   border-bottom: $grey-3 solid 3px;
-  margin: 0 -15px;
+  // margin: 0 -15px;
   padding: $gutter;
 
   @media screen and (min-width: 641px) {
-    margin: 0;
+    // margin: 0;
   }
 
   h2 {
