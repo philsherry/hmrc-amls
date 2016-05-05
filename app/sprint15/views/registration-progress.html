@@ -21,7 +21,6 @@
                     <h2 class="heading-small">{{name}}</h2>
                     {{^status}}
                     <p>{{message}}</p>
-                    <!--<p class="font-xsmall">Start this section</p>-->
                     {{/status}}
                     {{#status}}
                     <p class="reg-link font-xsmall">Edit</p>
@@ -29,17 +28,9 @@
                 </div>
                 <div class="column-one-third reg-step--status">
                     {{^status}}
-                    <div class="grid-row reg-link--to-go">
-                        <div class="column-two-thirds">
-                            <p class="font-xsmall"><span class="heading-large">{{time}}</span> minutes to complete</p>
-                        </div>
-                        <div class="column-one-third">
-                            <span class="progress-icon progress-icon--pending"></span>
-                        </div>
+                    <div class="column-two-thirds reg-step--status-time">
+                        <p class="font-xsmall"><span class="heading-large">{{time}}</span> minutes to complete</p>
                     </div>
-                    {{/status}}
-                    {{#status}}
-                    <span class="progress-icon progress-icon--complete"></span>
                     {{/status}}
                 </div>
             </a>
