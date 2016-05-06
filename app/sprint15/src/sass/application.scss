@@ -4,14 +4,6 @@
 // https://www.npmjs.com/package/css-mqpacker
 // https://www.npmjs.com/package/gulp-postcss
 
-// image sprite
-// usage: url(#{$sprite-path})
-$sprite-path: '../images/icons/app-status.png';
-
-@function get-path-to-assets($sprite-path) {
-  @return $sprite-path;
-};
-
 // dimensions
 $gutter: 20px; // this probably needs a better name
 
@@ -183,7 +175,10 @@ a.reg-step {
   padding: 0;
   position: relative;
   text-decoration: none;
-  transition: all .25s ease-in;
+  transition: .25s ease-in;
+  // need to be specific here, specifying both values we want to target (i.e. not 'all')
+  // otherwise Safari tries to apply a transition to the background svg chevron
+  transition-property: background-color, outline;
 
   @media screen and (min-width: 481px) {
     background-position: 97% 50%;
