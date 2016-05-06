@@ -167,7 +167,7 @@ hr {
 // Registration step: block-level link
 a.reg-step {
   background: $grey-3 url('../images/icons/chevron.svg') no-repeat 100% 50%;
-  background-size: 15%;
+  background-size: 12%;
   color: $text-colour;
   display: block; // for IE8
   display: flex;  // for everything else
@@ -181,7 +181,6 @@ a.reg-step {
   transition-property: background-color, outline;
 
   @media screen and (min-width: 481px) {
-    background-position: 97% 50%;
     background-size: 15%;
 
     // IE10+11 only… *sigh*
