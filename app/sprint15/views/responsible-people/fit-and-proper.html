@@ -15,27 +15,22 @@
             {{>includes/back}}
 <h1 class="heading-xlarge">
                 <span class="heading-secondary">Responsible people</span>
-               Has this person had training in anti-money laundering or counter-terrorism funding?
+               Has this person previously passed the fit and proper test?
             </h1>
             <span class ="form-hint"></span>
             <form method="post">
-                    <input type="hidden" name="next-page" value="fit-and-proper">
+                    <input type="hidden" name="next-page" value="responsible-person-registered">
 
 
                     <div class="form-group">
                         <legend class="visuallyhidden">Have you had any training in anti-money laundering or counter-terrorism funding?</legend>
                         <fieldset class="inline">
-                            <label class="block-label" for="radio-inline-2-3" data-target="training">
+                            <label class="block-label" for="radio-inline-2-3" >
                                 <input id="radio-inline-2-3" type="radio" name="radio-inline-group-2" value="Yes">Yes
                             </label>
                             <label class="block-label" for="radio-inline-2-4">
                                 <input id="radio-inline-2-4" type="radio" name="radio-inline-group-2" value="No">No
                             </label>
-
-                            <div class="panel js-hidden" id="training">
-                                <label class="form-label" for="training">Please give a brief description, including approximate dates and duration</label>
-                                <textarea class="form-control" cols="100" rows="5"></textarea>
-                            </div>
 
                         </fieldset>
                     </div>
