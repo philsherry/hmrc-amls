@@ -15,6 +15,19 @@ $sprite-path: '../images/icons/app-status.png';
 // dimensions
 $gutter: 20px; // this probably needs a better name
 
+html {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
 
 // -- IE8 Hacks
 // just to make things look less broken in IE8…
@@ -25,9 +38,35 @@ $gutter: 20px; // this probably needs a better name
     margin: 0 auto;
   }
 
+  .column-one-third {
+    float: left;
+    width: 33.33333%;
+  }
+
+  .column-two-thirds {
+    float: left;
+    width: 66.66667%;
+  }
+
   .reg-step--submit {
-    margin: 0 15px;
+    margin: 0;
     padding-left: 0;
+  }
+
+  // Registration step: block-level link
+  a.reg-step {
+    background-image: url('../images/icons/icon-chevron-grey-large.png');
+    background-position: 95% 50%;
+
+    &:focus,
+    &:hover {
+      background-image: url('../images/icons/icon-chevron-white.png');
+    }
+
+    &.complete {
+      background-image: url('../images/icons/icon-tick-white.png');
+      background-position: 85% 50%;
+    }
   }
 }
 
@@ -135,21 +174,37 @@ hr {
 
 // Registration step: block-level link
 a.reg-step {
-  background: $grey-3 url('../images/icons/icon-chevron-grey.png') no-repeat 97% 92%;
+  background: $grey-3 url('../images/icons/chevron.svg') no-repeat 100% 50%;
+  background-size: 15%;
   color: $text-colour;
-  display: block;
+  display: block; // for IE8
+  display: flex;  // for everything else
   margin-bottom: 12px;
   padding: 0;
   position: relative;
+  text-decoration: none;
   transition: all .25s ease-in;
 
   @media screen and (min-width: 481px) {
-    background-image: url('../images/icons/icon-chevron-grey-medium.png');
     background-position: 97% 50%;
+    background-size: 15%;
+
+    // IE10+11 only… *sigh*
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      background-position: 135% 50%;
+      background-size: 50%;
+    }
   }
 
   @media screen and (min-width: 769px) {
-    background-image: url('../images/icons/icon-chevron-grey-large.png');
+    background-position: 97% 50%;
+    background-size: 15%;
+
+    // IE10+11 only… *sigh*
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      background-position: 210% 50%;
+      background-size: 75%;
+    }
   }
 
   &:focus,
@@ -164,11 +219,20 @@ a.reg-step {
   &:focus,
   &:hover {
     background-color: $green;
-    background-image: url('../images/icons/icon-chevron-white.png');
+
+    @media screen and (min-width: 769px) {
+      background-image: url('../images/icons/chevron-white.svg');
+    }
   }
 
   &.complete {
-    background: $turquoise url('../images/icons/icon-tick-white.png') no-repeat 86% 50%;
+    background: $turquoise url('../images/icons/tick.svg') no-repeat 89% 50%;
+
+    // IE10+11 only… *sigh*
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      background-position: 185% 50%;
+      background-size: 75%;
+    }
 
     .reg-link {
       color: $link-colour;
@@ -179,13 +243,6 @@ a.reg-step {
     }
   }
 
-  > .column-one-third,
-  > .column-two-thirds {
-    min-height: 9em;
-    padding-bottom: 10px;
-
-  }
-
   .column-one-third {
     float: left;
     width: 33.33333%;
@@ -194,6 +251,10 @@ a.reg-step {
   .column-two-thirds {
     float: left;
     width: 66.66667%;
+  }
+
+  > .column-two-thirds {
+    min-height: 5em;
   }
 }
 
@@ -221,5 +282,5 @@ a.reg-step {
 }
 
 .reg-step--status-time {
-  padding: 15px;
+  padding: 15px 15px 0;
 }
