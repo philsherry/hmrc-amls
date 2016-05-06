@@ -7,6 +7,62 @@
 // dimensions
 $gutter: 20px; // this probably needs a better name
 
+html {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+// -- IE8 Hacks
+// just to make things look less broken in IE8…
+// these are mostly due to lack of respect for media queries
+.lte-ie8 {
+
+  #content {
+    margin: 0 auto;
+  }
+
+  .column-one-third {
+    float: left;
+    width: 33.33333%;
+  }
+
+  .column-two-thirds {
+    float: left;
+    width: 66.66667%;
+  }
+
+  .reg-step--submit {
+    margin: 0;
+    padding-left: 0;
+  }
+
+  // Registration step: block-level link
+  a.reg-step {
+    background-image: url('../images/icons/icon-chevron-grey-large.png');
+    background-position: 95% 50%;
+
+    &:focus,
+    &:hover {
+      background-image: url('../images/icons/icon-chevron-white.png');
+    }
+
+    &.complete {
+      background-image: url('../images/icons/icon-tick-white.png');
+      background-position: 85% 50%;
+    }
+  }
+}
+
+// Helpers, because GDS
 .space {
   margin-bottom: $gutter;
 }
@@ -21,10 +77,6 @@ $gutter: 20px; // this probably needs a better name
 
 .spacelarge {
   margin-bottom: ($gutter * 2);
-
-  @media screen and (min-width: 480px) and (max-width: 768px) {
-    margin: 0 15px ($gutter * 2);
-  }
 }
 
 .spacesummary {
@@ -50,152 +102,15 @@ $gutter: 20px; // this probably needs a better name
   margin-top: 0;
 }
 
-.chevron {
-
-  // initial reg-link--to-go is tiny and positioned bottom-right
-  &::before {
-    // colour values are required here, otherwise IE renders a slight shadow on the sides with 0 width
-    // note: this doesn't render *at all* in IE8, so we're probably better off using an image to be consistent
-    border-color: $secondary-text-colour $secondary-text-colour transparent transparent;
-    border-style: solid;
-    border-width: .4em .4em 0 0;
-    content: '';
-    display: inline-block;
-    height: .5em;
-    transform: rotate(-45deg);
-    width: .5em;
-
-    // then it's changing size and position as the screen size grow
-    // note: IE8 won't understand these media queries, so we really should have a [if IE 8] stylesheet
-    @media screen and (min-width: 480px) and (max-width: 768px) {
-      height: 1.25em;
-      margin-left: 0;
-      margin-top: 24px;
-      width: 1.25em;
-    }
-
-    @media screen and (min-width: 769px) {
-      height: 1.75em;
-      margin-left: -10px;
-      margin-top: 30px;
-      width: 1.75em;
-    }
-
-    @media screen and (min-width: 960px) {
-      height: 2.5em;
-      margin-left: -20px;
-      margin-top: 36px;
-      width: 2.5em;
-    }
-
-  }
-
-  &.right {
-
-    &::before {
-      transform: rotate(45deg);
-    }
-  }
-
-}
-
-// Registration Page Coding
-// block-level link
-a.reg-step {
-  background: $grey-3;
-  color: $text-colour;
-  display: block;
-  margin-bottom: 12px;
-  padding: 0;
-  position: relative;
-  transition: all .25s ease-in;
-
-  &:focus,
-  &:hover,
-  &.complete {
-
-    .reg-link--to-go {
-      color: $page-colour;
-    }
-
-    .chevron::before {
-      border-color: $page-colour $page-colour transparent transparent;
-    }
-  }
-
-  &:focus,
-  &:hover {
-    background-color: $green;
-  }
-
-  &.complete {
-    background-color: $turquoise;
-  }
-
-  > .column-one-third,
-  > .column-two-thirds {
-    min-height: 8em;
-    padding-bottom: 10px;
-
-    @media screen and (min-width: 769px) {
-      min-height: initial;
-    }
-  }
-
-  > .column-one-third {
-    float: left;
-    width: 33.33333%;
-  }
-
-  > .column-two-thirds {
-    float: left;
-    width: 66.66667%;
-  }
-}
-
-.reg-step--details {
-  background: $grey-4;
-  border-bottom: $grey-3 solid 3px;
-  padding-bottom: 10px;
-
-  p {
-    margin: 0;
-    padding-bottom: 10px;
-  }
-}
-
-.reg-step--status {
-  color: $secondary-text-colour;
-}
-
-.reg-step--submit {
-  padding-left: 30px;
-  padding-right: 0;
-}
-
-.white {
-  color: $page-colour;
-}
-
-.notice {
-
-  p {
-    display: block;
-    margin-left: -15px;
-    padding-left: 65px;
-  }
-}
-
 // information icon override
 .declaration {
   background: $grey-4;
   border-bottom: $grey-3 solid 3px;
-  margin: 0 15px;
-  padding: 15px $gutter 0;
+  margin: 0 -15px;
+  padding: $gutter;
 
   @media screen and (min-width: 641px) {
     margin: 0;
-    padding-top: 0;
   }
 
   h2 {
@@ -212,46 +127,152 @@ a.reg-step {
   }
 }
 
-.reg-link--to-go {
-  display: block;
-  text-decoration: none;
+.statuslist {
+  background: $grey-2;
+  color: $page-colour;
+  padding: 10px;
+}
 
-  p {
-    margin: 0;
-    padding: 24px 0 0;
+.statusdone {
+  background: $turquoise;
+  color: $page-colour;
+}
+
+.statusdone,
+.statuspending {
+  // background-color: $grey-4;
+  // color: $grey-1;
+  padding: ($gutter / 2);
+
+}
+
+.grey45 {
+  // background-color: $grey-4;
+  // border-bottom: 3px solid $grey-3;
+  padding: 0 $gutter;
+}
+
+.status-text {
+
+  h2 {
+    margin-top: ($gutter / 2);
+  }
+
+}
+
+hr {
+  margin-bottom: 0;
+}
+
+// Registration step: block-level link
+a.reg-step {
+  background: $grey-3 url('../images/icons/chevron.svg') no-repeat 100% 50%;
+  background-size: 15%;
+  color: $text-colour;
+  display: block; // for IE8
+  display: flex;  // for everything else
+  margin-bottom: 12px;
+  padding: 0;
+  position: relative;
+  text-decoration: none;
+  transition: all .25s ease-in;
+
+  @media screen and (min-width: 481px) {
+    background-position: 97% 50%;
+    background-size: 15%;
+
+    // IE10+11 only… *sigh*
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      background-position: 135% 50%;
+      background-size: 50%;
+    }
+  }
+
+  @media screen and (min-width: 769px) {
+    background-position: 97% 50%;
+    background-size: 15%;
+
+    // IE10+11 only… *sigh*
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      background-position: 210% 50%;
+      background-size: 75%;
+    }
+  }
+
+  &:focus,
+  &:hover,
+  &.complete {
+
+    .reg-step--status-time {
+      color: $page-colour;
+    }
+  }
+
+  &:focus,
+  &:hover {
+    background-color: $green;
+    background-image: url('../images/icons/chevron-white.svg');
+  }
+
+  &.complete {
+    background: $turquoise url('../images/icons/tick.svg') no-repeat 89% 50%;
+
+    // IE10+11 only… *sigh*
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      background-position: 185% 50%;
+      background-size: 75%;
+    }
+
+    .reg-link {
+      color: $link-colour;
+    }
+
+    &:hover .reg-link {
+      color: $link-hover-colour;
+    }
   }
 
   .column-one-third {
-    bottom: 10px;
-    position: absolute;
-    right: 0;
-    text-align: right;
+    float: left;
+    width: 33.33333%;
   }
 
-  .column-one-third,
   .column-two-thirds {
-    float: none;
-    width: inherit;
+    float: left;
+    width: 66.66667%;
   }
 
-  @media screen and (min-width: 480px) {
-
-    .column-one-third {
-      bottom: inherit;
-      float: right;
-      position: relative;
-      right: $gutter;
-      text-align: right;
-      width: 33.33333%;
-    }
-
-    .column-two-thirds {
-      float: left;
-      width: 66.66667%;
-    }
+  > .column-two-thirds {
+    min-height: 5em;
   }
 }
 
+// Registration step: details
+.reg-step--details {
+  background: $grey-4;
+  border-bottom: $grey-3 solid 3px;
+  padding-bottom: 10px;
+
+  p {
+    margin: 0;
+    padding-bottom: 10px;
+  }
+}
+
+// Registration step: status
+.reg-step--status {
+  color: $secondary-text-colour;
+  padding: 0;
+  position: relative;
+
+  .column-one-third {
+    min-height: 6em;
+  }
+}
+
+.reg-step--status-time {
+  padding: 15px 15px 0;
+}
 
 // we want the number *inside* the list element here
 .status-list {
@@ -265,7 +286,8 @@ a.reg-step {
   }
 
   .status-list--icon {
-    background-image: url('../images/icons/app-status.png');
+    background: url('../images/icons/tick.svg') no-repeat;
+    background-size: 164%;
     height: 30px;
     position: absolute;
     right: 10px;
@@ -286,8 +308,6 @@ a.reg-step {
 .status-list--pending {
 
   .status-list--icon {
-    // progress dots
-    // background-position: -62px -9px;
     background-image: none;
   }
 }
@@ -298,7 +318,7 @@ a.reg-step {
 
   .status-list--icon {
     // tick
-    background-position: -10px -9px;
+    background-position: -10px -10px;
   }
 }
 
@@ -309,22 +329,3 @@ a.reg-step {
 .status-list--end {
   border-bottom: 3px solid $grey-2;
 }
-
-.grey45 {
-  // background-color: $grey-4;
-  // border-bottom: 3px solid $grey-3;
-  padding: 0 20px;
-}
-
-
-.status-text {
-  h2 {
-    margin-top: 10px;
-  }
-
-}
-
-hr {
-  margin-bottom: 0;
-}
-

@@ -4,14 +4,6 @@
 // https://www.npmjs.com/package/css-mqpacker
 // https://www.npmjs.com/package/gulp-postcss
 
-// image sprite
-// usage: url(#{$sprite-path})
-$sprite-path: '../images/icons/app-status.png';
-
-@function get-path-to-assets($sprite-path) {
-  @return $sprite-path;
-};
-
 // dimensions
 $gutter: 20px; // this probably needs a better name
 
