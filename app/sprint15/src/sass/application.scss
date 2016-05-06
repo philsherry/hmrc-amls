@@ -219,10 +219,7 @@ a.reg-step {
   &:focus,
   &:hover {
     background-color: $green;
-
-    @media screen and (min-width: 769px) {
-      background-image: url('../images/icons/chevron-white.svg');
-    }
+    background-image: url('../images/icons/chevron-white.svg');
   }
 
   &.complete {
