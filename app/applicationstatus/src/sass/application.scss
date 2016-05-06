@@ -60,6 +60,15 @@ html {
       background-position: 85% 50%;
     }
   }
+
+  // status list
+  .status-list--complete .status-list--icon {
+    background-image: url('../images/icons/icon-tick-white.png');
+    background-position: 0 0;
+    height: 35px;
+    top: 5px;
+    width: 35px;
+  }
 }
 
 // Helpers, because GDS
