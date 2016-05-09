@@ -60,6 +60,15 @@ html {
       background-position: 85% 50%;
     }
   }
+
+  // status list
+  .status-list--complete .status-list--icon {
+    background-image: url('../images/icons/icon-tick-white.png');
+    background-position: 0 0;
+    height: 35px;
+    top: 5px;
+    width: 35px;
+  }
 }
 
 // Helpers, because GDS
@@ -167,7 +176,7 @@ hr {
 // Registration step: block-level link
 a.reg-step {
   background: $grey-3 url('../images/icons/chevron.svg') no-repeat 100% 50%;
-  background-size: 15%;
+  background-size: 12%;
   color: $text-colour;
   display: block; // for IE8
   display: flex;  // for everything else
@@ -181,7 +190,6 @@ a.reg-step {
   transition-property: background-color, outline;
 
   @media screen and (min-width: 481px) {
-    background-position: 97% 50%;
     background-size: 15%;
 
     // IE10+11 only… *sigh*
@@ -275,4 +283,52 @@ a.reg-step {
 
 .reg-step--status-time {
   padding: 15px 15px 0;
+}
+
+// we want the number *inside* the list element here
+.status-list {
+  padding-left: 0;
+
+  li {
+    line-height: 1.25;
+    list-style-position: inside;
+    padding: 18px 55px 10px 10px;
+    position: relative;
+  }
+}
+
+.status-list--icon {
+  height: 30px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 35px;
+
+  .status-list--complete & {
+    // tick
+    background: url('../images/icons/tick.svg') no-repeat -10px -10px;
+    background-size: 164%;
+  }
+}
+
+.status-list--upcoming {
+  background: $grey-2;
+  color: $page-colour;
+}
+
+.status-list--pending {
+  //
+}
+
+.status-list--complete {
+  background-color: $turquoise;
+  color: $page-colour;
+}
+
+.status-list--start {
+  border-top: 3px solid $grey-2;
+}
+
+.status-list--end {
+  border-bottom: 3px solid $grey-2;
 }
