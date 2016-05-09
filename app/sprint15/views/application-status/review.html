@@ -33,22 +33,18 @@
         <ol class="list list-number status-list">
             <li class="status-list--complete">Complete all sections <span class="status-list--icon"></span></li>
             <li class="status-list--complete">Submit application <span class="status-list--icon"></span></li>
-            <li class="status-list--pending">Pay fee <span class="status-list--icon"></span></li>
-            <li class="status-list--upcoming">Under review <span class="status-list--icon"></span></li>
+            <li class="status-list--complete">Pay fee <span class="status-list--icon"></span></li>
+            <li class="status-list--pending">Under review <span class="status-list--icon"></span></li>
             <li class="status-list--upcoming">Decision <span class="status-list--icon"></span></li>
             {{!
+            <li class="status-list--upcoming">Rejected <span class="status-list--icon"></span></li>
             <li class="status-list--upcoming">Withdrawn <span class="status-list--icon"></span></li>
             <li class="status-list--upcoming">Timed out <span class="status-list--icon"></span></li> }}
         </ol>
     </div>
     <div class="column-two-thirds status-text">
-        <h2 class="heading-medium">Pay the registration fee</h2>
-        <p>You’ve submitted the application but you haven’t paid the registration fee. Your application form won’t be reviewed until the fee is paid.</p>
-        <p>Your registration fee:
-            <br /><span class="heading-xlarge">&pound;1,200</span></p>
-        <div class="form-group">
-            <a href="#" class="button" type="submit">Pay fee</a>
-        </div>
+        <h2 class="heading-medium">Under review</h2>
+        <p>Your application is being reviewed by HM Revenue and Customs. This usually takes XX weeks, and you’ll receive the decision by XXemail?XX. If you haven’t received a response within XXtimescaleXX, XXwhat action if any do we want them to take?XX</p>
     </div>
 </div>
 
@@ -57,7 +53,7 @@
 <div class="grid-row">
     <div class="column-two-thirds">
         {{>includes/status-change}}
-        <a href="status-04-review" class="link-back">temp status link</a>
+        <a href="approved" class="link-back">temp status link</a>
     </div>
 </div>
 
