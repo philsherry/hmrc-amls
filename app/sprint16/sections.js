@@ -57,7 +57,7 @@ module.exports = [
   ],
   [
     {
-      name: 'Accountancy service provider',
+      name: 'Accountancy Service Provider',
       section: 'accountancy-service-provider',
       link: 'accountancy-service-provider/what-you-need',
       editlink: 'accountancy-service-provider/your-answers',
@@ -66,7 +66,7 @@ module.exports = [
       status: undefined
     },
     {
-      name: 'Estate agent business',
+      name: 'Estate Agency Business',
       section: 'estate-agents',
       link: 'estate-agents/what-you-need',
       editlink: 'estate-agents/your-answers',
@@ -75,7 +75,7 @@ module.exports = [
       status: undefined
     },
     {
-      name: 'High value dealer',
+      name: 'High Value Dealer',
       section: 'high-value-dealer',
       link: 'high-value-dealer/what-you-need',
       editlink: 'high-value-dealer/your-answers',
@@ -84,7 +84,7 @@ module.exports = [
       status: undefined
     },
     {
-      name: 'Money service business',
+      name: 'Money Service Business',
       section: 'money-service-business',
       link: 'money-service-business/what-you-need',
       editlink: 'money-service-business/your-answers',
@@ -93,7 +93,7 @@ module.exports = [
       status: undefined
     },
     {
-      name: 'Trust or company service provider',
+      name: 'Trust or Company Service Provider',
       section: 'trust-company-service-provider',
       link: 'trust-company-service-provider/what-you-need',
       editlink: 'trust-company-service-provider/your-answers',
@@ -108,7 +108,7 @@ module.exports = [
       section: 'supervision',
       link: 'supervision/what-you-need',
       editlink: 'supervision/your-answers',
-      message: 'Registration information specifically for Trust or Company Service Providers.',
+      message: 'Information about any previous supervision for anti-money laundering.',
       time: '4',
       status: undefined
     }
