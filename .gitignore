@@ -3,6 +3,7 @@
 /public/
 /global/public/
 /global/admin/public/
+/global/template/
 /views/
 session.json
 npm-debug.log
