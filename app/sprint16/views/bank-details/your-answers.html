@@ -1,0 +1,103 @@
+{{<layout}}
+
+{{$pageTitle}}
+  Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$main}}
+
+{{>includes/service-header}}
+
+		<div class="grid-row">
+			<div class="column-two-thirds">
+
+                {{>includes/back}}
+                <h1 class="heading-xlarge">
+                    <span class="heading-secondary">Bank details</span>
+                   	Your answers
+				</h1>
+
+                <div class="panel panel-border-wide spacelarge">
+                    <p><a href="accounts">Add a bank account</a></p>
+                </div>
+
+
+
+				<table class="spacesummary">
+                    <tbody>
+                        <tr>
+                            <th>ACME Limited</th>
+                            <td class="numeric"><a href="#">Edit</a></td>
+                            <td width="10%" class="numeric"><a href="#">Delete</a></td>
+                        </tr>
+                        <tr>
+                            <td width="40%">Account number:</td>
+                            <td colspan="2">01234537</td>
+                        </tr>
+                        <tr>
+                            <td>Sort code:</td>
+                            <td colspan="2">45-33-14</td>
+                        </tr>
+                        <tr>
+                            <td>Account type:</td>
+                            <td colspan="2">Personal account</td>
+                        </tr>
+                        <tr>
+                            <td>UK bank account:</td>
+                            <td colspan="2">Yes</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table class="spacesummary">
+                    <tbody>
+                        <tr>
+                            <th>Oceans Limited</th>
+                            <td class="numeric"><a href="#">Edit</a></td>
+                            <td width="10%" class="numeric"><a href="#">Delete</a></td>
+                        </tr>
+                        <tr>
+                            <td width="40%">IBAN number:</td>
+                            <td colspan="2">01234537</td>
+                        </tr>
+
+                        <tr>
+                            <td>Account type:</td>
+                            <td colspan="2">My business account</td>
+                        </tr>
+                        <tr>
+                            <td>UK bank account:</td>
+                            <td colspan="2">No</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                {{! <form method="post">
+
+                    <fieldset class="inline">
+                        <legend class="form-label">Do you want to register another bank account?</legend>
+                        <div class="form-group">
+                            <label class="block-label" data-target="sortcode" for="radio-indent-1">
+                                <input id="radio-indent-1" type="radio" name="next-page" value="accounts">Yes
+                            </label>
+                            <label class="block-label" data-target="iban" for="radio-indent-2">
+                                <input id="radio-indent-2" type="radio" name="next-page" value="../registration-progress">No
+                            </label>
+
+                        </div>
+                    </fieldset>
+
+                    <div class="form-group">
+                        <input type="submit" class="button" value="Confirm and continue">
+                    </div>
+
+                </form> }}
+
+
+				<a href="../registration-progress" class="button" type="submit">Confirm and continue</a>
+
+			</div>
+		</div>
+
+{{/main}}
+{{/layout}}
