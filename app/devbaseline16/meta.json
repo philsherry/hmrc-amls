@@ -1,6 +1,6 @@
 {
-  "name": "Dev Baseline",
+  "name": "Dev Baseline 16",
   "description": "Dev baseline for prototype",
   "phase": "alpha",
-  "hidden": false
+  "hidden": true
 }
