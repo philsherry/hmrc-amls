@@ -1,0 +1,63 @@
+{{<layout}}
+
+{{$pageTitle}}
+    Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$main}}
+
+    <div class="grid-row">
+		<div class="column-two-thirds">
+
+            {{>includes/back}}
+            <h1 class="heading-xlarge">
+                <span class="heading-secondary">Pre-application</span>
+                What's your business structure?
+            </h1>
+
+		    <form class="form" method="post">
+                <fieldset>
+                    <legend class="visuallyhidden">What's your business structure</legend>
+                    <div class="form-group">
+						<label for="lc" class="block-label">
+                            <input type="radio" name="next-page" id="lc" value="registration-number-am">
+                            Limited company
+                        </label>
+                        <label for="sole" class="block-label">
+							<input type="radio" name="next-page" id="sole" value="activities">
+							Sole proprietor
+						</label>
+						<label for="partner" class="block-label">
+                            <input type="radio" name="next-page" id="partner" value="activities">
+                            Partnership
+                        </label>
+                        <label for="lp" class="block-label">
+                            <input type="radio" name="next-page" id="lp" value="registration-number-am">
+                            Limited partnership or limited liability partnership
+                        </label>
+                        {{! <label for="llp" class="block-label">
+							<input type="radio" name="next-page" id="llp" value="registration-number-am">
+							Limited liability partnership
+						</label> }}
+
+						{{! <label for="cb" class="block-label">
+							<input type="radio" name="next-page" id="cb" value="business-details">
+							Incorporated body
+						</label> }}
+
+						<label for="other" class="block-label">
+							<input type="radio" name="next-page" id="other" value="business-type-am">
+							Unincorporated association or trust
+						</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="button" value="Save and continue">
+                    </div>
+                </fieldset>
+		    </form>
+
+		</div>
+	</div>
+
+{{/main}}
+{{/layout}}
