@@ -1,0 +1,48 @@
+{{<layout}}
+
+{{$pageTitle}}
+  Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$main}}
+
+{{>includes/service-header}}
+
+		<div class="grid-row">
+			<div class="column-two-thirds">
+
+				{{>includes/back}}
+				<h1 class="heading-xlarge">
+					<span class="heading-secondary">Bank details</span>
+				  	What kind of bank account does your business use?
+				</h1>
+
+				<form method="post">
+				<fieldset>
+                        <div class="form-group">
+                            <legend class="visuallyhidden">What type of account is this?</legend>
+                            <label class="block-label" for="radio-inline-2-1">
+                              <input id="radio-inline-2-1" type="radio" name="next-page" value="account-details">A personal bank account
+                            </label>
+                            <label class="block-label" for="radio-inline-2-2">
+                              <input id="radio-inline-2-2" type="radio" name="next-page" value="account-details">A business account belonging to this business
+                            </label>
+                            <label class="block-label" for="radio-inline-2-3">
+                              <input id="radio-inline-2-3" type="radio" name="next-page" value="account-details">A business account belonging to another business
+                            </label>
+                            <label class="block-label" for="radio-inline-2-4">
+                              <input id="radio-inline-2-4" type="radio" name="next-page" value="check-your-answers-no-account">The business doesn't use a bank account
+                            </label>
+                        </div>
+                    </fieldset>
+
+					<div class="form-group">
+				   		<input type="submit" class="button" value="Save and continue">
+					</div>
+				</form>
+
+			</div>
+		</div>
+
+{{/main}}
+{{/layout}}
