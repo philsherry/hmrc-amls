@@ -1,0 +1,95 @@
+{{<layout}}
+
+{{$pageTitle}}
+  Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$main}}
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+
+            {{>includes/back}}
+            <h1 class="heading-xlarge">
+                <span class="heading-secondary">Pre-application</span>
+                Check your answers
+            </h1>
+
+
+            <div class="panel panel-border-wide spacelarge">
+                <p>You are applying to register the following business for anti-money laundering supervision</p>
+            </div>
+
+            <table class="space">
+                <tbody>
+                    <tr>
+                        <th width="90%">Your business:</th>
+                        <td><a href="index">Edit</a></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Your Organisation
+                            <br>Street Name
+                            <br>Town
+                            <br>County
+                            <br>AB1 2DE
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="space">
+                <tbody>
+                    <tr>
+                        <th width="90%">What's your business structure?</th>
+                        <td><a href="pre-application/structure-am">Edit</a></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Limited company</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+            <table class="space">
+                <tbody>
+                    <tr>
+                        <th width="90%">What's your company registration number?</th>
+                        <td><a href="pre-application/registration-number-am">Edit</a></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">A1234567</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+            <table class="spacelarge">
+                <tbody>
+                    <tr>
+                        <th width="90%">What do you need to register?</th>
+                        <td><a href="activities">Edit</a></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">{{>includes/business-type}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <form method="post">
+                <input type="hidden" name="next-page" value="../summary"/>
+                <div class="form-group">
+                    <input type="submit" class="button" value="Confirm and start application">
+                </div>
+            </form>
+
+           <p><a href="#">Print this page</a></p>
+
+        </div>
+
+
+
+        </div>
+    </div>
+
+{{/main}}
+{{/layout}}
