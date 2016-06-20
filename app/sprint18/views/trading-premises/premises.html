@@ -14,14 +14,9 @@
                 {{>includes/back}}
                 <h1 class="heading-xlarge">
         	   		<span class="heading-secondary">Trading premises</span>
-        	   		Where are your trading premises?
+        	   		Where your business trades
         	   	</h1>
 
-                <p>Include:</p>
-                <ul class="list list-bullet">
-                    <li>your own business premises</li>
-                    <li>other businesses' premises, if you have a contractual agreement for them to act as your agents and provide your services</li>
-                </ul>
 
                 <form class="form" method="post">
                     <input type="hidden" name="next-page" value="who-uses">
@@ -72,13 +67,25 @@
 
                     </fieldset>
 
+                     <fieldset>
+                        <div class="form-group">
+                            <label class="form-label-bold">Is this a residential address?</label>
+                            <fieldset class="inline">
+                                <label class="block-label" for="yes">
+                                    <input id="yes" type="radio" name="radio-inline-group-2" value="Yes">Yes
+                                </label>
+                                <label class="block-label" for="no">
+                                    <input id="no" type="radio" name="radio-inline-group-2" value="No">No
+                                </label>
+                            </fieldset>
+
 
 
                     <fieldset>
                         <div class="form-group">
                             <div class="form-date">
-                                <label class="form-label-bold">When will you start trading from these premises?</label>
-                                <p>If you are already trading, give the date you started</p>
+                                <label class="form-label-bold">When will the business start trading from these premises?</label>
+                                <p>If it is already trading, give the date it started</p>
                                 <p class="form-hint">For example, 31 3 2017</p>
 
                                 <div class="form-group form-group-day">
@@ -99,17 +106,7 @@
                         </div>
                     </fieldset>
 
-                    <fieldset>
-                        <div class="form-group">
-				            <label class="form-label-bold">Is this a residential address?</label>
-                            <fieldset class="inline">
-                                <label class="block-label" for="yes">
-                                    <input id="yes" type="radio" name="radio-inline-group-2" value="Yes">Yes
-                                </label>
-                                <label class="block-label" for="no">
-                                    <input id="no" type="radio" name="radio-inline-group-2" value="No">No
-                                </label>
-                            </fieldset>
+                   
                         </div>
 
 
