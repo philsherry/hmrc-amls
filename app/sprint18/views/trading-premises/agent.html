@@ -15,37 +15,35 @@
 				{{>includes/back}}
 <h1 class="heading-xlarge">
 					<span class="heading-secondary">Trading premises</span>
-					Who is your agent?
+					What is your agent's business structure?
 				</h1>
 
-                <div class="panel panel-border-wide spacelarge">
-                    <p>An agent is an individual or business that works on behalf of your business to provide your services.</p>
-                </div>
+                
 
 				<form class="form" method="post">
 					{{! <input type="hidden" name="next-page" value="activities"> }}
 
 					<fieldset>
-						<legend class="visuallyhidden">Agent's tax details</legend>
+						<legend class="visuallyhidden">What is your agent's business structure?</legend>
 
 
 						<div class="form-group">
-							<legend class="form-label">What is your agent's business structure?</legend>
-
-							<label  class="block-label">
-								<input type="radio" name="next-page" id="sole" value="dateofbirth">Sole proprietor
+						
+							<label class="block-label">
+								<input type="radio" name="next-page" id="ub" value="crn-number">Limited company
 							</label>
-							<label  class="block-label">
-								<input type="radio" name="next-page" id="partner" value="crn-number">Limited liability partnership
+							<label class="block-label">
+								<input type="radio" name="next-page" id="sole" value="dateofbirth">Sole proprietor
 							</label>
 							<label class="block-label">
 								<input type="radio" name="next-page" id="cb" value="activities">Partnership
 							</label>
-							<label class="block-label">
-								<input type="radio" name="next-page" id="ub" value="crn-number">Incorporated body
+							<label  class="block-label">
+								<input type="radio" name="next-page" id="partner" value="crn-number">Limited partnership or limited liability partnership
 							</label>
+												
 							<label class="block-label">
-								<input type="radio" name="next-page" id="other" value="activities">Unincorporated body
+								<input type="radio" name="next-page" id="other" value="activities">Unincorporated association or trust
 							</label>
 						</div>
 
