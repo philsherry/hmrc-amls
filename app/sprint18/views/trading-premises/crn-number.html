@@ -15,27 +15,38 @@
 				{{>includes/back}}
                 <h1 class="heading-xlarge">
 					<span class="heading-secondary">Trading premises</span>
-					What is your agent's company registration number?
+					About your agent
 				</h1>
 
                 <form class="form" method="post">
 					<input type="hidden" name="next-page" value="activities">
 
 					<fieldset>
+                        <legend class="visuallyhidden">Agent's business name</legend>
+
+                        <div class="form-group">
+                            <label class="form-label" for="middle-name">What is your agent's business name</label>
+
+                            <input type="text" id="middle-name" class="form-control">
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
 						<legend class="visuallyhidden">Agent's tax details</legend>
 
                         <div class="form-group">
-                            <label class="visuallyhidden" for="middle-name">What is your agent's company registration number?</label>
+                            <label class="form-label" for="middle-name">What is your agent's company registration number?</label>
                          	<span class="form-hint">For example: A1234567</span>
 
                             <input type="text" id="middle-name" class="form-control">
                         </div>
+                    </fieldset>
 
-						<div class="form-group">
-							<input type="submit" class="button" value="Save and continue">
-						</div>
+					<div class="form-group">
+						<input type="submit" class="button" value="Save and continue">
+					</div>
 
-					</fieldset>
+
 				</form>
 
 
