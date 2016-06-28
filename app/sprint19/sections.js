@@ -70,7 +70,7 @@ module.exports = [
       section: 'estate-agents',
       link: 'estate-agents/what-you-need',
       editlink: 'estate-agents/your-answers',
-      message: 'Registration information specifically for Estate Agent Businesses.',
+      message: 'Registration information specifically for Estate Agency Businesses.',
       time: '5',
       status: undefined
     },
