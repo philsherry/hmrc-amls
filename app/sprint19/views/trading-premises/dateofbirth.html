@@ -14,18 +14,26 @@
                 {{>includes/back}}
                 <h1 class="heading-xlarge">
         	   		<span class="heading-secondary">Trading premises</span>
-        	   		What is your agent's date of birth?
+        	   		Your agent's details
         	   	</h1>
 
 
 
                 <form class="form" method="post">
-                    <input type="hidden" name="next-page" value="premises-registered">
+                    <input type="hidden" name="next-page" value="premises">
+                    <fieldset>
+                        <legend class="visuallyhidden">What is your agent's name?</legend>
+
+                        <div class="form-group">
+                            <label class="form-label" for="middle-name">What is your agent's name?</label>
+                            <input type="text" id="middle-name" class="form-control">
+                        </div>
+                    </fieldset>
 
                     <fieldset>
                         <div class="form-group">
                             <div class="form-date">
-                                <label class="visuallyhidden">What is your agent's date of birth?</label>
+                                <label class="form-label">What is your agent's date of birth?</label>
                                 <p class="form-hint">For example, 31 3 1980</p>
 
                                 <div class="form-group form-group-day">
