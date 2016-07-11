@@ -1,0 +1,56 @@
+{{<layout}}
+
+{{$pageTitle}}
+  Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$main}}
+
+<div class="grid-row">
+    <div class="column-two-thirds">
+        <h1 class="heading-xlarge">
+            <span class="heading-secondary">Anti-money laundering supervision registration</span>
+            Your application status
+        </h1>
+    </div>
+</div>
+
+<div class="grid-row spacelarge">
+    <div class="column-two-thirds">
+        <div class="panel panel-border-wide">
+            <p><span class="heading-small">Your business:</span><br />Ubunchews Accountany Services</span></p>
+            <p class="heading-small">Confirmation code:<br /><span class="font-small">CXAAM00000123456</span></p>
+        </div>
+    </div>
+
+</div>
+
+<div class="grid-row">
+    <div class="column-one-third">
+        <ol class="list list-number status-list">
+            <li class="status-list--complete">Completed <span class="status-list--icon"></span></li>
+            <li class="status-list--complete">Submitted <span class="status-list--icon"></span></li>
+            <li class="status-list--complete">Fee paid <span class="status-list--icon"></span></li>
+            <li class="status-list--pending">Under review <span class="status-list--icon"></span></li>
+            <li class="status-list--upcoming">Decision made <span class="status-list--icon"></span></li>
+        </ol>
+    </div>
+    <div class="column-two-thirds status-text">
+        <h2 class="heading-medium">Under review</h2>
+        <p>Your application is being reviewed by HM Revenue and Customs. This process can take up to 45 days.</p>
+        <p>You'll receive an email asking you to sign in to this website, where you will be able to see if you have been approved or rejected.</p>
+    </div>
+</div>
+
+<hr />
+
+<div class="grid-row">
+    <div class="column-two-thirds">
+        {{>includes/status-change}}
+    </div>
+</div>
+
+    {{>includes/templinks}}
+
+{{/main}}
+{{/layout}}
