@@ -1,0 +1,69 @@
+{{<layout}}
+
+{{$pageTitle}}
+  Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$main}}
+
+    {{>includes/service-header}}
+
+
+	<div class="grid-row">
+		<div class="column-two-thirds">
+
+            {{>includes/back}}
+			<h1 class="heading-xlarge">
+	   			<span class="heading-secondary">Submit registration</span>
+
+                Who is registering this business?</h1>
+
+            <div class="panel panel-border-wide spacelarge">
+               One person must take responsibility for the accuracy of this anti-money laundering supervision registration.
+            </div>
+
+
+			<form class="form" method="post">
+
+
+
+
+				<fieldset>
+                    <div class="form-group">
+                        <legend class="visuallyhidden">Who is making the declaration</legend>
+                            <label class="block-label" for="radio-1">
+                        <input id="radio-1" type="radio" name="next-page" value="declaration">John Doe
+                        </label>
+                        <label class="block-label" for="radio-2">
+                            <input id="radio-2" type="radio" name="next-page" value="declaration">Andrew Buchannan
+                        </label>
+                        <label class="block-label" for="radio-3">
+                            <input id="radio-3" type="radio" name="next-page" value="declaration">Milly Shaw
+                        </label>
+                        <label class="block-label" for="radio-4">
+                            <input id="radio-4" type="radio" name="next-page" value="declaration">Michael Wolfendale
+                        </label>
+                        <label class="block-label" for="radio-5">
+                            <input id="radio-5" type="radio" name="next-page" value="declaration">Chloe Walker
+                        </label>
+                        <label class="block-label" for="radio-6">
+                            <input id="radio-6" type="radio" name="next-page" value="declaration">Brian Coult
+                        </label>
+                        <p class="form-block">or</p>
+                        <label class="block-label" for="radio-7">
+                            <input id="radio-7" type="radio" name="next-page" value="add-person">Someone else
+                        </label>
+                    </div>
+                </fieldset>
+
+				<div class="form-group">
+		            <input type="submit" class="button" value="Save and continue">
+	   			</div>
+
+	   		</form>
+
+	  	</div>
+	</div>
+
+{{/main}}
+{{/layout}}

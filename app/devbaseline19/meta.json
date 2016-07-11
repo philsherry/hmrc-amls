@@ -1,6 +1,6 @@
 {
-  "name": "Dev Baseline",
+  "name": "Dev Baseline 19",
   "description": "Baseline for dev work from Sprint 19",
   "phase": "beta",
-  "hidden": false
+  "hidden": true
 }

@@ -1,0 +1,47 @@
+{{<layout}}
+
+{{$pageTitle}}
+  Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$main}}
+
+    {{>includes/service-header}}
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+
+            {{>includes/back}}
+            <h1 class="heading-xlarge">
+                <span class="heading-secondary">Business activities</span>
+                Does this professional advisor also manage your tax affairs with HM Revenue and Customs (HMRC)?
+            </h1>
+
+            <form method="post">
+
+                <fieldset class="inline">
+                <legend class="visuallyhidden">Does this professional advisor also manage your tax affairs with HM Revenue and Customs (HMRC)?</legend>
+                <div class="form-group">
+                    <label class="block-label" for="yes" data-target="no-activity">
+                        <input id="yes" type="radio" name="next-page" value="check-your-answers">Yes
+                    </label>
+                    <label class="block-label" >
+                        <input id="no" type="radio" name="next-page" value="check-your-answers">No
+                    </label>
+                  
+
+            </fieldset>
+
+
+            <div class="form-group">
+                <input type="submit" class="button" value="Save and continue">
+            </div>
+
+            </form>
+
+
+        </div>
+    </div>
+
+{{/main}}
+{{/layout}}

@@ -1,0 +1,92 @@
+{{<layout}}
+
+{{$pageTitle}}
+  Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$main}}
+
+{{>includes/service-header}}
+
+		<div class="grid-row">
+			<div class="column-two-thirds">
+
+                {{>includes/back}}
+                <h1 class="heading-xlarge">
+                    <span class="heading-secondary">Bank details</span>
+                   	Check your answers
+				</h1>
+
+
+ <table class="space">
+                    <tbody>
+                        <tr>
+                            <th width="90%">What kind of bank account does your business use?
+                            </th>
+                            <td><a href="confirm-activities">Edit</a></td>
+                            </tr>
+                            <tr>
+                            <td colspan="2">A business account belonging to this business</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+
+                 <table class="space">
+                    <tbody>
+                        <tr>
+                            <th width="90%">Account details
+                            </th>
+                            <td><a href="confirm-activities">Edit</a></td>
+                            </tr>
+                            <tr>
+                            <td colspan="2">Account name: ACME Ltd</td>
+                            </tr>
+                            <td colspan="2">UK bank account: yes</td>
+                            </tr>
+                            <td colspan="2">Sort code: 45-33-14 </td>
+                            </tr>
+                            <td colspan="2">Account number: 01234537</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                {{! <table class="spacesummary">
+                    <tbody>
+                        <tr>
+                            <th>Oceans Limited</th>
+                            <td class="numeric"><a href="accounts">Edit</a></td>
+                        </tr>
+                        <tr>
+                            <td width="40%">IBAN number:</td>
+                            <td>01234537</td>
+                        </tr>
+                        <tr>
+                            <td>Sort code:</td>
+                            <td>45-33-14</td>
+                        </tr>
+                        <tr>
+                            <td>Account type:</td>
+                            <td>My business account</td>
+                        </tr>
+                        <tr>
+                            <td>UK bank account:</td>
+                            <td>No</td>
+                        </tr>
+                    </tbody>
+                </table> }}
+
+				<form method="post">
+    				<div class="form-group">
+   						<input type="submit" class="button" value="Accept and complete section">
+					</div>
+				</form>
+
+                <p><a href="#">Print this page</a></p>
+
+			</div>
+		</div>
+
+{{/main}}
+{{/layout}}

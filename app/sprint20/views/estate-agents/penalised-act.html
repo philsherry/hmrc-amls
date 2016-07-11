@@ -1,0 +1,72 @@
+{{<layout}}
+
+{{$pageTitle}}
+  Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$main}}
+
+	{{>includes/service-header}}
+
+	<div class="grid-row">
+		<div class="column-two-thirds">
+
+			{{>includes/back}}
+<h1 class="heading-xlarge">
+		  		<span class="heading-secondary">Estate Agency Business</span>
+				 Has the business, or anyone in the business, ever been penalised under the Estate Agents Act 1979?
+			</h1>
+
+
+
+
+
+			<form method="post">
+				<input type="hidden" name="next-page" value="penalised-body">
+
+
+				<fieldset>
+
+
+					<div class="form-group">
+						<fieldset class="inline">
+							<legend class="visuallyhidden">Has the business, or anyone in the business, ever been penalised under the Estate Agents Act 1979?</legend>
+
+								<p>Examples of a penalty include:</p>
+								<ul class="list-bullet space">
+									<li>receiving a formal warning</li>
+									<li>being banned from taking part in estate agency activities</li>
+							  	</ul>
+
+			  				<label class="block-label" for="yes-1" data-target="estate-act">
+								<input id="yes-1" type="radio" name="act-group" value="Yes">Yes
+							</label>
+			  				<label class="block-label" for="no-1">
+			  					<input id="no-1" type="radio" name="act-group" value="No">No
+			  				</label>
+
+			  				<div class="panel panel-border-narrow js-hidden" id="estate-act">
+								<label class="form-label" for="details">Give a brief overview of what the penalty was, and when it occurred.</label>
+                                <span class="form-hint">Enter 255 characters or less.</span>
+								<textarea name="details" class="form-control" id="details" cols="100" rows="5"></textarea>
+			  				</div>
+						</fieldset>
+		  			</div>
+
+
+
+
+		  			<div class="form-group">
+						<input class="button" type="submit" value="Save and continue">
+		  			</div>
+
+		  		</fieldset>
+			</form>
+
+
+
+		</div>
+	</div>
+
+{{/main}}
+{{/layout}}
