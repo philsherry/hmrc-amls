@@ -1,0 +1,57 @@
+{{<layout}}
+
+{{$pageTitle}}
+  Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$main}}
+
+    {{>includes/service-header}}
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+
+            {{>includes/back}}
+            <h1 class="heading-xlarge">
+                <span class="heading-secondary">Business activities</span>
+              Other activities
+            </h1>
+
+            <p>You've told us your business does this:</p>
+            <div class="panel panel-border-wide spacelarge">
+                <p>{{>includes/business-type}}</p>
+            </div>
+
+            <form class="form" method="post">
+                <fieldset class="inline">
+                    <legend class="form-label">Is your business involved in other activities, which are not covered by Money Laundering Regulations?</legend>
+                   
+
+                    <div class="form-group">
+                        <label class="block-label" for="yes" data-target="no-activity">
+                            <input id="yes" type="radio" name="next-page" value="business-turnover">Yes
+                        </label>
+                        <label class="block-label" >
+                            <input id="no" type="radio" name="next-page" value="turnover">No
+                        </label>
+                        <div class="panel js-hidden" id="no-activity">
+                            <div class="form-group">
+                                <legend class="form-label">Please give details</label>
+                                <textarea class="form-control" cols="100" rows="5"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                </fieldset>
+
+                <div class="form-group">
+                    <input type="submit" class="button" value="Save and continue">
+                </div>
+            </form>
+
+
+        </div>
+    </div>
+
+{{/main}}
+{{/layout}}
