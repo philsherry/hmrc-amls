@@ -1,0 +1,61 @@
+{{<layout}}
+
+{{$pageTitle}}
+  Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$main}}
+
+    {{>includes/service-header}}
+
+        <div class="grid-row">
+            <div class="column-two-thirds">
+
+                {{>includes/back}}
+                <h1 class="heading-xlarge">
+        	   		<span class="heading-secondary">Trading premises</span>
+        	   		Your agent's partnership
+        	   	</h1>
+                  <label class="form-label">List all your agent's partners</label>
+
+
+                <form class="form" method="post">
+                    <input type="hidden" name="next-page" value="premises">
+
+                    <fieldset>
+                        <div class="form-group">
+                            <label class="visuallyhidden" for="middle-name">
+</label>
+                         
+                            <input type="text" id="middle-name" class="form-control">
+                        </div>
+                    </fieldset>
+
+
+
+
+                        <div class="form-group">
+                            <input type="submit" class="button" value="Save and continue">
+                        </div>
+
+                </form>
+
+            </div>
+        </div>
+
+{{/main}}
+{{/layout}}
+<!--<script>
+$("#over").hide();
+$("#radio-inline-2-1").on('click', function() {
+  $("#over").hide();
+  $("#count").show();
+});
+</script>
+
+<script>
+$("#radio-inline-2-2").on('click', function() {
+  $("#over").show();
+  $("#count").hide();
+});
+</script>-->

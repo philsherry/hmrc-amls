@@ -1,0 +1,74 @@
+{{<layout}}
+
+{{$pageTitle}}
+  Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$main}}
+
+	{{>includes/service-header}}
+
+		<div class="grid-row">
+			<div class="column-two-thirds">
+
+	  			{{>includes/back}}
+<h1 class="heading-xlarge">
+					<span class="heading-secondary">High Value Dealer</span>
+					Do you expect to receive cash payments over €15,000 from customers you've not met in person?
+	  			</h1>
+
+	  			<form method="post">
+	  				<input type="hidden" name="next-page" value="percentage">
+					<fieldset>
+						<legend class="visuallyhidden">Do you expect to receive cash payments over €15,000 from customers you've not met in person?</legend>
+                        <p>If you do not use Euros, please convert to the currency you use.</p>
+
+						<div class="form-group">
+							<fieldset class="inline">
+						 		<label class="block-label" for="yes-alias" data-target="face">
+									<input id="yes-alias" type="radio" name="payment" value="6a">Yes
+								</label>
+								<label class="block-label" for="no-alias">
+									<input id="no-alias" type="radio" name="payment" value="summary">No
+								</label>
+							</fieldset>
+					  	</div>
+
+						<div class="panel panel-border-narrow js-hidden" id="face">
+							<legend class="form-label-bold">How do you expect to receive these payments?</legend>
+							<span class="form-hint">Select all that apply</span>
+					  		<div class="form-group" >
+                    			<label class="block-label" >
+                        			<input id="asp" type="checkbox" name="activities" value="asp">By courier
+                    			</label>
+
+                    			<label class="block-label" >
+                        			<input id="ct" type="checkbox" name="activities" value="bpsp">Directly into a bank account
+                    			</label>
+
+                    			<label class="block-label" data-target="other" >
+                        			<input id="other-ps" type="checkbox" name="activities" value="msb">Other
+                    			</label>
+
+
+								<div class="form-group js-hidden" id="other">
+					  				<label class="form-label" for="first-name-2">Please give details</label>
+					  				<input class="form-control" id="first-name-2" type="text">
+								</div>
+
+               				</div>
+  						</div>
+                	</fieldset>
+
+					<div class="form-group">
+						<input type="submit" class="button" value="Save and continue">
+					</div>
+
+	  			</form>
+
+
+	  		</div>
+	  	</div>
+
+{{/main}}
+{{/layout}}

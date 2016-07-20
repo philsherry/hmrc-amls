@@ -1,0 +1,45 @@
+{{<layout}}
+
+{{$pageTitle}}
+  Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$main}}
+
+    {{>includes/service-header}}
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+
+            {{>includes/back}}
+            <h1 class="heading-xlarge">
+                <span class="heading-secondary">Business activities</span>
+                People in your business
+            </h1>
+
+
+            <form class="form" method="post">
+
+                <input type="hidden" name="next-page" value="employment">
+
+                <fieldset class="inline">
+                    <div class="form-group">
+                        <label for="yes" class="form-label">Approximately how many people work in the business? Include directors.</label>
+                        <input id="yes" class="form-control" type="number" >
+                    </div>
+                    <div class="form-group">
+                        <label for="no" class="form-label">Approximately how many people work on activities covered by Money Laundering Regulations?</label>
+                        <input id="no" class="form-control" type="number" >
+                    </div>
+                </fieldset>
+
+                <div class="form-group">
+                    <input type="submit" class="button" value="Save and continue">
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+{{/main}}
+{{/layout}}
