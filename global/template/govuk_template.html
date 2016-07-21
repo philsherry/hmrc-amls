@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
-<!--[if lt IE 9]><html class="lte-ie8" lang="en"><![endif]-->
-<!--[if gt IE 8]><!--><html lang="en"><!--<![endif]-->
+<!--[if lt IE 9]><html class="lte-ie8" lang=""><![endif]-->
+<!--[if gt IE 8]><!--><html lang=""><!--<![endif]-->
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 
@@ -10,8 +10,6 @@
     <script type="text/javascript">
       (function(){if(navigator.userAgent.match(/IEMobile\/10\.0/)){var d=document,c="appendChild",a=d.createElement("style");a[c](d.createTextNode("@-ms-viewport{width:auto!important}"));d.getElementsByTagName("head")[0][c](a);}})();
     </script>
-
-    <script src="{{assetPath}}javascripts/vendor/modernizr.js"></script>
 
     <!--[if gt IE 8]><!--><link href="{{assetPath}}stylesheets/govuk-template.css?0.16.4" media="screen" rel="stylesheet" type="text/css" /><!--<![endif]-->
     <!--[if IE 6]><link href="{{assetPath}}stylesheets/govuk-template-ie6.css?0.16.4" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
@@ -61,7 +59,7 @@
   <body class="{{$bodyClasses}}{{/bodyClasses}}">
     <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
 
-
+    
 
     <div id="skiplink-container">
       <div>
@@ -70,13 +68,13 @@
     </div>
 
     <div id="global-cookie-message">
-
+      
         {{$cookieMessage}}{{/cookieMessage}}
-
+      
     </div>
     <!--end global-cookie-message-->
 
-
+    
     <header role="banner" id="global-header" class="{{$headerClass}}{{/headerClass}}">
       <div class="header-wrapper">
         <div class="header-global">
@@ -91,7 +89,7 @@
       </div>
     </header>
     <!--end header-->
-
+    
 
     {{$afterHeader}}{{/afterHeader}}
 
@@ -111,9 +109,9 @@
 
             <div class="open-government-licence">
               <p class="logo"><a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence</a></p>
-
+              
                 {{$licenceMessage}}<p>All content is available under the <a href='https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/' rel='license'>Open Government Licence v3.0</a>, except where otherwise stated</p>{{/licenceMessage}}
-
+              
             </div>
           </div>
 
