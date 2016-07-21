@@ -14,12 +14,12 @@
     </div>
 
     <div class="grid-row">
-        <ul class="grid-layout column-two-thirds progress-steps">
+        <ul class="grid-layout column-two-thirds progress-steps" role="menu">
             {{#sections}}
             <li role="menuitem">
                 <a href="{{^status}}{{link}}{{/status}}{{#status}}{{editlink}}{{/status}}" class="progress-step">
                     <div class="grid-layout column-two-thirds progress-step--details">
-                        <h2 class="heading-small">{{name}}<span class="visuallyhidden">.</span></h2>
+                        <h2 class="heading-small">{{name}}</h2>
                         {{^status}}
                         <p>{{message}}</p>
                         {{/status}}
