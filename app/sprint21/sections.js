@@ -15,7 +15,7 @@ module.exports = [
       link: 'about-the-business/what-you-need',
       editlink: 'about-the-business/your-answers',
       message: 'Administrative information about your business and your current registration status.',
-      time: '5',
+      time: '3',
       status: undefined
     },
     {
@@ -24,7 +24,7 @@ module.exports = [
       link: 'business-activities/what-you-need',
       editlink: 'business-activities/your-answers',
       message: 'Information about how your business operates, and your anti-money laundering procedures.',
-      time: '8',
+      time: '7',
       status: undefined
     },
     {
@@ -33,7 +33,7 @@ module.exports = [
       link: 'bank-details/what-you-need',
       editlink: 'bank-details/your-answers',
       message: 'The bank accounts your business uses. These include personal accounts or accounts belonging to other businesses.',
-      time: '5',
+      time: '2',
       status: undefined
     },
     {
@@ -42,7 +42,7 @@ module.exports = [
       link: 'responsible-people/who-must-register',
       editlink: 'responsible-people/your-answers',
       message: 'Information about the people in charge of your business.',
-      time: '10',
+      time: '7',
       status: undefined
     },
     {
@@ -51,7 +51,7 @@ module.exports = [
       link: 'trading-premises/what-you-need',
       editlink: 'trading-premises/your-answers',
       message: 'Which premises your business trades from, and details of any other businesses that trade on your behalf.',
-      time: '8',
+      time: '3',
       status: undefined
     }
   ],
@@ -62,7 +62,7 @@ module.exports = [
       link: 'accountancy-service-provider/what-you-need',
       editlink: 'accountancy-service-provider/your-answers',
       message: 'Registration information specifically for Accountancy Service Providers.',
-      time: 5,
+      time: '2',
       status: undefined
     },
     {
@@ -80,7 +80,7 @@ module.exports = [
       link: 'high-value-dealer/what-you-need',
       editlink: 'high-value-dealer/your-answers',
       message: 'Registration information specifically for High Value Dealers.',
-      time: 8,
+      time: '3',
       status: undefined
     },
     {
@@ -89,7 +89,7 @@ module.exports = [
       link: 'money-service-business/what-you-need',
       editlink: 'money-service-business/your-answers',
       message: 'Registration information specifically for Money Service Businesses.',
-      time: '6',
+      time: '4',
       status: undefined
     },
     {
@@ -98,7 +98,7 @@ module.exports = [
       link: 'trust-company-service-provider/what-you-need',
       editlink: 'trust-company-service-provider/your-answers',
       message: 'Registration information specifically for Trust or Company Service Providers.',
-      time: '8',
+      time: '3',
       status: undefined
     }
   ],
@@ -109,7 +109,7 @@ module.exports = [
       link: 'supervision/what-you-need',
       editlink: 'supervision/your-answers',
       message: 'Information about any previous supervision for anti-money laundering.',
-      time: '4',
+      time: '2',
       status: undefined
     }
   ],
@@ -120,7 +120,7 @@ module.exports = [
     //   link: 'supervision/what-you-need',
     //   editlink: 'supervision/your-answers',
     //   message: 'Registration information specifically for Trust or Company Service Providers.',
-    //   time: '4',
+    //   time: '2',
     //   status: undefined
     // },
     // {
@@ -138,7 +138,7 @@ module.exports = [
     //   link: 'payment/what-you-need',
     //   editlink: 'payment/your-answers',
     //   message: 'business activities covered by the Money Laundering Regulations, details of staff and agents that will decide here.',
-    //   time: '5',
+    //   time: '2',
     //   status: undefined
     // }
   ]
