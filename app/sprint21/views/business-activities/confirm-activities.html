@@ -16,16 +16,13 @@
                 <span class="heading-secondary">Business activities</span>
               Other activities
             </h1>
-
-            <p>You've told us your business does this:</p>
-            <div class="panel panel-border-wide spacelarge">
-                <p>{{>includes/business-type}}</p>
-            </div>
-
+     
             <form class="form" method="post">
                 <fieldset class="inline">
-                    <legend class="form-label">Is your business involved in other activities, which are not covered by Money Laundering Regulations?</legend>
+                    <legend class="form-label">You've told us your business type is {{>includes/business-type}}. Does your business have other activities?</legend>
                    
+
+                        <p class="form-hint">For example: you would select 'yes' if your business was a newsagents shop that sent money overseas. The business would be classed as a Money Service Business. The other activities would be the newsagents part of the business.</p> 
 
                     <div class="form-group">
                         <label class="block-label" for="yes" data-target="no-activity">
