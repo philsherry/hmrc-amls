@@ -417,8 +417,8 @@ a.progress-step,
 
   .status-list--complete & {
     // tick
-    background: url('../images/icons/tick.svg') no-repeat -10px -10px;
-    background-size: 164%;
+    background: url('../images/icons/tick.svg') no-repeat;
+    background-size: 100%;
   }
 }
 
