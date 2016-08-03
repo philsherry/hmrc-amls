@@ -396,6 +396,16 @@ a.progress-step,
 
 /* -- // application progress page -- */
 
+/* -- Amend application progress page -- */
+.progress-steps__amend .progress-step--status,
+.progress-steps__amend .progress-step--status:focus,
+.progress-steps__amend .progress-step--status:hover  {
+  background-image: none;
+
+}
+
+/* -- // Amend application progress page -- */
+
 // we want the number *inside* the list element here
 .status-list {
   padding-left: 0;

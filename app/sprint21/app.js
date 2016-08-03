@@ -70,4 +70,15 @@ app.get('/registration-progress', function (req, res) {
   });
 });
 
+
+app.get('/amend-your-registration', function (req, res) {
+  res.render('amend-your-registration', {
+    complete : req.session.sections.every(function (section) {
+      // console.log(section);
+      return section.status === 'DONE';
+    }),
+    sections : req.session.sections
+  });
+});
+
 module.exports = app;
