@@ -1,0 +1,46 @@
+{{<layout}}
+
+{{$pageTitle}}
+  Anti Money Laundering Registration
+{{/pageTitle}}
+
+{{$main}}
+
+    {{>includes/service-header}}
+
+        <div class="grid-row">
+            <div class="column-two-thirds">
+
+                {{>includes/back}}
+                <h1 class="heading-xlarge">
+        	   		<span class="heading-secondary">Trading premises</span>
+        	   		Does your business use agents?
+        	   	</h1>
+
+                <form class="form" method="post">
+                    <fieldset>
+                        <div class="form-group">
+                            <label class="visuallyhidden">Does your business use agents?</label>
+                            <p>An agent is an individual or business that works on behalf of your business, to provide your services. An employee is not an agent.</p>
+                            <fieldset class="inline">
+                                <label class="block-label" for="radio-inline-2-3">
+                                    <input id="radio-inline-2-3" type="radio" name="next-page" value="who-uses">Yes
+                                </label>
+                                <label class="block-label" for="radio-inline-2-4">
+                                    <input id="radio-inline-2-4" type="radio" name="next-page" value="premises">No
+                                </label>
+                            </fieldset>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-group">
+                        <input type="submit" class="button" value="Save and continue">
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+
+{{/main}}
+{{/layout}}

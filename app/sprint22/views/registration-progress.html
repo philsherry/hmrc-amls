@@ -1,0 +1,69 @@
+{{<layout}}
+
+  {{$pageTitle}}
+    Anti Money Laundering Registration
+  {{/pageTitle}}
+
+  {{$main}}
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <h1 class="heading-xlarge">Application progress</h1>
+            <p class="lede">It usually takes around 30 minutes to complete all sections.</p>
+            <p>Your information is saved automatically. If you sign out, you'll have 28 days to return and complete your application.</p>
+
+        </div>
+    </div>
+
+    <div class="grid-row">
+        <ul class="grid-layout column-two-thirds progress-steps" role="menu">
+            {{#sections}}
+            <li role="menuitem">
+                <a href="{{^status}}{{link}}{{/status}}{{#status}}{{editlink}}{{/status}}" class="progress-step">
+                    <div class="grid-layout column-two-thirds progress-step--details">
+                        <h2 class="heading-small">{{name}}</h2>
+                        {{^status}}
+                        <p>{{message}}</p>
+                        {{/status}}
+                        {{#status}}
+                        <p class="visuallyhidden">This section has been completed.</p>
+                        <p class="progress-step__edit font-xsmall" aria-label="You can edit this section.">Edit</p>
+                        {{/status}}
+                    </div>
+                    <div class="grid-layout column-one-third progress-step--status{{^status}} progress-step--status__not-started{{/status}}{{#status}} progress-step--status__completed{{/status}}">
+                        {{^status}}
+                        <div class="column-two-thirds progress-step--status-time">
+                            <p class="visuallyhidden">This section needs starting and will take approximately</p>
+                            <p class="font-xsmall"><span class="heading-large">{{time}}</span> minutes to complete</p>
+                        </div>
+                        {{/status}}
+                    </div>
+                </a>
+            </li>
+            {{/sections}}
+        </ul>
+
+        <div class="column-one-third reg-step--submit">
+            <div class="grid-row statusblock declaration">
+                <h2 class="heading-small">Submit application</h2>
+                {{^complete}}
+                <p>You can't finish the application until you've completed all the sections.</p>
+                {{/complete}}
+                {{#complete}}
+                <p>All sections complete: you can now submit the application.</p>
+                {{/complete}}
+                <div class="form-group">
+                    {{^complete}}
+                    <a href="" class="button" disabled="disabled" type="submit">Submit application</a>
+                    {{/complete}}
+                    {{#complete}}
+                    <a href="declaration/who-is-registering" class="button" type="submit">Submit application</a>
+                    {{/complete}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+  {{/main}}
+
+{{/layout}}
