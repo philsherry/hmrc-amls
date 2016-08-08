@@ -15,7 +15,7 @@
 				{{>includes/back}}
                 <h1 class="heading-xlarge">
 					<span class="heading-secondary">Trading premises</span>
-					Your agent's company details
+					{{! Your agent's company details }}What is your agent's registered company name?
 				</h1>
 
                 <form class="form" method="post">
@@ -25,13 +25,13 @@
                         <legend class="visuallyhidden">What is your agent's registered company name?</legend>
 
                         <div class="form-group">
-                            <label class="form-label" for="middle-name">What is your agent's registered company name?</label>
+
                             <span class="form-hint">It must be identical to the registered name on the incorporation certificate.</span>
                             <input type="text" id="middle-name" class="form-control">
                         </div>
                     </fieldset>
 
-                    <fieldset>
+                   {{!  <fieldset>
 						<legend class="visuallyhidden">What is your agent's company registration number?</legend>
 
                         <div class="form-group">
@@ -40,7 +40,7 @@
 
                             <input type="text" id="middle-name" class="form-control">
                         </div>
-                    </fieldset>
+                    </fieldset> }}
 
 					<div class="form-group">
 						<input type="submit" class="button" value="Save and continue">

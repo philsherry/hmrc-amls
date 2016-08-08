@@ -14,7 +14,7 @@
                 {{>includes/back}}
                 <h1 class="heading-xlarge">
         	   		<span class="heading-secondary">Trading premises</span>
-        	   		Your agent's details
+        	   		{{! Your agent's details }}What is your agent's name?
         	   	</h1>
 
 
@@ -25,12 +25,11 @@
                         <legend class="visuallyhidden">What is your agent's name?</legend>
 
                         <div class="form-group">
-                            <label class="form-label" for="middle-name">What is your agent's name?</label>
                             <input type="text" id="middle-name" class="form-control">
                         </div>
                     </fieldset>
 
-                    <fieldset>
+                    {{! <fieldset>
                         <div class="form-group">
                             <div class="form-date">
                                 <label class="form-label">What is your agent's date of birth?</label>
@@ -53,7 +52,7 @@
                             </div>
                         </div>
                     </fieldset>
-
+ }}
 
                         <div class="form-group">
                             <input type="submit" class="button" value="Save and continue">
