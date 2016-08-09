@@ -8,79 +8,73 @@ Anti Money Laundering Registration
     <div class="column-two-thirds">
         {{>includes/back}}
         <h1 class="heading-xlarge">
-        <span class="heading-secondary">Business activities</span>
-        Check your answers
+            <span class="heading-secondary">Business activities</span>
+            Check your answers
         </h1>
 
+        <div id="example-1">
+            <section class="check-your-answers">
+                <dl>
+                    <dt>Which services does your business provide? <a href="/anti-money-laundering/money-service-business/services?edit=true" class="edit" aria-label="You can edit this section.">Edit</a></dt>
+                    <dd>Transmitting money</dd>
+                    <dd>Currency exchange</dd>
+                    <dd>Cheque cashing (all businesses except scrap metal dealers)</dd>
+                    <dd>Cheque cashing (scrap metal dealers)</dd>
+                </dl>
+            </section>
+        </div>
 
-        <section class="check-your-answers">
-            <dl>
-                <dt>Which services does your business provide? <a href="/anti-money-laundering/money-service-business/services?edit=true" class="edit" aria-label="You can edit this section.">Edit</a></dt>
-                <dd>Transmitting money</dd>
-                <dd>Currency exchange</dd>
-                <dd>Cheque cashing (all businesses except scrap metal dealers)</dd>
-                <dd>Cheque cashing (scrap metal dealers)</dd>
-            </dl>
-        </section>
-        <!-- http://www.powermapper.com/tests/screen-readers/labelling/a-aria-label/ -->
+        <div id="example-2">
+            <section class="check-your-answers">
+                <div class="grid-row">
+                    <header class="check-your-answers--header column-two-thirds">
+                        <h2 class="heading-small">Which services does your business provide?</h2>
+                    </header>
+                    <footer class="check-your-answers--footer column-one-third">
+                        <a class="edit" href="/anti-money-laundering/money-service-business/services?edit=true" aria-label="You can edit this section.">Edit</a>
+                    </footer>
+                </div>
 
+                <ul class="grid-row check-your-answers--list">
+                    <li>Transmitting money</li>
+                    <li>Currency exchange</li>
+                    <li>Cheque cashing (all businesses except scrap metal dealers)</li>
+                    <li>Cheque cashing (scrap metal dealers)</li>
+                </ul>
+            </section>
+        </div>
 
+        <div id="example-3">
+            <table class="check-your-answers">
+                <tbody>
+                    <tr>
+                        <th>Which services does your business provide?</th>
+                        <th class="edit" width="12"><a href="/anti-money-laundering/money-service-business/services?edit=true" aria-label="You can edit this section.">Edit</a></th>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            Transmitting money
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            Currency exchange
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            Cheque cashing (all businesses except scrap metal dealers)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            Cheque cashing (scrap metal dealers)
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
-
-
-
-        <section class="check-your-answers">
-            <div class="grid-row">
-                <header class="check-your-answers--header column-two-thirds">
-                    <h2 class="heading-small">Which services does your business provide?</h2>
-                </header>
-                <footer class="check-your-answers--footer column-one-third">
-                    <a class="edit" href="/anti-money-laundering/money-service-business/services?edit=true" aria-label="You can edit this section.">Edit</a>
-                </footer>
-            </div>
-
-            <ul class="check-your-answers--list">
-                <li>Transmitting money</li>
-                <li>Currency exchange</li>
-                <li>Cheque cashing (all businesses except scrap metal dealers)</li>
-                <li>Cheque cashing (scrap metal dealers)</li>
-            </ul>
-        </section>
-        <!-- “Footers don’t necessarily have to appear at the end of a section, though they usually do.”
-        – https://html.spec.whatwg.org/#the-footer-element -->
-
-
-
-
-
-        <table class="summary">
-            <tbody>
-                <tr>
-                    <th>Which services does your business provide?</th>
-                    <th class="edit" width="12"><a href="/anti-money-laundering/money-service-business/services?edit=true">Edit</a></th>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        Transmitting money
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        Currency exchange
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        Cheque cashing (all businesses except scrap metal dealers)
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        Cheque cashing (scrap metal dealers)
-                    </td>
-                </tr>
-            </tbody>
-        </table>
         <form method="post">
             <div class="form-group">
                 <input type="submit" class="button" value="Accept and complete section">
