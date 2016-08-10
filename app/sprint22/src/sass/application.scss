@@ -728,7 +728,7 @@ table.summary td {
   text-align: right;
 }
 
-.check-your-answers .edit,
+.check-your-answers p,
 .check-your-answers--list li,
 .check-your-answers--header .heading-xsmall {
   font-size: 19px;
@@ -737,6 +737,7 @@ table.summary td {
 .check-your-answers .edit {
   color: #005ea5;
   display: block;
+  font-size: 16px;
   font-weight: normal;
   line-height: 1.25;
   margin: 0;
@@ -749,10 +750,12 @@ table.summary td {
   vertical-align: middle;
 }
 
-@media (max-width: 640px) {
+@media screen and (max-width: 640px) {
   .check-your-answers .grid-layout--stacked .grid-layout__column {
       display: table-cell;
   }
+
+  .check-your-answers p,
   .check-your-answers .edit,
   .check-your-answers--list li,
   .check-your-answers--header .heading-xsmall {
@@ -787,7 +790,7 @@ table.summary td {
   text-transform: none;
 }
 
-@media (min-width: 641px) {
+@media screen and (min-width: 641px) {
   .page-header .page-header--sub {
     font-size: 27px;
     line-height: 1.11111;
