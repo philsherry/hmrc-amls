@@ -169,7 +169,7 @@ hr {
 .progress-step--status,
 .no-svg .progress-step--status {
   background-image: url('../images/icons/chevron.svg');
-  background-position: 90% 20px; /* y-axis in px for when text > 2 lines */
+  background-position: 90%;
   background-repeat: no-repeat;
   background-size: 33%;
 }
@@ -178,41 +178,44 @@ hr {
   background-image: url('../images/icons/chevron.png');
 }
 
-.progress-step--status__started,
-.progress-step:focus .progress-step--status__started,
-.progress-step:focus .progress-step--status__not-started,
-.progress-step:hover .progress-step--status__started,
-.progress-step:hover .progress-step--status__not-started {
+.progress-step__started .progress-step--status,
+.progress-step:focus .progress-step--status,
+.progress-step:hover .progress-step--status,
+.progress-step__started:focus .progress-step--status,
+.progress-step__started:hover .progress-step--status {
   background-image: url('../images/icons/chevron-white.svg');
 }
 
-.no-svg .progress-step--status__started,
-.no-svg .progress-step--status__not-started,
-.no-svg .progress-step:focus .progress-step--status__started,
-.no-svg .progress-step:focus .progress-step--status__not-started,
-.no-svg .progress-step:hover .progress-step--status__started,
-.no-svg .progress-step:hover .progress-step--status__not-started {
+.no-svg .progress-step__started .progress-step--status,
+.no-svg .progress-step:focus .progress-step--status,
+.no-svg .progress-step:hover .progress-step--status,
+.no-svg .progress-step__started:focus .progress-step--status,
+.no-svg .progress-step__started:hover .progress-step--status {
   background-image: url('../images/icons/chevron-white.png');
 }
 
 .no-svg .progress-step--status,
-.no-svg .progress-step:focus .progress-step--status__started,
-.no-svg .progress-step:focus .progress-step--status__not-started,
-.no-svg .progress-step:hover .progress-step--status__started,
-.no-svg .progress-step:hover .progress-step--status__not-started,
-.no-svg .progress-step--status__completed {
+.no-svg .progress-step__started .progress-step--status,
+.no-svg .progress-step:focus .progress-step--status,
+.no-svg .progress-step:hover .progress-step--status,
+.no-svg .progress-step__started:focus .progress-step--status,
+.no-svg .progress-step__started:hover .progress-step--status,
+.no-svg .progress-step__completed {
   background-repeat: no-repeat;
 }
 
-.progress-step--status__completed,
-.no-svg .progress-step--status__completed {
-  background-image: url('../images/icons/tick.svg');
+.progress-step__complete .progress-step--status,
+.progress-step__complete:focus .progress-step--status,
+.progress-step__complete:hover .progress-step--status,
+.no-svg .progress-step__complete .progress-step--status {
+  background-image: url('../images/icons/tick.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: 33%;
 }
 
-.no-svg .progress-step--status__completed {
+.no-svg .progress-step__complete .progress-step--status,
+.no-svg .progress-step__complete:hover .progress-step--status {
   background-image: url('../images/icons/tick.png');
 }
 
@@ -257,13 +260,13 @@ a.progress-step,
 .progress-step--status,
 .progress-step--details {
   display: block;
-  padding: 5px 10px 15px;
 }
 
 /* -- Progress Step: details -- */
 .progress-step--details {
   background-color: #f8f8f8;
   border-bottom: 3px solid #dee0e2;
+  padding: 5px 10px 15px;
 }
 
 .progress-step--details p {
@@ -274,16 +277,17 @@ a.progress-step,
 /* -- Progress Step: status -- */
 .progress-step--status {
   border-bottom: 3px solid #cdcdcd;
-  color: #6f777b;
+  color: #364747;
+  padding: 5px 10px;
   position: relative;
   transition: .25s ease-in;
 }
 
-.progress-step--status__started,
-.progress-step:focus .progress-step--status__not-started,
-.progress-step:hover .progress-step--status__not-started,
-.progress-step:focus .progress-step--status__started,
-.progress-step:hover .progress-step--status__started {
+.progress-step__started .progress-step--status,
+.progress-step:focus .progress-step--status,
+.progress-step:hover .progress-step--status,
+.progress-step__started:focus .progress-step--status,
+.progress-step__started:hover .progress-step--status {
   color: #fff;
 }
 
@@ -292,45 +296,51 @@ a.progress-step,
 }
 
 /* -- Progress Step: not started -- */
-.progress-step:focus .progress-step--status__not-started,
-.progress-step:hover .progress-step--status__not-started,
-.progress-step:focus .progress-step--status__started,
-.progress-step:hover .progress-step--status__started {
+.progress-step:focus .progress-step--status,
+.progress-step:hover .progress-step--status,
+.progress-step__started:focus .progress-step--status,
+.progress-step__started:hover .progress-step--status {
   background-color: #006435;
   border-bottom-color: #01552e;
 }
 
 /* -- Progress Step: started -- */
-.progress-step--status__started {
+.progress-step__started .progress-step--status {
   background-color: #f47738;
   border-bottom-color: #f9641a;
 }
 
-.progress-step--status__started .progress-step--status-time {
-  padding-top: 18px;
+.progress-step__started .progress-step--status {
+  display: flex;
+}
+
+.progress-step__started .progress-step--status-time {
+  align-self: center;
+  flex: 1;
+  padding-bottom: 15px; /* add bottom padding to help centre it for the flex browsers */
+}
+
+.progress-step__started .progress-step--status-time .font-xsmall {
+  margin: 0;
 }
 
 /* -- Progress Step: completed -- */
-.progress-step--status__completed,
-.progress-step:focus .progress-step--status__completed,
-.progress-step:hover .progress-step--status__completed {
+.progress-step__complete .progress-step--status,
+.progress-step__complete:focus .progress-step--status,
+.progress-step__complete:hover .progress-step--status {
   background-color: #28a197;
   border-bottom-color: #088277;
 }
 
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  /* IE10+ hacks here */
-  .progress-step--status {
-    background-position: 110%;
-    background-size: 66%;
-  }
-  .progress-step--status__completed {
-    background-position: 50%;
-    background-size: 50%;
+@media screen and (max-width: 480px) {
+  .progress-step--status,
+  .no-svg .progress-step--status {
+    background-position: 90% 90%;
   }
 }
 
 @media screen and (max-width: 640px) {
+
   .progress-step {
     margin: 0 -0.78947em 12px;
   }
@@ -345,16 +355,38 @@ a.progress-step,
     width: 66.66667%;
   }
 
-  .progress-step--status__started,
-  .progress-step--status__not-started {
+  .progress-step--status {
     background-size: 20%;
   }
 }
 
 @media screen and (min-width: 641px) and (max-width: 767px) {
-  .progress-step--status__started,
-  .progress-step--status__not-started {
+  .progress-step--status {
+    background-position: 90% 90%;
     background-size: 25%;
+  }
+}
+
+/* -- TODO: fix this – IE10+ needs a chevron kick
+@media all and
+  (-ms-high-contrast: none) and (max-width: 640px),
+  (-ms-high-contrast: active) and (max-width: 640px) {
+  .progress-step--status {
+    background-position: 90%;
+  }
+} */
+
+@media all and
+  (-ms-high-contrast: none),
+  (-ms-high-contrast: active) {
+  /* IE10+ hacks here */
+  .progress-step--status {
+    background-position: 140%;
+    background-size: 66%;
+  }
+  .progress-step--status__completed {
+    background-position: 50%;
+    background-size: 50%;
   }
 }
 
@@ -380,9 +412,13 @@ a.progress-step,
 
 .lte-ie8 .progress-step--details,
 .lte-ie8 .progress-step--status,
-.lte-ie8 .progress-step--status__started,
-.lte-ie8 .progress-step--status__not-started {
-  min-height: 130px;
+.lte-ie8 .progress-step--status__started {
+  min-height: 136px;
+}
+
+.lte-ie8 .progress-step__complete .progress-step--status,
+.lte-ie8 .progress-step__complete .progress-step--details {
+  min-height: 90px;
 }
 
 .lte-ie8 .progress-step--details {
@@ -396,405 +432,3 @@ a.progress-step,
 
 /* -- // application progress page -- */
 
-/* -- Amend application progress page -- */
-.progress-steps__amend .progress-step--status,
-.progress-steps__amend .progress-step--status:focus,
-.progress-steps__amend .progress-step--status:hover  {
-  background-image: none;
-
-}
-
-/* -- // Amend application progress page -- */
-
-// we want the number *inside* the list element here
-.status-list {
-  padding-left: 0;
-
-  li {
-    line-height: 1.25;
-    list-style-position: inside;
-    padding: 18px 55px 10px 10px;
-    position: relative;
-  }
-}
-
-.status-list--icon {
-  height: 30px;
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  width: 35px;
-
-  .status-list--complete & {
-    // tick
-    background: url('../images/icons/tick.svg') no-repeat;
-    background-size: 100%;
-  }
-}
-
-.status-list--upcoming {
-  background: $grey-2;
-  color: $page-colour;
-}
-
-.status-list--pending {
-  //
-}
-
-.status-list--complete {
-  background-color: $turquoise;
-  color: $page-colour;
-}
-
-.status-list--start {
-  border-top: 3px solid $grey-2;
-}
-
-.status-list--end {
-  border-bottom: 3px solid $grey-2;
-}
-
-.temp-links {
-  margin-top: 300px;
-}
-
-// -- Check your answers -- //
-
-.summary-title {
-  width: 88%;
-}
-
-.summary {
-  font-size: 16px;
-  margin-bottom: 20px;
-}
-
-table.summary {
-  table-layout: fixed;
-}
-
-table.summary th {
-  vertical-align: top;
-}
-
-table.summary th.edit {
-  font-weight: normal;
-}
-
-table.summary td {
-  word-break: break-all;
-}
-
-.summary ul li {
-  font-size: 16px;
-  margin-bottom: 0;
-}
-
-
-
-// -- IDs for namespacing purposes only -- //
-
-#example-1,
-#example-1b {
-  .check-your-answers dt,
-  .check-your-answers dd {
-    border-bottom: 1px solid #bfc1c3;
-    font-size: 19px;
-    padding: 0 0 .52632em 0;
-  }
-
-  .check-your-answers header {
-    padding: 0;
-  }
-
-  .check-your-answers h2,
-  .check-your-answers dt,
-  .check-your-answers dd {
-    margin-bottom: 0;
-    margin-top: 0;
-    padding: .73684em 1.05263em .52632em 0;
-  }
-
-  .check-your-answers dt {
-    display: flex;
-    font-weight: bold;
-    padding-right: 0;
-  }
-
-  .check-your-answers dt a {
-    display: block;
-  }
-
-  .check-your-answers h2 a {
-    color: #0b0c0c;
-    display: flex;
-    text-decoration: none;
-  }
-
-  .check-your-answers {
-    margin-bottom: 20px;
-  }
-
-  .check-your-answers--header {}
-
-  .check-your-answers--footer {}
-
-  .check-your-answers .edit {
-    color: #005ea5;
-    font-weight: normal;
-    line-height: 1.25;
-    margin: 0 0 .21053em;
-    padding-left: 1.05263em;
-    text-decoration: underline;
-  }
-
-  .check-your-answers dt .edit {
-    align-content: flex-end;
-    flex: 1;
-    text-align: right;
-  }
-
-  @media (max-width: 640px) {
-    .check-your-answers .grid-layout--stacked .grid-layout__column {
-        display: table-cell;
-    }
-    .check-your-answers dd,
-    .check-your-answers dt,
-    .check-your-answers .edit,
-    .check-your-answers--header .heading-xsmall {
-      font-size: 14px;
-    }
-  }
-}
-
-#example-1b {
-  .check-your-answers dt,
-  .check-your-answers dd {
-    border-bottom: 0;
-  }
-
-  .check-your-answers {
-    border-bottom: 1px solid #bfc1c3;
-  }
-
-  .check-your-answers .edit {
-    padding-left: 0;
-  }
-}
-
-#example-2,
-#example-2b {
-
-  .check-your-answers li,
-  .check-your-answers--header,
-  .check-your-answers--footer {
-    border-bottom: 1px solid #bfc1c3;
-    padding: 0;
-  }
-
-  .check-your-answers h2,
-  .check-your-answers li {
-    line-height: 1.25;
-    margin-bottom: 0;
-    margin-top: 0;
-    padding: .73684em 1.05263em .52632em 0;
-  }
-
-  .check-your-answers h2 a {
-    color: #0b0c0c;
-    display: flex;
-    text-decoration: none;
-  }
-
-  .check-your-answers {
-    margin-bottom: 20px;
-    padding: 0 15px;
-  }
-
-  .check-your-answers--header {}
-
-  .check-your-answers--footer {
-    text-align: right;
-  }
-
-  .check-your-answers .edit,
-  .check-your-answers--list li,
-  .check-your-answers--header .heading-xsmall {
-    font-size: 19px;
-  }
-
-  .check-your-answers .edit {
-    color: #005ea5;
-    display: block;
-    font-weight: normal;
-    line-height: 1.25;
-    margin: 0;
-    padding: .73684em 0 .52632em 1.05263em;
-    text-decoration: underline;
-  }
-
-  .check-your-answers .grid-one-third {
-    text-align: right;
-    vertical-align: middle;
-  }
-
-  @media (max-width: 640px) {
-    .check-your-answers .grid-layout--stacked .grid-layout__column {
-        display: table-cell;
-    }
-    .check-your-answers .edit,
-    .check-your-answers--list li,
-    .check-your-answers--header .heading-xsmall {
-      font-size: 14px;
-    }
-  }
-}
-
-#example-2b {
-  .check-your-answers {
-    padding: 0;
-  }
-
-  .check-your-answers li {
-    border-bottom: 0;
-  }
-
-  .check-your-answers .edit {
-    padding-left: 0;
-  }
-}
-
-#table {
-  .check-your-answers {
-    margin-bottom: 20px;
-    table-layout: fixed;
-  }
-
-  .check-your-answers th {
-    vertical-align: top;
-  }
-
-  .check-your-answers th.edit {
-    font-weight: normal;
-    text-align: right;
-  }
-
-  .check-your-answers td {
-    word-break: break-all;
-  }
-
-  @media (min-width: 641px) {
-    .check-your-answers th,
-    .check-your-answers td {
-        font-size: 19px;
-    }
-  }
-}
-
-.check-your-answers li,
-.check-your-answers--header,
-.check-your-answers--footer {
-  border-bottom: 1px solid #bfc1c3;
-  padding: 0;
-}
-
-.check-your-answers h2,
-.check-your-answers li {
-  line-height: 1.25;
-  margin-bottom: 0;
-  margin-top: 0;
-  padding: .73684em 1.05263em .52632em 0;
-}
-
-.check-your-answers h2 a {
-  color: #0b0c0c;
-  display: flex;
-  text-decoration: none;
-}
-
-.check-your-answers {
-  border-bottom: 1px solid #bfc1c3;
-  margin-bottom: 20px;
-  padding: 0;
-}
-
-.check-your-answers li {
-  border-bottom: 0;
-}
-
-.check-your-answers--header {}
-
-.check-your-answers--footer {
-  text-align: right;
-}
-
-.check-your-answers p,
-.check-your-answers--list li,
-.check-your-answers--header .heading-xsmall {
-  font-size: 19px;
-}
-
-.check-your-answers .edit {
-  color: #005ea5;
-  display: block;
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 1.25;
-  margin: 0;
-  padding: 0;
-  text-decoration: underline;
-}
-
-.check-your-answers .grid-one-third {
-  text-align: right;
-  vertical-align: middle;
-}
-
-@media screen and (max-width: 640px) {
-  .check-your-answers .grid-layout--stacked .grid-layout__column {
-      display: table-cell;
-  }
-
-  .check-your-answers p,
-  .check-your-answers .edit,
-  .check-your-answers--list li,
-  .check-your-answers--header .heading-xsmall {
-    font-size: 14px;
-  }
-}
-
-
-
-.page-header {
-  clear: both;
-  display: table;
-  margin-top: 0.46875em;
-  margin-bottom: 0.9375em;
-}
-
-.page-header--lede {
-  display: table-footer-group;
-}
-
-.page-header--sub {
-  display: table-header-group;
-
-  color: #6f777b;
-  display: block;
-  font-family: "nta", Arial, sans-serif;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 1.11111;
-  padding-bottom: 7px;
-  padding-top: 8px;
-  text-transform: none;
-}
-
-@media screen and (min-width: 641px) {
-  .page-header .page-header--sub {
-    font-size: 27px;
-    line-height: 1.11111;
-    padding-bottom: 6px;
-    padding-top: 4px;
-  }
-}
