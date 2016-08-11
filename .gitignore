@@ -10,3 +10,4 @@ npm-debug.log
 .idea/
 session.json
 app/**/public/stylesheets/application.css
+/app/sprint22/public/stylesheets/application-phil.css
