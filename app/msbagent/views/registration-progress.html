@@ -9,26 +9,31 @@
     <div class="grid-row">
         <div class="column-two-thirds">
             <h1 class="heading-xlarge">Application progress</h1>
-            <p class="lede">Your information is saved automatically. If you sign out, you'll have 28 days to return and complete your application.</p>
+            <p class="lede">It usually takes around 30 minutes to complete all sections.</p>
+            <p>Your information is saved automatically. If you sign out, you'll have 28 days to return and complete your application.</p>
         </div>
     </div>
 
     <div class="grid-row">
-        <ul class="grid-layout column-two-thirds progress-steps">
+        <ul class="grid-layout column-two-thirds progress-steps" role="menu">
+
             {{#sections}}
             <li role="menuitem">
-                <a href="{{^status}}{{link}}{{/status}}{{#status}}{{editlink}}{{/status}}" class="progress-step">
+
+                <a href="{{^status}}{{link}}{{/status}}{{#status}}{{editlink}}{{/status}}" class="progress-step {{#status}}progress-step__complete{{/status}}">
                     <div class="grid-layout column-two-thirds progress-step--details">
-                        <h2 class="heading-small">{{name}}<span class="visuallyhidden">.</span></h2>
+                        <h2 class="heading-small">{{name}}</h2>
+                        {{! If not started }}
                         {{^status}}
-                        <p>{{message}}</p>
+                            <p>{{message}}</p>
                         {{/status}}
+                        {{! If completed }}
                         {{#status}}
-                        <p class="visuallyhidden">This section has been completed.</p>
-                        <p class="progress-step__edit font-xsmall" aria-label="You can edit this section.">Edit</p>
+                            <p class="visuallyhidden">This section has been completed.</p>
+                            <p class="progress-step__edit font-xsmall" aria-label="You can edit this section.">Edit</p>
                         {{/status}}
                     </div>
-                    <div class="grid-layout column-one-third progress-step--status{{^status}} progress-step--status__not-started{{/status}}{{#status}} progress-step--status__completed{{/status}}">
+                    <div class="grid-layout column-one-third progress-step--status {{#status}}progress-step__complete{{/status}}">
                         {{^status}}
                         <div class="column-two-thirds progress-step--status-time">
                             <p class="visuallyhidden">This section needs starting and will take approximately</p>
@@ -37,11 +42,12 @@
                         {{/status}}
                     </div>
                 </a>
+
             </li>
             {{/sections}}
         </ul>
 
-        <div class="column-one-third reg-step--submit">
+        <div class="column-one-third progress-step--submit">
             <div class="grid-row statusblock declaration">
                 <h2 class="heading-small">Submit application</h2>
                 {{^complete}}

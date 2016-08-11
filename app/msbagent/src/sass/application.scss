@@ -39,36 +39,6 @@ html {
     float: left;
     width: 66.66667%;
   }
-
-  .reg-step--submit {
-    margin: 0;
-    padding-left: 0;
-  }
-
-  // Registration step: block-level link
-  a.reg-step {
-    background-image: url('../images/icons/icon-chevron-grey-large.png');
-    background-position: 95% 50%;
-
-    &:focus,
-    &:hover {
-      background-image: url('../images/icons/icon-chevron-white.png');
-    }
-
-    &.complete {
-      background-image: url('../images/icons/icon-tick-white.png');
-      background-position: 85% 50%;
-    }
-  }
-
-  // status list
-  .status-list--complete .status-list--icon {
-    background-image: url('../images/icons/icon-tick-white.png');
-    background-position: 0 0;
-    height: 35px;
-    top: 5px;
-    width: 35px;
-  }
 }
 
 // Helpers, because GDS
@@ -177,7 +147,11 @@ hr {
   margin-bottom: 0;
 }
 
-/* -- application progress page -- */
+.grid-layout {
+  table-layout: fixed;
+}
+
+/* -- Progress Step -- */
 .progress-steps {
   margin-bottom: 12px;
 }
@@ -191,6 +165,60 @@ hr {
   margin-top: 0;
 }
 
+/* -- Progress Step: assets (tick & chevrons) -- */
+.progress-step--status,
+.no-svg .progress-step--status {
+  background-image: url('../images/icons/chevron.svg');
+  background-position: 90%;
+  background-repeat: no-repeat;
+  background-size: 33%;
+}
+
+.no-svg .progress-step--status {
+  background-image: url('../images/icons/chevron.png');
+}
+
+.progress-step__started .progress-step--status,
+.progress-step:focus .progress-step--status,
+.progress-step:hover .progress-step--status,
+.progress-step__started:focus .progress-step--status,
+.progress-step__started:hover .progress-step--status {
+  background-image: url('../images/icons/chevron-white.svg');
+}
+
+.no-svg .progress-step__started .progress-step--status,
+.no-svg .progress-step:focus .progress-step--status,
+.no-svg .progress-step:hover .progress-step--status,
+.no-svg .progress-step__started:focus .progress-step--status,
+.no-svg .progress-step__started:hover .progress-step--status {
+  background-image: url('../images/icons/chevron-white.png');
+}
+
+.no-svg .progress-step--status,
+.no-svg .progress-step__started .progress-step--status,
+.no-svg .progress-step:focus .progress-step--status,
+.no-svg .progress-step:hover .progress-step--status,
+.no-svg .progress-step__started:focus .progress-step--status,
+.no-svg .progress-step__started:hover .progress-step--status,
+.no-svg .progress-step__completed {
+  background-repeat: no-repeat;
+}
+
+.progress-step__complete .progress-step--status,
+.progress-step__complete:focus .progress-step--status,
+.progress-step__complete:hover .progress-step--status,
+.no-svg .progress-step__complete .progress-step--status {
+  background-image: url('../images/icons/tick.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 33%;
+}
+
+.no-svg .progress-step__complete .progress-step--status,
+.no-svg .progress-step__complete:hover .progress-step--status {
+  background-image: url('../images/icons/tick.png');
+}
+
 /* qualified attribute selector required here, otherwise
    all text colour takes on regular anchor colour  */
 a.progress-step {
@@ -200,6 +228,7 @@ a.progress-step {
   display: flex; /* for everything else */
   margin-bottom: 0;
   padding: 0;
+  overflow: hidden; /* fix for firefox focus bug */
   position: relative;
   text-decoration: none;
   transition: .25s ease-in;
@@ -221,9 +250,22 @@ a.progress-step {
   color: #2e8aca;
 }
 
+a.progress-step,
+.progress-step--status,
 .progress-step--details {
-  background: #f8f8f8;
-  border-bottom: #dee0e2 solid 3px;
+  box-sizing: border-box;
+}
+
+/* `display:block` fixes a layout issue in IE & Firefox */
+.progress-step--status,
+.progress-step--details {
+  display: block;
+}
+
+/* -- Progress Step: details -- */
+.progress-step--details {
+  background-color: #f8f8f8;
+  border-bottom: 3px solid #dee0e2;
   padding: 5px 10px 15px;
 }
 
@@ -232,83 +274,73 @@ a.progress-step {
   padding-bottom: 10px;
 }
 
+/* -- Progress Step: status -- */
 .progress-step--status {
-  background: url("../images/icons/chevron.svg") no-repeat 90% / 33%;
-  border-bottom: 3px solid #dee0e2;
-  color: #6f777b;
-  padding: 0;
+  border-bottom: 3px solid #cdcdcd;
+  color: #364747;
+  padding: 5px 10px;
   position: relative;
   transition: .25s ease-in;
 }
 
-.no-svg .progress-step--status {
-  background-image: url("../images/icons/chevron.png");
-  background-position: 90%;
-}
-
-.progress-step--status__completed,
-.progress-step:focus .progress-step--status__completed,
-.progress-step:hover .progress-step--status__completed {
-  border-bottom-color: #28a197;
-}
-
-.progress-step:focus .progress-step--status__started,
-.progress-step:focus .progress-step--status__not-started,
-.progress-step:hover .progress-step--status__started,
-.progress-step:hover .progress-step--status__not-started {
-  background-color: #006435;
-  background-image: url("../images/icons/chevron-white.svg");
-  border-bottom-color: #01552e;
+.progress-step__started .progress-step--status,
+.progress-step:focus .progress-step--status,
+.progress-step:hover .progress-step--status,
+.progress-step__started:focus .progress-step--status,
+.progress-step__started:hover .progress-step--status {
   color: #fff;
 }
 
-.no-svg .progress-step:focus .progress-step--status__started,
-.no-svg .progress-step:focus .progress-step--status__not-started,
-.no-svg .progress-step:hover .progress-step--status__started,
-.no-svg .progress-step:hover .progress-step--status__not-started {
-  background-image: url("../images/icons/chevron-white.png");
-}
-
-.progress-step--status__completed {
-  background: #28a197 url("../images/icons/tick.svg") no-repeat 50% / 33%;
-  transition: none;
-}
-
-.no-svg .progress-step--status__completed {
-  background-color: #28a197;
-  background-image: url("../images/icons/tick.png");
-  background-position: 50%;
-}
-
-.no-svg .progress-step--status,
-.no-svg .progress-step:focus .progress-step--status__started,
-.no-svg .progress-step:focus .progress-step--status__not-started,
-.no-svg .progress-step:hover .progress-step--status__started,
-.no-svg .progress-step:hover .progress-step--status__not-started,
-.no-svg .progress-step--status__completed {
-  background-repeat: no-repeat;
-}
-
 .progress-step--status-time {
-  padding: 15px 15px 0;
+  padding: 15px 0 0;
 }
 
-.lte-ie8 .grid-layout {
-  table-layout: fixed;
+/* -- Progress Step: not started -- */
+.progress-step:focus .progress-step--status,
+.progress-step:hover .progress-step--status,
+.progress-step__started:focus .progress-step--status,
+.progress-step__started:hover .progress-step--status {
+  background-color: #006435;
+  border-bottom-color: #01552e;
 }
 
-/* having to specify these widths for IE8 until a better fix appears.
-   we can get away with this because IE8 isn't responsive */
-
-.lte-ie8 .progress-step > .column-one-third {
-  width: 213.66px;
+/* -- Progress Step: started -- */
+.progress-step__started .progress-step--status {
+  background-color: #f47738;
+  border-bottom-color: #f9641a;
 }
 
-.lte-ie8 .progress-step > .column-two-thirds {
-  width: 427.33px;
+.progress-step__started .progress-step--status {
+  display: flex;
+}
+
+.progress-step__started .progress-step--status-time {
+  align-self: center;
+  flex: 1;
+  padding-bottom: 15px; /* add bottom padding to help centre it for the flex browsers */
+}
+
+.progress-step__started .progress-step--status-time .font-xsmall {
+  margin: 0;
+}
+
+/* -- Progress Step: completed -- */
+.progress-step__complete .progress-step--status,
+.progress-step__complete:focus .progress-step--status,
+.progress-step__complete:hover .progress-step--status {
+  background-color: #28a197;
+  border-bottom-color: #088277;
+}
+
+@media screen and (max-width: 480px) {
+  .progress-step--status,
+  .no-svg .progress-step--status {
+    background-position: 90% 90%;
+  }
 }
 
 @media screen and (max-width: 640px) {
+
   .progress-step {
     margin: 0 -0.78947em 12px;
   }
@@ -323,71 +355,80 @@ a.progress-step {
     width: 66.66667%;
   }
 
-  .progress-step--status__started,
-  .progress-step--status__not-started {
+  .progress-step--status {
     background-size: 20%;
   }
 }
 
 @media screen and (min-width: 641px) and (max-width: 767px) {
-  .progress-step--status__started,
-  .progress-step--status__not-started {
+  .progress-step--status {
+    background-position: 90% 90%;
     background-size: 25%;
   }
 }
 
+/* -- TODO: fix this – IE10+ needs a chevron kick
+@media all and
+  (-ms-high-contrast: none) and (max-width: 640px),
+  (-ms-high-contrast: active) and (max-width: 640px) {
+  .progress-step--status {
+    background-position: 90%;
+  }
+} */
+
+@media all and
+  (-ms-high-contrast: none),
+  (-ms-high-contrast: active) {
+  /* IE10+ hacks here */
+  .progress-step--status {
+    background-position: 140%;
+    background-size: 66%;
+  }
+  .progress-step--status__completed {
+    background-position: 50%;
+    background-size: 50%;
+  }
+}
+
+/* Having to specify these widths for IE8 until a better fix appears.
+   We can get away with this because IE8 isn't responsive */
+.lte-ie8 .progress-step:before,
+.lte-ie8 .progress-step:after {
+  content: '';
+  display: table;
+}
+
+.lte-ie8 .progress-step:after {
+  clear: both;
+}
+
+.lte-ie8 .progress-step {
+  *zoom: 1;
+}
+
+.lte-ie8 .progress-step--status {
+  width: 202px;
+}
+
+.lte-ie8 .progress-step--details,
+.lte-ie8 .progress-step--status,
+.lte-ie8 .progress-step--status__started {
+  min-height: 136px;
+}
+
+.lte-ie8 .progress-step__complete .progress-step--status,
+.lte-ie8 .progress-step__complete .progress-step--details {
+  min-height: 90px;
+}
+
+.lte-ie8 .progress-step--details {
+  width: 427px;
+}
+
+.lte-ie8 .progress-step--status,
+.lte-ie8 .progress-step--details {
+  float: left;
+}
+
 /* -- // application progress page -- */
-
-
-
-/* -- // application status page -- */
-// we want the number *inside* the list element here
-.status-list {
-  padding-left: 0;
-
-  li {
-    line-height: 1.25;
-    list-style-position: inside;
-    padding: 18px 55px 10px 10px;
-    position: relative;
-  }
-}
-
-.status-list--icon {
-  height: 30px;
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  width: 35px;
-
-  .status-list--complete & {
-    // tick
-    background: url('../images/icons/tick.svg') no-repeat -10px -10px;
-    background-size: 164%;
-  }
-}
-
-.status-list--upcoming {
-  background: $grey-2;
-  color: $page-colour;
-}
-
-.status-list--pending {
-  //
-}
-
-.status-list--complete {
-  background-color: $turquoise;
-  color: $page-colour;
-}
-
-.status-list--start {
-  border-top: 3px solid $grey-2;
-}
-
-.status-list--end {
-  border-bottom: 3px solid $grey-2;
-}
-
-
 
