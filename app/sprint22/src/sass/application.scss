@@ -538,3 +538,60 @@ a.progress-step,
 }
 
 
+
+
+/* -- // Amend application progress page -- */
+
+// we want the number *inside* the list element here
+.status-list {
+  padding-left: 0;
+
+  li {
+    line-height: 1.25;
+    list-style-position: inside;
+    padding: 18px 55px 10px 10px;
+    position: relative;
+  }
+}
+
+.status-list--icon {
+  height: 30px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 35px;
+
+  .status-list--complete & {
+    // tick
+    background: url('../images/icons/tick.svg') no-repeat;
+    background-size: 100%;
+  }
+}
+
+.status-list--upcoming {
+  background: $grey-2;
+  color: $page-colour;
+}
+
+.status-list--pending {
+  //
+}
+
+.status-list--complete {
+  background-color: $turquoise;
+  color: $page-colour;
+}
+
+.status-list--start {
+  border-top: 3px solid $grey-2;
+}
+
+.status-list--end {
+  border-bottom: 3px solid $grey-2;
+}
+
+
+
+.temp-links {
+  margin-top: 300px;
+}
