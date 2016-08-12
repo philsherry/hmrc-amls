@@ -305,7 +305,9 @@ a.progress-step,
 }
 
 /* -- Progress Step: started -- */
-.progress-step__started .progress-step--status {
+.progress-step__started .progress-step--status,
+.progress-steps__amend .progress-step__complete:hover .progress-step--status,
+.progress-steps__amend .progress-step__complete:focus .progress-step--status {
   background-color: #f47738;
   border-bottom-color: #f9641a;
 }
