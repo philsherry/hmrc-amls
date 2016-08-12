@@ -15,11 +15,12 @@
     </div>
 
     <div class="grid-row">
-        <ul class="grid-layout column-two-thirds progress-steps progress-steps__amend">
+        <ul class="grid-layout column-two-thirds progress-steps" role="menu">
 
             {{#sections}}
             <li role="menuitem">
-                <a href="{{^status}}{{editlink}}{{/status}}" class="progress-step">
+
+                <a href="{{^status}}{{editlink}}{{/status}}" class="progress-step progress-steps__amend">
                     <div class="grid-layout column-two-thirds progress-step--details">
                         <h2 class="heading-small">{{name}}<span class="visuallyhidden">.</span></h2>
                         {{^status}}
@@ -27,13 +28,14 @@
                             <p>{{message}}</p>
                         {{/status}}
                     </div>
-                    <div class="grid-layout column-one-third progress-step--status{{#status}} progress-step--status__completed{{/status}}">
+                    <div class="grid-layout column-one-third progress-step--status progress-steps__amend">
                         {{^status}}
                             <p class="visuallyhidden">Edit this section</p>
                             <p class="progress-step__edit font-xsmall" aria-label="You can edit this section.">Edit</p>
                         {{/status}}
                     </div>
                 </a>
+
             </li>
             {{/sections}}
         </ul>
