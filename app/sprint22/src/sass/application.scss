@@ -367,6 +367,15 @@ a.progress-step,
   }
 }
 
+
+/* -- Amend application progress page -- */
+.progress-steps__amend .progress-step--status,
+.progress-steps__amend .progress-step--status:focus,
+.progress-steps__amend .progress-step--status:hover  {
+  background-image: none;
+
+}
+
 /* -- TODO: fix this – IE10+ needs a chevron kick
 @media all and
   (-ms-high-contrast: none) and (max-width: 640px),
