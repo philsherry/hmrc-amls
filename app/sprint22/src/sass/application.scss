@@ -506,25 +506,20 @@ a.progress-step,
 .page-header {
   clear: both;
   display: table;
-  margin-top: 0.46875em;
-  margin-bottom: 0.9375em;
+  margin-top: 1.8em;
 }
 
 .page-header--lede {
-  margin: 0;
+  margin: .15em 0 1.25em;
 }
 
 .page-header--sub {
   display: table-header-group;
   margin-bottom: 0;
-
   color: #6f777b;
-  font-family: "nta", Arial, sans-serif;
   font-size: 20px;
   font-weight: 400;
   line-height: 1.11111;
-  padding-bottom: 7px;
-  padding-top: 8px;
   text-transform: none;
 }
 
