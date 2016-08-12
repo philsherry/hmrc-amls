@@ -511,7 +511,7 @@ a.progress-step,
 }
 
 .page-header--lede {
-  display: table-footer-group;
+  margin: 0;
 }
 
 .page-header--sub {
@@ -519,7 +519,6 @@ a.progress-step,
   margin-bottom: 0;
 
   color: #6f777b;
-  display: block;
   font-family: "nta", Arial, sans-serif;
   font-size: 20px;
   font-weight: 400;
