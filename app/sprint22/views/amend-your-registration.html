@@ -8,9 +8,10 @@
 
     <div class="grid-row">
         <div class="column-two-thirds">
-            <h1 class="heading-xlarge">Amend your application</h1>
-            <p class="lede">Text here about amends.</p>
-            <p>Your information is saved automatically. If you sign out, you'll have 28 days to return and complete your application.</p>
+            <h1 class="heading-xlarge">Update your information</h1>
+            <p>If something has changed in your business which is relevant to Money Laundering Regulations, you must amend and re-submit your application for anti-money laudering supervision.</p>
+            <p>There will be an additional fee to pay if you increase the number of responsible people or trading premises.</p>
+           
         </div>
     </div>
 
@@ -37,7 +38,8 @@
                         {{^status}}
                         <div class="column-two-thirds progress-step--status-time">
                             <p class="visuallyhidden">Edit this section</p>
-                            <p class="font-xsmall">Make an amendment</p>
+                        
+                            <p class="font-xsmall">View and amend your information</p>
                         </div>
                         {{/status}}
                     </div>
@@ -50,17 +52,17 @@
             <div class="grid-row statusblock declaration">
                 <h2 class="heading-small">Re-submit application</h2>
                 {{^complete}}
-                <p>You can't re-submit the application until you've made a change to at least one section.</p>
+                <p>You don't need to re-submit your application until you've made changes to it.</p>
                 {{/complete}}
                 {{#complete}}
                 <p>All sections complete: you can now submit the application.</p>
                 {{/complete}}
                 <div class="form-group">
                     {{^complete}}
-                    <a href="" class="button" disabled="disabled" type="submit">Submit application</a>
+                    <a href="" class="button" disabled="disabled" type="submit">Re-submit application</a>
                     {{/complete}}
                     {{#complete}}
-                    <a href="declaration/who-is-registering" class="button" type="submit">Submit application</a>
+                    <a href="declaration/who-is-registering" class="button" type="submit">Re-submit application</a>
                     {{/complete}}
                 </div>
             </div>
