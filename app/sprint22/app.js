@@ -46,6 +46,20 @@ app.post('/:section/check-your-answers-no-account', function (req, res) {
   );
 });
 
+app.post('/:section/your-answers', function (req, res) {
+  var sections = req.session.sections.map(
+    function (e) {
+      if (e.section === req.params.section) {
+        e.status = 'DONE';
+      }
+      return e;
+  });
+  req.session.sections = sections;
+  res.redirect(
+    '../amend-your-registration'
+  );
+});
+
 app.post('/:section/:page', function (req, res) {
   if (req.session.sections) {
     var sections = req.session.sections.map(

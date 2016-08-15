@@ -182,7 +182,10 @@ hr {
 .progress-step:focus .progress-step--status,
 .progress-step:hover .progress-step--status,
 .progress-step__started:focus .progress-step--status,
-.progress-step__started:hover .progress-step--status {
+.progress-step__started:hover .progress-step--status,
+.progress-steps__amend .progress-step__complete .progress-step--status,
+.progress-steps__amend .progress-step__complete:focus .progress-step--status,
+.progress-steps__amend .progress-step__complete:hover .progress-step--status {
   background-image: url('../images/icons/chevron-white.svg');
 }
 
@@ -217,6 +220,10 @@ hr {
 .no-svg .progress-step__complete .progress-step--status,
 .no-svg .progress-step__complete:hover .progress-step--status {
   background-image: url('../images/icons/tick.png');
+}
+
+.progress-steps__amend .progress-step__complete .progress-step--status {
+  background-position: 90%;
 }
 
 /* qualified attribute selector required here, otherwise
@@ -299,15 +306,15 @@ a.progress-step,
 .progress-step:focus .progress-step--status,
 .progress-step:hover .progress-step--status,
 .progress-step__started:focus .progress-step--status,
-.progress-step__started:hover .progress-step--status {
+.progress-step__started:hover .progress-step--status,
+.progress-steps__amend .progress-step__complete:hover .progress-step--status,
+.progress-steps__amend .progress-step__complete:focus .progress-step--status {
   background-color: #006435;
   border-bottom-color: #01552e;
 }
 
 /* -- Progress Step: started -- */
-.progress-step__started .progress-step--status,
-.progress-steps__amend .progress-step__complete:hover .progress-step--status,
-.progress-steps__amend .progress-step__complete:focus .progress-step--status {
+.progress-step__started .progress-step--status {
   background-color: #f47738;
   border-bottom-color: #f9641a;
 }
@@ -330,6 +337,12 @@ a.progress-step,
 .progress-step__complete .progress-step--status,
 .progress-step__complete:focus .progress-step--status,
 .progress-step__complete:hover .progress-step--status {
+  background-color: #28a197;
+  border-bottom-color: #088277;
+}
+
+/* -- Progress Step: amended -- */
+.progress-steps__amend .progress-step__complete .progress-step--status {
   background-color: #28a197;
   border-bottom-color: #088277;
 }
@@ -367,15 +380,6 @@ a.progress-step,
     background-position: 90% 90%;
     background-size: 25%;
   }
-}
-
-
-/* -- Amend application progress page -- */
-.progress-steps__amend .progress-step--status,
-.progress-steps__amend .progress-step--status:focus,
-.progress-steps__amend .progress-step--status:hover  {
-  background-image: none;
-
 }
 
 /* -- TODO: fix this – IE10+ needs a chevron kick
