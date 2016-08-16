@@ -15,10 +15,10 @@
     </div>
 
     <div class="grid-row">
-        <ul class="grid-layout column-two-thirds progress-steps" role="menu">
+        <ul class="grid-layout column-two-thirds progress-steps">
 
             {{#sections}}
-            <li role="menuitem">
+            <li>
 
                 <a href="{{^status}}{{link}}{{/status}}{{#status}}{{editlink}}{{/status}}" class="progress-step {{#status}}progress-step__complete{{/status}}">
                     <div class="grid-layout column-two-thirds progress-step--details">
