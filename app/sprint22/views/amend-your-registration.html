@@ -11,7 +11,7 @@
             <h1 class="heading-xlarge">Update your information</h1>
             <p>If something has changed in your business which is relevant to Money Laundering Regulations, you must amend and re-submit your application for anti-money laudering supervision.</p>
             <p>There will be an additional fee to pay if you increase the number of responsible people or trading premises.</p>
-           
+
         </div>
     </div>
 
@@ -21,19 +21,18 @@
             {{#sections}}
             <li role="menuitem">
 
-                <a href="{{^status}}{{editlink}}{{/status}}" class="progress-step {{#status}}progress-step__complete{{/status}} {{status}}">
+                <a href="{{^status}}{{editlink}}{{/status}}" class="progress-step {{#status}}progress-step__complete{{/status}}">
                     <div class="grid-layout column-two-thirds progress-step--details">
                         <h2 class="heading-small">{{name}}</h2>
                         <p>{{message}}</p>
                     </div>
                     <div class="grid-layout column-one-third progress-step--status {{#status}}progress-step__complete{{/status}}">
-                        
+
                         <div class="column-two-thirds progress-step--status-time">
                             <p class="visuallyhidden">Edit this section</p>
-                            
                             <p class="font-xsmall">View and <br />amend your <br />information</p>
                         </div>
-                        
+
                     </div>
                 </a>
 
